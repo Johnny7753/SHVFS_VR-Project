@@ -60,7 +60,9 @@ public class EnemySystem : Singleton<EnemySystem>
         int numToFresh = (int)Random.Range(numRangeToFresh.x, numRangeToFresh.y);
         for (int i = 0; i < numToFresh; i++)
         {
-            RefreshOneEnemy();
+            //Prevent the infinite loop when the hidden point cannot be found
+            if (enemyAlive.Count<points.Count)
+                RefreshOneEnemy();
         }
     }
     private void RefreshOneEnemy()
