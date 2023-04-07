@@ -232,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 135837772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7cabaf917cb5646af70ae7bd088c07, type: 3}
+  m_Script: {fileID: 11500000, guid: f810ce5ac65b652499b46c0ed5eab027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   p0: {fileID: 1844398631}
@@ -3495,14 +3495,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912934778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7cabaf917cb5646af70ae7bd088c07, type: 3}
+  m_Script: {fileID: 11500000, guid: 71246cf8f9238124ba0ba4284a3d7260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   p0: {fileID: 149379001}
   p1: {fileID: 695474367}
   p2: {fileID: 1280697527}
-  obj: {fileID: 181152502}
-  slider: 0
   rightHand: {fileID: 1447334074}
   leftHand: {fileID: 691140779}
   LeftGrip: {fileID: 1842655003}
@@ -3531,12 +3529,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912934778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71246cf8f9238124ba0ba4284a3d7260, type: 3}
+  m_Script: {fileID: 11500000, guid: f810ce5ac65b652499b46c0ed5eab027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   p0: {fileID: 149379001}
   p1: {fileID: 695474367}
   p2: {fileID: 1280697527}
+  obj: {fileID: 181152502}
+  slider: 0
   rightHand: {fileID: 1447334074}
   leftHand: {fileID: 691140779}
   LeftGrip: {fileID: 1842655003}
