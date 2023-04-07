@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftHandComponent : MonoBehaviour
+public class HandComponent : MonoBehaviour
 {
-    public GameObject leftHand;
+    public GameObject holdingObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,6 @@ public class LeftHandComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = leftHand.transform.position;
-        transform.rotation = leftHand.transform.rotation;
+        
     }
 }

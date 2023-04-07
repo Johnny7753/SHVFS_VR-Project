@@ -239,7 +239,7 @@ MonoBehaviour:
   p1: {fileID: 1633974519}
   p2: {fileID: 1793624871}
   obj: {fileID: 214615696}
-  slider: 0
+  slider: 0.5
   rightHand: {fileID: 1447334074}
   leftHand: {fileID: 691140779}
   LeftGrip: {fileID: 1842655003}
@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149379000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 2.6}
+  m_LocalPosition: {x: 0, y: 0.8, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -414,6 +414,22 @@ MonoBehaviour:
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
   TargetPoint: {fileID: 181152501}
+--- !u!114 &214615698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214615695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d12d3337840a94fbcddaf6268a4233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmmoCount: 0
+  loadingBoxMagazine: {fileID: 0}
+  IsAmmoEmpty: 0
+  IsConnected: 0
 --- !u!4 &568036892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a8ce28b261456224d99a0a964c9e5595, type: 3}
@@ -466,6 +482,7 @@ GameObject:
   - component: {fileID: 691140784}
   - component: {fileID: 691140786}
   - component: {fileID: 691140787}
+  - component: {fileID: 691140788}
   m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
@@ -558,6 +575,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &691140788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691140779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d748060b899162438507e8f403d31e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdingObj: {fileID: 0}
 --- !u!1 &695474366
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807755714}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.75223994, y: 0.87866, z: -0.19455999}
+  m_LocalPosition: {x: 0.752, y: 0.87866, z: -0.716}
   m_LocalScale: {x: 0.11400002, y: 0.11399999, z: 0.11400002}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -838,16 +868,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f964984709968d42898cd80ab368ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmmoCount: 500
   isEmpty: 0
   isConnected: 0
-  isLeftHandIn: 0
-  isRightHandIn: 0
+  isrightHandIn: 0
+  isleftHandIn: 0
   isHandled: 0
+  hasLoaded: 1
+  BulletCapacity: 500
   Gun: {fileID: 214615695}
   LoadPoint: {fileID: 764196634}
-  LeftHand: {fileID: 691140779}
-  RightHand: {fileID: 1447334074}
+  leftHand: {fileID: 691140779}
+  rightHand: {fileID: 1447334074}
 --- !u!54 &807755721
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -969,6 +1000,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67b8eb5cf7a59e24db1875b7ee809dbe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 214615697}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67b8eb5cf7a59e24db1875b7ee809dbe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 214615698}
   m_SourcePrefab: {fileID: 100100000, guid: 67b8eb5cf7a59e24db1875b7ee809dbe, type: 3}
 --- !u!4 &895191248 stripped
 Transform:
@@ -993,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3075796065018117745, guid: 6a0fad355b98c8c4e88b208307be84a0, type: 3}
-  BoxMagazine: {fileID: 807755714}
+  Gun: {fileID: 214615695}
   SpawnPoint: {fileID: 954495091}
   LeftGrip: {fileID: 1842655004}
   RightGrip: {fileID: 1270487293}
@@ -1092,6 +1126,163 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &951597722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951597728}
+  - component: {fileID: 951597727}
+  - component: {fileID: 951597726}
+  - component: {fileID: 951597725}
+  - component: {fileID: 951597724}
+  - component: {fileID: 951597723}
+  m_Layer: 0
+  m_Name: Box Magazine  (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &951597723
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!114 &951597724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f964984709968d42898cd80ab368ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 0
+  isConnected: 0
+  isrightHandIn: 0
+  isleftHandIn: 0
+  isHandled: 0
+  hasLoaded: 1
+  BulletCapacity: 500
+  Gun: {fileID: 214615695}
+  LoadPoint: {fileID: 764196634}
+  leftHand: {fileID: 691140779}
+  rightHand: {fileID: 1447334074}
+--- !u!65 &951597725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &951597726
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &951597727
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &951597728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951597722}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.752, y: 0.895, z: -0.874}
+  m_LocalScale: {x: 0.11400002, y: 0.11399999, z: 0.11400002}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954495090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,8 +1642,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_InvalidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 1, g: 0, b: 0, a: 0}
+    key1: {r: 1, g: 0, b: 0, a: 0}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1476,7 +1667,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
@@ -2001,7 +2192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 3075796065018117745, guid: 6a0fad355b98c8c4e88b208307be84a0, type: 3}
-  BoxMagazine: {fileID: 807755714}
+  Gun: {fileID: 214615695}
   SpawnPoint: {fileID: 766542778}
   LeftGrip: {fileID: 1842655004}
   RightGrip: {fileID: 1270487293}
@@ -2037,6 +2228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRightGripCaught: 0
+  rightHand: {fileID: 1447334074}
 --- !u!136 &1270487292
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2099,7 +2291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280697526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: -2.6}
+  m_LocalPosition: {x: 0, y: 0.8, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2118,6 +2310,7 @@ GameObject:
   - component: {fileID: 1447334079}
   - component: {fileID: 1447334081}
   - component: {fileID: 1447334082}
+  - component: {fileID: 1447334083}
   m_Layer: 6
   m_Name: RightHand
   m_TagString: Untagged
@@ -2202,6 +2395,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1447334083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447334074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d748060b899162438507e8f403d31e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdingObj: {fileID: 0}
 --- !u!1 &1576358399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,8 +2776,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_InvalidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 1, g: 0, b: 0, a: 0}
+    key1: {r: 1, g: 0, b: 0, a: 0}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2595,7 +2801,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
@@ -3315,7 +3521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793624870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: -1.3}
+  m_LocalPosition: {x: 0, y: 0.8, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3414,6 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeftGripCaught: 0
+  leftHand: {fileID: 691140779}
 --- !u!136 &1842655006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3461,7 +3668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844398630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 1.3}
+  m_LocalPosition: {x: 0, y: 0.8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3536,7 +3743,7 @@ MonoBehaviour:
   p1: {fileID: 695474367}
   p2: {fileID: 1280697527}
   obj: {fileID: 181152502}
-  slider: 0
+  slider: 0.5
   rightHand: {fileID: 1447334074}
   leftHand: {fileID: 691140779}
   LeftGrip: {fileID: 1842655003}

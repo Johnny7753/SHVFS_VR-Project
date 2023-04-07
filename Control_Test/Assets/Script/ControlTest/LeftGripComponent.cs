@@ -6,6 +6,7 @@ using UnityEngine.TextCore.Text;
 public class LeftGripComponent : MonoBehaviour
 {
     public bool isLeftGripCaught = false;
+    public GameObject leftHand;
     private bool isEnter = false;
     // Start is called before the first frame update
     void Start()
@@ -16,15 +17,24 @@ public class LeftGripComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("LeftGrip") == 0)
+        if(isLeftGripCaught == true)
         {
-            isLeftGripCaught = false;
+            if (Input.GetAxisRaw("LeftGrip") == 0)
+            {
+                leftHand.GetComponent<HandComponent>().holdingObj = null;
+                isLeftGripCaught = false;
+            }
         }
         if (isEnter)
         {
             if (Input.GetAxisRaw("LeftGrip") > 0f)
             {
-                isLeftGripCaught = true;
+                if(leftHand.GetComponent<HandComponent>().holdingObj == null)
+                {
+                    leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                    isLeftGripCaught = true;
+                }
+               
             }
         }
     }

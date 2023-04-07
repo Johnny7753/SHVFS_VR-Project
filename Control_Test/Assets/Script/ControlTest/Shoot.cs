@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public GameObject Bullet;
-    public GameObject BoxMagazine;
+    public GameObject Gun;
     public Transform SpawnPoint;
     public Transform LeftGrip;
     public Transform RightGrip;
@@ -23,16 +23,17 @@ public class Shoot : MonoBehaviour
     {
         if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true || RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
         {
-            if(BoxMagazine.GetComponent<BoxMagazineComponent>().isEmpty == false)
+            if(Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
             {
-                if (Input.GetAxisRaw("RightTrigger") == 1 || Input.GetAxisRaw("LeftTrigger") == 1)
+                if (Input.GetAxisRaw("RightTrigger") >= 0.1 || Input.GetAxisRaw("LeftTrigger") >= 0.1)
                 {
                     invokeTime += Time.deltaTime;
                     if (invokeTime - currentTime > 0)
                     {
                         GameObject bullet;
                         bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
-                        BoxMagazine.GetComponent<BoxMagazineComponent>().AmmoCount--;
+                        Gun.GetComponent<GunComponent>().AmmoCount--;
+                        Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
                         invokeTime = 0;
                     }
                 }

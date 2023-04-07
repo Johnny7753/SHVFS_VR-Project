@@ -24,14 +24,6 @@ public class ThreePoint_Bezier : MonoBehaviour
     void Update()
     {
         slider = (rightHand.transform.eulerAngles.y + leftHand.transform.eulerAngles.y) / 360;
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log(slider);
-            Debug.Log((rightHand.transform.eulerAngles.y));
-            Debug.Log((rightHand.transform.rotation.y));
-        }
-
-
         if (slider < 0.3)
         {
             slider = 0.3f;

@@ -14,6 +14,10 @@ public class RightHandComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetAxisRaw("RightGrip") == 0)
+        {
+            this.GetComponent<HandComponent>().holdingObj = null;
+        }
         transform.position = rightHand.transform.position;
         transform.rotation = rightHand.transform.rotation;
     }
