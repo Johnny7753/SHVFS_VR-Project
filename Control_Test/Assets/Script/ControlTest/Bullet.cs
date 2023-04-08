@@ -17,5 +17,14 @@ public class Bullet : MonoBehaviour
     {
         this.transform.Translate(Vector3.forward * Time.deltaTime * speed);
         Destroy(this.gameObject, bulletLifeTime);
+        Vector3 oriPos = transform.position;
+        Vector3 direction = transform.position - oriPos;
+        float ength = (transform.position - oriPos).magnitude;
+        RaycastHit hitinfo;
+        bool isCollider = Physics.Raycast(oriPos, direction, out hitinfo , ength);
+        if (isCollider)
+        {
+            //hit.collider.getcomponent<>();
+        }
     }
 }

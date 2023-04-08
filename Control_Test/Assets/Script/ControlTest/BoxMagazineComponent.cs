@@ -11,26 +11,40 @@ public class BoxMagazineComponent : MonoBehaviour
     public bool isleftHandIn = false;
     public bool isHandled = false;
     public bool hasLoaded = true;
+    public float timer = 0;
     public int BulletCapacity = 500;
     public GameObject Gun;
     public GameObject LoadPoint;
     public GameObject leftHand;
     public GameObject rightHand;
+    public Transform leftHandHoldPoint;
+    public Transform rightHandHoldPoint;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Gun = FindObjectOfType<GunComponent>().gameObject;
+        LoadPoint = FindObjectOfType<BoxMagazineLoadPoint>().gameObject;
+        leftHand = FindObjectOfType<LeftHandComponent>().gameObject;
+        rightHand = FindObjectOfType<RightHandComponent>().gameObject;
+        leftHandHoldPoint = FindObjectOfType<LeftHandComponent>().gameObject.GetComponentInChildren<HoldPointComponent>().transform;
+        rightHandHoldPoint = FindObjectOfType<RightHandComponent>().gameObject.GetComponentInChildren<HoldPointComponent>().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(timer > 5)
+        {
+            Destroy(this.gameObject);
+        }
         if (isleftHandIn)
         {
             if (Input.GetAxisRaw("LeftGrip") >= 0.1f)
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
+                    timer = 0;
                     leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                     isHandled = true;
                     hasLoaded = true;
@@ -39,6 +53,8 @@ public class BoxMagazineComponent : MonoBehaviour
                     transform.SetParent(leftHand.transform);
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     GetComponent<Rigidbody>().useGravity = false;
+                    transform.position = leftHandHoldPoint.position;
+                    transform.rotation = leftHandHoldPoint.rotation;
                 }
             }
             if (Input.GetAxisRaw("LeftGrip") == 0 && isHandled)
@@ -55,6 +71,7 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (rightHand.GetComponent<HandComponent>().holdingObj == null)
                 {
+                    timer = 0;
                     rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                     isHandled = true;
                     hasLoaded = true;
@@ -63,6 +80,8 @@ public class BoxMagazineComponent : MonoBehaviour
                     transform.SetParent(rightHand.transform);
                     GetComponent<Rigidbody>().velocity = Vector3.zero;
                     GetComponent<Rigidbody>().useGravity = false;
+                    transform.position = rightHandHoldPoint.position;
+                    transform.rotation = rightHandHoldPoint.rotation;
                 }
             }
             if (Input.GetAxisRaw("RightGrip") == 0 && isHandled)
@@ -117,6 +136,10 @@ public class BoxMagazineComponent : MonoBehaviour
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
                 GetComponent<Rigidbody>().useGravity = false;
             }
+        }
+        if (collision.gameObject.GetComponent<Ground>() != null)
+        {
+            timer += Time.deltaTime;
         }
     }
     private void OnTriggerExit(Collider collision)
