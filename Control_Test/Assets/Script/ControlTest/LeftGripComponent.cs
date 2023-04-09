@@ -49,7 +49,7 @@ public class LeftGripComponent : MonoBehaviour
             if (leftGripRange.GetComponent<LeftGripRange>().isEnterLeftGripRange == false)
             {
                 leftHand.GetComponent<HandComponent>().holdingObj = null;
-                leftHandmodel.transform.localScale = new Vector3(-1, 1, 1);
+                leftHandmodel.transform.localScale = new Vector3(1, 1, 1);
                 leftGripHandmodel.transform.localScale = new Vector3(0, 0, 0);
                 isLeftGripCaught = false;
             }

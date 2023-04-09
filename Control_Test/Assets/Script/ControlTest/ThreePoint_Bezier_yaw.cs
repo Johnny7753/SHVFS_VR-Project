@@ -36,16 +36,16 @@ public class ThreePoint_Bezier_yaw : MonoBehaviour
         }
         else if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false )
         {
-            if (leftHand.transform.eulerAngles.y > 30 && leftHand.transform.eulerAngles.y < 150)
+            if (leftHand.transform.eulerAngles.y+10 > 30 && leftHand.transform.eulerAngles.y+10 < 150)
             {
-                slider = (leftHand.transform.eulerAngles.y) / 180;
+                slider = (leftHand.transform.eulerAngles.y+10) / 180;
             }
         }
         else if (RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true && LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false )
         {
-            if (rightHand.transform.eulerAngles.y > 30 && rightHand.transform.eulerAngles.y <150 )
+            if (rightHand.transform.eulerAngles.y-10 > 30 && rightHand.transform.eulerAngles.y-10 <150 )
             {
-                slider = (rightHand.transform.eulerAngles.y) / 180;
+                slider = (rightHand.transform.eulerAngles.y-10) / 180;
             }
         }
         obj.position = Bezier(slider);
