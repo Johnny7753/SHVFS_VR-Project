@@ -852,12 +852,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9c00c7c13395c4e887dd1b70d90782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveIndex: 0
+  partIndex: 0
   points: []
   enemyAlive: []
   bornBoundary: {x: -42, y: -23, z: -27, w: 31}
-  freshTimeInterval: 10
-  numRangeToFresh: {x: 4, y: 5}
-  enemyPrefab: {fileID: 633884567046046782, guid: 196f2b62e9b53324e85635d0b2ac6af7, type: 3}
+  freshTimeInterval:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 1
+  - 1
+  - 1
+  - 1.5
+  waves:
+  - parts:
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 10
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 1
+      enemyType: 0
+      enemyNum: 5
+      switchTime: 5
+      leftEnemy: 0
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 6
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 1
+      enemyType: 0
+      enemyNum: 11
+      switchTime: 5
+      leftEnemy: 0
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 12
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 1
+      enemyType: 0
+      enemyNum: 12
+      switchTime: 0
+      leftEnemy: 0
+  - parts:
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 13
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 1
+      enemyType: 0
+      enemyNum: 8
+      switchTime: 5
+      leftEnemy: 0
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 15
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 1
+      enemyType: 0
+      enemyNum: 12
+      switchTime: 5
+      leftEnemy: 0
+    - switchType: 0
+      enemyType: 1
+      enemyNum: 17
+      switchTime: 0
+      leftEnemy: 2
+    - switchType: 0
+      enemyType: 0
+      enemyNum: 10
+      switchTime: 0
+      leftEnemy: 0
+  - parts: []
+  - parts: []
+  - parts: []
+  - parts: []
+  - parts: []
+  - parts: []
+  - parts: []
+  - parts: []
+  enemyPrefab:
+  - {fileID: 633884567046046782, guid: 1cc33b2dd86df804485b4e5e063489a5, type: 3}
+  - {fileID: 633884567046046782, guid: 196f2b62e9b53324e85635d0b2ac6af7, type: 3}
+  - {fileID: 633884567046046782, guid: ffbf59b0b0a26fa4f946faf4bfa1ffad, type: 3}
+  - {fileID: 633884567046046782, guid: a506c38fdae05274caa2b8c6410288ea, type: 3}
+  - {fileID: 633884567046046782, guid: 8b180ff9ee012f54ba9d0fdf730301ab, type: 3}
+  - {fileID: 633884567046046782, guid: 7a9c25a055011d14792c76dc19ec6a6b, type: 3}
 --- !u!4 &738905682
 Transform:
   m_ObjectHideFlags: 0
@@ -1645,7 +1733,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b2be861b715b86348928eb52e973615f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2094000710
 GameObject:

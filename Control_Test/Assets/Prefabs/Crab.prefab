@@ -224,9 +224,9 @@ GameObject:
   - component: {fileID: 633884567046046780}
   - component: {fileID: 633884567046046783}
   - component: {fileID: 633884567046046752}
-  - component: {fileID: 633884567046046755}
+  - component: {fileID: -8545226789669482282}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ec23cdb5acb3b9c43b6529051627aabe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,7 +345,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &633884567046046755
+--- !u!114 &-8545226789669482282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,15 +354,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 633884567046046782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255f0fcad6f36c541a38287913ec794a, type: 3}
+  m_Script: {fileID: 11500000, guid: a3b9a678b7e4d7d429bf0e5583009096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
   type: 0
   goal: {fileID: 0}
   waitSeconds: {x: 5, y: 10}
-  shootPoint: {fileID: 6535146013663846722}
-  bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
+  shootPoint: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!1 &633884567644515742
 GameObject:
   m_ObjectHideFlags: 0
