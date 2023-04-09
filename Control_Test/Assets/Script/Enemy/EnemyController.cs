@@ -2,16 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyType
-{
-    A,
-    B
-};
+
 public class EnemyController : MonoBehaviour
 {
-    [Header("Attrabutes")]
+    [Header("Attributes")]
     public float HP;
-    public EnemyType type;
 
     [Header("Enemy Movement")]
     [Tooltip("enemy chase goal")]
@@ -40,14 +35,15 @@ public class EnemyController : MonoBehaviour
         player = GameObject.Find("FakePlayer").transform; //'GameObject.Find' need to be replaced
 
         //find first hide point
-        points = EnemySystem.Instance.points;
-        do
-        {
-            nextPointIndex = Random.Range(0, points.Count);
-        } while (points[nextPointIndex].isTaken);
-        points[nextPointIndex].isTaken = true;
-        goal = points[nextPointIndex].transform;
-        agent.destination = goal.position;
+        //points = EnemySystem.Instance.points;
+        //do
+        //{
+        //    nextPointIndex = Random.Range(0, points.Count);
+        //} while (points[nextPointIndex].isTaken);
+        //points[nextPointIndex].isTaken = true;
+
+        //goal = points[nextPointIndex].transform;
+        //agent.destination = goal.position;
         
     }
     private void Update()
@@ -60,16 +56,16 @@ public class EnemyController : MonoBehaviour
     private void FixedUpdate()
     {
        //look at player to attack
-        if(Vector3.Distance(transform.position, goal.position) <1.5f)
-       {
-            transform.LookAt(player);
-            if (!hasFoundNextPoint)
-            {
-                Invoke("FindNextPosition", Random.Range(waitSeconds.x, waitSeconds.y));
-                hasFoundNextPoint = true;
-            }
+       // if(Vector3.Distance(transform.position, goal.position) <1.5f)
+       //{
+       //     transform.LookAt(player);
+       //     if (!hasFoundNextPoint)
+       //     {
+       //         Invoke("FindNextPosition", Random.Range(waitSeconds.x, waitSeconds.y));
+       //         hasFoundNextPoint = true;
+       //     }
 
-        }
+       // }
     }
 
     private void FindNextPosition()
@@ -91,7 +87,8 @@ public class EnemyController : MonoBehaviour
     //destroy this enemy
     public void EnemyDie()
     {
-        points[nextPointIndex].isTaken = false;
+        //points[nextPointIndex].isTaken = false;
+        EnemySystem.Instance.enemyAlive.Remove(gameObject);
         Destroy(gameObject);
     }
     private void EnemyShoot()
