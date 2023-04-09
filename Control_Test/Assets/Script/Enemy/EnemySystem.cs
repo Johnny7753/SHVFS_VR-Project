@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -46,6 +47,7 @@ public class Wave
         enemyAlive = new List<GameObject>();
         waveIndex = 0;
         partIndex = 0;
+
         //fresh enemies
         isRefreshing = true;
         RefreshEnemies();
@@ -54,23 +56,31 @@ public class Wave
     {
         //some cheat key
         //kill all enemy
-        //if (Input.GetKeyDown(KeyCode.Alpha1))
-        //{
-        //    foreach (var enemy in enemyAlive)
-        //    {
-        //        enemy.GetComponent<EnemyController>().EnemyDie();
-        //    }
-        //    enemyAlive.Clear();
-        //}
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            foreach (var enemy in enemyAlive.ToList())
+            {
+                enemy.GetComponent<EnemyController>().EnemyDie();
+            }
+            enemyAlive.Clear();
+        }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             enemyAlive[(int)Random.Range(0,enemyAlive.Count)].GetComponent<EnemyController>().EnemyDie();
-            //RefreshEnemies();
         }
 
 
         //detect if enemies are all killed, enter next wave
-        if (enemyAlive.Count == 0 &&partIndex>= waves[waveIndex].parts.Length-1&&!isRefreshing)
+        EnterNextWave();
+
+        //change part in wave
+        EnterNextPart();
+    }
+
+    //detect if enemies are all killed, enter next wave
+    private void EnterNextWave()
+    {
+        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && !isRefreshing)
         {
             isRefreshing = true;
             waveIndex++;
@@ -81,12 +91,14 @@ public class Wave
         {
             Debug.Log("no more enemies!");
         }
-
-        //change part in wave
-        switch(waves[waveIndex].parts[partIndex].switchType)
+    }
+    //enter next part
+    private void EnterNextPart()
+    {
+        switch (waves[waveIndex].parts[partIndex].switchType)
         {
             case SwitchType.EnemyLeft:
-                if(enemyAlive.Count<= waves[waveIndex].parts[partIndex].leftEnemy&&partIndex< waves[waveIndex].parts.Length-1&&!isRefreshing)
+                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing)
                 {
                     isRefreshing = true;
                     partIndex++;
@@ -94,7 +106,7 @@ public class Wave
                 }
                 break;
             case SwitchType.Time:
-                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length-1&&!isRefreshing)
+                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing)
                 {
                     isRefreshing = true;
                     Invoke("RefreshEnemies", waves[waveIndex].parts[partIndex].switchTime);
@@ -111,7 +123,6 @@ public class Wave
     }
     private void RefreshEnemies()
     {
-
         for(int i=0;i<waves[waveIndex].parts[partIndex].enemyNum; i++)
         {
             RefreshOneEnemy(enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType]);

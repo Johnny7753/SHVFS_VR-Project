@@ -858,16 +858,16 @@ MonoBehaviour:
   enemyAlive: []
   bornBoundary: {x: -42, y: -23, z: -27, w: 31}
   freshTimeInterval:
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 1
-  - 1
-  - 1
-  - 1.5
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 10
+  - 10
+  - 10
+  - 15
   waves:
   - parts:
     - switchType: 0

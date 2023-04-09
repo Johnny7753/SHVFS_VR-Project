@@ -9,7 +9,6 @@ public class EnemySystemEditor : PropertyDrawer
     // Draw the property inside the given rect
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        EditorGUI.BeginChangeCheck();
         // Using BeginProperty / EndProperty on the parent property means that
         // prefab override logic works on the entire property.
         EditorGUI.BeginProperty(position, label, property);
@@ -39,54 +38,5 @@ public class EnemySystemEditor : PropertyDrawer
         EditorGUI.indentLevel = indent;
 
         EditorGUI.EndProperty();
-        if (EditorGUI.EndChangeCheck())
-            property.serializedObject.ApplyModifiedProperties();
     }
-    //SerializedProperty waveIndex;
-    //SerializedProperty partIndex;
-    //SerializedProperty enemyAlive;
-    //SerializedProperty bornBoundary;
-    //SerializedProperty freshTimeInterval;
-    //SerializedProperty waves;
-    //SerializedProperty enemyPrefabs;
-
-    //private void OnEnable()
-    //{
-    //    waveIndex = serializedObject.FindProperty("waveIndex");
-    //    partIndex = serializedObject.FindProperty("partIndex");
-    //    enemyAlive = serializedObject.FindProperty("enemyAlive");
-    //    bornBoundary = serializedObject.FindProperty("bornBoundary");
-    //    freshTimeInterval = serializedObject.FindProperty("freshTimeInterval");
-    //    waves = serializedObject.FindProperty("waves");
-    //    enemyPrefabs = serializedObject.FindProperty("enemyPrefabs");
-    //}
-    //public override void OnInspectorGUI()
-    //{
-    //    EnemySystem t = (EnemySystem)target;
-
-    //    EditorGUILayout.LabelField("Enemy Information");
-    //    EditorGUILayout.PropertyField(waveIndex);
-    //    EditorGUILayout.PropertyField(partIndex);
-    //    EditorGUILayout.PropertyField(enemyAlive);
-
-    //    EditorGUILayout.Space();
-    //    EditorGUILayout.Space();
-
-    //    EditorGUILayout.LabelField("Enemy Spawn");
-    //    EditorGUILayout.PropertyField(bornBoundary);
-    //    EditorGUILayout.PropertyField(freshTimeInterval);
-    //    if(t.waves[].parts[partIndex].switchType==SwitchType.EnemyLeft)
-    //    {
-
-    //    }
-    //    ///Part t = target as Part;
-    //    //if (t.switchType==SwitchType.EnemyLeft)
-    //    //{
-    //    //    EditorGUILayout.IntField("leftEnemy", t.leftEnemy);
-    //    //}
-    //    //else
-    //    //{
-    //    //    EditorGUILayout.IntField("switchTime", t.switchTime);
-    //    //}
-    //}
 }
