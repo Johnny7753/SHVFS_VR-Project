@@ -8,7 +8,7 @@ public class Wave
 {
     public Part[] parts;
 }
-    public class EnemySystem : Singleton<EnemySystem>
+public class EnemySystem : Singleton<EnemySystem>
 {
     [Header("Information")]
     [SerializeField]
@@ -16,7 +16,8 @@ public class Wave
     [SerializeField]
     private int partIndex;
     [Tooltip("just to show dont need to set values")]
-    public List<EnemyHidenPoint> points;
+    public List<OtherEnemyHiddenPoint> points;
+    public List<FlyingDragonHiddenPoint> fdPoints;
     [HideInInspector]
     public List<GameObject> enemyAlive;
 
@@ -35,13 +36,22 @@ public class Wave
     private GameObject[] enemyPrefab;
 
     private bool isRefreshing;//set it true each time enemy is refreshed
+    private bool finishRefreshing;
+
+    private float timer;
+    [HideInInspector]
+    public int enemyNum;
 
     public override void Awake()
     {
         base.Awake();
+
         //get and sort all hidden point
-        EnemyHidenPoint[] _points = FindObjectsOfType<EnemyHidenPoint>();
-        points = new List<EnemyHidenPoint>(_points);
+        OtherEnemyHiddenPoint[] _points = FindObjectsOfType<OtherEnemyHiddenPoint>();
+        FlyingDragonHiddenPoint[] _fpPoints = FindObjectsOfType<FlyingDragonHiddenPoint>();
+        points = new List<OtherEnemyHiddenPoint>(_points);
+        fdPoints = new List<FlyingDragonHiddenPoint>(_fpPoints);
+
         SortPointByX();
 
         enemyAlive = new List<GameObject>();
@@ -49,7 +59,10 @@ public class Wave
         partIndex = 0;
 
         //fresh enemies
+        timer = 0;
+        enemyNum = 0;
         isRefreshing = true;
+        finishRefreshing = false;
         RefreshEnemies();
     }
     private void Update()
@@ -66,7 +79,7 @@ public class Wave
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            enemyAlive[(int)Random.Range(0,enemyAlive.Count)].GetComponent<EnemyController>().EnemyDie();
+            enemyAlive[(int)Random.Range(0, enemyAlive.Count)].GetComponent<EnemyController>().EnemyDie();
         }
 
 
@@ -75,17 +88,22 @@ public class Wave
 
         //change part in wave
         EnterNextPart();
+
+        if (isRefreshing)
+        {
+            RefreshEnemies();
+        }
     }
 
     //detect if enemies are all killed, enter next wave
     private void EnterNextWave()
     {
-        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && !isRefreshing)
+        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && !isRefreshing&&finishRefreshing)
         {
-            isRefreshing = true;
+            finishRefreshing = false;
             waveIndex++;
             partIndex = 0;
-            Invoke("RefreshEnemies", freshTimeInterval[waveIndex]);
+            Invoke("StartRefreshing", freshTimeInterval[waveIndex]);
         }
         else if (waveIndex >= waves.Length)
         {
@@ -98,18 +116,23 @@ public class Wave
         switch (waves[waveIndex].parts[partIndex].switchType)
         {
             case SwitchType.EnemyLeft:
-                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing)
+                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && finishRefreshing&&!isRefreshing)
                 {
-                    isRefreshing = true;
+                    timer = 0;
+                    enemyNum = 0;
+                    finishRefreshing = false;
+                    StartRefreshing();
                     partIndex++;
-                    RefreshEnemies();
+                    //RefreshEnemies();
                 }
                 break;
             case SwitchType.Time:
-                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing)
+                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing&&finishRefreshing)
                 {
-                    isRefreshing = true;
-                    Invoke("RefreshEnemies", waves[waveIndex].parts[partIndex].switchTime);
+                    timer = 0;
+                    enemyNum = 0;
+                    finishRefreshing = false;
+                    Invoke("StartRefreshing", waves[waveIndex].parts[partIndex].switchTime);
                     partIndex++;
                 }
                 break;
@@ -119,20 +142,32 @@ public class Wave
     //give points an order by x from smallest to biggest
     public void SortPointByX()
     {
-        points.Sort((x,y)=>(x.transform.position.x.CompareTo(y.transform.position.x)));
+        points.Sort((x, y) => (x.transform.position.x.CompareTo(y.transform.position.x)));
+    }
+    private void StartRefreshing()
+    {
+        isRefreshing = true;
     }
     private void RefreshEnemies()
     {
-        for(int i=0;i<waves[waveIndex].parts[partIndex].enemyNum; i++)
+        timer += Time.deltaTime;
+        if (timer >= enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType].GetComponent<EnemyController>().refreshInterval)
         {
+            timer = 0;
             RefreshOneEnemy(enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType]);
         }
-        isRefreshing = false;
+        if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum)
+        {
+            isRefreshing = false;
+            finishRefreshing = true;
+        }
+
     }
     private void RefreshOneEnemy(GameObject enemy)
     {
-        Vector3 position = new Vector3(Random.Range(bornBoundary.x,bornBoundary.y),0, Random.Range(bornBoundary.z, bornBoundary.w));
-        GameObject newEnemy= Instantiate(enemy, position,Quaternion.Euler( Vector3.right));
+        enemyNum++;
+        //Vector3 position = new Vector3(Random.Range(bornBoundary.x, bornBoundary.y), 0, Random.Range(bornBoundary.z, bornBoundary.w));
+        GameObject newEnemy = Instantiate(enemy);
         enemyAlive.Add(newEnemy);
     }
 }

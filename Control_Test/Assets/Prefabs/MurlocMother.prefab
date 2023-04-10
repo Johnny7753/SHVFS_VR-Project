@@ -359,9 +359,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
-  type: 0
-  goal: {fileID: 0}
+  Score: 0
+  refreshInterval: 0
+  goal: {x: 0, y: 0, z: 0}
   waitSeconds: {x: 5, y: 10}
+  actionArea: {x: 0, y: 0, z: 0, w: 0}
+  bornArea: {x: -42, y: -23, z: -27, w: 31}
+  pointsTaken: {fileID: 0}
   shootPoint: {fileID: 6535146013663846722}
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
 --- !u!114 &3781287966183921210
@@ -377,9 +381,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
-  type: 0
-  goal: {fileID: 0}
+  Score: 0
+  refreshInterval: 0
+  goal: {x: 0, y: 0, z: 0}
   waitSeconds: {x: 5, y: 10}
+  actionArea: {x: -5, y: 4, z: -2, w: 3}
+  bornArea: {x: 0, y: 0, z: 0, w: 0}
+  pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}
   bullet: {fileID: 0}
 --- !u!1 &633884567644515742

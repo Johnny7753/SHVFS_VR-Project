@@ -358,9 +358,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
-  type: 0
-  goal: {fileID: 0}
+  Score: 0
+  refreshInterval: 0
+  goal: {x: 0, y: 0, z: 0}
   waitSeconds: {x: 5, y: 10}
+  actionArea: {x: -5, y: 4, z: -2, w: 3}
+  bornArea: {x: -42, y: -23, z: -27, w: 31}
+  pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}
   bullet: {fileID: 0}
 --- !u!1 &633884567644515742

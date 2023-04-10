@@ -7,14 +7,22 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Attributes")]
     public float HP;
+    public float Score;
+    public float refreshInterval;
 
     [Header("Enemy Movement")]
     [Tooltip("enemy chase goal")]
     [SerializeField]
-    private Transform goal;
+    protected Vector3 goal;
     [Tooltip("the time range for finding next standing point")]
     [SerializeField]
-    private Vector2 waitSeconds=new Vector2(5,10);
+    protected Vector2 waitSeconds=new Vector2(5,10);
+    [SerializeField]
+    protected Vector4 actionArea;
+    [SerializeField]
+    protected Vector4 bornArea;
+    [SerializeField]
+    protected EnemyHidenPoint pointsTaken;
 
     [Header("EnemyAttack")]
     [SerializeField]
@@ -22,72 +30,40 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject bullet;
 
-    private Transform player;
-    private NavMeshAgent agent;
-    private List<EnemyHidenPoint> points;
-    private int nextPointIndex;
+    protected Transform player;
+    protected NavMeshAgent agent;
+    //private List<EnemyHidenPoint> points;
+    //private int nextPointIndex;
     //make sure invoke run once
-    private bool hasFoundNextPoint;
+    protected bool hasFoundNextPoint;
+    protected int nextPointIndex;
 
-    void Start()
+    protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("FakePlayer").transform; //'GameObject.Find' need to be replaced
-
-        //find first hide point
-        //points = EnemySystem.Instance.points;
-        //do
-        //{
-        //    nextPointIndex = Random.Range(0, points.Count);
-        //} while (points[nextPointIndex].isTaken);
-        //points[nextPointIndex].isTaken = true;
-
-        //goal = points[nextPointIndex].transform;
-        //agent.destination = goal.position;
-        
-    }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            EnemyShoot();
-        }
+        nextPointIndex = -1;
     }
     private void FixedUpdate()
     {
-       //look at player to attack
-       // if(Vector3.Distance(transform.position, goal.position) <1.5f)
-       //{
-       //     transform.LookAt(player);
-       //     if (!hasFoundNextPoint)
-       //     {
-       //         Invoke("FindNextPosition", Random.Range(waitSeconds.x, waitSeconds.y));
-       //         hasFoundNextPoint = true;
-       //     }
-
-       // }
-    }
-
-    private void FindNextPosition()
-    {
-        int lastIndex = nextPointIndex;
-        nextPointIndex = Random.Range(nextPointIndex, points.Count);
-        if(points[nextPointIndex].isTaken)
+        //look at player to attack
+        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
         {
-            nextPointIndex = lastIndex;
-            hasFoundNextPoint = false;
-            return;
+            transform.LookAt(player);
+            if (!hasFoundNextPoint)
+            {
+                Invoke("RefreshStandPoint", Random.Range(waitSeconds.x, waitSeconds.y));
+                hasFoundNextPoint = true;
+            }
         }
-        points[lastIndex].isTaken = false;
-        points[nextPointIndex].isTaken = true;
-        goal = points[nextPointIndex].transform;
-        agent.destination = goal.position;
-        hasFoundNextPoint = false;
     }
+    protected virtual void InitializeEnemy() { }
+
     //destroy this enemy
     public void EnemyDie()
     {
-        //points[nextPointIndex].isTaken = false;
+        if(pointsTaken)
+            pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
         Destroy(gameObject);
     }
@@ -95,5 +71,26 @@ public class EnemyController : MonoBehaviour
     {
        var newBullet= Instantiate(bullet,shootPoint.position,shootPoint.rotation);
        newBullet.GetComponent<Rigidbody>().AddForce(5000*transform.forward);
+    }
+
+    protected List<T> GetAvailablePoints<T>(List<T> points) where T:EnemyHidenPoint
+    {
+        List<T> availablePoints = new List<T>();
+        foreach (T point in points)
+        {
+            if (!point.isTaken)
+                availablePoints.Add(point);
+        }
+        return availablePoints;
+    }
+    protected List<T> GetAvailablePointsBeforeEnemy<T>(List<T> points) where T : EnemyHidenPoint
+    {
+        List<T> availablePoints = new List<T>();
+        foreach (T point in points)
+        {
+            if (!point.isTaken&&point.transform.position.x>transform.position.x)
+                availablePoints.Add(point);
+        }
+        return availablePoints;
     }
 }

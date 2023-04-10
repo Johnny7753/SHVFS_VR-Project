@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallCrabController : EnemyController
+public class SmallCrabController : MurlocController
 {
 
 }
