@@ -15,16 +15,15 @@ public class EnemySystem : Singleton<EnemySystem>
     private int waveIndex;
     [SerializeField]
     private int partIndex;
-    [Tooltip("just to show dont need to set values")]
+    
+    [HideInInspector]
     public List<OtherEnemyHiddenPoint> points;
+    [HideInInspector]
     public List<FlyingDragonHiddenPoint> fdPoints;
     [HideInInspector]
     public List<GameObject> enemyAlive;
 
     [Header("Enemy Spawn")]
-    [Tooltip("the boundary of sea, x-> min x, y->max x, z-> min y w-> max y")]
-    [SerializeField]
-    private Vector4 bornBoundary;
     [Tooltip("the time for fresh new enemies")]
     [SerializeField]
     private float[] freshTimeInterval;

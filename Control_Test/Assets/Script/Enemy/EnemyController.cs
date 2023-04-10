@@ -11,9 +11,6 @@ public class EnemyController : MonoBehaviour
     public float refreshInterval;
 
     [Header("Enemy Movement")]
-    [Tooltip("enemy chase goal")]
-    [SerializeField]
-    protected Vector3 goal;
     [Tooltip("the time range for finding next standing point")]
     [SerializeField]
     protected Vector2 waitSeconds=new Vector2(5,10);
@@ -30,6 +27,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject bullet;
 
+    protected Vector3 goal;
     protected Transform player;
     protected NavMeshAgent agent;
     //private List<EnemyHidenPoint> points;
