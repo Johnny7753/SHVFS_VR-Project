@@ -6,6 +6,8 @@ public class MurlocController : EnemyController
 {
     private List<OtherEnemyHiddenPoint> points;
     private List<OtherEnemyHiddenPoint> availablePoints;
+
+    private bool beginAttack;
     protected override void Start()
     {
         base.Start();
@@ -14,6 +16,21 @@ public class MurlocController : EnemyController
         points = EnemySystem.Instance.points;
         InitializeEnemy();
         agent.destination = FindStandPoint();
+    }
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+        //Debug.Log(Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)));
+        if(beginAttack)
+        {
+            transform.LookAt(player);
+            timer += Time.deltaTime;
+            if(timer>attackInterval)
+            {
+                timer = 0;
+                Debug.Log("fortress be attacked");
+            }
+        }
     }
     protected override void InitializeEnemy()
     {
@@ -42,7 +59,13 @@ public class MurlocController : EnemyController
         {
             pointsTaken = null;
             nextPointIndex = -1;
-            goal = new Vector3(Random.Range(transform.position.x, actionArea.y), 0, Random.Range(actionArea.z, actionArea.w));
+            if(Mathf.Abs(transform.position.x- actionArea.y)>10)
+                goal = new Vector3(Random.Range(transform.position.x, actionArea.y), 0, Random.Range(actionArea.z, actionArea.w));
+            else
+            {
+                goal = new Vector3(actionArea.y, 0, Random.Range(player.transform.position.z - 3, player.transform.position.z + 3));
+                beginAttack=true;
+            }
         }
         return goal;
     }

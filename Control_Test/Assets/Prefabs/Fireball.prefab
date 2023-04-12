@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4064734189835469384}
   - component: {fileID: 1999340679872780776}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1995517181549351702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.281, y: 1.006, z: -0.452}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -146,3 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596eb8537eeba534f820a0b58a95fbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emissionForce: 600

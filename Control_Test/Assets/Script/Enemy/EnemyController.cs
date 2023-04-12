@@ -23,18 +23,19 @@ public class EnemyController : MonoBehaviour
 
     [Header("EnemyAttack")]
     [SerializeField]
-    private Transform shootPoint;
+    protected Transform shootPoint;
     [SerializeField]
-    private GameObject bullet;
+    protected float attackInterval;
+
 
     protected Vector3 goal;
     protected Transform player;
     protected NavMeshAgent agent;
-    //private List<EnemyHidenPoint> points;
-    //private int nextPointIndex;
     //make sure invoke run once
     protected bool hasFoundNextPoint;
     protected int nextPointIndex;
+    //count the attack interval
+    protected float timer;
 
     protected virtual void Start()
     {
@@ -42,7 +43,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.Find("FakePlayer").transform; //'GameObject.Find' need to be replaced
         nextPointIndex = -1;
     }
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //look at player to attack
         if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
@@ -65,11 +66,11 @@ public class EnemyController : MonoBehaviour
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
         Destroy(gameObject);
     }
-    private void EnemyShoot()
-    {
-       var newBullet= Instantiate(bullet,shootPoint.position,shootPoint.rotation);
-       newBullet.GetComponent<Rigidbody>().AddForce(5000*transform.forward);
-    }
+    //private void EnemyShoot()
+    //{
+    //   var newBullet= Instantiate(bullet,shootPoint.position,shootPoint.rotation);
+    //   newBullet.GetComponent<Rigidbody>().AddForce(5000*transform.forward);
+    //}
 
     protected List<T> GetAvailablePoints<T>(List<T> points) where T:EnemyHidenPoint
     {
