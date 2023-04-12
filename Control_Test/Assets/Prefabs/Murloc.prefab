@@ -361,7 +361,7 @@ MonoBehaviour:
   Score: 20
   refreshInterval: 0.5
   waitSeconds: {x: 5, y: 10}
-  actionArea: {x: -21, y: 12, z: -9, w: 20}
+  actionArea: {x: -21, y: 5, z: -9, w: 20}
   bornArea: {x: -42, y: -23, z: -27, w: 31}
   pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}

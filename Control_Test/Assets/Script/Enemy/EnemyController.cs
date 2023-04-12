@@ -36,6 +36,8 @@ public class EnemyController : MonoBehaviour
     protected int nextPointIndex;
     //count the attack interval
     protected float timer;
+    //attack check for ground enemy
+    protected bool beginAttack;
 
     protected virtual void Start()
     {
@@ -46,7 +48,7 @@ public class EnemyController : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         //look at player to attack
-        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
+        if (!beginAttack&&Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
         {
             transform.LookAt(player);
             if (!hasFoundNextPoint)

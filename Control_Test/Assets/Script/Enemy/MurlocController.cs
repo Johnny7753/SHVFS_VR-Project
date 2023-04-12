@@ -7,7 +7,7 @@ public class MurlocController : EnemyController
     private List<OtherEnemyHiddenPoint> points;
     private List<OtherEnemyHiddenPoint> availablePoints;
 
-    private bool beginAttack;
+    
     protected override void Start()
     {
         base.Start();
@@ -59,7 +59,7 @@ public class MurlocController : EnemyController
         {
             pointsTaken = null;
             nextPointIndex = -1;
-            if(Mathf.Abs(transform.position.x- actionArea.y)>10)
+            if(Mathf.Abs(transform.position.x- actionArea.y)>2)
                 goal = new Vector3(Random.Range(transform.position.x, actionArea.y), 0, Random.Range(actionArea.z, actionArea.w));
             else
             {

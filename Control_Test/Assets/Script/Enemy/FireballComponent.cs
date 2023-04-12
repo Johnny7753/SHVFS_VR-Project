@@ -17,7 +17,6 @@ public class FireballComponent : MonoBehaviour
     {
         if(!collision.gameObject.GetComponent<EnemyController>()&&!collision.gameObject.GetComponent<FireballComponent>())
         {
-            Debug.Log(collision.gameObject);
             Destroy(gameObject);
         }
     }
