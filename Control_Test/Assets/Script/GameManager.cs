@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    bool Isdead;
+    public bool Isdead;
+    
+    public GameObject EndUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Isdead)
+        {
+            Debug.Log("Dead!");
+            EndUI.SetActive(true);
+        }
     }
 }

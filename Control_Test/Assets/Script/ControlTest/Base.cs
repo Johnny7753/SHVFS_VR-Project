@@ -16,7 +16,7 @@ public class Base : MonoBehaviour
     {
         if(BaseHp <= 0)
         {
-
+            FindObjectOfType<GameManager>().GetComponent<GameManager>().Isdead = true;
         }
     }
 }
