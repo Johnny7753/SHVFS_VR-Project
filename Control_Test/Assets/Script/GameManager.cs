@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
         if(FindObjectOfType<EnemySystem>().wavenumber>2)
         {
-            Debug.Log("Dead!");
+            Debug.Log("Win!");
             WinUI.SetActive(true);
             Time.timeScale = 0;
         }

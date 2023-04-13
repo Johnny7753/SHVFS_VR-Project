@@ -7502,16 +7502,9 @@ MonoBehaviour:
   fdPoints: []
   enemyAlive: []
   freshTimeInterval:
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 10
-  - 10
-  - 10
-  - 15
+  - 5
+  - 0
+  - 0
   waves:
   - parts:
     - switchType: 0
@@ -7575,14 +7568,12 @@ MonoBehaviour:
       enemyNum: 12
       switchTime: 0
       leftEnemy: 0
-  - parts: []
-  - parts: []
-  - parts: []
-  - parts: []
-  - parts: []
-  - parts: []
-  - parts: []
-  - parts: []
+  - parts:
+    - switchType: 0
+      enemyType: 3
+      enemyNum: 10
+      switchTime: 0
+      leftEnemy: 2
   enemyPrefab:
   - {fileID: 633884567046046782, guid: 1cc33b2dd86df804485b4e5e063489a5, type: 3}
   - {fileID: 633884567046046782, guid: 196f2b62e9b53324e85635d0b2ac6af7, type: 3}
