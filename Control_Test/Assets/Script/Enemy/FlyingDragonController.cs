@@ -35,7 +35,16 @@ public class FlyingDragonController : EnemyController
     protected override void InitializeEnemy()
     {
         transform.position = FindStandPoint();
+
+        //check ground
+        Ray ray = new Ray(transform.position, -Vector3.up);
+        RaycastHit hit;
+        Physics.Raycast(ray, out hit, 50, 1 << 7);
+        //Debug.Log(hit.point);
+        transform.position += new Vector3(0, hit.point.y + 1, 0);
         transform.LookAt(player);
+
+        agent.enabled = true;
     }
     private void RefreshStandPoint()
     {

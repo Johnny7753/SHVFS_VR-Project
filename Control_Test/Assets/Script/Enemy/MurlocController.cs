@@ -34,8 +34,16 @@ public class MurlocController : EnemyController
     }
     protected override void InitializeEnemy()
     {
-        transform.position = new Vector3(Random.Range(bornArea.x, bornArea.y), 0, Random.Range(bornArea.z, bornArea.w));
+        transform.position = new Vector3(Random.Range(bornArea.x, bornArea.y),0, Random.Range(bornArea.z, bornArea.w));
+        //check the ground point
+        Ray ray = new Ray(transform.position,-Vector3.up);
+        RaycastHit hit;
+        Physics.Raycast(ray, out hit, 50,1 << 7);
+        //Debug.Log(hit.point);
+        transform.position += new Vector3(0, hit.point.y + 1,0);
         transform.LookAt(player);
+
+        agent.enabled = true;
     }
     private void RefreshStandPoint()
     {
@@ -59,14 +67,15 @@ public class MurlocController : EnemyController
         {
             pointsTaken = null;
             nextPointIndex = -1;
-            if(Mathf.Abs(transform.position.x- actionArea.y)>2)
-                goal = new Vector3(Random.Range(transform.position.x, actionArea.y), 0, Random.Range(actionArea.z, actionArea.w));
+            if(Mathf.Abs(transform.position.x- actionArea.x)>2)
+                goal = new Vector3(Random.Range(actionArea.x, transform.position.x ), 0, Random.Range(actionArea.z, actionArea.w));
             else
             {
-                goal = new Vector3(actionArea.y, 0, Random.Range(player.transform.position.z - 3, player.transform.position.z + 3));
+                goal = new Vector3(actionArea.x, 0, Random.Range(player.transform.position.z - 3, player.transform.position.z + 3));
                 beginAttack=true;
             }
         }
+        Debug.Log(goal);
         return goal;
     }
 }

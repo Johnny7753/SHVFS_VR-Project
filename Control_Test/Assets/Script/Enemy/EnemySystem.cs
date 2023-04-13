@@ -141,7 +141,7 @@ public class EnemySystem : Singleton<EnemySystem>
     //give points an order by x from smallest to biggest
     public void SortPointByX()
     {
-        points.Sort((x, y) => (x.transform.position.x.CompareTo(y.transform.position.x)));
+        points.Sort((x, y) => (-x.transform.position.x.CompareTo(y.transform.position.x)));
     }
     private void StartRefreshing()
     {

@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour
     protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("FakePlayer").transform; //'GameObject.Find' need to be replaced
+        player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced
         nextPointIndex = -1;
     }
     protected virtual void FixedUpdate()
@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
         //look at player to attack
         if (!beginAttack&&Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
         {
-            transform.LookAt(player);
+            transform.LookAt(new Vector3(player.transform.position.x,transform.position.y, player.transform.position.z));
             if (!hasFoundNextPoint)
             {
                 Invoke("RefreshStandPoint", Random.Range(waitSeconds.x, waitSeconds.y));
@@ -95,7 +95,8 @@ public class EnemyController : MonoBehaviour
         List<T> availablePoints = new List<T>();
         foreach (T point in points)
         {
-            if (!point.isTaken&&point.transform.position.x>transform.position.x)
+           // Debug.Log(point.transform.position.x > transform.position.x);
+            if (!point.isTaken&&point.transform.position.x<transform.position.x)
                 availablePoints.Add(point);
         }
         return availablePoints;
