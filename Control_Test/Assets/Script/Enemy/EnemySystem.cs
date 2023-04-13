@@ -87,7 +87,10 @@ public class EnemySystem : Singleton<EnemySystem>
         EnterNextWave();
 
         //change part in wave
-        EnterNextPart();
+        if (waves[waveIndex].parts.Length != 0)
+            EnterNextPart();
+        else
+            Debug.Log("no more enemies!");
 
         if (isRefreshing)
         {
@@ -107,7 +110,7 @@ public class EnemySystem : Singleton<EnemySystem>
 
             wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
             partIndex = 0;
-            Invoke("StartRefreshing", freshTimeInterval[waveIndex]);
+            Invoke("StartRefreshing", freshTimeInterval[waveIndex-1]);
         }
         else if (waveIndex >= waves.Length)
         {
@@ -160,7 +163,7 @@ public class EnemySystem : Singleton<EnemySystem>
             timer = 0;
             RefreshOneEnemy(enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType]);
         }
-        Debug.Log(enemyNum);
+        //Debug.Log(enemyNum);
         if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum)
         {
             isRefreshing = false;
