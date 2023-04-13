@@ -101,7 +101,7 @@ public class EnemySystem : Singleton<EnemySystem>
     //detect if enemies are all killed, enter next wave
     private void EnterNextWave()
     {
-        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && !isRefreshing&&finishRefreshing)
+        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1&&(waveIndex+1)<waves.Length && !isRefreshing&&finishRefreshing)
         {
             timer = 0;
             enemyNum = 0;
@@ -112,7 +112,7 @@ public class EnemySystem : Singleton<EnemySystem>
             partIndex = 0;
             Invoke("StartRefreshing", freshTimeInterval[waveIndex-1]);
         }
-        else if (waveIndex >= waves.Length)
+        else if (waveIndex >= waves.Length-1)
         {
             Debug.Log("no more enemies!");
         }
