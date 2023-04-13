@@ -7363,7 +7363,7 @@ MonoBehaviour:
   waves:
   - parts:
     - switchType: 0
-      enemyType: 1
+      enemyType: 3
       enemyNum: 10
       switchTime: 0
       leftEnemy: 2

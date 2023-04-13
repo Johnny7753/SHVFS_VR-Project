@@ -75,7 +75,7 @@ public class MurlocController : EnemyController
                 beginAttack=true;
             }
         }
-        Debug.Log(goal);
+        //Debug.Log(goal);
         return goal;
     }
 }

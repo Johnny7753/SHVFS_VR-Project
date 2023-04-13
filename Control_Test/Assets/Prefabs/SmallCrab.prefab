@@ -330,7 +330,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633884567046046782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -361,11 +361,11 @@ MonoBehaviour:
   Score: 5
   refreshInterval: 0
   waitSeconds: {x: 5, y: 10}
-  actionArea: {x: -21, y: 5, z: -9, w: 20}
-  bornArea: {x: -42, y: -23, z: -27, w: 31}
+  actionArea: {x: 85, y: 174, z: -89, w: 81}
+  bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}
-  attackInterval: 0
+  attackInterval: 3
   EnemyDamage: 20
 --- !u!1 &633884567644515742
 GameObject:
