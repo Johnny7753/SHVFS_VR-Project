@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public bool Isdead;
     
-    public GameObject EndUI;
+    public GameObject GameOverUI;
+    public GameObject WinUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +18,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Isdead&&EndUI!=null)
+        if(Isdead&&GameOverUI!=null)
         {
             Debug.Log("Dead!");
-            EndUI.SetActive(true);
+            GameOverUI.SetActive(true);
             Time.timeScale = 0;
         }
 
+        if(FindObjectOfType<EnemySystem>().wavenumber>2)
+        {
+            Debug.Log("Dead!");
+            WinUI.SetActive(true);
+            Time.timeScale = 0;
+        }
         
     }
 

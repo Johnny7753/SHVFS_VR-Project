@@ -13,12 +13,22 @@ public class FireballComponent : MonoBehaviour
         //give initial force
         rigid.AddForce((transform.forward+transform.up)*emissionForce);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(!collision.gameObject.GetComponent<EnemyController>()&&!collision.gameObject.GetComponent<FireballComponent>())
         {
-            FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;
+            if (collision.gameObject.GetComponent<Base>())
+            {
+                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;
+                Debug.Log("attacking");
+            }
+            // FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;                                                   Hardy changed, 4/13
             Destroy(gameObject);
+
+
         }
+
+        
     }
+   
 }

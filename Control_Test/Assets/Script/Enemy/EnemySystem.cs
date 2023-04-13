@@ -13,6 +13,7 @@ public class EnemySystem : Singleton<EnemySystem>
     [Header("Information")]
     [SerializeField]
     private int waveIndex;
+    public int wavenumber;                  //  to transfer wave index                               by Hardy     in 4/13
     [SerializeField]
     private int partIndex;
     
@@ -101,6 +102,7 @@ public class EnemySystem : Singleton<EnemySystem>
         {
             finishRefreshing = false;
             waveIndex++;
+            wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
             partIndex = 0;
             Invoke("StartRefreshing", freshTimeInterval[waveIndex]);
         }
