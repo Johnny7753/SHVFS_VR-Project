@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  bulletLifeTime: 3
+  bulletLifeTime: 5
   oriPos: {x: 0, y: 0, z: 0}
-  bulletDamage: 1
+  bulletDamage: 3
