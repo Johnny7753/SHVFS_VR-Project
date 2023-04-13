@@ -49,6 +49,7 @@ public class EnemyController : MonoBehaviour
     {
         if (HP <= 0)
         {
+            Debug.Log(1);
             EnemyDie();
         }
         //look at player to attack
@@ -67,7 +68,8 @@ public class EnemyController : MonoBehaviour
     //destroy this enemy
     public void EnemyDie()
     {
-        if(pointsTaken)
+        Debug.Log(2);
+        if (pointsTaken)
             pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
         Destroy(gameObject);

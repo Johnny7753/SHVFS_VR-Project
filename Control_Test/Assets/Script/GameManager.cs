@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Dead!");
             EndUI.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
