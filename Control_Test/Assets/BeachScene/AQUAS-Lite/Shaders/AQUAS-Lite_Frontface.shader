@@ -71,7 +71,7 @@ Shader "AQUAS-Lite/Frontface"
 		};
 
 		UNITY_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
-		uniform sampler2D _NormalTexture;
+		//uniform sampler2D _NormalTexture;
 		uniform float _WaveSpeed;
 		uniform float _NormalTiling;
 		uniform float _NormalStrength;
