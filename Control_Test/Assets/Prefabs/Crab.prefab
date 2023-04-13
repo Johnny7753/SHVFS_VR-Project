@@ -357,15 +357,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b9a678b7e4d7d429bf0e5583009096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
-  Score: 0
+  HP: 60
+  Score: 10
   refreshInterval: 0
   waitSeconds: {x: 5, y: 10}
   actionArea: {x: -21, y: 5, z: -9, w: 20}
   bornArea: {x: -42, y: -23, z: -27, w: 31}
   pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}
-  attackInterval: 0
+  attackInterval: 3
+  EnemyDamage: 5
 --- !u!1 &633884567644515742
 GameObject:
   m_ObjectHideFlags: 0

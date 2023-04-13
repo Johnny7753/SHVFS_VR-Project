@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e5fcfdb0588d14c8dd3681b1bbc9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 20
   Score: 20
   refreshInterval: 0.5
   waitSeconds: {x: 5, y: 10}
@@ -366,6 +366,7 @@ MonoBehaviour:
   pointsTaken: {fileID: 0}
   shootPoint: {fileID: 0}
   attackInterval: 3
+  EnemyDamage: 2
 --- !u!1 &633884567644515742
 GameObject:
   m_ObjectHideFlags: 0
