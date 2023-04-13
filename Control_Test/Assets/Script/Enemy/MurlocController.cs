@@ -6,7 +6,7 @@ public class MurlocController : EnemyController
 {
     private List<OtherEnemyHiddenPoint> points;
     private List<OtherEnemyHiddenPoint> availablePoints;
-
+    public float EnemyDamage;
     
     protected override void Start()
     {
@@ -28,7 +28,7 @@ public class MurlocController : EnemyController
             if(timer>attackInterval)
             {
                 timer = 0;
-                Debug.Log("fortress be attacked");
+                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= EnemyDamage;
             }
         }
     }

@@ -6,7 +6,7 @@ public class FireballComponent : MonoBehaviour
 {
     public float emissionForce;
     private Rigidbody rigid;
-
+    public float FireballDamage;
     private void Awake()
     {
         rigid=GetComponent<Rigidbody>();
@@ -17,6 +17,7 @@ public class FireballComponent : MonoBehaviour
     {
         if(!collision.gameObject.GetComponent<EnemyController>()&&!collision.gameObject.GetComponent<FireballComponent>())
         {
+            FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;
             Destroy(gameObject);
         }
     }

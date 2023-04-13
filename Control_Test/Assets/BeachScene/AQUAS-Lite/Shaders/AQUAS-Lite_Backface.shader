@@ -59,7 +59,7 @@ Shader "AQUAS-Lite/Backface"
 		uniform float4 _DeepWaterColor;
 		UNITY_DECLARE_SCREENSPACE_TEXTURE( _GrabTexture )
 		uniform float _Refraction;
-		uniform sampler2D _NormalTexture;
+		//uniform sampler2D _NormalTexture;
 		uniform float _WaveSpeed;
 		uniform float _NormalTiling;
 		uniform float _NormalStrength;

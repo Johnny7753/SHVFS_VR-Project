@@ -47,6 +47,10 @@ public class EnemyController : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
+        if (HP <= 0)
+        {
+            EnemyDie();
+        }
         //look at player to attack
         if (!beginAttack&&Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
         {
