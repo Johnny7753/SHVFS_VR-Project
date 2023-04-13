@@ -20,6 +20,11 @@ public class FlyingDragonController : EnemyController
     }
     protected override void FixedUpdate()
     {
+        if (HP <= 0)
+        {
+            Debug.Log(1);
+            EnemyDie();
+        }
         //look at player to attack
         if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
         {
