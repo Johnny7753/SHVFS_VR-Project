@@ -9992,7 +9992,7 @@ MonoBehaviour:
   waves:
   - parts:
     - switchType: 0
-      enemyType: 1
+      enemyType: 2
       enemyNum: 13
       switchTime: 0
       leftEnemy: 2

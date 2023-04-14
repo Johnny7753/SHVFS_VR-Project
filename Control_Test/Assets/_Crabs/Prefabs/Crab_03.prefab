@@ -1,0 +1,2247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &205482654248840223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6799464364609225962}
+  m_Layer: 0
+  m_Name: beetle-Tailr4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6799464364609225962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205482654248840223}
+  m_LocalRotation: {x: -0.036015812, y: 0.27213696, z: -0.25457445, w: 0.9272736}
+  m_LocalPosition: {x: -0.08452862, y: 0.000000038146972, z: 0}
+  m_LocalScale: {x: 1.000004, y: 0.999995, z: 1.000001}
+  m_Children:
+  - {fileID: 5359258824894484020}
+  m_Father: {fileID: 6038389463369046903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &416642374259508412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5354988723509820811}
+  m_Layer: 0
+  m_Name: beetle-Hub002Bone001Bone001 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5354988723509820811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416642374259508412}
+  m_LocalRotation: {x: -0.016150668, y: 0.512619, z: -0.13132824, w: 0.84835947}
+  m_LocalPosition: {x: -0.10698463, y: -0.000000038146972, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 3781504973478638}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &502564097078312935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8249504091690246748}
+  m_Layer: 0
+  m_Name: beetle-LArm2_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8249504091690246748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502564097078312935}
+  m_LocalRotation: {x: -0.52644265, y: 0.6812364, z: 0.4284548, w: 0.2742292}
+  m_LocalPosition: {x: -0.123734966, y: -0.0000003147125, z: -0.000000047683713}
+  m_LocalScale: {x: 0.999998, y: 1.000005, z: 0.999998}
+  m_Children:
+  - {fileID: 1895849726657705178}
+  m_Father: {fileID: 8379937309286709926}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &716716178625812489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5448958347314017090}
+  m_Layer: 0
+  m_Name: beetle-MLLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5448958347314017090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716716178625812489}
+  m_LocalRotation: {x: -0.048198532, y: 0.46324795, z: 0.052106176, w: 0.8833817}
+  m_LocalPosition: {x: -0.14356606, y: -0.0000013017655, z: 0.00000007152557}
+  m_LocalScale: {x: 1.000002, y: 1.000007, z: 0.999993}
+  m_Children:
+  - {fileID: 4425990502919634230}
+  m_Father: {fileID: 8956639445043145744}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &733284697471750764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568613759350296996}
+  m_Layer: 0
+  m_Name: beetle-FRLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568613759350296996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733284697471750764}
+  m_LocalRotation: {x: -0.13172616, y: 0.54523253, z: -0.22495751, w: 0.7967207}
+  m_LocalPosition: {x: -0.059964, y: 0.000000009536743, z: 0}
+  m_LocalScale: {x: 0.999995, y: 1.000001, z: 1.000003}
+  m_Children:
+  - {fileID: 4986262525870130947}
+  m_Father: {fileID: 5327631876515259197}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1091372193363421930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2646112154229894453}
+  m_Layer: 0
+  m_Name: beetle-LArmCollarbone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2646112154229894453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091372193363421930}
+  m_LocalRotation: {x: -0.27299458, y: 0.763735, z: -0.33216515, w: 0.48150715}
+  m_LocalPosition: {x: 0.0017198181, y: 0.24604438, z: 0.082820766}
+  m_LocalScale: {x: 1, y: 1, z: 0.999999}
+  m_Children:
+  - {fileID: 8457437578017830800}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1272776134383219813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2048169196371450187}
+  m_Layer: 0
+  m_Name: beetle-Hub002Tooth_U_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2048169196371450187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272776134383219813}
+  m_LocalRotation: {x: -0.003565037, y: 0.000042250223, z: 0.99529195, w: 0.09685667}
+  m_LocalPosition: {x: 0.035916615, y: 0.0931192, z: 0.017572211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1278835467788880257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4743190710753100097}
+  m_Layer: 0
+  m_Name: beetle-RArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4743190710753100097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278835467788880257}
+  m_LocalRotation: {x: 0.027554942, y: -0.36616156, z: -0.30420077, w: 0.87899286}
+  m_LocalPosition: {x: -0.12729351, y: 0, z: 0.000000021457671}
+  m_LocalScale: {x: 1, y: 0.999998, z: 0.999999}
+  m_Children:
+  - {fileID: 2479742671087572532}
+  m_Father: {fileID: 7991921976222693143}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1302569716157506352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3781504973478638}
+  m_Layer: 0
+  m_Name: beetle-Hub002Bone002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3781504973478638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302569716157506352}
+  m_LocalRotation: {x: -0.21555436, y: -0.23869094, z: -0.783595, w: 0.5315466}
+  m_LocalPosition: {x: 0.03992506, y: 0.00000022888183, z: -0.018420406}
+  m_LocalScale: {x: 1, y: 1.000001, z: 1}
+  m_Children:
+  - {fileID: 5354988723509820811}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126494020681768167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135238205218201553}
+  m_Layer: 0
+  m_Name: beetle-MLLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135238205218201553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126494020681768167}
+  m_LocalRotation: {x: -0.063668706, y: 0.9487889, z: 0.11780292, w: 0.28612664}
+  m_LocalPosition: {x: 0.044081952, y: -0.01235142, z: 0.096145734}
+  m_LocalScale: {x: 1.000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8956639445043145744}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2157535718110657769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3539988873044623167}
+  m_Layer: 0
+  m_Name: beetle-Hub002Tooth_U_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3539988873044623167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157535718110657769}
+  m_LocalRotation: {x: -0.0075282743, y: -0.00035965364, z: 0.99927276, w: 0.03737882}
+  m_LocalPosition: {x: 0.03591669, y: 0.09311901, z: -0.017572215}
+  m_LocalScale: {x: 1.000001, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2297060987525953573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596491843171949830}
+  m_Layer: 0
+  m_Name: beetle-Taill5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596491843171949830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2297060987525953573}
+  m_LocalRotation: {x: 0.028071446, y: -0.21222953, z: -0.3457374, w: 0.9135843}
+  m_LocalPosition: {x: -0.07680607, y: -0.000000038146972, z: 0}
+  m_LocalScale: {x: 0.999991, y: 1.000009, z: 0.999999}
+  m_Children: []
+  m_Father: {fileID: 8242688122701247682}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2311787864916693646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6002408499420237123}
+  m_Layer: 0
+  m_Name: beetle-BRLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6002408499420237123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311787864916693646}
+  m_LocalRotation: {x: -0.034307636, y: -0.19672514, z: -0.03305947, w: 0.9793004}
+  m_LocalPosition: {x: -0.12876737, y: -0.000000009536743, z: -0.000000038146972}
+  m_LocalScale: {x: 1.000001, y: 1, z: 0.999999}
+  m_Children: []
+  m_Father: {fileID: 6792404157141032249}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2312909926618386582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9212542817223542321}
+  m_Layer: 0
+  m_Name: beetle-FLLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9212542817223542321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312909926618386582}
+  m_LocalRotation: {x: 0.12485936, y: -0.58823794, z: -0.24285921, w: 0.761187}
+  m_LocalPosition: {x: -0.05996402, y: -0.000000009536743, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1.000002, z: 0.999998}
+  m_Children:
+  - {fileID: 3586214744472936958}
+  m_Father: {fileID: 8686954228824799542}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2574066912453443157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4176711902029983704}
+  m_Layer: 0
+  m_Name: beetle-Taill2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4176711902029983704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574066912453443157}
+  m_LocalRotation: {x: 0.051635772, y: -0.0191653, z: -0.0001960848, w: 0.99848205}
+  m_LocalPosition: {x: -0.099366605, y: -0.000000019073486, z: -0.000000019073486}
+  m_LocalScale: {x: 1, y: 0.999999, z: 1.000001}
+  m_Children:
+  - {fileID: 9204561174108982432}
+  m_Father: {fileID: 660406031500407286}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2672903804718217817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6038389463369046903}
+  m_Layer: 0
+  m_Name: beetle-Tailr3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6038389463369046903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672903804718217817}
+  m_LocalRotation: {x: -0.13733117, y: 0.23011443, z: -0.22029552, w: 0.93790054}
+  m_LocalPosition: {x: -0.08170448, y: 0, z: -0.000000019073486}
+  m_LocalScale: {x: 1.000002, y: 0.999996, z: 1.000003}
+  m_Children:
+  - {fileID: 6799464364609225962}
+  m_Father: {fileID: 321944147430572017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2730267731867486451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2297478317374516099}
+  m_Layer: 0
+  m_Name: beetle-FLLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2297478317374516099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730267731867486451}
+  m_LocalRotation: {x: 0.07296496, y: 0.19079278, z: -0.05340848, w: 0.9774568}
+  m_LocalPosition: {x: -0.12209236, y: 0.0000000047683715, z: 0}
+  m_LocalScale: {x: 1.000001, y: 1, z: 0.999999}
+  m_Children: []
+  m_Father: {fileID: 3586214744472936958}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2768660150579268296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478659445201671953}
+  m_Layer: 0
+  m_Name: beetle-Hub002Bone001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1478659445201671953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768660150579268296}
+  m_LocalRotation: {x: 0.21555342, y: 0.23869187, z: -0.7835932, w: 0.5315493}
+  m_LocalPosition: {x: 0.03992491, y: 0.00000015258789, z: 0.018420404}
+  m_LocalScale: {x: 0.999999, y: 1.000001, z: 1.000001}
+  m_Children:
+  - {fileID: 16458395026163052}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2920929949269056052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7247179748373774194}
+  m_Layer: 0
+  m_Name: beetle-RArmDigit11_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7247179748373774194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920929949269056052}
+  m_LocalRotation: {x: -0.016691742, y: 0.040300038, z: 0.38231966, w: 0.92300004}
+  m_LocalPosition: {x: -0.01469346, y: -0.012164307, z: -0.0016107821}
+  m_LocalScale: {x: 1, y: 1.000001, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 5833146626985601489}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3102416882863839980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3275200939486716446}
+  m_Layer: 0
+  m_Name: beetle-Hub002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3275200939486716446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102416882863839980}
+  m_LocalRotation: {x: -0.0031132428, y: -0.0005852777, z: 0.6168687, w: 0.7870597}
+  m_LocalPosition: {x: -0.049355164, y: 0, z: 0.0000000011920929}
+  m_LocalScale: {x: 0.999999, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1478659445201671953}
+  - {fileID: 3781504973478638}
+  - {fileID: 4024425820499731502}
+  - {fileID: 2714045735263625692}
+  - {fileID: 2048169196371450187}
+  - {fileID: 3539988873044623167}
+  - {fileID: 9034399303212856476}
+  - {fileID: 4452863188302479221}
+  - {fileID: 660406031500407286}
+  - {fileID: 8864753554289549798}
+  m_Father: {fileID: 8016455176599088455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3142466523209847914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8379937309286709926}
+  m_Layer: 0
+  m_Name: beetle-LArm1_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8379937309286709926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142466523209847914}
+  m_LocalRotation: {x: 0.29742852, y: -0.6272535, z: -0.23734118, w: 0.6795282}
+  m_LocalPosition: {x: -0.096594796, y: 0, z: 0.000000038146972}
+  m_LocalScale: {x: 1.000001, y: 1.000001, z: 0.999999}
+  m_Children:
+  - {fileID: 8249504091690246748}
+  m_Father: {fileID: 9034399303212856476}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3234562247606496023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9121585900031833220}
+  m_Layer: 0
+  m_Name: beetle-RArm1_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9121585900031833220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234562247606496023}
+  m_LocalRotation: {x: -0.29724908, y: 0.62765753, z: -0.23572478, w: 0.6797963}
+  m_LocalPosition: {x: -0.096594945, y: 0, z: 0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.999999, z: 1.000002}
+  m_Children:
+  - {fileID: 3756505813383920646}
+  m_Father: {fileID: 4452863188302479221}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3273468592831771985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8686954228824799542}
+  m_Layer: 0
+  m_Name: beetle-FLLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8686954228824799542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3273468592831771985}
+  m_LocalRotation: {x: -0.016066574, y: 0.98082155, z: 0.011847129, w: 0.19388308}
+  m_LocalPosition: {x: 0.04408205, y: 0.120219275, z: 0.096145906}
+  m_LocalScale: {x: 1, y: 0.999999, z: 1.000002}
+  m_Children:
+  - {fileID: 9212542817223542321}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3445339696208852437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5145879212455765670}
+  m_Layer: 0
+  m_Name: beetle-RArmCollarbone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5145879212455765670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445339696208852437}
+  m_LocalRotation: {x: -0.24425521, y: 0.8122445, z: 0.2506287, w: -0.46667287}
+  m_LocalPosition: {x: 0.001719799, y: 0.2460445, z: -0.0828209}
+  m_LocalScale: {x: 1, y: 0.999999, z: 1}
+  m_Children:
+  - {fileID: 7991921976222693143}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3491010565526652681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8372148789203914200}
+  m_Layer: 0
+  m_Name: beetle-BLLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8372148789203914200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491010565526652681}
+  m_LocalRotation: {x: 0.036980573, y: -0.80443007, z: -0.005927982, w: 0.5928655}
+  m_LocalPosition: {x: -0.07007529, y: 0.000000009536743, z: -0.000000028610229}
+  m_LocalScale: {x: 1, y: 0.999995, z: 1.000006}
+  m_Children:
+  - {fileID: 7246785438668411920}
+  m_Father: {fileID: 9134213297682102304}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3698152700817903334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8242688122701247682}
+  m_Layer: 0
+  m_Name: beetle-Taill4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8242688122701247682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698152700817903334}
+  m_LocalRotation: {x: 0.06371578, y: -0.22449398, z: -0.2829101, w: 0.93032503}
+  m_LocalPosition: {x: -0.084528655, y: 0, z: 0.000000038146972}
+  m_LocalScale: {x: 0.999996, y: 1.000007, z: 0.999999}
+  m_Children:
+  - {fileID: 596491843171949830}
+  m_Father: {fileID: 9204561174108982432}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3839802286795983219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3586214744472936958}
+  m_Layer: 0
+  m_Name: beetle-FLLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3586214744472936958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839802286795983219}
+  m_LocalRotation: {x: 0.027281746, y: 0.28540888, z: 0.037094522, w: 0.95729905}
+  m_LocalPosition: {x: -0.14471646, y: -0.0000012779235, z: 0.00000019073485}
+  m_LocalScale: {x: 1.000002, y: 0.999997, z: 1.000002}
+  m_Children:
+  - {fileID: 2297478317374516099}
+  m_Father: {fileID: 9212542817223542321}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3867933675495690220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16458395026163052}
+  m_Layer: 0
+  m_Name: beetle-Hub002Bone001Bone001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16458395026163052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867933675495690220}
+  m_LocalRotation: {x: 0.016150493, y: -0.5126197, z: -0.13132504, w: 0.8483596}
+  m_LocalPosition: {x: -0.10698467, y: 0, z: 0.000000019073486}
+  m_LocalScale: {x: 0.999999, y: 0.999999, z: 1.000002}
+  m_Children: []
+  m_Father: {fileID: 1478659445201671953}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3953580365834077735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7619143150469120140}
+  m_Layer: 0
+  m_Name: beetle-BLLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7619143150469120140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953580365834077735}
+  m_LocalRotation: {x: 0.032614026, y: 0.18037574, z: -0.07089544, w: 0.98049724}
+  m_LocalPosition: {x: -0.12876491, y: -0.0000000047683715, z: -0.000000057220458}
+  m_LocalScale: {x: 1.000001, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7246785438668411920}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4003638822798238469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704178785188244042}
+  m_Layer: 0
+  m_Name: beetle-MRLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1704178785188244042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003638822798238469}
+  m_LocalRotation: {x: 0.06539077, y: 0.35325512, z: -0.0131936865, w: 0.93314564}
+  m_LocalPosition: {x: -0.07061764, y: 0.0000000023841857, z: 0}
+  m_LocalScale: {x: 0.999999, y: 0.999999, z: 1}
+  m_Children:
+  - {fileID: 481342154984512126}
+  m_Father: {fileID: 1363483055174130743}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4361240429620662227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4302677997263204186}
+  m_Layer: 0
+  m_Name: beetle-Hub001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4302677997263204186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4361240429620662227}
+  m_LocalRotation: {x: 0.7070993, y: -0.003248978, z: -0.7070993, w: 0.0032489162}
+  m_LocalPosition: {x: -0, y: -0.0106204, z: 0.230899}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9134213297682102304}
+  - {fileID: 431092176977488767}
+  - {fileID: 8686954228824799542}
+  - {fileID: 5327631876515259197}
+  - {fileID: 9158135070087320017}
+  - {fileID: 2646112154229894453}
+  - {fileID: 1135238205218201553}
+  - {fileID: 1363483055174130743}
+  - {fileID: 5145879212455765670}
+  - {fileID: 4904029210154346688}
+  m_Father: {fileID: 2749275126284844127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4607404286469029361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3414124710196733266}
+  - component: {fileID: 5091330038176541480}
+  m_Layer: 0
+  m_Name: Wood_beetle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3414124710196733266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607404286469029361}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5251655650465324039}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &5091330038176541480
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607404286469029361}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc978e39b8b1ecd4bb39a4eb56473745, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 3363855207508947962, guid: 0cf9185edb0e9ad47a731ed689317d24, type: 3}
+  m_Bones:
+  - {fileID: 4302677997263204186}
+  - {fileID: 5145879212455765670}
+  - {fileID: 7991921976222693143}
+  - {fileID: 4743190710753100097}
+  - {fileID: 2479742671087572532}
+  - {fileID: 2646112154229894453}
+  - {fileID: 8457437578017830800}
+  - {fileID: 8576696332319806271}
+  - {fileID: 3352532045876784287}
+  - {fileID: 4904029210154346688}
+  - {fileID: 8016455176599088455}
+  - {fileID: 3275200939486716446}
+  - {fileID: 2714045735263625692}
+  - {fileID: 4024425820499731502}
+  - {fileID: 3539988873044623167}
+  - {fileID: 2048169196371450187}
+  - {fileID: 8864753554289549798}
+  - {fileID: 321944147430572017}
+  - {fileID: 6038389463369046903}
+  - {fileID: 6799464364609225962}
+  - {fileID: 5359258824894484020}
+  - {fileID: 660406031500407286}
+  - {fileID: 4176711902029983704}
+  - {fileID: 9204561174108982432}
+  - {fileID: 8242688122701247682}
+  - {fileID: 596491843171949830}
+  - {fileID: 4452863188302479221}
+  - {fileID: 9121585900031833220}
+  - {fileID: 3756505813383920646}
+  - {fileID: 5833146626985601489}
+  - {fileID: 7247179748373774194}
+  - {fileID: 9034399303212856476}
+  - {fileID: 8379937309286709926}
+  - {fileID: 8249504091690246748}
+  - {fileID: 1895849726657705178}
+  - {fileID: 2766535316206642908}
+  - {fileID: 3781504973478638}
+  - {fileID: 5354988723509820811}
+  - {fileID: 1478659445201671953}
+  - {fileID: 16458395026163052}
+  - {fileID: 9158135070087320017}
+  - {fileID: 431092176977488767}
+  - {fileID: 3201338040979152178}
+  - {fileID: 6792404157141032249}
+  - {fileID: 6002408499420237123}
+  - {fileID: 9134213297682102304}
+  - {fileID: 8372148789203914200}
+  - {fileID: 7246785438668411920}
+  - {fileID: 7619143150469120140}
+  - {fileID: 5327631876515259197}
+  - {fileID: 568613759350296996}
+  - {fileID: 4986262525870130947}
+  - {fileID: 3143983347761148215}
+  - {fileID: 8686954228824799542}
+  - {fileID: 9212542817223542321}
+  - {fileID: 3586214744472936958}
+  - {fileID: 2297478317374516099}
+  - {fileID: 1135238205218201553}
+  - {fileID: 8956639445043145744}
+  - {fileID: 5448958347314017090}
+  - {fileID: 4425990502919634230}
+  - {fileID: 1363483055174130743}
+  - {fileID: 1704178785188244042}
+  - {fileID: 481342154984512126}
+  - {fileID: 8491552439008498159}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 4302677997263204186}
+  m_AABB:
+    m_Center: {x: 0.112992615, y: 0.13638246, z: 0.0071516633}
+    m_Extent: {x: 0.5023681, y: 0.6994959, z: 0.52254444}
+  m_DirtyAABB: 0
+--- !u!1 &4745592102946373442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9204561174108982432}
+  m_Layer: 0
+  m_Name: beetle-Taill3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9204561174108982432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745592102946373442}
+  m_LocalRotation: {x: 0.1306345, y: -0.17891881, z: -0.26028278, w: 0.9397743}
+  m_LocalPosition: {x: -0.08170452, y: 0.000000019073486, z: 0}
+  m_LocalScale: {x: 0.999999, y: 1.000004, z: 0.999998}
+  m_Children:
+  - {fileID: 8242688122701247682}
+  m_Father: {fileID: 4176711902029983704}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4761643698503739170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4904029210154346688}
+  m_Layer: 0
+  m_Name: beetle-Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4904029210154346688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4761643698503739170}
+  m_LocalRotation: {x: -0.0032072773, y: -0.0006978665, z: -0.6255995, w: 0.7801375}
+  m_LocalPosition: {x: 0.000000019073486, y: 0.25124213, z: -0.00000003793649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8016455176599088455}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4875833043033048765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5251655650465324039}
+  - component: {fileID: 2162163407557838461}
+  m_Layer: 0
+  m_Name: Crab_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5251655650465324039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875833043033048765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6126044, y: 0.012436867, z: -0.5422225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2749275126284844127}
+  - {fileID: 3414124710196733266}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2162163407557838461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875833043033048765}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0cf9185edb0e9ad47a731ed689317d24, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &4937715519424319180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5359258824894484020}
+  m_Layer: 0
+  m_Name: beetle-Tailr5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5359258824894484020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937715519424319180}
+  m_LocalRotation: {x: 0.0072237216, y: 0.24007176, z: -0.33214468, w: 0.9121367}
+  m_LocalPosition: {x: -0.07680607, y: 0, z: 0}
+  m_LocalScale: {x: 1.000009, y: 0.999991, z: 1.000002}
+  m_Children: []
+  m_Father: {fileID: 6799464364609225962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5432076436997565534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9134213297682102304}
+  m_Layer: 0
+  m_Name: beetle-BLLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9134213297682102304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432076436997565534}
+  m_LocalRotation: {x: 0.0063888584, y: 0.92567956, z: 0.37749472, w: -0.023965077}
+  m_LocalPosition: {x: 0.037182655, y: -0.12937689, z: 0.08750685}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8372148789203914200}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5481589068279658368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321944147430572017}
+  m_Layer: 0
+  m_Name: beetle-Tailr2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321944147430572017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481589068279658368}
+  m_LocalRotation: {x: -0.06019113, y: 0.029684486, z: 0.009833836, w: 0.99769694}
+  m_LocalPosition: {x: -0.099366605, y: 0.000000019073486, z: -0.000000038146972}
+  m_LocalScale: {x: 1.000001, y: 1, z: 0.999999}
+  m_Children:
+  - {fileID: 6038389463369046903}
+  m_Father: {fileID: 8864753554289549798}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5601838480858359787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481342154984512126}
+  m_Layer: 0
+  m_Name: beetle-MRLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481342154984512126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601838480858359787}
+  m_LocalRotation: {x: -0.6064403, y: -0.48119763, z: 0.06343688, w: 0.62980545}
+  m_LocalPosition: {x: -0.14356613, y: -0.0000013017655, z: -0.00000012397766}
+  m_LocalScale: {x: 1.000001, y: 1.000006, z: 0.999995}
+  m_Children:
+  - {fileID: 8491552439008498159}
+  m_Father: {fileID: 1704178785188244042}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5627495763306552786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3756505813383920646}
+  m_Layer: 0
+  m_Name: beetle-RArm2_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3756505813383920646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627495763306552786}
+  m_LocalRotation: {x: -0.52637815, y: 0.68128186, z: -0.42848393, w: -0.27419445}
+  m_LocalPosition: {x: -0.1237363, y: 0.00000049114226, z: -0.00000029563904}
+  m_LocalScale: {x: 1.000002, y: 0.999996, z: 1.000005}
+  m_Children:
+  - {fileID: 5833146626985601489}
+  m_Father: {fileID: 9121585900031833220}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5628746543824425197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660406031500407286}
+  m_Layer: 0
+  m_Name: beetle-Taill1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660406031500407286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628746543824425197}
+  m_LocalRotation: {x: 0.2695412, y: 0.14598216, z: -0.29611063, w: 0.90462995}
+  m_LocalPosition: {x: -0.0052819634, y: 0.07051254, z: 0.020841107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4176711902029983704}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5635084316415572265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9034399303212856476}
+  m_Layer: 0
+  m_Name: beetle-LArmCollarbone_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9034399303212856476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635084316415572265}
+  m_LocalRotation: {x: -0.20887476, y: 0.9177207, z: -0.25268447, w: 0.22430046}
+  m_LocalPosition: {x: 0.058997344, y: -0.021352423, z: 0.09058913}
+  m_LocalScale: {x: 1.000002, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8379937309286709926}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5747103035337815644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8491552439008498159}
+  m_Layer: 0
+  m_Name: beetle-MRLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8491552439008498159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747103035337815644}
+  m_LocalRotation: {x: 0.58776265, y: 0.032571204, z: -0.21602039, w: 0.7789798}
+  m_LocalPosition: {x: -0.122110374, y: 0, z: 0.000000038146972}
+  m_LocalScale: {x: 1, y: 1.00001, z: 0.99999}
+  m_Children: []
+  m_Father: {fileID: 481342154984512126}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5861244310435143063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3143983347761148215}
+  m_Layer: 0
+  m_Name: beetle-FRLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3143983347761148215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861244310435143063}
+  m_LocalRotation: {x: -0.080094025, y: -0.20037824, z: -0.04223847, w: 0.9755252}
+  m_LocalPosition: {x: -0.12209049, y: -0.000000042915342, z: 0}
+  m_LocalScale: {x: 0.999999, y: 1, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 4986262525870130947}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6106619633545439880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3352532045876784287}
+  m_Layer: 0
+  m_Name: beetle-LArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3352532045876784287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106619633545439880}
+  m_LocalRotation: {x: 0.000000086520764, y: 0.1757314, z: -0.00000048468485, w: 0.9844382}
+  m_LocalPosition: {x: -0.12485805, y: -0.00561161, z: 0.06766338}
+  m_LocalScale: {x: 0.999996, y: 1, z: 1.000005}
+  m_Children: []
+  m_Father: {fileID: 8576696332319806271}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6379811967452052356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1895849726657705178}
+  m_Layer: 0
+  m_Name: beetle-LArmPalm_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1895849726657705178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379811967452052356}
+  m_LocalRotation: {x: -0.02087871, y: -0.024513653, z: -0.049054235, w: 0.99827695}
+  m_LocalPosition: {x: -0.09344583, y: 0.000000076293944, z: -0.000000014305114}
+  m_LocalScale: {x: 1.000006, y: 0.999994, z: 0.999998}
+  m_Children:
+  - {fileID: 2766535316206642908}
+  m_Father: {fileID: 8249504091690246748}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6874361870576884862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2749275126284844127}
+  m_Layer: 0
+  m_Name: beetle-Hip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2749275126284844127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874361870576884862}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4302677997263204186}
+  m_Father: {fileID: 5251655650465324039}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6989930656984417625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425990502919634230}
+  m_Layer: 0
+  m_Name: beetle-MLLegAnkle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425990502919634230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6989930656984417625}
+  m_LocalRotation: {x: 0.027168747, y: 0.10422354, z: -0.015501197, w: 0.9940619}
+  m_LocalPosition: {x: -0.12211219, y: 0, z: 0.000000019073486}
+  m_LocalScale: {x: 1, y: 1.000001, z: 0.999999}
+  m_Children: []
+  m_Father: {fileID: 5448958347314017090}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7067081758253718635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5833146626985601489}
+  m_Layer: 0
+  m_Name: beetle-RArmPalm_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5833146626985601489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7067081758253718635}
+  m_LocalRotation: {x: 0.020303214, y: 0.024470575, z: -0.04890623, w: 0.99829715}
+  m_LocalPosition: {x: -0.093445815, y: -0.000000076293944, z: 0.00000002026558}
+  m_LocalScale: {x: 0.999997, y: 1.000002, z: 1.000003}
+  m_Children:
+  - {fileID: 7247179748373774194}
+  m_Father: {fileID: 3756505813383920646}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7213818829334653273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2479742671087572532}
+  m_Layer: 0
+  m_Name: beetle-RArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2479742671087572532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213818829334653273}
+  m_LocalRotation: {x: -0.00000000950681, y: -0.18340032, z: -0.0000003200957, w: 0.9830383}
+  m_LocalPosition: {x: -0.124858126, y: -0.0056115626, z: -0.06766365}
+  m_LocalScale: {x: 1.000005, y: 1, z: 0.999995}
+  m_Children: []
+  m_Father: {fileID: 4743190710753100097}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7361039777161926121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8576696332319806271}
+  m_Layer: 0
+  m_Name: beetle-LArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8576696332319806271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361039777161926121}
+  m_LocalRotation: {x: -0.03681334, y: 0.36975744, z: -0.3027677, w: 0.8776423}
+  m_LocalPosition: {x: -0.12729347, y: 0, z: -0.0000000047683715}
+  m_LocalScale: {x: 1.000001, y: 1, z: 0.999995}
+  m_Children:
+  - {fileID: 3352532045876784287}
+  m_Father: {fileID: 8457437578017830800}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7485696332428177664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3201338040979152178}
+  m_Layer: 0
+  m_Name: beetle-BRLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3201338040979152178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485696332428177664}
+  m_LocalRotation: {x: -0.039809797, y: 0.74375886, z: -0.005914216, w: 0.6672353}
+  m_LocalPosition: {x: -0.07007527, y: 0.0000000023841857, z: 0.000000019073486}
+  m_LocalScale: {x: 1.000004, y: 0.999996, z: 1.000001}
+  m_Children:
+  - {fileID: 6792404157141032249}
+  m_Father: {fileID: 431092176977488767}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7574858374437349582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363483055174130743}
+  m_Layer: 0
+  m_Name: beetle-MRLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1363483055174130743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574858374437349582}
+  m_LocalRotation: {x: -0.11705193, y: 0.8633478, z: 0.053368658, w: -0.4879357}
+  m_LocalPosition: {x: 0.044081915, y: -0.012351421, z: -0.09614571}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1704178785188244042}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7585309289238778006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431092176977488767}
+  m_Layer: 0
+  m_Name: beetle-BRLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431092176977488767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7585309289238778006}
+  m_LocalRotation: {x: 0.00723304, y: 0.9481595, z: -0.31202322, w: -0.059855923}
+  m_LocalPosition: {x: 0.037182618, y: -0.12937689, z: -0.087506816}
+  m_LocalScale: {x: 1, y: 1, z: 1.000001}
+  m_Children:
+  - {fileID: 3201338040979152178}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7616498070104269820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9158135070087320017}
+  m_Layer: 0
+  m_Name: beetle-Hub001Bone001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9158135070087320017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616498070104269820}
+  m_LocalRotation: {x: 6.1698265e-11, y: 2.0083872e-10, z: -1.2391401e-20, w: 1}
+  m_LocalPosition: {x: -0.08184849, y: -0.000009155273, z: -0.00000031932635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7651312857934835099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8864753554289549798}
+  m_Layer: 0
+  m_Name: beetle-Tailr1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8864753554289549798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651312857934835099}
+  m_LocalRotation: {x: -0.2643897, y: -0.15671067, z: -0.2997087, w: 0.9031692}
+  m_LocalPosition: {x: -0.0052819634, y: 0.07051197, z: -0.020841097}
+  m_LocalScale: {x: 1, y: 1.000001, z: 1.000001}
+  m_Children:
+  - {fileID: 321944147430572017}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7881473395439980150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4986262525870130947}
+  m_Layer: 0
+  m_Name: beetle-FRLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4986262525870130947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881473395439980150}
+  m_LocalRotation: {x: -0.027733393, y: -0.26291415, z: 0.03429477, w: 0.9638106}
+  m_LocalPosition: {x: -0.14471646, y: -0.0000013017655, z: -0.000000076293944}
+  m_LocalScale: {x: 1, y: 0.999996, z: 1.000005}
+  m_Children:
+  - {fileID: 3143983347761148215}
+  m_Father: {fileID: 568613759350296996}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7918389767057217774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2766535316206642908}
+  m_Layer: 0
+  m_Name: beetle-LArmDigit11_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2766535316206642908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918389767057217774}
+  m_LocalRotation: {x: 0.01669206, y: -0.04030052, z: 0.38232017, w: 0.92299974}
+  m_LocalPosition: {x: -0.014693584, y: -0.012164344, z: 0.0016107546}
+  m_LocalScale: {x: 0.999997, y: 1.000004, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1895849726657705178}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7977666328492333433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5327631876515259197}
+  m_Layer: 0
+  m_Name: beetle-FRLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5327631876515259197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7977666328492333433}
+  m_LocalRotation: {x: -0.06043796, y: 0.97264016, z: 0.032895166, w: -0.22189255}
+  m_LocalPosition: {x: 0.044082087, y: 0.12021943, z: -0.096145675}
+  m_LocalScale: {x: 1, y: 0.999999, z: 1.000002}
+  m_Children:
+  - {fileID: 568613759350296996}
+  m_Father: {fileID: 4302677997263204186}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8372161203497656799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8016455176599088455}
+  m_Layer: 0
+  m_Name: beetle-Spine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8016455176599088455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372161203497656799}
+  m_LocalRotation: {x: -0.00041057356, y: -0.012133171, z: -0.02448783, w: 0.99962646}
+  m_LocalPosition: {x: -0.04935503, y: -0.000000038146972, z: -6.705522e-10}
+  m_LocalScale: {x: 1, y: 1.000001, z: 1.000001}
+  m_Children:
+  - {fileID: 3275200939486716446}
+  m_Father: {fileID: 4904029210154346688}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8581373391727037762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2714045735263625692}
+  m_Layer: 0
+  m_Name: beetle-Hub002Tooth_D_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2714045735263625692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581373391727037762}
+  m_LocalRotation: {x: -0.0005027918, y: 0.0007131947, z: -0.46405667, w: 0.88580513}
+  m_LocalPosition: {x: 0.08575744, y: 0.062916756, z: -0.015143101}
+  m_LocalScale: {x: 1, y: 1, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8691890978878400242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7246785438668411920}
+  m_Layer: 0
+  m_Name: beetle-BLLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7246785438668411920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8691890978878400242}
+  m_LocalRotation: {x: -0.027549881, y: 0.33087152, z: 0.0125090415, w: 0.94319063}
+  m_LocalPosition: {x: -0.14210206, y: -0.0000014257431, z: 0.000000095367426}
+  m_LocalScale: {x: 1.000003, y: 0.999996, z: 1.000002}
+  m_Children:
+  - {fileID: 7619143150469120140}
+  m_Father: {fileID: 8372148789203914200}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8713154188335850644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4452863188302479221}
+  m_Layer: 0
+  m_Name: beetle-RArmCollarbone_m
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4452863188302479221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713154188335850644}
+  m_LocalRotation: {x: -0.20887499, y: 0.91772056, z: 0.25268456, w: -0.22430056}
+  m_LocalPosition: {x: 0.05899738, y: -0.021352347, z: -0.0905891}
+  m_LocalScale: {x: 1.000001, y: 0.999999, z: 1}
+  m_Children:
+  - {fileID: 9121585900031833220}
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8752443114224713782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7991921976222693143}
+  m_Layer: 0
+  m_Name: beetle-RArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7991921976222693143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752443114224713782}
+  m_LocalRotation: {x: 0.6252151, y: -0.07623698, z: -0.25101608, w: 0.7350408}
+  m_LocalPosition: {x: -0.20535308, y: -0.000000019073486, z: 0.000000076293944}
+  m_LocalScale: {x: 1.000001, y: 1.000002, z: 0.999997}
+  m_Children:
+  - {fileID: 4743190710753100097}
+  m_Father: {fileID: 5145879212455765670}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8824744568778310974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8956639445043145744}
+  m_Layer: 0
+  m_Name: beetle-MLLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8956639445043145744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824744568778310974}
+  m_LocalRotation: {x: 0.043010205, y: -0.62600064, z: -0.005714006, w: 0.7786146}
+  m_LocalPosition: {x: -0.070617594, y: 0.0000000047683715, z: 0.000000019073486}
+  m_LocalScale: {x: 1.000001, y: 1.000001, z: 0.999999}
+  m_Children:
+  - {fileID: 5448958347314017090}
+  m_Father: {fileID: 1135238205218201553}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8829111610438555823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4024425820499731502}
+  m_Layer: 0
+  m_Name: beetle-Hub002Tooth_D_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4024425820499731502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8829111610438555823}
+  m_LocalRotation: {x: -0.0005027918, y: 0.0007131947, z: -0.46405667, w: 0.88580513}
+  m_LocalPosition: {x: 0.085757464, y: 0.06291687, z: 0.015143105}
+  m_LocalScale: {x: 1, y: 1, z: 1.000001}
+  m_Children: []
+  m_Father: {fileID: 3275200939486716446}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9099421908189542297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6792404157141032249}
+  m_Layer: 0
+  m_Name: beetle-BRLeg3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6792404157141032249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099421908189542297}
+  m_LocalRotation: {x: 0.028134389, y: -0.3012062, z: 0.0116396835, w: 0.95307285}
+  m_LocalPosition: {x: -0.14210218, y: -0.0000014019012, z: -0.0000000667572}
+  m_LocalScale: {x: 1.000006, y: 0.999996, z: 0.999999}
+  m_Children:
+  - {fileID: 6002408499420237123}
+  m_Father: {fileID: 3201338040979152178}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9212477568700786108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8457437578017830800}
+  m_Layer: 0
+  m_Name: beetle-LArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8457437578017830800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212477568700786108}
+  m_LocalRotation: {x: -0.6833154, y: 0.03127282, z: -0.19024011, w: 0.7042094}
+  m_LocalPosition: {x: -0.20535336, y: 0.0000002002716, z: -0.00000015258789}
+  m_LocalScale: {x: 1.000001, y: 1.000001, z: 0.999997}
+  m_Children:
+  - {fileID: 8576696332319806271}
+  m_Father: {fileID: 2646112154229894453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

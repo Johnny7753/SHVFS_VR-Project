@@ -1,0 +1,626 @@
+fileFormatVersion: 2
+guid: 51e236dbbdcaa5e42a45b80e4a9ffe2a
+timeCreated: 1524355043
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ForestDragon_
+    100004: ForestDragon_ Head
+    100006: ForestDragon_ L Calf
+    100008: ForestDragon_ L Clavicle
+    100010: ForestDragon_ L Finger0
+    100012: ForestDragon_ L Finger01
+    100014: ForestDragon_ L Finger1
+    100016: ForestDragon_ L Finger11
+    100018: ForestDragon_ L Finger2
+    100020: ForestDragon_ L Finger21
+    100022: ForestDragon_ L Finger3
+    100024: ForestDragon_ L Finger31
+    100026: ForestDragon_ L Foot
+    100028: ForestDragon_ L Forearm
+    100030: ForestDragon_ L Hand
+    100032: ForestDragon_ L HorseLink
+    100034: ForestDragon_ L Thigh
+    100036: ForestDragon_ L Toe0
+    100038: ForestDragon_ L Toe01
+    100040: ForestDragon_ L Toe1
+    100042: ForestDragon_ L Toe11
+    100044: ForestDragon_ L Toe2
+    100046: ForestDragon_ L Toe21
+    100048: ForestDragon_ L Toe3
+    100050: ForestDragon_ L Toe31
+    100052: ForestDragon_ L UpperArm
+    100054: ForestDragon_ Neck
+    100056: ForestDragon_ Neck1
+    100058: ForestDragon_ Pelvis
+    100060: ForestDragon_ Ponytail1
+    100062: ForestDragon_ R Calf
+    100064: ForestDragon_ R Clavicle
+    100066: ForestDragon_ R Finger0
+    100068: ForestDragon_ R Finger01
+    100070: ForestDragon_ R Finger1
+    100072: ForestDragon_ R Finger11
+    100074: ForestDragon_ R Finger2
+    100076: ForestDragon_ R Finger21
+    100078: ForestDragon_ R Finger3
+    100080: ForestDragon_ R Finger31
+    100082: ForestDragon_ R Foot
+    100084: ForestDragon_ R Forearm
+    100086: ForestDragon_ R Hand
+    100088: ForestDragon_ R HorseLink
+    100090: ForestDragon_ R Thigh
+    100092: ForestDragon_ R Toe0
+    100094: ForestDragon_ R Toe01
+    100096: ForestDragon_ R Toe1
+    100098: ForestDragon_ R Toe11
+    100100: ForestDragon_ R Toe2
+    100102: ForestDragon_ R Toe21
+    100104: ForestDragon_ R Toe3
+    100106: ForestDragon_ R Toe31
+    100108: ForestDragon_ R UpperArm
+    100110: ForestDragon_ Spine
+    100112: ForestDragon_ Spine1
+    100114: ForestDragon_ Tail
+    100116: ForestDragon_ Tail1
+    100118: ForestDragon_ Tail10
+    100120: ForestDragon_ Tail2
+    100122: ForestDragon_ Tail3
+    100124: ForestDragon_ Tail4
+    100126: ForestDragon_ Tail5
+    100128: ForestDragon_ Tail6
+    100130: ForestDragon_ Tail7
+    100132: ForestDragon_ Tail8
+    100134: ForestDragon_ Tail9
+    100136: ForestDragon_Tongue_1
+    100138: ForestDragon_Tongue_2
+    100140: ForestDragon_Tongue_3
+    100142: ForestDragon_Tongue_4
+    100144: ForestDragon_WingL_Arm
+    100146: ForestDragon_WingL_FingerA_1
+    100148: ForestDragon_WingL_FingerA_2
+    100150: ForestDragon_WingL_FingerA_3
+    100152: ForestDragon_WingL_FingerB_1
+    100154: ForestDragon_WingL_FingerB_2
+    100156: ForestDragon_WingL_FingerB_3
+    100158: ForestDragon_WingL_FingerC_1
+    100160: ForestDragon_WingL_FingerC_2
+    100162: ForestDragon_WingL_FingerC_3
+    100164: ForestDragon_WingL_ForeArm
+    100166: ForestDragon_WingL_Hand
+    100168: ForestDragon_WingR_Arm
+    100170: ForestDragon_WingR_FingerA_1
+    100172: ForestDragon_WingR_FingerA_2
+    100174: ForestDragon_WingR_FingerA_3
+    100176: ForestDragon_WingR_FingerB_1
+    100178: ForestDragon_WingR_FingerB_2
+    100180: ForestDragon_WingR_FingerB_3
+    100182: ForestDragon_WingR_FingerC_1
+    100184: ForestDragon_WingR_FingerC_2
+    100186: ForestDragon_WingR_FingerC_3
+    100188: ForestDragon_WingR_ForeArm
+    100190: ForestDragon_WingR_Hand
+    100192: root
+    400000: //RootNode
+    400002: ForestDragon_
+    400004: ForestDragon_ Head
+    400006: ForestDragon_ L Calf
+    400008: ForestDragon_ L Clavicle
+    400010: ForestDragon_ L Finger0
+    400012: ForestDragon_ L Finger01
+    400014: ForestDragon_ L Finger1
+    400016: ForestDragon_ L Finger11
+    400018: ForestDragon_ L Finger2
+    400020: ForestDragon_ L Finger21
+    400022: ForestDragon_ L Finger3
+    400024: ForestDragon_ L Finger31
+    400026: ForestDragon_ L Foot
+    400028: ForestDragon_ L Forearm
+    400030: ForestDragon_ L Hand
+    400032: ForestDragon_ L HorseLink
+    400034: ForestDragon_ L Thigh
+    400036: ForestDragon_ L Toe0
+    400038: ForestDragon_ L Toe01
+    400040: ForestDragon_ L Toe1
+    400042: ForestDragon_ L Toe11
+    400044: ForestDragon_ L Toe2
+    400046: ForestDragon_ L Toe21
+    400048: ForestDragon_ L Toe3
+    400050: ForestDragon_ L Toe31
+    400052: ForestDragon_ L UpperArm
+    400054: ForestDragon_ Neck
+    400056: ForestDragon_ Neck1
+    400058: ForestDragon_ Pelvis
+    400060: ForestDragon_ Ponytail1
+    400062: ForestDragon_ R Calf
+    400064: ForestDragon_ R Clavicle
+    400066: ForestDragon_ R Finger0
+    400068: ForestDragon_ R Finger01
+    400070: ForestDragon_ R Finger1
+    400072: ForestDragon_ R Finger11
+    400074: ForestDragon_ R Finger2
+    400076: ForestDragon_ R Finger21
+    400078: ForestDragon_ R Finger3
+    400080: ForestDragon_ R Finger31
+    400082: ForestDragon_ R Foot
+    400084: ForestDragon_ R Forearm
+    400086: ForestDragon_ R Hand
+    400088: ForestDragon_ R HorseLink
+    400090: ForestDragon_ R Thigh
+    400092: ForestDragon_ R Toe0
+    400094: ForestDragon_ R Toe01
+    400096: ForestDragon_ R Toe1
+    400098: ForestDragon_ R Toe11
+    400100: ForestDragon_ R Toe2
+    400102: ForestDragon_ R Toe21
+    400104: ForestDragon_ R Toe3
+    400106: ForestDragon_ R Toe31
+    400108: ForestDragon_ R UpperArm
+    400110: ForestDragon_ Spine
+    400112: ForestDragon_ Spine1
+    400114: ForestDragon_ Tail
+    400116: ForestDragon_ Tail1
+    400118: ForestDragon_ Tail10
+    400120: ForestDragon_ Tail2
+    400122: ForestDragon_ Tail3
+    400124: ForestDragon_ Tail4
+    400126: ForestDragon_ Tail5
+    400128: ForestDragon_ Tail6
+    400130: ForestDragon_ Tail7
+    400132: ForestDragon_ Tail8
+    400134: ForestDragon_ Tail9
+    400136: ForestDragon_Tongue_1
+    400138: ForestDragon_Tongue_2
+    400140: ForestDragon_Tongue_3
+    400142: ForestDragon_Tongue_4
+    400144: ForestDragon_WingL_Arm
+    400146: ForestDragon_WingL_FingerA_1
+    400148: ForestDragon_WingL_FingerA_2
+    400150: ForestDragon_WingL_FingerA_3
+    400152: ForestDragon_WingL_FingerB_1
+    400154: ForestDragon_WingL_FingerB_2
+    400156: ForestDragon_WingL_FingerB_3
+    400158: ForestDragon_WingL_FingerC_1
+    400160: ForestDragon_WingL_FingerC_2
+    400162: ForestDragon_WingL_FingerC_3
+    400164: ForestDragon_WingL_ForeArm
+    400166: ForestDragon_WingL_Hand
+    400168: ForestDragon_WingR_Arm
+    400170: ForestDragon_WingR_FingerA_1
+    400172: ForestDragon_WingR_FingerA_2
+    400174: ForestDragon_WingR_FingerA_3
+    400176: ForestDragon_WingR_FingerB_1
+    400178: ForestDragon_WingR_FingerB_2
+    400180: ForestDragon_WingR_FingerB_3
+    400182: ForestDragon_WingR_FingerC_1
+    400184: ForestDragon_WingR_FingerC_2
+    400186: ForestDragon_WingR_FingerC_3
+    400188: ForestDragon_WingR_ForeArm
+    400190: ForestDragon_WingR_Hand
+    400192: root
+    7400000: GetHit1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GetHit1
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/ForestDragon_
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe0
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe0/ForestDragon_
+          L Toe01
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe1/ForestDragon_
+          L Toe11
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe2/ForestDragon_
+          L Toe21
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ L Thigh/ForestDragon_
+          L Calf/ForestDragon_ L HorseLink/ForestDragon_ L Foot/ForestDragon_ L Toe3/ForestDragon_
+          L Toe31
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe0
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe0/ForestDragon_
+          R Toe01
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe1/ForestDragon_
+          R Toe11
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe2/ForestDragon_
+          R Toe21
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ R Thigh/ForestDragon_
+          R Calf/ForestDragon_ R HorseLink/ForestDragon_ R Foot/ForestDragon_ R Toe3/ForestDragon_
+          R Toe31
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger0
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger0/ForestDragon_ L Finger01
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger1/ForestDragon_ L Finger11
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger2/ForestDragon_ L Finger21
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ L Clavicle/ForestDragon_ L UpperArm/ForestDragon_ L
+          Forearm/ForestDragon_ L Hand/ForestDragon_ L Finger3/ForestDragon_ L Finger31
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head/ForestDragon_
+          Ponytail1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head/ForestDragon_
+          Ponytail1/ForestDragon_Tongue_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head/ForestDragon_
+          Ponytail1/ForestDragon_Tongue_1/ForestDragon_Tongue_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head/ForestDragon_
+          Ponytail1/ForestDragon_Tongue_1/ForestDragon_Tongue_2/ForestDragon_Tongue_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ Neck/ForestDragon_ Neck1/ForestDragon_ Head/ForestDragon_
+          Ponytail1/ForestDragon_Tongue_1/ForestDragon_Tongue_2/ForestDragon_Tongue_3/ForestDragon_Tongue_4
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger0
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger0/ForestDragon_ R Finger01
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger1/ForestDragon_ R Finger11
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger2/ForestDragon_ R Finger21
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_ R Clavicle/ForestDragon_ R UpperArm/ForestDragon_ R
+          Forearm/ForestDragon_ R Hand/ForestDragon_ R Finger3/ForestDragon_ R Finger31
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerA_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerA_1/ForestDragon_WingL_FingerA_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerA_1/ForestDragon_WingL_FingerA_2/ForestDragon_WingL_FingerA_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerB_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerB_1/ForestDragon_WingL_FingerB_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerB_1/ForestDragon_WingL_FingerB_2/ForestDragon_WingL_FingerB_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerC_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerC_1/ForestDragon_WingL_FingerC_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingL_Arm/ForestDragon_WingL_ForeArm/ForestDragon_WingL_Hand/ForestDragon_WingL_FingerC_1/ForestDragon_WingL_FingerC_2/ForestDragon_WingL_FingerC_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerA_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerA_1/ForestDragon_WingR_FingerA_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerA_1/ForestDragon_WingR_FingerA_2/ForestDragon_WingR_FingerA_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerB_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerB_1/ForestDragon_WingR_FingerB_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerB_1/ForestDragon_WingR_FingerB_2/ForestDragon_WingR_FingerB_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerC_1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerC_1/ForestDragon_WingR_FingerC_2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Spine/ForestDragon_
+          Spine1/ForestDragon_WingR_Arm/ForestDragon_WingR_ForeArm/ForestDragon_WingR_Hand/ForestDragon_WingR_FingerC_1/ForestDragon_WingR_FingerC_2/ForestDragon_WingR_FingerC_3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5/ForestDragon_ Tail6
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5/ForestDragon_ Tail6/ForestDragon_ Tail7
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5/ForestDragon_ Tail6/ForestDragon_ Tail7/ForestDragon_ Tail8
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5/ForestDragon_ Tail6/ForestDragon_ Tail7/ForestDragon_ Tail8/ForestDragon_
+          Tail9
+        weight: 1
+      - path: root/ForestDragon_/ForestDragon_ Pelvis/ForestDragon_ Tail/ForestDragon_
+          Tail1/ForestDragon_ Tail2/ForestDragon_ Tail3/ForestDragon_ Tail4/ForestDragon_
+          Tail5/ForestDragon_ Tail6/ForestDragon_ Tail7/ForestDragon_ Tail8/ForestDragon_
+          Tail9/ForestDragon_ Tail10
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 566ab038e6c891c43bafebcd6ba07083,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
