@@ -20,23 +20,8 @@ public class FlyingDragonController : EnemyController
     }
     protected override void FixedUpdate()
     {
-        if (HP <= 0)
-        {
-            Debug.Log(1);
-            EnemyDie();
-        }
+        base.FixedUpdate();
         Attack();
-        ////look at player to attack
-        //if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
-        //{
-        //    transform.LookAt(player);
-            
-        //    if (!hasFoundNextPoint)
-        //    {
-        //        Invoke("RefreshStandPoint", Random.Range(waitSeconds.x, waitSeconds.y));
-        //        hasFoundNextPoint = true;
-        //    }
-        //}
     }
     protected override void InitializeEnemy()
     {
@@ -52,14 +37,6 @@ public class FlyingDragonController : EnemyController
 
         agent.enabled = true;
     }
-    //private void RefreshStandPoint()
-    //{
-    //    FlyingDragonHiddenPoint lastPoint =(FlyingDragonHiddenPoint)pointsTaken;        
-    //    agent.destination = FindStandPoint();
-    //    if (lastPoint != null)
-    //        lastPoint.isTaken = false;
-    //    hasFoundNextPoint = false;
-    //}
     private Vector3 FindStandPoint()
     {
         availablePoints = GetAvailablePoints(points);
@@ -77,6 +54,16 @@ public class FlyingDragonController : EnemyController
             goal = new Vector3(Random.Range(actionArea.x, actionArea.y), 0, Random.Range(actionArea.z, actionArea.w));
         }
         return goal;       
+    }
+    protected List<T> GetAvailablePoints<T>(List<T> points) where T : EnemyHidenPoint
+    {
+        List<T> availablePoints = new List<T>();
+        foreach (T point in points)
+        {
+            if (!point.isTaken)
+                availablePoints.Add(point);
+        }
+        return availablePoints;
     }
 
     private void Attack()
