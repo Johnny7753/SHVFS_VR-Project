@@ -11,6 +11,7 @@ public class BoxMagazineComponent : MonoBehaviour
     public bool isleftHandIn = false;
     public bool isHandled = false;
     public bool hasLoaded = true;
+    public bool hasShaked = false;
     public float timer = 0;
     public int BulletCapacity = 500;
     public GameObject Gun;
@@ -48,7 +49,10 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    leftHandController.GetComponent<VibrateManager>().VibrateController(1, 5);
+                    if (hasShaked == false)
+                    {
+                        leftHandController.GetComponent<VibrateManager>().VibrateController(1, 1);
+                    }
                     timer = 0;
                     leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                     isHandled = true;

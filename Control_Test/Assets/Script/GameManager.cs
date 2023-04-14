@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
         Time.timeScale = 1;
     }
     public void PauseGame()

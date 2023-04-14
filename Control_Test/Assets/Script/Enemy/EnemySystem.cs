@@ -17,7 +17,7 @@ public class EnemySystem : Singleton<EnemySystem>
     [SerializeField]
     private int partIndex;
     
-    [HideInInspector]
+    
     public List<OtherEnemyHiddenPoint> points;
     [HideInInspector]
     public List<FlyingDragonHiddenPoint> fdPoints;
