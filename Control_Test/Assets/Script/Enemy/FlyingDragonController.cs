@@ -25,17 +25,18 @@ public class FlyingDragonController : EnemyController
             Debug.Log(1);
             EnemyDie();
         }
-        //look at player to attack
-        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
-        {
-            transform.LookAt(player);
-            Attack();
-            if (!hasFoundNextPoint)
-            {
-                Invoke("RefreshStandPoint", Random.Range(waitSeconds.x, waitSeconds.y));
-                hasFoundNextPoint = true;
-            }
-        }
+        Attack();
+        ////look at player to attack
+        //if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 1.5f)
+        //{
+        //    transform.LookAt(player);
+            
+        //    if (!hasFoundNextPoint)
+        //    {
+        //        Invoke("RefreshStandPoint", Random.Range(waitSeconds.x, waitSeconds.y));
+        //        hasFoundNextPoint = true;
+        //    }
+        //}
     }
     protected override void InitializeEnemy()
     {
@@ -51,14 +52,14 @@ public class FlyingDragonController : EnemyController
 
         agent.enabled = true;
     }
-    private void RefreshStandPoint()
-    {
-        FlyingDragonHiddenPoint lastPoint =(FlyingDragonHiddenPoint)pointsTaken;        
-        agent.destination = FindStandPoint();
-        if (lastPoint != null)
-            lastPoint.isTaken = false;
-        hasFoundNextPoint = false;
-    }
+    //private void RefreshStandPoint()
+    //{
+    //    FlyingDragonHiddenPoint lastPoint =(FlyingDragonHiddenPoint)pointsTaken;        
+    //    agent.destination = FindStandPoint();
+    //    if (lastPoint != null)
+    //        lastPoint.isTaken = false;
+    //    hasFoundNextPoint = false;
+    //}
     private Vector3 FindStandPoint()
     {
         availablePoints = GetAvailablePoints(points);

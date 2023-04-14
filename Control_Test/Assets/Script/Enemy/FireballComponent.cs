@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FireballComponent : MonoBehaviour
 {
-    public float emissionForce;
+    [Tooltip("x means the force on x axis, y means the force on y axis")]
+    public Vector2 emissionForce;
     private Rigidbody rigid;
     public float FireballDamage;
     private void Awake()
     {
         rigid=GetComponent<Rigidbody>();
         //give initial force
-        rigid.AddForce((transform.forward+transform.up)*emissionForce);
+        rigid.AddForce(transform.forward*emissionForce.x+transform.up*emissionForce.y);
     }
     private void Update()
     {
