@@ -17,6 +17,8 @@ public class BoxMagazineComponent : MonoBehaviour
     public GameObject LoadPoint;
     public GameObject leftHand;
     public GameObject rightHand;
+    public GameObject leftHandController;
+    public GameObject rightHandController;
     public Transform leftHandHoldPoint;
     public Transform rightHandHoldPoint;
 
@@ -29,6 +31,8 @@ public class BoxMagazineComponent : MonoBehaviour
         rightHand = FindObjectOfType<RightHandComponent>().gameObject;
         leftHandHoldPoint = FindObjectOfType<LeftHandComponent>().gameObject.GetComponentInChildren<HoldPointComponent>().transform;
         rightHandHoldPoint = FindObjectOfType<RightHandComponent>().gameObject.GetComponentInChildren<HoldPointComponent>().transform;
+        leftHandController= FindObjectOfType<LeftHandController>().gameObject;
+        rightHandController = FindObjectOfType<RightHandController>().gameObject;
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
+                    leftHandController.GetComponent<VibrateManager>().VibrateController(1, 5);
                     timer = 0;
                     leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                     isHandled = true;

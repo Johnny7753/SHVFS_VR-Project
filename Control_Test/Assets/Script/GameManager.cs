@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -39,12 +39,16 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
         }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
+        }
         
     }
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-
+        Time.timeScale = 1;
     }
     public void PauseGame()
     {

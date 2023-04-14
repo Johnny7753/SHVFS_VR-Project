@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public float HP;
     public float Score;
     public float refreshInterval;
-
+    
     [Header("Enemy Movement")]
     [Tooltip("the time range for finding next standing point")]
     [SerializeField]
@@ -38,7 +38,6 @@ public class EnemyController : MonoBehaviour
     protected float timer;
     //attack check for ground enemy
     protected bool beginAttack;
-
     protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -47,9 +46,9 @@ public class EnemyController : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
+        
         if (HP <= 0)
         {
-            Debug.Log(1);
             EnemyDie();
         }
         //look at player to attack
@@ -68,7 +67,8 @@ public class EnemyController : MonoBehaviour
     //destroy this enemy
     public void EnemyDie()
     {
-        Debug.Log(2);
+        
+        GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
         if (pointsTaken)
             pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);

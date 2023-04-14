@@ -65,6 +65,12 @@ public class EnemySystem : Singleton<EnemySystem>
         finishRefreshing = false;
         RefreshEnemies();
     }
+
+    public void Start()
+    {
+        waveIndex = 0;
+        enemyNum = 0;
+    }
     private void Update()
     {
         //some cheat key

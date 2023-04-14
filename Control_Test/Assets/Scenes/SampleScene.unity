@@ -7281,6 +7281,8 @@ GameObject:
   - component: {fileID: 1087421050}
   - component: {fileID: 1087421049}
   - component: {fileID: 1087421048}
+  - component: {fileID: 1087421053}
+  - component: {fileID: 1087421054}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -7849,6 +7851,31 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1087421053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087421046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a9940d84506b74e83ed7a8de5fd710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+--- !u!114 &1087421054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087421046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b07fd9db5c360a408335c32c02b0834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093417981
 GameObject:
   m_ObjectHideFlags: 0
@@ -11670,6 +11697,8 @@ GameObject:
   - component: {fileID: 1661295722}
   - component: {fileID: 1661295721}
   - component: {fileID: 1661295720}
+  - component: {fileID: 1661295725}
+  - component: {fileID: 1661295726}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -12238,6 +12267,31 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1661295725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661295718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a9940d84506b74e83ed7a8de5fd710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+--- !u!114 &1661295726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661295718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9958534cc4102e479a1083792707356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661832701
 GameObject:
   m_ObjectHideFlags: 0
@@ -14538,6 +14592,10 @@ PrefabInstance:
       propertyPath: rightGripHandmodel
       value: 
       objectReference: {fileID: 2009041237}
+    - target: {fileID: 1270487291, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: rightHandController
+      value: 
+      objectReference: {fileID: 1661295718}
     - target: {fileID: 1842655005, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: leftHand
       value: 
@@ -14558,6 +14616,10 @@ PrefabInstance:
       propertyPath: leftGripHandmodel
       value: 
       objectReference: {fileID: 425297483}
+    - target: {fileID: 1842655005, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: leftHandController
+      value: 
+      objectReference: {fileID: 1087421046}
     - target: {fileID: 228616345592959704, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_IsActive
       value: 0

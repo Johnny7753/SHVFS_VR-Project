@@ -25,11 +25,39 @@ public class Shoot : MonoBehaviour
         {
             if(Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
             {
-                if (Input.GetAxisRaw("RightTrigger") >= 0.1 || Input.GetAxisRaw("LeftTrigger") >= 0.1)
+                if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
                 {
                     invokeTime += Time.deltaTime;
                     if (invokeTime - currentTime > 0)
                     {
+                        LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(0.2f,1);
+                        RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(0.2f, 1);
+                        GameObject bullet;
+                        bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
+                        Gun.GetComponent<GunComponent>().AmmoCount--;
+                        Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
+                        invokeTime = 0;
+                    }
+                }
+                else if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") == 0)
+                {
+                    invokeTime += Time.deltaTime;
+                    if (invokeTime - currentTime > 0)
+                    {
+                        RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(0.2f, 1);
+                        GameObject bullet;
+                        bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
+                        Gun.GetComponent<GunComponent>().AmmoCount--;
+                        Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
+                        invokeTime = 0;
+                    }
+                }
+                else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
+                {
+                    invokeTime += Time.deltaTime;
+                    if (invokeTime - currentTime > 0)
+                    {
+                        LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(0.2f, 1);
                         GameObject bullet;
                         bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
                         Gun.GetComponent<GunComponent>().AmmoCount--;

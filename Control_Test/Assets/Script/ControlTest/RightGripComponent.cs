@@ -6,6 +6,7 @@ using UnityEngine.TextCore.Text;
 public class RightGripComponent : MonoBehaviour
 {
     public bool isRightGripCaught = false;
+    public GameObject rightHandController;
     public GameObject rightHand;
     public GameObject rightGripHandmodel;
     public GameObject rightHandModel;
