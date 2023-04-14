@@ -13,6 +13,17 @@ public class FireballComponent : MonoBehaviour
         //give initial force
         rigid.AddForce((transform.forward+transform.up)*emissionForce);
     }
+    private void Update()
+    {
+        RaycastHit hitinfo;
+        Physics.Raycast(transform.position, Vector3.down, out hitinfo ,2.1f);
+        if (hitinfo.collider == null) return;
+        else if(hitinfo.collider.GetComponent<Ground>() != null)
+        {
+            Destroy(gameObject);
+        }
+       
+    }
     private void OnTriggerEnter(Collider collision)
     {
         if(!collision.gameObject.GetComponent<EnemyController>()&&!collision.gameObject.GetComponent<FireballComponent>())

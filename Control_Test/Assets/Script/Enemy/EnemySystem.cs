@@ -41,7 +41,7 @@ public class EnemySystem : Singleton<EnemySystem>
     private float timer;
     [HideInInspector]
     public int enemyNum;
-
+    public bool isWin = false;
     public override void Awake()
     {
         base.Awake();
@@ -114,6 +114,7 @@ public class EnemySystem : Singleton<EnemySystem>
         }
         else if (waveIndex >= waves.Length-1)
         {
+            isWin = true;
             Debug.Log("no more enemies!");
         }
     }

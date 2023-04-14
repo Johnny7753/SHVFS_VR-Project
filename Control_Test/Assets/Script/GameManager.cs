@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     
     public GameObject GameOverUI;
     public GameObject WinUI;
+    public GameObject PauseUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,22 +24,46 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Dead!");
             GameOverUI.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0.0001f;
         }
 
-        if(FindObjectOfType<EnemySystem>().wavenumber>2)
+
+        if(WinUI !=null && FindObjectOfType<EnemySystem>().isWin)
         {
             Debug.Log("Win!");
             WinUI.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 0.0001f;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Joystick1Button0))
+        {
+            PauseGame();
         }
         
     }
-
-
     public void StartGame()
     {
         SceneManager.LoadScene(1);
 
+    }
+    public void PauseGame()
+    {
+        //Time.timeScale = 0.0001f;
+        PauseUI.SetActive(true);
+    }
+    public void ResumeGame()
+    {
+        PauseUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void ExitGameScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

@@ -126,7 +126,7 @@ MonoBehaviour:
   isHandled: 0
   hasLoaded: 1
   timer: 0
-  BulletCapacity: 500
+  BulletCapacity: 1000
   Gun: {fileID: 0}
   LoadPoint: {fileID: 0}
   leftHand: {fileID: 0}
