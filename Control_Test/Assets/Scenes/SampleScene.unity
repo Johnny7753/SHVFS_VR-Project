@@ -10093,7 +10093,7 @@ MonoBehaviour:
   waves:
   - parts:
     - switchType: 0
-      enemyType: 2
+      enemyType: 1
       enemyNum: 13
       switchTime: 0
       leftEnemy: 2
@@ -10162,7 +10162,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 633884567046046782, guid: 1cc33b2dd86df804485b4e5e063489a5, type: 3}
   - {fileID: 633884567046046782, guid: 196f2b62e9b53324e85635d0b2ac6af7, type: 3}
-  - {fileID: 633884567046046782, guid: ffbf59b0b0a26fa4f946faf4bfa1ffad, type: 3}
+  - {fileID: 3279793852556787533, guid: d66ca9a0fcffcc947a8a3c62b65592f3, type: 3}
   - {fileID: 633884567046046782, guid: a506c38fdae05274caa2b8c6410288ea, type: 3}
   - {fileID: 633884567046046782, guid: 8b180ff9ee012f54ba9d0fdf730301ab, type: 3}
   - {fileID: 633884567046046782, guid: 7a9c25a055011d14792c76dc19ec6a6b, type: 3}
