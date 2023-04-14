@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: 51a74a1fc3577d446bbec88dd01a3fb1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ForestDragon_
+    100002: ForestDragon_ Head
+    100004: ForestDragon_ L Calf
+    100006: ForestDragon_ L Clavicle
+    100008: ForestDragon_ L Finger0
+    100010: ForestDragon_ L Finger01
+    100012: ForestDragon_ L Finger1
+    100014: ForestDragon_ L Finger11
+    100016: ForestDragon_ L Finger2
+    100018: ForestDragon_ L Finger21
+    100020: ForestDragon_ L Finger3
+    100022: ForestDragon_ L Finger31
+    100024: ForestDragon_ L Foot
+    100026: ForestDragon_ L Forearm
+    100028: ForestDragon_ L Hand
+    100030: ForestDragon_ L HorseLink
+    100032: ForestDragon_ L Thigh
+    100034: ForestDragon_ L Toe0
+    100036: ForestDragon_ L Toe01
+    100038: ForestDragon_ L Toe1
+    100040: ForestDragon_ L Toe11
+    100042: ForestDragon_ L Toe2
+    100044: ForestDragon_ L Toe21
+    100046: ForestDragon_ L Toe3
+    100048: ForestDragon_ L Toe31
+    100050: ForestDragon_ L UpperArm
+    100052: ForestDragon_ Neck
+    100054: ForestDragon_ Neck1
+    100056: ForestDragon_ Pelvis
+    100058: ForestDragon_ Ponytail1
+    100060: ForestDragon_ R Calf
+    100062: ForestDragon_ R Clavicle
+    100064: ForestDragon_ R Finger0
+    100066: ForestDragon_ R Finger01
+    100068: ForestDragon_ R Finger1
+    100070: ForestDragon_ R Finger11
+    100072: ForestDragon_ R Finger2
+    100074: ForestDragon_ R Finger21
+    100076: ForestDragon_ R Finger3
+    100078: ForestDragon_ R Finger31
+    100080: ForestDragon_ R Foot
+    100082: ForestDragon_ R Forearm
+    100084: ForestDragon_ R Hand
+    100086: ForestDragon_ R HorseLink
+    100088: ForestDragon_ R Thigh
+    100090: ForestDragon_ R Toe0
+    100092: ForestDragon_ R Toe01
+    100094: ForestDragon_ R Toe1
+    100096: ForestDragon_ R Toe11
+    100098: ForestDragon_ R Toe2
+    100100: ForestDragon_ R Toe21
+    100102: ForestDragon_ R Toe3
+    100104: ForestDragon_ R Toe31
+    100106: ForestDragon_ R UpperArm
+    100108: ForestDragon_ Spine
+    100110: ForestDragon_ Spine1
+    100112: ForestDragon_ Tail
+    100114: ForestDragon_ Tail1
+    100116: ForestDragon_ Tail10
+    100118: ForestDragon_ Tail2
+    100120: ForestDragon_ Tail3
+    100122: ForestDragon_ Tail4
+    100124: ForestDragon_ Tail5
+    100126: ForestDragon_ Tail6
+    100128: ForestDragon_ Tail7
+    100130: ForestDragon_ Tail8
+    100132: ForestDragon_ Tail9
+    100134: ForestDragon_Tongue_1
+    100136: ForestDragon_Tongue_2
+    100138: ForestDragon_Tongue_3
+    100140: ForestDragon_Tongue_4
+    100142: ForestDragon_WingL_Arm
+    100144: ForestDragon_WingL_FingerA_1
+    100146: ForestDragon_WingL_FingerA_2
+    100148: ForestDragon_WingL_FingerA_3
+    100150: ForestDragon_WingL_FingerB_1
+    100152: ForestDragon_WingL_FingerB_2
+    100154: ForestDragon_WingL_FingerB_3
+    100156: ForestDragon_WingL_FingerC_1
+    100158: ForestDragon_WingL_FingerC_2
+    100160: ForestDragon_WingL_FingerC_3
+    100162: ForestDragon_WingL_ForeArm
+    100164: ForestDragon_WingL_Hand
+    100166: ForestDragon_WingR_Arm
+    100168: ForestDragon_WingR_FingerA_1
+    100170: ForestDragon_WingR_FingerA_2
+    100172: ForestDragon_WingR_FingerA_3
+    100174: ForestDragon_WingR_FingerB_1
+    100176: ForestDragon_WingR_FingerB_2
+    100178: ForestDragon_WingR_FingerB_3
+    100180: ForestDragon_WingR_FingerC_1
+    100182: ForestDragon_WingR_FingerC_2
+    100184: ForestDragon_WingR_FingerC_3
+    100186: ForestDragon_WingR_ForeArm
+    100188: ForestDragon_WingR_Hand
+    100190: root
+    100192: //RootNode
+    100194: SK_ForestDragon
+    400000: ForestDragon_
+    400002: ForestDragon_ Head
+    400004: ForestDragon_ L Calf
+    400006: ForestDragon_ L Clavicle
+    400008: ForestDragon_ L Finger0
+    400010: ForestDragon_ L Finger01
+    400012: ForestDragon_ L Finger1
+    400014: ForestDragon_ L Finger11
+    400016: ForestDragon_ L Finger2
+    400018: ForestDragon_ L Finger21
+    400020: ForestDragon_ L Finger3
+    400022: ForestDragon_ L Finger31
+    400024: ForestDragon_ L Foot
+    400026: ForestDragon_ L Forearm
+    400028: ForestDragon_ L Hand
+    400030: ForestDragon_ L HorseLink
+    400032: ForestDragon_ L Thigh
+    400034: ForestDragon_ L Toe0
+    400036: ForestDragon_ L Toe01
+    400038: ForestDragon_ L Toe1
+    400040: ForestDragon_ L Toe11
+    400042: ForestDragon_ L Toe2
+    400044: ForestDragon_ L Toe21
+    400046: ForestDragon_ L Toe3
+    400048: ForestDragon_ L Toe31
+    400050: ForestDragon_ L UpperArm
+    400052: ForestDragon_ Neck
+    400054: ForestDragon_ Neck1
+    400056: ForestDragon_ Pelvis
+    400058: ForestDragon_ Ponytail1
+    400060: ForestDragon_ R Calf
+    400062: ForestDragon_ R Clavicle
+    400064: ForestDragon_ R Finger0
+    400066: ForestDragon_ R Finger01
+    400068: ForestDragon_ R Finger1
+    400070: ForestDragon_ R Finger11
+    400072: ForestDragon_ R Finger2
+    400074: ForestDragon_ R Finger21
+    400076: ForestDragon_ R Finger3
+    400078: ForestDragon_ R Finger31
+    400080: ForestDragon_ R Foot
+    400082: ForestDragon_ R Forearm
+    400084: ForestDragon_ R Hand
+    400086: ForestDragon_ R HorseLink
+    400088: ForestDragon_ R Thigh
+    400090: ForestDragon_ R Toe0
+    400092: ForestDragon_ R Toe01
+    400094: ForestDragon_ R Toe1
+    400096: ForestDragon_ R Toe11
+    400098: ForestDragon_ R Toe2
+    400100: ForestDragon_ R Toe21
+    400102: ForestDragon_ R Toe3
+    400104: ForestDragon_ R Toe31
+    400106: ForestDragon_ R UpperArm
+    400108: ForestDragon_ Spine
+    400110: ForestDragon_ Spine1
+    400112: ForestDragon_ Tail
+    400114: ForestDragon_ Tail1
+    400116: ForestDragon_ Tail10
+    400118: ForestDragon_ Tail2
+    400120: ForestDragon_ Tail3
+    400122: ForestDragon_ Tail4
+    400124: ForestDragon_ Tail5
+    400126: ForestDragon_ Tail6
+    400128: ForestDragon_ Tail7
+    400130: ForestDragon_ Tail8
+    400132: ForestDragon_ Tail9
+    400134: ForestDragon_Tongue_1
+    400136: ForestDragon_Tongue_2
+    400138: ForestDragon_Tongue_3
+    400140: ForestDragon_Tongue_4
+    400142: ForestDragon_WingL_Arm
+    400144: ForestDragon_WingL_FingerA_1
+    400146: ForestDragon_WingL_FingerA_2
+    400148: ForestDragon_WingL_FingerA_3
+    400150: ForestDragon_WingL_FingerB_1
+    400152: ForestDragon_WingL_FingerB_2
+    400154: ForestDragon_WingL_FingerB_3
+    400156: ForestDragon_WingL_FingerC_1
+    400158: ForestDragon_WingL_FingerC_2
+    400160: ForestDragon_WingL_FingerC_3
+    400162: ForestDragon_WingL_ForeArm
+    400164: ForestDragon_WingL_Hand
+    400166: ForestDragon_WingR_Arm
+    400168: ForestDragon_WingR_FingerA_1
+    400170: ForestDragon_WingR_FingerA_2
+    400172: ForestDragon_WingR_FingerA_3
+    400174: ForestDragon_WingR_FingerB_1
+    400176: ForestDragon_WingR_FingerB_2
+    400178: ForestDragon_WingR_FingerB_3
+    400180: ForestDragon_WingR_FingerC_1
+    400182: ForestDragon_WingR_FingerC_2
+    400184: ForestDragon_WingR_FingerC_3
+    400186: ForestDragon_WingR_ForeArm
+    400188: ForestDragon_WingR_Hand
+    400190: root
+    400192: //RootNode
+    400194: SK_ForestDragon
+    4300000: SK_ForestDragon
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SK_ForestDragon
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ForestDragon
+    second: {fileID: 2100000, guid: 0de7b4d4038f493429f3deb4e5b9aad5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
