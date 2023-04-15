@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverUI;
     public GameObject WinUI;
     public GameObject PauseUI;
+    public TextMeshProUGUI BulletNumber;
+    public TextMeshProUGUI FortressHP;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +47,18 @@ public class GameManager : MonoBehaviour
         {
             GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
         }
-        
+
+        if(BulletNumber!=null)
+        {
+          
+            BulletNumber.text = FindObjectOfType<GunComponent>().AmmoCount.ToString();
+        }
+        if (FortressHP!= null)
+        {
+
+            FortressHP.text = FindObjectOfType<Base>().BaseHp.ToString();
+        }
+
     }
     public void StartGame()
     {
