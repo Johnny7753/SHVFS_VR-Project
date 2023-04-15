@@ -13757,6 +13757,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
+--- !u!1 &1791808376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 286671456688906510, guid: bf12c4f914f23c04f86e535ccf7e9cfd, type: 3}
+  m_PrefabInstance: {fileID: 1097506093523469913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1793624870
 GameObject:
   m_ObjectHideFlags: 0
@@ -14101,6 +14106,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831499285}
   m_CullTransparentMesh: 1
+--- !u!1 &1835256133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492374174831756750, guid: 6cd7e858864e148498252cef91f989a8, type: 3}
+  m_PrefabInstance: {fileID: 6258000413150224977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842655003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1842655003, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
@@ -15492,6 +15502,7 @@ MonoBehaviour:
   WinUI: {fileID: 799946019}
   PauseUI: {fileID: 905859831}
   BulletNumber: {fileID: 342244235}
+  FortressHP: {fileID: 0}
 --- !u!1 &2124993506
 GameObject:
   m_ObjectHideFlags: 0
@@ -15726,7 +15737,7 @@ PrefabInstance:
     - target: {fileID: 1270487291, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: rightHandModel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1791808376}
     - target: {fileID: 1270487291, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: rightHandmodel
       value: 
@@ -15750,7 +15761,7 @@ PrefabInstance:
     - target: {fileID: 1842655005, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: leftHandmodel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1835256133}
     - target: {fileID: 1842655005, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: lefttHandmodel
       value: 
