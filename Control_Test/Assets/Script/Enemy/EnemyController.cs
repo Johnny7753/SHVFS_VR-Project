@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
     protected float attackInterval;
     [Tooltip("the damage for melee enemy")]
     public float EnemyDamage;
-
+    [SerializeField]
     protected Vector3 goal;//enemy move destination
     protected Transform player;//player, enemy will look at this point
     protected Vector3 enemyTarget;//enemy will stop at this point
