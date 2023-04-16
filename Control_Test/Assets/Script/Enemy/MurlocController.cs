@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class MurlocController : EnemyController
 {
-    [Header("Enemy Movement")]
+    #region parameters
+    [Header("Murloc Movement")]
     [Tooltip("the time range for finding next standing point")]
     [SerializeField]
     protected Vector2 waitSeconds = new Vector2(5, 10);
     [SerializeField]
+    [Tooltip("The enemy will hide less if the value increases")]
     [Range(0, 10)]
     private float momentum = 3;//the enemy momentum
     [SerializeField]
+    [Tooltip("this is the circle for enemy to find hidder")]
     private float checkHiddenPointRadius;
 
-    [Header("EnemyAttack")]
-    public float EnemyDamage;
+    //private int numHidden;//the count of enemy to hide
 
+    //private List<OtherEnemyHiddenPoint> points;
+    //private OtherEnemyHiddenPoint nearestPoint;
+    private bool isHidden;//to check if player is hidden
 
-    private int numHidden;//the count of enemy to hide
-
-    private List<OtherEnemyHiddenPoint> points;
-    private OtherEnemyHiddenPoint nearestPoint;
-    private bool isHidden;
+    #endregion
 
     protected override void Start()
     {
         base.Start();
 
         //find first hide point and set destination
-        numHidden = 0;
+        //numHidden = 0;
         //availablePoints = new List<OtherEnemyHiddenPoint>();
-        points = EnemySystem.Instance.points;
+        //points = EnemySystem.Instance.points;
         InitializeEnemy();
        // RefreshState();
         goal = agent.destination = enemyTarget;
@@ -58,29 +59,9 @@ public class MurlocController : EnemyController
             goal = agent.destination = transform.position;
             beginAttack = true;
         }
-        if(beginAttack)
-        {
-            timer += Time.deltaTime;
-            if (timer > attackInterval)
-            {
-                timer = 0;
-                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= EnemyDamage;
-            }
-        }
+        GroundEnemyAttack();
     }
-    protected override void InitializeEnemy()
-    {
-        transform.position = new Vector3(Random.Range(bornArea.x, bornArea.y),0, Random.Range(bornArea.z, bornArea.w));
-        //check the ground point
-        Ray ray = new Ray(transform.position,-Vector3.up);
-        RaycastHit hit;
-        Physics.Raycast(ray, out hit, 50,1 << 7);
-        //Debug.Log(hit.point);
-        transform.position += new Vector3(0, hit.point.y + 1,0);
-        transform.LookAt(player);
-
-        agent.enabled = true;
-    }
+    //find hidden point while moving
     private void CheckHiddenPoint()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, checkHiddenPointRadius,1<<8);
@@ -101,12 +82,15 @@ public class MurlocController : EnemyController
             }
         }
     }
+
+    //show check sphere
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, checkHiddenPointRadius);
     }
 #endif
+
     private void ReTargetPlayer()
     {
         isHidden = false;
@@ -114,62 +98,63 @@ public class MurlocController : EnemyController
         pointsTaken = null;
         goal = agent.destination = enemyTarget;
     }
-    private void RefreshState()
-    {
-        if(pointsTaken)
-            pointsTaken.isTaken = false;
-        //if murloc has hidden 2 hiddenpoints, it will go straight to player
-        if (numHidden >= 2)
-        {
-            pointsTaken = null;
-            goal=agent.destination = enemyTarget;
-            return;
-        }
-        int way = Random.Range(0, 10);
-        if(way<momentum)
-        {
-            pointsTaken = null;
-            goal = agent.destination = enemyTarget;
-        }
-        else
-        {
-            agent.destination = FindStandPoint();
-        }
-        hasFoundNextPoint = false;
-    }
-    private Vector3 FindStandPoint()
-    {
-        nearestPoint = GetNearestPointsBeforeEnemy(points);
-        if (nearestPoint!=null)
-        {
-            Debug.Log(pointsTaken+"+"+nearestPoint);
-            numHidden++;
-            nearestPoint.isTaken = true;
-            pointsTaken = nearestPoint;
-            goal = nearestPoint.transform.position;
-        }
-        else
-        {
-            pointsTaken = null;
-            goal = enemyTarget;
-        }
-        return goal;
-    }
-    private OtherEnemyHiddenPoint GetNearestPointsBeforeEnemy(List<OtherEnemyHiddenPoint> points)
-    {
-        float nearestDis = 10000;
-        OtherEnemyHiddenPoint nearestPoint=null;
-        foreach (OtherEnemyHiddenPoint point in points)
-        {
-            //find the nearest hidden point before player
-            if (point.transform.position.x < transform.position.x&&Vector3.Distance(point.transform.position,transform.position)<nearestDis)
-            {
-                nearestDis = Vector3.Distance(point.transform.position, transform.position);
-                nearestPoint = point;
-            }
-        }
-        if(nearestPoint!=null&&nearestPoint.isTaken==false&&nearestPoint!=pointsTaken)
-            return nearestPoint;
-        return null;
-    }
+
+    //private void RefreshState()
+    //{
+    //    if(pointsTaken)
+    //        pointsTaken.isTaken = false;
+    //    //if murloc has hidden 2 hiddenpoints, it will go straight to player
+    //    if (numHidden >= 2)
+    //    {
+    //        pointsTaken = null;
+    //        goal=agent.destination = enemyTarget;
+    //        return;
+    //    }
+    //    int way = Random.Range(0, 10);
+    //    if(way<momentum)
+    //    {
+    //        pointsTaken = null;
+    //        goal = agent.destination = enemyTarget;
+    //    }
+    //    else
+    //    {
+    //        agent.destination = FindStandPoint();
+    //    }
+    //    hasFoundNextPoint = false;
+    //}
+    //private Vector3 FindStandPoint()
+    //{
+    //    nearestPoint = GetNearestPointsBeforeEnemy(points);
+    //    if (nearestPoint!=null)
+    //    {
+    //        Debug.Log(pointsTaken+"+"+nearestPoint);
+    //        numHidden++;
+    //        nearestPoint.isTaken = true;
+    //        pointsTaken = nearestPoint;
+    //        goal = nearestPoint.transform.position;
+    //    }
+    //    else
+    //    {
+    //        pointsTaken = null;
+    //        goal = enemyTarget;
+    //    }
+    //    return goal;
+    //}
+    //private OtherEnemyHiddenPoint GetNearestPointsBeforeEnemy(List<OtherEnemyHiddenPoint> points)
+    //{
+    //    float nearestDis = 10000;
+    //    OtherEnemyHiddenPoint nearestPoint=null;
+    //    foreach (OtherEnemyHiddenPoint point in points)
+    //    {
+    //        //find the nearest hidden point before player
+    //        if (point.transform.position.x < transform.position.x&&Vector3.Distance(point.transform.position,transform.position)<nearestDis)
+    //        {
+    //            nearestDis = Vector3.Distance(point.transform.position, transform.position);
+    //            nearestPoint = point;
+    //        }
+    //    }
+    //    if(nearestPoint!=null&&nearestPoint.isTaken==false&&nearestPoint!=pointsTaken)
+    //        return nearestPoint;
+    //    return null;
+    //}
 }
