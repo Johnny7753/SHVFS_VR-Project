@@ -1,0 +1,723 @@
+fileFormatVersion: 2
+guid: 68df0dff90f1c4947a42fc41d7e15643
+timeCreated: 1521140947
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: OceanDragon_
+    100004: OceanDragon_ Head
+    100006: OceanDragon_ L Calf
+    100008: OceanDragon_ L Clavicle
+    100010: OceanDragon_ L Finger0
+    100012: OceanDragon_ L Finger01
+    100014: OceanDragon_ L Finger02
+    100016: OceanDragon_ L Finger1
+    100018: OceanDragon_ L Finger11
+    100020: OceanDragon_ L Finger12
+    100022: OceanDragon_ L Finger2
+    100024: OceanDragon_ L Finger21
+    100026: OceanDragon_ L Finger22
+    100028: OceanDragon_ L Foot
+    100030: OceanDragon_ L Forearm
+    100032: OceanDragon_ L Hand
+    100034: OceanDragon_ L Thigh
+    100036: OceanDragon_ L UpperArm
+    100038: OceanDragon_ Neck
+    100040: OceanDragon_ Neck1
+    100042: OceanDragon_ Neck2
+    100044: OceanDragon_ Neck3
+    100046: OceanDragon_ Pelvis
+    100048: OceanDragon_ Ponytail1
+    100050: OceanDragon_ R Calf
+    100052: OceanDragon_ R Clavicle
+    100054: OceanDragon_ R Finger0
+    100056: OceanDragon_ R Finger01
+    100058: OceanDragon_ R Finger02
+    100060: OceanDragon_ R Finger1
+    100062: OceanDragon_ R Finger11
+    100064: OceanDragon_ R Finger12
+    100066: OceanDragon_ R Finger2
+    100068: OceanDragon_ R Finger21
+    100070: OceanDragon_ R Finger22
+    100072: OceanDragon_ R Foot
+    100074: OceanDragon_ R Forearm
+    100076: OceanDragon_ R Hand
+    100078: OceanDragon_ R Thigh
+    100080: OceanDragon_ R UpperArm
+    100082: OceanDragon_ Spine
+    100084: OceanDragon_ Spine1
+    100086: OceanDragon_ Spine2
+    100088: OceanDragon_ Tail
+    100090: OceanDragon_ Tail1
+    100092: OceanDragon_ Tail10
+    100094: OceanDragon_ Tail11
+    100096: OceanDragon_ Tail12
+    100098: OceanDragon_ Tail13
+    100100: OceanDragon_ Tail14
+    100102: OceanDragon_ Tail15
+    100104: OceanDragon_ Tail16
+    100106: OceanDragon_ Tail17
+    100108: OceanDragon_ Tail2
+    100110: OceanDragon_ Tail3
+    100112: OceanDragon_ Tail4
+    100114: OceanDragon_ Tail5
+    100116: OceanDragon_ Tail6
+    100118: OceanDragon_ Tail7
+    100120: OceanDragon_ Tail8
+    100122: OceanDragon_ Tail9
+    100124: OceanDragon_AnalFinL_1
+    100126: OceanDragon_AnalFinL_2
+    100128: OceanDragon_AnalFinL_3
+    100130: OceanDragon_AnalFinR_1
+    100132: OceanDragon_AnalFinR_2
+    100134: OceanDragon_AnalFinR_3
+    100136: OceanDragon_ToeL_A_1
+    100138: OceanDragon_ToeL_A_2
+    100140: OceanDragon_ToeL_A_3
+    100142: OceanDragon_ToeL_B_1
+    100144: OceanDragon_ToeL_B_2
+    100146: OceanDragon_ToeL_B_3
+    100148: OceanDragon_ToeL_C_1
+    100150: OceanDragon_ToeL_C_2
+    100152: OceanDragon_ToeL_C_3
+    100154: OceanDragon_ToeR_A_1
+    100156: OceanDragon_ToeR_A_2
+    100158: OceanDragon_ToeR_A_3
+    100160: OceanDragon_ToeR_B_1
+    100162: OceanDragon_ToeR_B_2
+    100164: OceanDragon_ToeR_B_3
+    100166: OceanDragon_ToeR_C_1
+    100168: OceanDragon_ToeR_C_2
+    100170: OceanDragon_ToeR_C_3
+    100172: OceanDragon_Tongue_1
+    100174: OceanDragon_Tongue_2
+    100176: OceanDragon_Tongue_3
+    100178: OceanDragon_Tongue_4
+    100180: OceanDragon_Tongue_5
+    100182: OceanDragon_Tongue_6
+    100184: OceanDragon_WingL_1
+    100186: OceanDragon_WingL_10
+    100188: OceanDragon_WingL_2
+    100190: OceanDragon_WingL_3
+    100192: OceanDragon_WingL_4
+    100194: OceanDragon_WingL_5
+    100196: OceanDragon_WingL_6
+    100198: OceanDragon_WingL_7
+    100200: OceanDragon_WingL_8
+    100202: OceanDragon_WingL_9
+    100204: OceanDragon_WingR_1
+    100206: OceanDragon_WingR_10
+    100208: OceanDragon_WingR_2
+    100210: OceanDragon_WingR_3
+    100212: OceanDragon_WingR_4
+    100214: OceanDragon_WingR_5
+    100216: OceanDragon_WingR_6
+    100218: OceanDragon_WingR_7
+    100220: OceanDragon_WingR_8
+    100222: OceanDragon_WingR_9
+    100224: root
+    400000: //RootNode
+    400002: OceanDragon_
+    400004: OceanDragon_ Head
+    400006: OceanDragon_ L Calf
+    400008: OceanDragon_ L Clavicle
+    400010: OceanDragon_ L Finger0
+    400012: OceanDragon_ L Finger01
+    400014: OceanDragon_ L Finger02
+    400016: OceanDragon_ L Finger1
+    400018: OceanDragon_ L Finger11
+    400020: OceanDragon_ L Finger12
+    400022: OceanDragon_ L Finger2
+    400024: OceanDragon_ L Finger21
+    400026: OceanDragon_ L Finger22
+    400028: OceanDragon_ L Foot
+    400030: OceanDragon_ L Forearm
+    400032: OceanDragon_ L Hand
+    400034: OceanDragon_ L Thigh
+    400036: OceanDragon_ L UpperArm
+    400038: OceanDragon_ Neck
+    400040: OceanDragon_ Neck1
+    400042: OceanDragon_ Neck2
+    400044: OceanDragon_ Neck3
+    400046: OceanDragon_ Pelvis
+    400048: OceanDragon_ Ponytail1
+    400050: OceanDragon_ R Calf
+    400052: OceanDragon_ R Clavicle
+    400054: OceanDragon_ R Finger0
+    400056: OceanDragon_ R Finger01
+    400058: OceanDragon_ R Finger02
+    400060: OceanDragon_ R Finger1
+    400062: OceanDragon_ R Finger11
+    400064: OceanDragon_ R Finger12
+    400066: OceanDragon_ R Finger2
+    400068: OceanDragon_ R Finger21
+    400070: OceanDragon_ R Finger22
+    400072: OceanDragon_ R Foot
+    400074: OceanDragon_ R Forearm
+    400076: OceanDragon_ R Hand
+    400078: OceanDragon_ R Thigh
+    400080: OceanDragon_ R UpperArm
+    400082: OceanDragon_ Spine
+    400084: OceanDragon_ Spine1
+    400086: OceanDragon_ Spine2
+    400088: OceanDragon_ Tail
+    400090: OceanDragon_ Tail1
+    400092: OceanDragon_ Tail10
+    400094: OceanDragon_ Tail11
+    400096: OceanDragon_ Tail12
+    400098: OceanDragon_ Tail13
+    400100: OceanDragon_ Tail14
+    400102: OceanDragon_ Tail15
+    400104: OceanDragon_ Tail16
+    400106: OceanDragon_ Tail17
+    400108: OceanDragon_ Tail2
+    400110: OceanDragon_ Tail3
+    400112: OceanDragon_ Tail4
+    400114: OceanDragon_ Tail5
+    400116: OceanDragon_ Tail6
+    400118: OceanDragon_ Tail7
+    400120: OceanDragon_ Tail8
+    400122: OceanDragon_ Tail9
+    400124: OceanDragon_AnalFinL_1
+    400126: OceanDragon_AnalFinL_2
+    400128: OceanDragon_AnalFinL_3
+    400130: OceanDragon_AnalFinR_1
+    400132: OceanDragon_AnalFinR_2
+    400134: OceanDragon_AnalFinR_3
+    400136: OceanDragon_ToeL_A_1
+    400138: OceanDragon_ToeL_A_2
+    400140: OceanDragon_ToeL_A_3
+    400142: OceanDragon_ToeL_B_1
+    400144: OceanDragon_ToeL_B_2
+    400146: OceanDragon_ToeL_B_3
+    400148: OceanDragon_ToeL_C_1
+    400150: OceanDragon_ToeL_C_2
+    400152: OceanDragon_ToeL_C_3
+    400154: OceanDragon_ToeR_A_1
+    400156: OceanDragon_ToeR_A_2
+    400158: OceanDragon_ToeR_A_3
+    400160: OceanDragon_ToeR_B_1
+    400162: OceanDragon_ToeR_B_2
+    400164: OceanDragon_ToeR_B_3
+    400166: OceanDragon_ToeR_C_1
+    400168: OceanDragon_ToeR_C_2
+    400170: OceanDragon_ToeR_C_3
+    400172: OceanDragon_Tongue_1
+    400174: OceanDragon_Tongue_2
+    400176: OceanDragon_Tongue_3
+    400178: OceanDragon_Tongue_4
+    400180: OceanDragon_Tongue_5
+    400182: OceanDragon_Tongue_6
+    400184: OceanDragon_WingL_1
+    400186: OceanDragon_WingL_10
+    400188: OceanDragon_WingL_2
+    400190: OceanDragon_WingL_3
+    400192: OceanDragon_WingL_4
+    400194: OceanDragon_WingL_5
+    400196: OceanDragon_WingL_6
+    400198: OceanDragon_WingL_7
+    400200: OceanDragon_WingL_8
+    400202: OceanDragon_WingL_9
+    400204: OceanDragon_WingR_1
+    400206: OceanDragon_WingR_10
+    400208: OceanDragon_WingR_2
+    400210: OceanDragon_WingR_3
+    400212: OceanDragon_WingR_4
+    400214: OceanDragon_WingR_5
+    400216: OceanDragon_WingR_6
+    400218: OceanDragon_WingR_7
+    400220: OceanDragon_WingR_8
+    400222: OceanDragon_WingR_9
+    400224: root
+    7400000: Turn45R_RM
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Turn45R_RM
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/OceanDragon_
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_A_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_A_1/OceanDragon_ToeL_A_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_A_1/OceanDragon_ToeL_A_2/OceanDragon_ToeL_A_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_B_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_B_1/OceanDragon_ToeL_B_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_B_1/OceanDragon_ToeL_B_2/OceanDragon_ToeL_B_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_C_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_C_1/OceanDragon_ToeL_C_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          L Thigh/OceanDragon_ L Calf/OceanDragon_ L Foot/OceanDragon_ToeL_C_1/OceanDragon_ToeL_C_2/OceanDragon_ToeL_C_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_A_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_A_1/OceanDragon_ToeR_A_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_A_1/OceanDragon_ToeR_A_2/OceanDragon_ToeR_A_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_B_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_B_1/OceanDragon_ToeR_B_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_B_1/OceanDragon_ToeR_B_2/OceanDragon_ToeR_B_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_C_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_C_1/OceanDragon_ToeR_C_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          R Thigh/OceanDragon_ R Calf/OceanDragon_ R Foot/OceanDragon_ToeR_C_1/OceanDragon_ToeR_C_2/OceanDragon_ToeR_C_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger0
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger0/OceanDragon_ L Finger01
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger0/OceanDragon_ L Finger01/OceanDragon_
+          L Finger02
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger1/OceanDragon_ L Finger11
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger1/OceanDragon_ L Finger11/OceanDragon_
+          L Finger12
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger2/OceanDragon_ L Finger21
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ L Clavicle/OceanDragon_ L UpperArm/OceanDragon_
+          L Forearm/OceanDragon_ L Hand/OceanDragon_ L Finger2/OceanDragon_ L Finger21/OceanDragon_
+          L Finger22
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1/OceanDragon_Tongue_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1/OceanDragon_Tongue_2/OceanDragon_Tongue_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1/OceanDragon_Tongue_2/OceanDragon_Tongue_3/OceanDragon_Tongue_4
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1/OceanDragon_Tongue_2/OceanDragon_Tongue_3/OceanDragon_Tongue_4/OceanDragon_Tongue_5
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ Neck/OceanDragon_ Neck1/OceanDragon_
+          Neck2/OceanDragon_ Neck3/OceanDragon_ Head/OceanDragon_ Ponytail1/OceanDragon_Tongue_1/OceanDragon_Tongue_2/OceanDragon_Tongue_3/OceanDragon_Tongue_4/OceanDragon_Tongue_5/OceanDragon_Tongue_6
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger0
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger0/OceanDragon_ R Finger01
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger0/OceanDragon_ R Finger01/OceanDragon_
+          R Finger02
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger1/OceanDragon_ R Finger11
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger1/OceanDragon_ R Finger11/OceanDragon_
+          R Finger12
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger2/OceanDragon_ R Finger21
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_ R Clavicle/OceanDragon_ R UpperArm/OceanDragon_
+          R Forearm/OceanDragon_ R Hand/OceanDragon_ R Finger2/OceanDragon_ R Finger21/OceanDragon_
+          R Finger22
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5/OceanDragon_WingL_6
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5/OceanDragon_WingL_6/OceanDragon_WingL_7
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5/OceanDragon_WingL_6/OceanDragon_WingL_7/OceanDragon_WingL_8
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5/OceanDragon_WingL_6/OceanDragon_WingL_7/OceanDragon_WingL_8/OceanDragon_WingL_9
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingL_1/OceanDragon_WingL_2/OceanDragon_WingL_3/OceanDragon_WingL_4/OceanDragon_WingL_5/OceanDragon_WingL_6/OceanDragon_WingL_7/OceanDragon_WingL_8/OceanDragon_WingL_9/OceanDragon_WingL_10
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5/OceanDragon_WingR_6
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5/OceanDragon_WingR_6/OceanDragon_WingR_7
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5/OceanDragon_WingR_6/OceanDragon_WingR_7/OceanDragon_WingR_8
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5/OceanDragon_WingR_6/OceanDragon_WingR_7/OceanDragon_WingR_8/OceanDragon_WingR_9
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Spine/OceanDragon_
+          Spine1/OceanDragon_ Spine2/OceanDragon_WingR_1/OceanDragon_WingR_2/OceanDragon_WingR_3/OceanDragon_WingR_4/OceanDragon_WingR_5/OceanDragon_WingR_6/OceanDragon_WingR_7/OceanDragon_WingR_8/OceanDragon_WingR_9/OceanDragon_WingR_10
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12/OceanDragon_
+          Tail13
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12/OceanDragon_
+          Tail13/OceanDragon_ Tail14
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12/OceanDragon_
+          Tail13/OceanDragon_ Tail14/OceanDragon_ Tail15
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12/OceanDragon_
+          Tail13/OceanDragon_ Tail14/OceanDragon_ Tail15/OceanDragon_ Tail16
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_ Tail3/OceanDragon_ Tail4/OceanDragon_
+          Tail5/OceanDragon_ Tail6/OceanDragon_ Tail7/OceanDragon_ Tail8/OceanDragon_
+          Tail9/OceanDragon_ Tail10/OceanDragon_ Tail11/OceanDragon_ Tail12/OceanDragon_
+          Tail13/OceanDragon_ Tail14/OceanDragon_ Tail15/OceanDragon_ Tail16/OceanDragon_
+          Tail17
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinL_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinL_1/OceanDragon_AnalFinL_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinL_1/OceanDragon_AnalFinL_2/OceanDragon_AnalFinL_3
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinR_1
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinR_1/OceanDragon_AnalFinR_2
+        weight: 1
+      - path: root/OceanDragon_/OceanDragon_ Pelvis/OceanDragon_ Tail/OceanDragon_
+          Tail1/OceanDragon_ Tail2/OceanDragon_AnalFinR_1/OceanDragon_AnalFinR_2/OceanDragon_AnalFinR_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: root
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b48d9afa3d66cb8409d6a0096bb1273c,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

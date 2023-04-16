@@ -1,0 +1,328 @@
+fileFormatVersion: 2
+guid: b48d9afa3d66cb8409d6a0096bb1273c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: OceanDragon_
+    100004: OceanDragon_ Head
+    100006: OceanDragon_ L Calf
+    100008: OceanDragon_ L Clavicle
+    100010: OceanDragon_ L Finger0
+    100012: OceanDragon_ L Finger01
+    100014: OceanDragon_ L Finger02
+    100016: OceanDragon_ L Finger1
+    100018: OceanDragon_ L Finger11
+    100020: OceanDragon_ L Finger12
+    100022: OceanDragon_ L Finger2
+    100024: OceanDragon_ L Finger21
+    100026: OceanDragon_ L Finger22
+    100028: OceanDragon_ L Foot
+    100030: OceanDragon_ L Forearm
+    100032: OceanDragon_ L Hand
+    100034: OceanDragon_ L Thigh
+    100036: OceanDragon_ L UpperArm
+    100038: OceanDragon_ Neck
+    100040: OceanDragon_ Neck1
+    100042: OceanDragon_ Neck2
+    100044: OceanDragon_ Neck3
+    100046: OceanDragon_ Pelvis
+    100048: OceanDragon_ Ponytail1
+    100050: OceanDragon_ R Calf
+    100052: OceanDragon_ R Clavicle
+    100054: OceanDragon_ R Finger0
+    100056: OceanDragon_ R Finger01
+    100058: OceanDragon_ R Finger02
+    100060: OceanDragon_ R Finger1
+    100062: OceanDragon_ R Finger11
+    100064: OceanDragon_ R Finger12
+    100066: OceanDragon_ R Finger2
+    100068: OceanDragon_ R Finger21
+    100070: OceanDragon_ R Finger22
+    100072: OceanDragon_ R Foot
+    100074: OceanDragon_ R Forearm
+    100076: OceanDragon_ R Hand
+    100078: OceanDragon_ R Thigh
+    100080: OceanDragon_ R UpperArm
+    100082: OceanDragon_ Spine
+    100084: OceanDragon_ Spine1
+    100086: OceanDragon_ Spine2
+    100088: OceanDragon_ Tail
+    100090: OceanDragon_ Tail1
+    100092: OceanDragon_ Tail10
+    100094: OceanDragon_ Tail11
+    100096: OceanDragon_ Tail12
+    100098: OceanDragon_ Tail13
+    100100: OceanDragon_ Tail14
+    100102: OceanDragon_ Tail15
+    100104: OceanDragon_ Tail16
+    100106: OceanDragon_ Tail17
+    100108: OceanDragon_ Tail2
+    100110: OceanDragon_ Tail3
+    100112: OceanDragon_ Tail4
+    100114: OceanDragon_ Tail5
+    100116: OceanDragon_ Tail6
+    100118: OceanDragon_ Tail7
+    100120: OceanDragon_ Tail8
+    100122: OceanDragon_ Tail9
+    100124: OceanDragon_AnalFinL_1
+    100126: OceanDragon_AnalFinL_2
+    100128: OceanDragon_AnalFinL_3
+    100130: OceanDragon_AnalFinR_1
+    100132: OceanDragon_AnalFinR_2
+    100134: OceanDragon_AnalFinR_3
+    100136: OceanDragon_ToeL_A_1
+    100138: OceanDragon_ToeL_A_2
+    100140: OceanDragon_ToeL_A_3
+    100142: OceanDragon_ToeL_B_1
+    100144: OceanDragon_ToeL_B_2
+    100146: OceanDragon_ToeL_B_3
+    100148: OceanDragon_ToeL_C_1
+    100150: OceanDragon_ToeL_C_2
+    100152: OceanDragon_ToeL_C_3
+    100154: OceanDragon_ToeR_A_1
+    100156: OceanDragon_ToeR_A_2
+    100158: OceanDragon_ToeR_A_3
+    100160: OceanDragon_ToeR_B_1
+    100162: OceanDragon_ToeR_B_2
+    100164: OceanDragon_ToeR_B_3
+    100166: OceanDragon_ToeR_C_1
+    100168: OceanDragon_ToeR_C_2
+    100170: OceanDragon_ToeR_C_3
+    100172: OceanDragon_Tongue_1
+    100174: OceanDragon_Tongue_2
+    100176: OceanDragon_Tongue_3
+    100178: OceanDragon_Tongue_4
+    100180: OceanDragon_Tongue_5
+    100182: OceanDragon_Tongue_6
+    100184: OceanDragon_WingL_1
+    100186: OceanDragon_WingL_10
+    100188: OceanDragon_WingL_2
+    100190: OceanDragon_WingL_3
+    100192: OceanDragon_WingL_4
+    100194: OceanDragon_WingL_5
+    100196: OceanDragon_WingL_6
+    100198: OceanDragon_WingL_7
+    100200: OceanDragon_WingL_8
+    100202: OceanDragon_WingL_9
+    100204: OceanDragon_WingR_1
+    100206: OceanDragon_WingR_10
+    100208: OceanDragon_WingR_2
+    100210: OceanDragon_WingR_3
+    100212: OceanDragon_WingR_4
+    100214: OceanDragon_WingR_5
+    100216: OceanDragon_WingR_6
+    100218: OceanDragon_WingR_7
+    100220: OceanDragon_WingR_8
+    100222: OceanDragon_WingR_9
+    100224: root
+    100226: SK_OceanDragon
+    400000: //RootNode
+    400002: OceanDragon_
+    400004: OceanDragon_ Head
+    400006: OceanDragon_ L Calf
+    400008: OceanDragon_ L Clavicle
+    400010: OceanDragon_ L Finger0
+    400012: OceanDragon_ L Finger01
+    400014: OceanDragon_ L Finger02
+    400016: OceanDragon_ L Finger1
+    400018: OceanDragon_ L Finger11
+    400020: OceanDragon_ L Finger12
+    400022: OceanDragon_ L Finger2
+    400024: OceanDragon_ L Finger21
+    400026: OceanDragon_ L Finger22
+    400028: OceanDragon_ L Foot
+    400030: OceanDragon_ L Forearm
+    400032: OceanDragon_ L Hand
+    400034: OceanDragon_ L Thigh
+    400036: OceanDragon_ L UpperArm
+    400038: OceanDragon_ Neck
+    400040: OceanDragon_ Neck1
+    400042: OceanDragon_ Neck2
+    400044: OceanDragon_ Neck3
+    400046: OceanDragon_ Pelvis
+    400048: OceanDragon_ Ponytail1
+    400050: OceanDragon_ R Calf
+    400052: OceanDragon_ R Clavicle
+    400054: OceanDragon_ R Finger0
+    400056: OceanDragon_ R Finger01
+    400058: OceanDragon_ R Finger02
+    400060: OceanDragon_ R Finger1
+    400062: OceanDragon_ R Finger11
+    400064: OceanDragon_ R Finger12
+    400066: OceanDragon_ R Finger2
+    400068: OceanDragon_ R Finger21
+    400070: OceanDragon_ R Finger22
+    400072: OceanDragon_ R Foot
+    400074: OceanDragon_ R Forearm
+    400076: OceanDragon_ R Hand
+    400078: OceanDragon_ R Thigh
+    400080: OceanDragon_ R UpperArm
+    400082: OceanDragon_ Spine
+    400084: OceanDragon_ Spine1
+    400086: OceanDragon_ Spine2
+    400088: OceanDragon_ Tail
+    400090: OceanDragon_ Tail1
+    400092: OceanDragon_ Tail10
+    400094: OceanDragon_ Tail11
+    400096: OceanDragon_ Tail12
+    400098: OceanDragon_ Tail13
+    400100: OceanDragon_ Tail14
+    400102: OceanDragon_ Tail15
+    400104: OceanDragon_ Tail16
+    400106: OceanDragon_ Tail17
+    400108: OceanDragon_ Tail2
+    400110: OceanDragon_ Tail3
+    400112: OceanDragon_ Tail4
+    400114: OceanDragon_ Tail5
+    400116: OceanDragon_ Tail6
+    400118: OceanDragon_ Tail7
+    400120: OceanDragon_ Tail8
+    400122: OceanDragon_ Tail9
+    400124: OceanDragon_AnalFinL_1
+    400126: OceanDragon_AnalFinL_2
+    400128: OceanDragon_AnalFinL_3
+    400130: OceanDragon_AnalFinR_1
+    400132: OceanDragon_AnalFinR_2
+    400134: OceanDragon_AnalFinR_3
+    400136: OceanDragon_ToeL_A_1
+    400138: OceanDragon_ToeL_A_2
+    400140: OceanDragon_ToeL_A_3
+    400142: OceanDragon_ToeL_B_1
+    400144: OceanDragon_ToeL_B_2
+    400146: OceanDragon_ToeL_B_3
+    400148: OceanDragon_ToeL_C_1
+    400150: OceanDragon_ToeL_C_2
+    400152: OceanDragon_ToeL_C_3
+    400154: OceanDragon_ToeR_A_1
+    400156: OceanDragon_ToeR_A_2
+    400158: OceanDragon_ToeR_A_3
+    400160: OceanDragon_ToeR_B_1
+    400162: OceanDragon_ToeR_B_2
+    400164: OceanDragon_ToeR_B_3
+    400166: OceanDragon_ToeR_C_1
+    400168: OceanDragon_ToeR_C_2
+    400170: OceanDragon_ToeR_C_3
+    400172: OceanDragon_Tongue_1
+    400174: OceanDragon_Tongue_2
+    400176: OceanDragon_Tongue_3
+    400178: OceanDragon_Tongue_4
+    400180: OceanDragon_Tongue_5
+    400182: OceanDragon_Tongue_6
+    400184: OceanDragon_WingL_1
+    400186: OceanDragon_WingL_10
+    400188: OceanDragon_WingL_2
+    400190: OceanDragon_WingL_3
+    400192: OceanDragon_WingL_4
+    400194: OceanDragon_WingL_5
+    400196: OceanDragon_WingL_6
+    400198: OceanDragon_WingL_7
+    400200: OceanDragon_WingL_8
+    400202: OceanDragon_WingL_9
+    400204: OceanDragon_WingR_1
+    400206: OceanDragon_WingR_10
+    400208: OceanDragon_WingR_2
+    400210: OceanDragon_WingR_3
+    400212: OceanDragon_WingR_4
+    400214: OceanDragon_WingR_5
+    400216: OceanDragon_WingR_6
+    400218: OceanDragon_WingR_7
+    400220: OceanDragon_WingR_8
+    400222: OceanDragon_WingR_9
+    400224: root
+    400226: SK_OceanDragon
+    4300000: SK_OceanDragon
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SK_OceanDragon
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_OceanDragon
+    second: {fileID: 2100000, guid: ced1ad138c5846845aa91bfc615d1204, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

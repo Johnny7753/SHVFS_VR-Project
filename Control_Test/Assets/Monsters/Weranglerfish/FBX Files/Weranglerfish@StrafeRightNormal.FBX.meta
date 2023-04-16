@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 7d8677da7674c124ea6dd2d7a4355d11
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: root
+    100002: //RootNode
+    100004: WERANGLERFISH_
+    100006: WERANGLERFISH_ Head
+    100008: WERANGLERFISH_ L Calf
+    100010: WERANGLERFISH_ L Clavicle
+    100012: WERANGLERFISH_ L Finger0
+    100014: WERANGLERFISH_ L Finger01
+    100016: WERANGLERFISH_ L Finger02
+    100018: WERANGLERFISH_ L Finger1
+    100020: WERANGLERFISH_ L Finger11
+    100022: WERANGLERFISH_ L Finger12
+    100024: WERANGLERFISH_ L Finger2
+    100026: WERANGLERFISH_ L Finger21
+    100028: WERANGLERFISH_ L Finger22
+    100030: WERANGLERFISH_ L Foot
+    100032: WERANGLERFISH_ L Forearm
+    100034: WERANGLERFISH_ L Hand
+    100036: WERANGLERFISH_ L Thigh
+    100038: WERANGLERFISH_ L Toe0
+    100040: WERANGLERFISH_ L Toe01
+    100042: WERANGLERFISH_ L Toe02
+    100044: WERANGLERFISH_ L Toe1
+    100046: WERANGLERFISH_ L Toe11
+    100048: WERANGLERFISH_ L Toe12
+    100050: WERANGLERFISH_ L Toe2
+    100052: WERANGLERFISH_ L Toe21
+    100054: WERANGLERFISH_ L Toe22
+    100056: WERANGLERFISH_ L UpperArm
+    100058: WERANGLERFISH_ Neck
+    100060: WERANGLERFISH_ Pelvis
+    100062: WERANGLERFISH_ Ponytail1
+    100064: WERANGLERFISH_ R Calf
+    100066: WERANGLERFISH_ R Clavicle
+    100068: WERANGLERFISH_ R Finger0
+    100070: WERANGLERFISH_ R Finger01
+    100072: WERANGLERFISH_ R Finger02
+    100074: WERANGLERFISH_ R Finger1
+    100076: WERANGLERFISH_ R Finger11
+    100078: WERANGLERFISH_ R Finger12
+    100080: WERANGLERFISH_ R Finger2
+    100082: WERANGLERFISH_ R Finger21
+    100084: WERANGLERFISH_ R Finger22
+    100086: WERANGLERFISH_ R Foot
+    100088: WERANGLERFISH_ R Forearm
+    100090: WERANGLERFISH_ R Hand
+    100092: WERANGLERFISH_ R Thigh
+    100094: WERANGLERFISH_ R Toe0
+    100096: WERANGLERFISH_ R Toe01
+    100098: WERANGLERFISH_ R Toe02
+    100100: WERANGLERFISH_ R Toe1
+    100102: WERANGLERFISH_ R Toe11
+    100104: WERANGLERFISH_ R Toe12
+    100106: WERANGLERFISH_ R Toe2
+    100108: WERANGLERFISH_ R Toe21
+    100110: WERANGLERFISH_ R Toe22
+    100112: WERANGLERFISH_ R UpperArm
+    100114: WERANGLERFISH_ Spine
+    100116: WERANGLERFISH_ Spine1
+    100118: WERANGLERFISH_ Tail
+    100120: WERANGLERFISH_ Tail1
+    100122: WERANGLERFISH_ Tail2
+    100124: WERANGLERFISH_BAIT_1
+    100126: WERANGLERFISH_BAIT_2
+    100128: WERANGLERFISH_BAIT_3
+    100130: WERANGLERFISH_BAIT_4
+    100132: WERANGLERFISH_BAIT_5
+    100134: WERANGLERFISH_BAIT_6
+    100136: WERANGLERFISH_BAIT_7
+    100138: WERANGLERFISH_BAIT_8
+    400000: root
+    400002: //RootNode
+    400004: WERANGLERFISH_
+    400006: WERANGLERFISH_ Head
+    400008: WERANGLERFISH_ L Calf
+    400010: WERANGLERFISH_ L Clavicle
+    400012: WERANGLERFISH_ L Finger0
+    400014: WERANGLERFISH_ L Finger01
+    400016: WERANGLERFISH_ L Finger02
+    400018: WERANGLERFISH_ L Finger1
+    400020: WERANGLERFISH_ L Finger11
+    400022: WERANGLERFISH_ L Finger12
+    400024: WERANGLERFISH_ L Finger2
+    400026: WERANGLERFISH_ L Finger21
+    400028: WERANGLERFISH_ L Finger22
+    400030: WERANGLERFISH_ L Foot
+    400032: WERANGLERFISH_ L Forearm
+    400034: WERANGLERFISH_ L Hand
+    400036: WERANGLERFISH_ L Thigh
+    400038: WERANGLERFISH_ L Toe0
+    400040: WERANGLERFISH_ L Toe01
+    400042: WERANGLERFISH_ L Toe02
+    400044: WERANGLERFISH_ L Toe1
+    400046: WERANGLERFISH_ L Toe11
+    400048: WERANGLERFISH_ L Toe12
+    400050: WERANGLERFISH_ L Toe2
+    400052: WERANGLERFISH_ L Toe21
+    400054: WERANGLERFISH_ L Toe22
+    400056: WERANGLERFISH_ L UpperArm
+    400058: WERANGLERFISH_ Neck
+    400060: WERANGLERFISH_ Pelvis
+    400062: WERANGLERFISH_ Ponytail1
+    400064: WERANGLERFISH_ R Calf
+    400066: WERANGLERFISH_ R Clavicle
+    400068: WERANGLERFISH_ R Finger0
+    400070: WERANGLERFISH_ R Finger01
+    400072: WERANGLERFISH_ R Finger02
+    400074: WERANGLERFISH_ R Finger1
+    400076: WERANGLERFISH_ R Finger11
+    400078: WERANGLERFISH_ R Finger12
+    400080: WERANGLERFISH_ R Finger2
+    400082: WERANGLERFISH_ R Finger21
+    400084: WERANGLERFISH_ R Finger22
+    400086: WERANGLERFISH_ R Foot
+    400088: WERANGLERFISH_ R Forearm
+    400090: WERANGLERFISH_ R Hand
+    400092: WERANGLERFISH_ R Thigh
+    400094: WERANGLERFISH_ R Toe0
+    400096: WERANGLERFISH_ R Toe01
+    400098: WERANGLERFISH_ R Toe02
+    400100: WERANGLERFISH_ R Toe1
+    400102: WERANGLERFISH_ R Toe11
+    400104: WERANGLERFISH_ R Toe12
+    400106: WERANGLERFISH_ R Toe2
+    400108: WERANGLERFISH_ R Toe21
+    400110: WERANGLERFISH_ R Toe22
+    400112: WERANGLERFISH_ R UpperArm
+    400114: WERANGLERFISH_ Spine
+    400116: WERANGLERFISH_ Spine1
+    400118: WERANGLERFISH_ Tail
+    400120: WERANGLERFISH_ Tail1
+    400122: WERANGLERFISH_ Tail2
+    400124: WERANGLERFISH_BAIT_1
+    400126: WERANGLERFISH_BAIT_2
+    400128: WERANGLERFISH_BAIT_3
+    400130: WERANGLERFISH_BAIT_4
+    400132: WERANGLERFISH_BAIT_5
+    400134: WERANGLERFISH_BAIT_6
+    400136: WERANGLERFISH_BAIT_7
+    400138: WERANGLERFISH_BAIT_8
+    7400000: StrafeRightNormal
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: StrafeRightNormal
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0fee7ae564f8c3344ad15a7804b291fd,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
