@@ -11559,12 +11559,12 @@ MonoBehaviour:
   waves:
   - parts:
     - switchType: 0
-      enemyType: 4
+      enemyType: 1
       enemyNum: 13
       switchTime: 0
       leftEnemy: 2
     - switchType: 1
-      enemyType: 4
+      enemyType: 0
       enemyNum: 8
       switchTime: 5
       leftEnemy: 0
