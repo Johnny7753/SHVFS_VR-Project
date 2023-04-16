@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 633884566042365905}
   - component: {fileID: 633884566042365904}
   - component: {fileID: 633884566042365907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 633884566342766494}
   - component: {fileID: 633884566342766489}
   - component: {fileID: 633884566342766488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 633884567046046752}
   - component: {fileID: 633884567046046755}
   - component: {fileID: 3781287966183921210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MurlocMother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,12 +361,12 @@ MonoBehaviour:
   HP: 0
   Score: 0
   refreshInterval: 0
-  waitSeconds: {x: 5, y: 10}
-  actionArea: {x: 85, y: 174, z: -89, w: 81}
   bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
-  shootPoint: {fileID: 6535146013663846722}
+  rayStart: {fileID: 0}
+  rayLength: 0
   attackInterval: 0
+  EnemyDamage: 0
 --- !u!114 &3781287966183921210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,13 +382,15 @@ MonoBehaviour:
   HP: 30
   Score: 5
   refreshInterval: 0
-  waitSeconds: {x: 5, y: 10}
-  actionArea: {x: -21, y: 5, z: -9, w: 20}
   bornArea: {x: 0, y: 0, z: 0, w: 0}
   pointsTaken: {fileID: 0}
-  shootPoint: {fileID: 0}
+  rayStart: {fileID: 0}
+  rayLength: 0
   attackInterval: 3
   EnemyDamage: 3
+  waitSeconds: {x: 5, y: 10}
+  momentum: 3
+  checkHiddenPointRadius: 0
 --- !u!1 &633884567644515742
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +403,7 @@ GameObject:
   - component: {fileID: 633884567644515714}
   - component: {fileID: 633884567644515741}
   - component: {fileID: 633884567644515740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6535146013663846722}
   - component: {fileID: 2099963484133552787}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

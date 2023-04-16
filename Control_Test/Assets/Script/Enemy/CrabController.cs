@@ -13,7 +13,7 @@ public class CrabController : EnemyController
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 20f)
+        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 100f)
         {
             transform.LookAt(player);
             goal = agent.destination = transform.position;

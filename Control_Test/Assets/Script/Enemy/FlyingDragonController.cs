@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FlyingDragonController : EnemyController
 {    
-    private List<FlyingDragonHiddenPoint> points;
-    private List<FlyingDragonHiddenPoint> availablePoints;
-
     [Header("Enemy Shoot")]
     [SerializeField]
     private GameObject bullet;
@@ -16,9 +13,6 @@ public class FlyingDragonController : EnemyController
     protected override void Start()
     {
         base.Start();
-
-        //find first hide point and set destination        
-        points = EnemySystem.Instance.fdPoints;
         InitializeEnemy();
     }
     protected override void FixedUpdate()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 633884566342766491}
   - component: {fileID: 633884566342766494}
   - component: {fileID: 633884566342766489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 633884567046046783}
   - component: {fileID: 633884567046046752}
   - component: {fileID: 3560409440987903761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FlyingDragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,12 +232,15 @@ MonoBehaviour:
   HP: 15
   Score: 5
   refreshInterval: 1
-  actionArea: {x: 260, y: 345, z: -173, w: 123}
   bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
-  shootPoint: {fileID: 6535146013663846722}
+  rayStart: {fileID: 6535146013663846722}
+  rayLength: 0
+  rayWidth: 0
   attackInterval: 1.5
+  EnemyDamage: 0
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
+  shootPoint: {fileID: 6535146013663846722}
 --- !u!1 &633884567644515742
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +252,7 @@ GameObject:
   - component: {fileID: 633884567644515743}
   - component: {fileID: 633884567644515714}
   - component: {fileID: 633884567644515741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6535146013663846722}
   - component: {fileID: 2099963484133552787}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

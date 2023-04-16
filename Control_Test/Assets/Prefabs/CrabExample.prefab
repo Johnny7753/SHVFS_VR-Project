@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3319369344307304962}
   - component: {fileID: 7180511651010048840}
   - component: {fileID: 7432385866968689288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrabExample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6349477808545384935}
+  - {fileID: 5153816531837201356}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -76,7 +77,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3279793852556787533}
   m_Enabled: 0
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 5.27
   m_Speed: 25
   m_Acceleration: 8
   avoidancePriority: 50
@@ -104,15 +105,44 @@ MonoBehaviour:
   HP: 60
   Score: 10
   refreshInterval: 0
-  actionArea: {x: 85, y: 174, z: -89, w: 81}
   bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
-  shootPoint: {fileID: 0}
+  rayStart: {fileID: 5153816531837201356}
+  rayLength: 20
+  rayWidth: 30
   attackInterval: 3
-  waitSeconds: {x: 5, y: 10}
-  momentum: 3
-  checkHiddenPointRadius: 0
   EnemyDamage: 5
+--- !u!1 &4065526522936733161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5153816531837201356}
+  m_Layer: 9
+  m_Name: rayStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5153816531837201356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4065526522936733161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 6.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5350524605469736000}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6349477808545384955
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +154,7 @@ GameObject:
   - component: {fileID: 6349477808545384935}
   - component: {fileID: 7440516221275700601}
   - component: {fileID: 565419646469529898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
