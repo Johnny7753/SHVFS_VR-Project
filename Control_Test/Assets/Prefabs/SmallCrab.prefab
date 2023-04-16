@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 633884567046046752}
   - component: {fileID: 4770182327461101708}
   - component: {fileID: 5357630411546482281}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SmallCrab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5239183835827543846}
-  - {fileID: 4955121043666015600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -71,7 +70,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 60
-  m_Acceleration: 30
+  m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -97,17 +96,15 @@ MonoBehaviour:
   HP: 15
   Score: 5
   refreshInterval: 0
+  actionArea: {x: 85, y: 174, z: -89, w: 81}
   bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
-  rayStart: {fileID: 4955121043666015600}
-  rayLength: 10
-  rayWidth: 5
+  shootPoint: {fileID: 0}
   attackInterval: 3
+  waitSeconds: {x: 5, y: 10}
+  momentum: 3
+  checkHiddenPointRadius: 0
   EnemyDamage: 20
-  lateralOffset: {x: 70, y: 100}
-  verticalOffset: {x: 20, y: 30}
-  disToAttackPlayer: 10
-  disToChangeTarget: 20
 --- !u!33 &5357630411546482281
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -127,7 +124,7 @@ GameObject:
   - component: {fileID: 5239183835827543846}
   - component: {fileID: 5435515631645358627}
   - component: {fileID: 1232225033030190975}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,34 +196,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5400293045196989998}
   m_Mesh: {fileID: 3363855207508947962, guid: 372464b43d26ce34c9c93bbb4e6cdb6d, type: 3}
---- !u!1 &8727598684918393145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4955121043666015600}
-  m_Layer: 9
-  m_Name: rayStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4955121043666015600
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727598684918393145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.791}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 633884567046046754}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
