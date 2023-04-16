@@ -117,11 +117,13 @@ public class EnemyController : MonoBehaviour
         {
             //Output the name of the Collider your Box hit
             Debug.Log("Hit : " + m_Hit.collider.name);
-            agent.isStopped = true;
+            if(agent.enabled)
+                agent.isStopped = true;
         }
         else
         {
-            agent.isStopped = false;
+            if (agent.enabled)
+                agent.isStopped = false;
         }
         //if (Physics.Raycast(rayStart.position, transform.forward, rayLength, 1 << 9))
         //{

@@ -11,7 +11,7 @@ public class SmallCrabController : EnemyController
     [SerializeField]
     private Vector2 verticalOffset;
     [SerializeField]
-    private float disToAttackPlayer=10f;
+    private float disToAttackPlayer=20f;
     [SerializeField]
     private float disToChangeTarget=10f;
 
@@ -31,20 +31,22 @@ public class SmallCrabController : EnemyController
     protected override void FixedUpdate()
     {
         transform.LookAt(player);
-        //look at player to attack
+        //find next destination
         if (!beginAttack&& Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5f)
         {
             agent.enabled=false;
             GetNextGoal();
         }
+        //set player as destination
         //Debug.Log(Mathf.Abs(enemyTarget.x - transform.position.x));
-        if(!beginAttack&&Mathf.Abs(enemyTarget.x-transform.position.x)<20f)
+        if (!beginAttack&&Mathf.Abs(enemyTarget.x-transform.position.x)<disToChangeTarget)
         {
             Debug.Log("change goal");
             goal = agent.destination = enemyTarget;
             beginAttack = true;
         }
-        if (beginAttack&& Vector3.Distance(enemyTarget, transform.position)<10f)
+        //explode state
+        if (beginAttack&& Vector3.Distance(enemyTarget, transform.position)<disToAttackPlayer)
         {
             Debug.Log("attack");
             agent.enabled = false;
@@ -65,7 +67,7 @@ public class SmallCrabController : EnemyController
         Vector3 offset = new Vector3(-Random.Range(verticalOffset.x, verticalOffset.y), 0, direction * Random.Range(lateralOffset.x, lateralOffset.y));
         agent.enabled = true;
         goal = agent.destination = transform.position + offset;
-        Debug.Log(goal);
+        //Debug.Log(goal);
         direction = -direction;
     }
 }

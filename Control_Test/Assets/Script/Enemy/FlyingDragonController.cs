@@ -21,34 +21,6 @@ public class FlyingDragonController : EnemyController
         Attack();
     }
 
-    //private Vector3 FindStandPoint()
-    //{
-    //    availablePoints = GetAvailablePoints(points);
-    //    if (availablePoints.Count != 0)
-    //    {
-    //        int nextPointIndex = Random.Range(0, availablePoints.Count);
-    //        availablePoints[nextPointIndex].isTaken = true;
-    //        pointsTaken = availablePoints[nextPointIndex];
-    //        goal = availablePoints[nextPointIndex].transform.position;
-    //    }
-    //    else
-    //    {
-    //        pointsTaken = null;
-    //        goal = new Vector3(Random.Range(bornArea.x, bornArea.y), 0, Random.Range(bornArea.z, bornArea.w));
-    //    }
-    //    return goal;       
-    //}
-    //protected List<T> GetAvailablePoints<T>(List<T> points) where T : EnemyHidenPoint
-    //{
-    //    List<T> availablePoints = new List<T>();
-    //    foreach (T point in points)
-    //    {
-    //        if (!point.isTaken)
-    //            availablePoints.Add(point);
-    //    }
-    //    return availablePoints;
-    //}
-
     private void Attack()
     {
         timer += Time.deltaTime;
