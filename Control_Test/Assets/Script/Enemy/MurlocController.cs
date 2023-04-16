@@ -17,10 +17,6 @@ public class MurlocController : EnemyController
     [Tooltip("this is the circle for enemy to find hidder")]
     private float checkHiddenPointRadius;
 
-    //private int numHidden;//the count of enemy to hide
-
-    //private List<OtherEnemyHiddenPoint> points;
-    //private OtherEnemyHiddenPoint nearestPoint;
     private bool isHidden;//to check if player is hidden
 
     #endregion
@@ -28,13 +24,7 @@ public class MurlocController : EnemyController
     protected override void Start()
     {
         base.Start();
-
-        //find first hide point and set destination
-        //numHidden = 0;
-        //availablePoints = new List<OtherEnemyHiddenPoint>();
-        //points = EnemySystem.Instance.points;
         InitializeEnemy();
-       // RefreshState();
         goal = agent.destination = enemyTarget;
     }
     protected override void FixedUpdate()
@@ -84,12 +74,12 @@ public class MurlocController : EnemyController
     }
 
     //show check sphere
-#if UNITY_EDITOR
-    private void OnDrawGizmos()
+    protected override void OnDrawGizmos()
     {
+        base.OnDrawGizmos();
+        Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, checkHiddenPointRadius);
     }
-#endif
 
     private void ReTargetPlayer()
     {
