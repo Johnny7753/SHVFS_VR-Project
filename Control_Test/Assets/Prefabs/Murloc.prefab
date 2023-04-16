@@ -35,14 +35,11 @@ Transform:
   - {fileID: 9009661593666413180}
 =======
   - {fileID: 9047046093456716861}
-<<<<<<< HEAD
   - {fileID: 8346191606312760106}
 <<<<<<< Updated upstream
 =======
 >>>>>>> d63ca98d56344f27738deef8d21a88a84e7b2041
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of d63ca98 (防止怪物撞车 以及小螃蟹行动逻辑)
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -106,22 +103,17 @@ MonoBehaviour:
   HP: 20
   Score: 20
   refreshInterval: 0.5
-  actionArea: {x: 85, y: 174, z: -89, w: 81}
   bornArea: {x: 260, y: 345, z: -173, w: 123}
   pointsTaken: {fileID: 0}
-<<<<<<< HEAD
 <<<<<<< Updated upstream
   rayStart: {fileID: 8346191606312760106}
   rayLength: 10
   rayWidth: 5
-=======
-  shootPoint: {fileID: 0}
->>>>>>> parent of d63ca98 (防止怪物撞车 以及小螃蟹行动逻辑)
   attackInterval: 3
+  EnemyDamage: 2
   waitSeconds: {x: 5, y: 10}
   momentum: 1
   checkHiddenPointRadius: 30
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   attackInterval: 3
@@ -210,9 +202,6 @@ PrefabInstance:
   momentum: 1
   checkHiddenPointRadius: 30
 >>>>>>> Stashed changes
-=======
-  EnemyDamage: 2
->>>>>>> parent of d63ca98 (防止怪物撞车 以及小螃蟹行动逻辑)
 --- !u!1 &6953002974844654204
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +213,7 @@ GameObject:
   - component: {fileID: 9047046093456716861}
   - component: {fileID: 8194323516365012491}
   - component: {fileID: 1815580044454757978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +287,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &7069350215813150490
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,5 +322,3 @@ Transform:
 =======
 >>>>>>> d63ca98d56344f27738deef8d21a88a84e7b2041
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of d63ca98 (防止怪物撞车 以及小螃蟹行动逻辑)
