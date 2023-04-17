@@ -23,10 +23,10 @@ public class SmallCrabController : EnemyController
         base.Start();
         InitializeEnemy();
         mat = GetComponentInChildren<MeshRenderer>();
+        direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
         GetNextGoal();
 
         agent.updateRotation = false;
-        direction = Random.Range(-1f,1f)>0?1:-1;
     }
     protected override void FixedUpdate()
     {
