@@ -40,13 +40,14 @@ public class GhostController : EnemyController
     {
         base.Start();
         InitializeEnemy();
+        direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
+
         ghostRenderer = GetComponentInChildren<MeshRenderer>();
         mat = GetComponent<Renderer>().material;
         GetNextGoal();
 
         agent.updateRotation = false;
-        direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
-
+       
         state = GhostState.visible;
         changeState = true;
     }
