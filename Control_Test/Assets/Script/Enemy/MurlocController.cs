@@ -44,7 +44,7 @@ public class MurlocController : EnemyController
         //        hasFoundNextPoint = true;
         //    }
         //}
-        if (goal == enemyTarget && Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 20f)
+        if (goal == enemyTarget && Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5)
         {
             goal = agent.destination = transform.position;
             beginAttack = true;

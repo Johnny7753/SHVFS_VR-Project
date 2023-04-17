@@ -112,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633884567046046782}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -27.18, y: 0.85, z: 0}
+  m_LocalPosition: {x: -27.101751, y: 0.85, z: 0.114154294}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -232,11 +232,12 @@ MonoBehaviour:
   HP: 15
   Score: 5
   refreshInterval: 1
-  bornArea: {x: 260, y: 345, z: -173, w: 123}
+  bornArea: {x: 300, y: 301, z: 60, w: 120}
   pointsTaken: {fileID: 0}
   rayStart: {fileID: 6535146013663846722}
   rayLength: 0
   rayWidth: 0
+  nearestDisToPlayer: 0
   attackInterval: 1.5
   EnemyDamage: 0
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}

@@ -77,7 +77,7 @@ public class MurlocMotherController : EnemyController
             }
         }
 
-        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 50f)
+        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5f)
         {
             transform.LookAt(player);
             agent.enabled = false;

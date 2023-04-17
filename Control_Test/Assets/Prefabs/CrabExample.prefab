@@ -105,11 +105,12 @@ MonoBehaviour:
   HP: 60
   Score: 10
   refreshInterval: 0
-  bornArea: {x: 260, y: 345, z: -173, w: 123}
+  bornArea: {x: 300, y: 400, z: 60, w: 120}
   pointsTaken: {fileID: 0}
   rayStart: {fileID: 5153816531837201356}
   rayLength: 20
   rayWidth: 30
+  nearestDisToPlayer: 100
   attackInterval: 3
   EnemyDamage: 5
 --- !u!1 &4065526522936733161

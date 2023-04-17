@@ -25,6 +25,8 @@ public class EnemyController : MonoBehaviour
     protected float rayLength;
     [SerializeField]
     protected float rayWidth;
+    [SerializeField]
+    protected float nearestDisToPlayer;
 
     [Header("Enemy Attack")]
     [SerializeField]
@@ -52,8 +54,6 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced,this is the target enemy should look at
-        enemyTarget =FindObjectOfType<EnemyTarget>().transform.position;//this is the point enemy will reach
-        enemyTarget = new Vector3(enemyTarget.x, enemyTarget.y, Random.Range( enemyTarget.z-30f, enemyTarget.z + 30f));
     }
     protected virtual void FixedUpdate()
     {
@@ -67,7 +67,14 @@ public class EnemyController : MonoBehaviour
     #region Function(ALL)
     protected void InitializeEnemy() 
     {
-        transform.position = new Vector3(Random.Range(bornArea.x, bornArea.y), 0, Random.Range(bornArea.z, bornArea.w));
+        float dis = Random.Range(bornArea.x,bornArea.y);
+        float angle = Random.Range(bornArea.z,bornArea.w);
+        float xOffset = dis * Mathf.Cos(angle*Mathf.Deg2Rad);
+        float yOffset = dis * Mathf.Sin(angle * Mathf.Deg2Rad);
+        transform.position = player.transform.position+new Vector3(yOffset, -player.transform.position.y, xOffset);
+
+        //enemyTarget = FindObjectOfType<EnemyTarget>().transform.position;//this is the point enemy will reach
+        enemyTarget = player.transform.position+ new Vector3(nearestDisToPlayer * Mathf.Sin(angle * Mathf.Deg2Rad), -player.transform.position.y, nearestDisToPlayer * Mathf.Cos(angle * Mathf.Deg2Rad));
         //check the ground point
         Ray ray = new Ray(transform.position, -Vector3.up);
         RaycastHit hit;
