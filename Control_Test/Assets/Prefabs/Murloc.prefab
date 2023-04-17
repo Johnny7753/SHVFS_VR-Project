@@ -105,7 +105,7 @@ MonoBehaviour:
   HP: 20
   Score: 20
   refreshInterval: 0.5
-  bornArea: {x: 300, y: 400, z: 60, w: 120}
+  bornArea: {x: 300, y: 400, z: 30, w: 150}
   pointsTaken: {fileID: 0}
   rayStart: {fileID: 8346191606312760106}
   rayLength: 10
