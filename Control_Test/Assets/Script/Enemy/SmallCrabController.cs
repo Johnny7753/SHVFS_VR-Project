@@ -50,7 +50,7 @@ public class SmallCrabController : EnemyController
         {
             Debug.Log("attack");
             agent.enabled = false;
-            mat.material.color = Color.red;
+            //mat.material.color = Color.red;
             transform.LookAt(player);
             timer += Time.deltaTime;
             if (timer > attackInterval)

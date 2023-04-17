@@ -14,6 +14,8 @@ public class GhostController : EnemyController
     private float disToAttackPlayer = 20f;
     [SerializeField]
     private float disToChangeTarget = 10f;
+    [SerializeField]
+    private Vector2 actionArea;
 
     [Header("SmallCrab Invisible")]
     [SerializeField]
@@ -23,9 +25,8 @@ public class GhostController : EnemyController
     [SerializeField]
     private Material invisibleMat;
 
-
     private Material mat;
-    private MeshRenderer ghostRenderer;
+    private SkinnedMeshRenderer ghostRenderer;
     private int direction;
     private float invisbleTimer = 0;
     private float currentInvisibleInterval;
@@ -40,10 +41,11 @@ public class GhostController : EnemyController
     {
         base.Start();
         InitializeEnemy();
-        direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
 
-        ghostRenderer = GetComponentInChildren<MeshRenderer>();
-        mat = GetComponent<Renderer>().material;
+        ghostRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        mat = ghostRenderer.material;
+
+        direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
         GetNextGoal();
 
         agent.updateRotation = false;
@@ -82,8 +84,19 @@ public class GhostController : EnemyController
     private void GetNextGoal()
     {
         Vector3 offset = new Vector3(-Random.Range(verticalOffset.x, verticalOffset.y), 0, direction * Random.Range(lateralOffset.x, lateralOffset.y));
+        Ray ray1 = new Ray(transform.position + offset, -Vector3.up);
+        Ray ray2 = new Ray(transform.position + offset, Vector3.up);
+        RaycastHit hit1;
+        RaycastHit hit2;
+        Physics.Raycast(ray1, out hit1, 50, 1 << 7);
+        Physics.Raycast(ray2, out hit2, 50, 1 << 7);
+
         agent.enabled = true;
-        goal = agent.destination = transform.position + offset;
+        goal = transform.position + offset+new Vector3(0,hit1.collider? hit1.point.y + 1 : hit2.point.y + 1, 0);
+        goal = new Vector3(goal.x, goal.y, goal.z < actionArea.x ? actionArea.x : goal.z);
+        goal = new Vector3(goal.x, goal.y, goal.z > actionArea.y ? actionArea.y : goal.z);
+        agent.destination = goal;
+
         direction = -direction;
     }
     //this is for enemy to change state
@@ -94,7 +107,7 @@ public class GhostController : EnemyController
             if (changeState)
             {
                 changeState = false;
-                GetComponent<Renderer>().material = mat;
+                ghostRenderer.material = mat;
                 currentInvisibleInterval = Random.Range(invisibleInterval.x, invisibleInterval.y);
             }
             invisbleTimer += Time.deltaTime;
@@ -110,7 +123,7 @@ public class GhostController : EnemyController
             if (changeState)
             {
                 changeState = false;
-                GetComponent<Renderer>().material = new Material(invisibleMat);
+                ghostRenderer.material = new Material(invisibleMat);
             }
             invisbleTimer += Time.deltaTime;
             if (invisbleTimer > invisibleDuration)
