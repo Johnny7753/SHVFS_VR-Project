@@ -70,7 +70,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 60
+  m_Speed: 30
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -104,11 +104,14 @@ MonoBehaviour:
   rayWidth: 5
   nearestDisToPlayer: 30
   attackInterval: 3
-  EnemyDamage: 20
+  enemyDamage: 20
+  goal: {x: 0, y: 0, z: 0}
   lateralOffset: {x: 70, y: 100}
-  verticalOffset: {x: 20, y: 30}
+  verticalOffset: {x: 40, y: 50}
   disToAttackPlayer: 10
   disToChangeTarget: 20
+  actionArea: {x: -145, y: 136}
+  explodeRadius: 10
 --- !u!33 &5357630411546482281
 MeshFilter:
   m_ObjectHideFlags: 0

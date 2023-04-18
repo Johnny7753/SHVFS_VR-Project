@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     protected float attackInterval;
     [Tooltip("the damage for melee enemy")]
-    public float EnemyDamage;
+    public float enemyDamage;
 
     [SerializeField]
     protected Vector3 goal;//enemy move destination
@@ -88,7 +88,7 @@ public class EnemyController : MonoBehaviour
     }
 
     //destroy this enemy
-    public void EnemyDie()
+    public virtual void EnemyDie()
     {        
         GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
         if (pointsTaken)
@@ -153,7 +153,7 @@ public class EnemyController : MonoBehaviour
             if (timer > attackInterval)
             {
                 timer = 0;
-                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= EnemyDamage;
+                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= enemyDamage;
             }
         }
     }

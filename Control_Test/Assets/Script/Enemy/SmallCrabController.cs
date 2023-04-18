@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SmallCrabController : EnemyController
 {
@@ -14,6 +15,12 @@ public class SmallCrabController : EnemyController
     private float disToAttackPlayer=20f;
     [SerializeField]
     private float disToChangeTarget=10f;
+    [SerializeField]
+    private Vector2 actionArea;
+
+    [Header("SmallCrab Attack")]
+    [SerializeField]
+    private float explodeRadius;
 
     //give player a hint that the crab is going to explode
     private MeshRenderer mat;
@@ -66,8 +73,46 @@ public class SmallCrabController : EnemyController
     {
         Vector3 offset = new Vector3(-Random.Range(verticalOffset.x, verticalOffset.y), 0, direction * Random.Range(lateralOffset.x, lateralOffset.y));
         agent.enabled = true;
-        goal = agent.destination = transform.position + offset;
-        //Debug.Log(goal);
+        goal =transform.position + offset;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(goal, out hit, 10.0f, NavMesh.AllAreas);
+
+        goal = new Vector3(hit.position.x, hit.position.y, hit.position.z < actionArea.x ? actionArea.x : hit.position.z);
+        goal = new Vector3(hit.position.x, hit.position.y, hit.position.z > actionArea.y ? actionArea.y : hit.position.z);
+        agent.destination = goal;
+
         direction = -direction;
+    }
+
+    public override void EnemyDie()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, explodeRadius);
+        if (hitColliders.Length > 0)
+        {
+            foreach (var hit in hitColliders)
+            {
+                if (hit.GetComponent<EnemyController>())
+                {
+                    hit.GetComponent<EnemyController>().HP -= enemyDamage;
+                }
+                else if (hit.GetComponent<Base>())
+                {
+                    hit.GetComponent<Base>().BaseHp -= enemyDamage;
+                }
+            }
+        }
+
+        base.EnemyDie();
+    }
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        if(beginAttack && Vector3.Distance(enemyTarget, transform.position) < disToAttackPlayer)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireSphere(transform.position, explodeRadius);
+        }
     }
 }

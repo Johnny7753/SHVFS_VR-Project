@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float bulletLifeTime;
     public Vector3 oriPos;
     public float bulletDamage;
+    public float criticalDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +28,13 @@ public class Bullet : MonoBehaviour
         bool isCollider = Physics.Raycast(oriPos, direction, out hitinfo , ength);
         if (isCollider)
         {
-            if(hitinfo.collider.GetComponent<EnemyController>() != null)
+            if(hitinfo.collider.GetComponent<WeaknessComponent>() != null)
             {
-                hitinfo.collider.GetComponent<EnemyController>().HP -= bulletDamage;
+                hitinfo.collider.GetComponentInParent<EnemyController>().HP -= criticalDamage;//critical damage
+            }
+            else if(hitinfo.collider.GetComponent<EnemyController>() != null)
+            {
+                hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
             }
             if(hitinfo.collider.GetComponent<Ground>() != null)
             {

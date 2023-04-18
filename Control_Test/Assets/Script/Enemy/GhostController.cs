@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GhostController : EnemyController
 {
@@ -84,17 +85,21 @@ public class GhostController : EnemyController
     private void GetNextGoal()
     {
         Vector3 offset = new Vector3(-Random.Range(verticalOffset.x, verticalOffset.y), 0, direction * Random.Range(lateralOffset.x, lateralOffset.y));
-        Ray ray1 = new Ray(transform.position + offset, -Vector3.up);
-        Ray ray2 = new Ray(transform.position + offset, Vector3.up);
-        RaycastHit hit1;
-        RaycastHit hit2;
-        Physics.Raycast(ray1, out hit1, 50, 1 << 7);
-        Physics.Raycast(ray2, out hit2, 50, 1 << 7);
+        //Ray ray1 = new Ray(transform.position + offset, -Vector3.up);
+        //Ray ray2 = new Ray(transform.position + offset, Vector3.up);
+        //RaycastHit hit1;
+        //RaycastHit hit2;
+        //Physics.Raycast(ray1, out hit1, 50, 1 << 7);
+        //Physics.Raycast(ray2, out hit2, 50, 1 << 7);
 
         agent.enabled = true;
-        goal = transform.position + offset+new Vector3(0,hit1.collider? hit1.point.y + 1 : hit2.point.y + 1, 0);
-        goal = new Vector3(goal.x, goal.y, goal.z < actionArea.x ? actionArea.x : goal.z);
-        goal = new Vector3(goal.x, goal.y, goal.z > actionArea.y ? actionArea.y : goal.z);
+        goal = transform.position + offset;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(goal, out hit, 10.0f, NavMesh.AllAreas);
+        //+new Vector3(0,hit1.collider? hit1.point.y + 1 : hit2.point.y + 1, 0);
+        //ensure the enemy only move in the action area
+        goal = new Vector3(hit.position.x, hit.position.y, hit.position.z < actionArea.x ? actionArea.x : hit.position.z);
+        goal = new Vector3(hit.position.x, hit.position.y, hit.position.z > actionArea.y ? actionArea.y : hit.position.z);
         agent.destination = goal;
 
         direction = -direction;

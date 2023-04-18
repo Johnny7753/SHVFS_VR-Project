@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 370584903293716077}
+  - {fileID: 2974708558162575557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -149,17 +150,49 @@ MonoBehaviour:
   refreshInterval: 0
   bornArea: {x: 300, y: 400, z: 60, w: 120}
   pointsTaken: {fileID: 0}
-  rayStart: {fileID: 0}
+  rayStart: {fileID: 2974708558162575557}
   rayLength: 10
   rayWidth: 5
   nearestDisToPlayer: 50
   attackInterval: 1
   EnemyDamage: 3
+  goal: {x: 0, y: 0, z: 0}
   moveDuration: {x: 5, y: 10}
   attackDuration: 5
   bullet: {fileID: 1995517181549351702, guid: 7db16ff497aa16d43b14c107f64a08db, type: 3}
-  shootPoint: {fileID: 0}
+  shootPoint: {fileID: 2974708558162575557}
   state: 0
+--- !u!1 &8040630504612227339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2974708558162575557}
+  m_Layer: 9
+  m_Name: rayStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2974708558162575557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8040630504612227339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 4.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633884567046046754}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &370584903294115049
 PrefabInstance:
   m_ObjectHideFlags: 0

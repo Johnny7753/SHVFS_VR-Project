@@ -113,6 +113,7 @@ MonoBehaviour:
   nearestDisToPlayer: 100
   attackInterval: 3
   EnemyDamage: 5
+  goal: {x: 0, y: 0, z: 0}
 --- !u!1 &4065526522936733161
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,16 +158,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.5825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.5825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9.5825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19843054
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.012435913
+      value: -1.9748
       objectReference: {fileID: 0}
     - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.097364
+      value: -1.42
       objectReference: {fileID: 0}
     - target: {fileID: 7348386784025819440, guid: 38c198fed66e8d141b49984e2e1f30fd, type: 3}
       propertyPath: m_LocalRotation.w
