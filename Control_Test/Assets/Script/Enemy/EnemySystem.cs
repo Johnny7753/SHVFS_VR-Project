@@ -16,8 +16,8 @@ public class EnemySystem : Singleton<EnemySystem>
     public int wavenumber;                  //  to transfer wave index                               by Hardy     in 4/13
     [SerializeField]
     private int partIndex;
-    
-    
+
+
     public List<OtherEnemyHiddenPoint> points;
     [HideInInspector]
     public List<FlyingDragonHiddenPoint> fdPoints;
@@ -32,8 +32,7 @@ public class EnemySystem : Singleton<EnemySystem>
     public Wave[] waves;
 
     [Header("Enemy Type")]
-    [SerializeField]
-    private GameObject[] enemyPrefab;
+    public GameObject[] enemyPrefab;
 
     private bool isRefreshing;//set it true each time enemy is refreshed
     private bool finishRefreshing;
@@ -75,14 +74,14 @@ public class EnemySystem : Singleton<EnemySystem>
     {
         //some cheat key
         //kill all enemy
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            foreach (var enemy in enemyAlive.ToList())
-            {
-                enemy.GetComponent<EnemyController>().EnemyDie();
-            }
-            enemyAlive.Clear();
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    foreach (var enemy in enemyAlive.ToList())
+        //    {
+        //        enemy.GetComponent<EnemyController>().EnemyDie();
+        //    }
+        //    enemyAlive.Clear();
+        //}
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             enemyAlive[(int)Random.Range(0, enemyAlive.Count)].GetComponent<EnemyController>().EnemyDie();
@@ -93,10 +92,7 @@ public class EnemySystem : Singleton<EnemySystem>
         EnterNextWave();
 
         //change part in wave
-        if (waves[waveIndex].parts.Length != 0)
-            EnterNextPart();
-        else
-            Debug.Log("no more enemies!");
+        EnterNextPart();
 
         if (isRefreshing)
         {
@@ -107,7 +103,7 @@ public class EnemySystem : Singleton<EnemySystem>
     //detect if enemies are all killed, enter next wave
     private void EnterNextWave()
     {
-        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1&&(waveIndex+1)<waves.Length && !isRefreshing&&finishRefreshing)
+        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && (waveIndex + 1) < waves.Length && !isRefreshing && finishRefreshing)
         {
             timer = 0;
             enemyNum = 0;
@@ -116,21 +112,30 @@ public class EnemySystem : Singleton<EnemySystem>
 
             wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
             partIndex = 0;
-            Invoke("StartRefreshing", freshTimeInterval[waveIndex-1]);
+            Invoke("StartRefreshing", freshTimeInterval[waveIndex - 1]);
         }
-        else if (waveIndex >= waves.Length-1)
+        else if (waveIndex >= waves.Length - 1)
         {
             isWin = true;
+            //instantiate boss here
+            //..
             Debug.Log("no more enemies!");
         }
     }
     //enter next part
     private void EnterNextPart()
     {
+        if (waveIndex >= waves.Length - 1 || partIndex >= waves[waveIndex].parts.Length - 1)
+        {
+            Debug.Log("no more enemies!");
+            //instantiate boss here
+            //..
+            return;
+        }
         switch (waves[waveIndex].parts[partIndex].switchType)
         {
             case SwitchType.EnemyLeft:
-                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && finishRefreshing&&!isRefreshing)
+                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && finishRefreshing && !isRefreshing)
                 {
                     timer = 0;
                     enemyNum = 0;
@@ -141,7 +146,7 @@ public class EnemySystem : Singleton<EnemySystem>
                 }
                 break;
             case SwitchType.Time:
-                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing&&finishRefreshing)
+                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing && finishRefreshing)
                 {
                     timer = 0;
                     enemyNum = 0;
@@ -178,7 +183,7 @@ public class EnemySystem : Singleton<EnemySystem>
         }
 
     }
-    private void RefreshOneEnemy(GameObject enemy)
+    public void RefreshOneEnemy(GameObject enemy)
     {
         enemyNum++;
         //Vector3 position = new Vector3(Random.Range(bornBoundary.x, bornBoundary.y), 0, Random.Range(bornBoundary.z, bornBoundary.w));

@@ -113,7 +113,7 @@ MonoBehaviour:
   rayWidth: 5
   nearestDisToPlayer: 30
   attackInterval: 3
-  EnemyDamage: 2
+  enemyDamage: 10
   goal: {x: 0, y: 0, z: 0}
   waitSeconds: {x: 5, y: 10}
   momentum: 1

@@ -8,11 +8,16 @@ public class FireballComponent : MonoBehaviour
     public Vector2 emissionForce;
     private Rigidbody rigid;
     public float FireballDamage;
+
+    private Transform player;
     private void Awake()
     {
         rigid=GetComponent<Rigidbody>();
+
+        player = GameObject.Find("XR Origin").transform;//  by rebe 0419
         //give initial force
-        rigid.AddForce(transform.forward*emissionForce.x+transform.up*emissionForce.y);
+        var direction = (player.position - transform.position).normalized;//  by rebe 0419
+        rigid.AddForce(direction * emissionForce.x+transform.up*emissionForce.y);
     }
     private void Update()
     {
