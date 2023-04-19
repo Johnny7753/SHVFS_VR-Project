@@ -1,0 +1,11 @@
+Load "Whirlpool.unity" for an example scene, or simply drag the required whirlpool from the Prefabs folder (in the Project window) into the Hierarchy window. Note there are two different whirlpools: one flat and one with depth; the flat one can be placed on top of a water plane whereas the depth version will need to have a hole cut in the water plane geometry. 
+
+When using the Whirlpool_Depth, a replacement example water mesh plane with a hole cut for the whirlpool is included; first place Unity's water into your scene (either Water or Water Basic - Water4 will not work), select the water and the in the Inspector replace the water plane mesh (either WaterBasicPlane or waterPlaneMesh) with Water_WithWhirlpoolHole. You may need to raise or lower the Whirlpool asset so that it doesn't sit beneath or intersect the water, plus check the scale of the whirlpool so that its edges overlap the water plane hole for a smooth transition.
+
+For best results you will likely need to tweak either the water colour or whirlpool texture so that the assets sit together well in your scene.
+
+Have fun!
+
+Thanks for purchasing this asset, please consider rating or writing a review about it. If you have any questions then please get in touch at bendurrant@rivermillstudios.com
+
+
