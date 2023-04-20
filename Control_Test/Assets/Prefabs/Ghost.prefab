@@ -103,7 +103,7 @@ MonoBehaviour:
   rayWidth: 5
   nearestDisToPlayer: 30
   attackInterval: 2
-  EnemyDamage: 5
+  enemyDamage: 0
   goal: {x: 0, y: 0, z: 0}
   lateralOffset: {x: 100, y: 140}
   verticalOffset: {x: 60, y: 70}
@@ -112,7 +112,7 @@ MonoBehaviour:
   actionArea: {x: -145, y: 136}
   invisibleInterval: {x: 5, y: 10}
   invisibleDuration: 5
-  invisibleMat: {fileID: 2100000, guid: 462b88ef3fa321f498025cfc0dfa72d6, type: 2}
+  invisibleMat: {fileID: 2100000, guid: be1294dc6ecda534398caa64783a15f6, type: 2}
 --- !u!1 &7197791463141119443
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: c1de02dfdae625f4e88a3a80c749ea83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4d4647c2d7ad11478cb393663cff8e8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

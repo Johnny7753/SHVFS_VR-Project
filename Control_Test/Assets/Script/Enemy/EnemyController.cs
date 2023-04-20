@@ -56,13 +56,16 @@ public class EnemyController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced,this is the target enemy should look at
     }
-    protected virtual void FixedUpdate()
+    private void Update()
     {
-        CheckFrontEnemy();
         if (HP <= 0)
         {
             EnemyDie();
         }
+    }
+    protected virtual void FixedUpdate()
+    {
+        CheckFrontEnemy();
     }
 
     #region Function(ALL)
