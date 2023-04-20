@@ -65,7 +65,7 @@ public class Shoot : MonoBehaviour
         
         if(canOverLoad == false)
         {
-            OverLoadCDTimer += Time.deltaTime;
+            OverLoadCDTimer += Time.deltaTime;    // OverloadCD- OverLoadCDTimer = CD UI
             if(OverLoadCDTimer >= OverLoadCD)
             {
                 OverLoadCDTimer = 0;

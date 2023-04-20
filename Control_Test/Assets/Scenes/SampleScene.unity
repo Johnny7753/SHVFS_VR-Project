@@ -22428,6 +22428,30 @@ PrefabInstance:
       propertyPath: TargetPoint
       value: 
       objectReference: {fileID: 181152501}
+    - target: {fileID: 932587371, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverLoadCD
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 932587371, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverHeatTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 932587371, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverLoadMaxTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232295979, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverLoadCD
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232295979, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverHeatTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232295979, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: OverLoadMaxTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1270487291, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: rightHand
       value: 
