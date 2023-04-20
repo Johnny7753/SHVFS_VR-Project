@@ -65,9 +65,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
         Time.timeScale = 1;
     }
+
+    
     public void PauseGame()
     {
-        //Time.timeScale = 0.0001f;
+        Time.timeScale = 0.0001f;
         PauseUI.SetActive(true);
     }
     public void ResumeGame()

@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 3318797608210065809}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &3318797608210065813
 MeshFilter:
@@ -125,12 +125,15 @@ MonoBehaviour:
   isleftHandIn: 0
   isHandled: 0
   hasLoaded: 1
+  hasShaked: 0
   timer: 0
   BulletCapacity: 1000
   Gun: {fileID: 0}
   LoadPoint: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
+  leftHandController: {fileID: 0}
+  rightHandController: {fileID: 0}
   leftHandHoldPoint: {fileID: 0}
   rightHandHoldPoint: {fileID: 0}
 --- !u!54 &3318797608210065818

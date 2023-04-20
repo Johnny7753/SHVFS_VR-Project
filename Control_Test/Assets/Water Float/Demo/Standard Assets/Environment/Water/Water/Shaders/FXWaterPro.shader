@@ -26,6 +26,7 @@ Subshader {
 CGPROGRAM
 #pragma vertex vert
 #pragma fragment frag
+#include "UnityCG.cginc"
 #pragma multi_compile_fog
 #pragma multi_compile WATER_REFRACTIVE WATER_REFLECTIVE WATER_SIMPLE
 
@@ -72,6 +73,8 @@ struct v2f {
 v2f vert(appdata v)
 {
 	v2f o;
+	UNITY_SETUP_INSTANCE_ID(v);
+	UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 	o.pos = UnityObjectToClipPos(v.vertex);
 	
 
