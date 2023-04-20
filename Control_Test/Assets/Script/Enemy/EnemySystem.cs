@@ -34,6 +34,12 @@ public class EnemySystem : Singleton<EnemySystem>
     [Header("Enemy Type")]
     public GameObject[] enemyPrefab;
 
+    [Header("Boss")]
+    [SerializeField]
+    private GameObject bossPrefab;
+    [SerializeField]
+    private Transform instantiatePos;
+
     private bool isRefreshing;//set it true each time enemy is refreshed
     private bool finishRefreshing;
 
@@ -117,8 +123,7 @@ public class EnemySystem : Singleton<EnemySystem>
         else if (waveIndex >= waves.Length - 1)
         {
             isWin = true;
-            //instantiate boss here
-            //..
+            InstantiateBoss();
             Debug.Log("no more enemies!");
         }
     }
@@ -128,8 +133,7 @@ public class EnemySystem : Singleton<EnemySystem>
         if (waveIndex >= waves.Length - 1 || partIndex >= waves[waveIndex].parts.Length - 1)
         {
             Debug.Log("no more enemies!");
-            //instantiate boss here
-            //..
+            InstantiateBoss();
             return;
         }
         switch (waves[waveIndex].parts[partIndex].switchType)
@@ -189,5 +193,10 @@ public class EnemySystem : Singleton<EnemySystem>
         //Vector3 position = new Vector3(Random.Range(bornBoundary.x, bornBoundary.y), 0, Random.Range(bornBoundary.z, bornBoundary.w));
         GameObject newEnemy = Instantiate(enemy);
         enemyAlive.Add(newEnemy);
+    }
+
+    private void InstantiateBoss()
+    {
+        Instantiate(bossPrefab,instantiatePos.position,instantiatePos.rotation);
     }
 }

@@ -2,19 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class BossAttack
+{
+    public AttackWay attackWay;
+    public float timeInterval;
+}
+public enum AttackWay
+{
+    call,
+    wave,
+    fireball
+};
 public class BossController : MonoBehaviour
 {
-    private enum AttackWay
-    {
-        call,
-        wave,
-        fireball
-    };
+
 
     [Header("Attributes")]
     public float HP=300;
     [SerializeField]
     private AttackWay attackway;
+
+    [Header("Attack")]
+    [SerializeField]
+    private BossAttack[] attacklist;
 
     [Header("Boss Call")]
     [SerializeField]
@@ -40,6 +51,10 @@ public class BossController : MonoBehaviour
 
     private Transform player;
 
+    private int attackIndex = 0;
+    private float timer;
+    private bool isAttacking;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +68,30 @@ public class BossController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             CallEnemies();
+        }
+        if(!isAttacking&&attackIndex<attacklist.Length)
+        {
+            isAttacking=true;
+            timer = 0;
+            attackway = attacklist[attackIndex].attackWay;
+            switch (attackway)
+            {
+                case AttackWay.call:
+                    CallEnemies();
+                    break;
+                case AttackWay.fireball:
+                    ShootFireball();
+                    break;
+                case AttackWay.wave:
+                    CallWave();
+                    break;
+            }
+        }
+        timer += Time.deltaTime;
+        if(isAttacking&& attackIndex < attacklist.Length&& timer >= attacklist[attackIndex].timeInterval)
+        {
+            attackIndex++;
+            isAttacking = false;
         }
     }
 
