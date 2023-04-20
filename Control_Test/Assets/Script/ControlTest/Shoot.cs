@@ -15,8 +15,8 @@ public class Shoot : MonoBehaviour
     public float OverLoadMaxTime;
     public float OverLoadCD;
     public float OverHeatTime;
+    public float oriTime;
 
-    private float oriTime;
     private float amp = 0.2f;
     private float invokeTime;
     private float OverLoadTimer;

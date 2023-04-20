@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     #region parameters
     [Header("Attributes")]
     public float HP;
-    public float Score;
+    public int Score;
     public float refreshInterval;
     
     [Header("Enemy Movement")]
@@ -95,7 +95,8 @@ public class EnemyController : MonoBehaviour
     //destroy this enemy
     public virtual void EnemyDie()
     {        
-        GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
+        GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(1, 100);
+        FindObjectOfType<GameManager>().GetComponent<GameManager>().EXP += Score;
         if (pointsTaken)
             pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
