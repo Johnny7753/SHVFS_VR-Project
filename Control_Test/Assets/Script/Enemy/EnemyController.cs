@@ -76,12 +76,14 @@ public class EnemyController : MonoBehaviour
 
         //enemyTarget = FindObjectOfType<EnemyTarget>().transform.position;//this is the point enemy will reach
         enemyTarget = player.transform.position+ new Vector3(nearestDisToPlayer * Mathf.Sin(angle * Mathf.Deg2Rad), -player.transform.position.y, nearestDisToPlayer * Mathf.Cos(angle * Mathf.Deg2Rad));
+        NavMeshHit hit;
+        NavMesh.SamplePosition(enemyTarget, out hit, 10.0f, NavMesh.AllAreas);
+        enemyTarget = hit.position;
+
         //check the ground point
-        Ray ray = new Ray(transform.position, -Vector3.up);
-        RaycastHit hit;
-        Physics.Raycast(ray, out hit, 50, 1 << 7);
-        //Debug.Log(hit.point);
-        transform.position += new Vector3(0, hit.point.y + 1, 0);
+        NavMeshHit hit2;
+        NavMesh.SamplePosition(transform.position, out hit2, 10.0f, NavMesh.AllAreas);
+        transform.position = hit2.position;
         transform.LookAt(player);
 
         agent.enabled = true;
