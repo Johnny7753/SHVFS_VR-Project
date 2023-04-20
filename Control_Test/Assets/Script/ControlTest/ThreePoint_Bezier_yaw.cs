@@ -18,6 +18,8 @@ public class ThreePoint_Bezier_yaw : MonoBehaviour
     GameObject LeftGrip;
     [SerializeField]
     GameObject RightGrip;
+    public float minAngle;
+    public float maxAngle;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,21 +31,21 @@ public class ThreePoint_Bezier_yaw : MonoBehaviour
     {
        if(LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true )
         {
-            if (leftHand.transform.eulerAngles.y > 30 && leftHand.transform.eulerAngles.y < 150 && rightHand.transform.eulerAngles.y > 30 && rightHand.transform.eulerAngles.y < 150)
+            if (leftHand.transform.eulerAngles.y > minAngle && leftHand.transform.eulerAngles.y < maxAngle && rightHand.transform.eulerAngles.y > minAngle && rightHand.transform.eulerAngles.y < maxAngle)
             {
                 slider = (rightHand.transform.eulerAngles.y + leftHand.transform.eulerAngles.y) / 360;
             }
         }
         else if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false )
         {
-            if (leftHand.transform.eulerAngles.y+10 > 30 && leftHand.transform.eulerAngles.y+10 < 150)
+            if (leftHand.transform.eulerAngles.y+10 > minAngle && leftHand.transform.eulerAngles.y+10 < maxAngle)
             {
                 slider = (leftHand.transform.eulerAngles.y+10) / 180;
             }
         }
         else if (RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true && LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false )
         {
-            if (rightHand.transform.eulerAngles.y-10 > 30 && rightHand.transform.eulerAngles.y-10 <150 )
+            if (rightHand.transform.eulerAngles.y-10 > minAngle && rightHand.transform.eulerAngles.y-10 < maxAngle)
             {
                 slider = (rightHand.transform.eulerAngles.y-10) / 180;
             }
