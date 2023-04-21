@@ -40,13 +40,15 @@ public class EnemySystem : Singleton<EnemySystem>
     [SerializeField]
     private Transform instantiatePos;
 
-    private bool isRefreshing;//set it true each time enemy is refreshed
-    private bool finishRefreshing;
+    private bool isRefreshing;//set it true each time enemy is refreshed，判断是否在刷新过程中
+    private bool finishRefreshing;//保证所有的刷新只刷新一遍
 
     private float timer;
     [HideInInspector]
     public int enemyNum;
     public bool isWin = false;
+
+    private bool bossAppear;
     public override void Awake()
     {
         base.Awake();
@@ -109,57 +111,60 @@ public class EnemySystem : Singleton<EnemySystem>
     //detect if enemies are all killed, enter next wave
     private void EnterNextWave()
     {
-        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && (waveIndex + 1) < waves.Length && !isRefreshing && finishRefreshing)
+        if (enemyAlive.Count == 0 && partIndex >= waves[waveIndex].parts.Length - 1 && !isRefreshing && finishRefreshing)
         {
-            timer = 0;
-            enemyNum = 0;
-            finishRefreshing = false;
-            waveIndex++;
+            if ((waveIndex + 1) < waves.Length)
+            {
+                timer = 0;
+                enemyNum = 0;
+                finishRefreshing = false;
+                waveIndex++;
 
-            wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
-            partIndex = 0;
-            Invoke("StartRefreshing", freshTimeInterval[waveIndex - 1]);
-        }
-        else if (waveIndex >= waves.Length - 1)
-        {
-            isWin = true;
-            InstantiateBoss();
-            Debug.Log("no more enemies!");
+                wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
+                partIndex = 0;
+                Invoke("StartRefreshing", freshTimeInterval[waveIndex - 1]);
+            }
+            else
+            {
+                //isWin = true;
+                finishRefreshing = false;
+                InstantiateBoss();
+                Debug.Log("no more enemies!");
+            }
         }
     }
     //enter next part
     private void EnterNextPart()
     {
-        if (waveIndex >= waves.Length - 1 || partIndex >= waves[waveIndex].parts.Length - 1)
+        if (finishRefreshing && !isRefreshing)
         {
-            Debug.Log("no more enemies!");
-            InstantiateBoss();
-            return;
+            switch (waves[waveIndex].parts[partIndex].switchType)
+            {
+                case SwitchType.EnemyLeft:
+                    if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy)
+                    {
+                        timer = 0;
+                        enemyNum = 0;
+                        finishRefreshing = false;
+                        StartRefreshing();
+                        partIndex++;
+                        //RefreshEnemies();
+                    }
+                    break;
+                case SwitchType.Time:
+                    if (enemyAlive.Count == 0 )
+                    {
+                        timer = 0;
+                        enemyNum = 0;
+                        finishRefreshing = false;
+                        Invoke("StartRefreshing", waves[waveIndex].parts[partIndex].switchTime);
+                        partIndex++;
+                    }
+                    break;
+            }
+
         }
-        switch (waves[waveIndex].parts[partIndex].switchType)
-        {
-            case SwitchType.EnemyLeft:
-                if (enemyAlive.Count <= waves[waveIndex].parts[partIndex].leftEnemy && partIndex < waves[waveIndex].parts.Length - 1 && finishRefreshing && !isRefreshing)
-                {
-                    timer = 0;
-                    enemyNum = 0;
-                    finishRefreshing = false;
-                    StartRefreshing();
-                    partIndex++;
-                    //RefreshEnemies();
-                }
-                break;
-            case SwitchType.Time:
-                if (enemyAlive.Count == 0 && partIndex < waves[waveIndex].parts.Length - 1 && !isRefreshing && finishRefreshing)
-                {
-                    timer = 0;
-                    enemyNum = 0;
-                    finishRefreshing = false;
-                    Invoke("StartRefreshing", waves[waveIndex].parts[partIndex].switchTime);
-                    partIndex++;
-                }
-                break;
-        }
+
     }
 
     //give points an order by x from smallest to biggest
@@ -197,6 +202,6 @@ public class EnemySystem : Singleton<EnemySystem>
 
     private void InstantiateBoss()
     {
-        Instantiate(bossPrefab,instantiatePos.position,instantiatePos.rotation);
+        Instantiate(bossPrefab, instantiatePos.position, instantiatePos.rotation);
     }
 }
