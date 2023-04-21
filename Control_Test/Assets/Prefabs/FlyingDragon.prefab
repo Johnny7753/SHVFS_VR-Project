@@ -107,6 +107,7 @@ MonoBehaviour:
   goal: {x: 0, y: 0, z: 0}
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
   shootPoint: {fileID: 6535146013663846722}
+  dragonanimator: {fileID: 8206527945431404372}
 --- !u!1 &7197791463141119443
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,5 +220,10 @@ PrefabInstance:
 --- !u!4 &8206527945424478388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
+  m_PrefabInstance: {fileID: 8206527945424091700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8206527945431404372 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
   m_PrefabInstance: {fileID: 8206527945424091700}
   m_PrefabAsset: {fileID: 0}
