@@ -6,12 +6,13 @@ public class SpawnBoxMagazine : MonoBehaviour
 {
     public GameObject BoxMagazine;
     public GameObject BoxMagazinePrefeb;
+    public GameObject GameManager;
     public bool needToSpawn = false;
     private float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        BoxMagazine = Instantiate(BoxMagazinePrefeb, transform.position, transform.rotation);
+        Spawn();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class SpawnBoxMagazine : MonoBehaviour
             timer += Time.deltaTime;
             if(timer > 5)
             {
-                BoxMagazine = Instantiate(BoxMagazinePrefeb, transform.position, transform.rotation);
+                Spawn();
                 timer = 0;
                 needToSpawn = false;
             }
@@ -37,5 +38,10 @@ public class SpawnBoxMagazine : MonoBehaviour
             BoxMagazine = null;
             needToSpawn = true;
         }
+    }
+    public void Spawn()
+    {
+        BoxMagazine = Instantiate(BoxMagazinePrefeb, transform.position, transform.rotation);
+        BoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity = GameManager.GetComponent<GameManager>().BulletCapacity;
     }
 }

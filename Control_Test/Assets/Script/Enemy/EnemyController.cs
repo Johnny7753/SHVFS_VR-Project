@@ -95,7 +95,8 @@ public class EnemyController : MonoBehaviour
     //destroy this enemy
     public virtual void EnemyDie()
     {        
-        GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(1, 100);
+        GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(1, 1);
+        GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(1, 1);
         FindObjectOfType<GameManager>().GetComponent<GameManager>().EXP += Score;
         if (pointsTaken)
             pointsTaken.isTaken = false;

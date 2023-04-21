@@ -26,5 +26,9 @@ public class GunComponent : MonoBehaviour
         {
             IsAmmoEmpty = false;
         }
+        if(IsConnected == false)
+        {
+            AmmoCount = 0;
+        }
     }
 }

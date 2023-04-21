@@ -8,14 +8,15 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public bool Isdead;
-    
+
     public GameObject GameOverUI;
     public GameObject WinUI;
     public GameObject PauseUI;
-    public GameObject BoxMagazinePrefab;
-    public GameObject BulletPrefeb;
     public GameObject[] Barrels;
     public GameObject Confirmpad;
+
+    public SpawnBoxMagazine[] BoxMagazinePrefeb;
+
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
     public int EXP;
@@ -33,19 +34,26 @@ public class GameManager : MonoBehaviour
     public float[] ShootingRate;
 
     public int OverloadCDMaxLevel;
-    private int BarrelMaxLevel;
-    private int BoxMagazineMaxLevel;
-    private int DamageMaxLevel;
+    public int BarrelMaxLevel;
+    public int BoxMagazineMaxLevel;
+    public int DamageMaxLevel;
     public int OverloadTimeMaxLevel;
-    private int ShootingRateMaxLevel;
+    public int ShootingRateMaxLevel;
+    public int BulletCapacity;
 
-    private int OverloadCDLevel=1;
-    private int BarrelLevel=1;
+    public float BulletDamage;
+
+    private int OverloadCDLevel = 1;
+    private int BarrelLevel = 1;
     private int BoxMagazineLevel = 1;
     private int DamageLevel = 1;
     private int OverloadTimeLevel = 1;
     private int ShootingRateLevel = 1;
+
     // Start is called before the first frame update
+
+
+
     void Start()
     {
         Time.timeScale = 1;
@@ -191,8 +199,8 @@ public class GameManager : MonoBehaviour
         Confirmpad.SetActive(false);
         EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
         BoxMagazineLevel++;
-        BoxMagazinePrefab.GetComponent<BoxMagazineComponent>().BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
-                                                                
+        BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
+
     }
     public void BoxMagazineUP()
     {
@@ -211,7 +219,7 @@ public class GameManager : MonoBehaviour
                                                                                                        //audio clip: upgrade success
         EXP -= DamageLevelEXP[DamageLevel - 1];
         DamageLevel++;
-        BulletPrefeb.GetComponent<Bullet>().bulletDamage = Damage[DamageLevel - 2];
+        BulletDamage = Damage[DamageLevel - 2];
         Confirmpad.SetActive(false);
 
     }

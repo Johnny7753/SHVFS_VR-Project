@@ -9,13 +9,19 @@ public class Bullet : MonoBehaviour
     public Vector3 oriPos;
     public float bulletDamage;
     public float criticalDamage;
+    public GameObject GameManager;
     // Start is called before the first frame update
     void Start()
     {
-        criticalDamage = bulletDamage*2;
+        GameManager = FindObjectOfType<GameManager>().gameObject;
         oriPos = transform.position;
     }
 
+    private void FixedUpdate()
+    {
+        bulletDamage = GameManager.GetComponent<GameManager>().BulletDamage;
+        criticalDamage = bulletDamage * 2;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -40,6 +46,10 @@ public class Bullet : MonoBehaviour
             if(hitinfo.collider.GetComponent<Ground>() != null)
             {
                 Destroy(gameObject);
+            }
+            if (hitinfo.collider.GetComponent<FireballComponent>() != null)
+            {
+                Destroy(hitinfo.collider.gameObject);
             }
         }
         oriPos = transform.position;

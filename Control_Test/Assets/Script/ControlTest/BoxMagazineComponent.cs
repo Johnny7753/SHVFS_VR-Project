@@ -13,19 +13,23 @@ public class BoxMagazineComponent : MonoBehaviour
     public bool hasLoaded = true;
     public bool hasShaked = false;
     public float timer = 0;
-    public int BulletCapacity = 500;
+    public int BulletCapacity;
     public GameObject Gun;
     public GameObject LoadPoint;
     public GameObject leftHand;
     public GameObject rightHand;
     public GameObject leftHandController;
     public GameObject rightHandController;
+    public GameObject GameManager;
     public Transform leftHandHoldPoint;
     public Transform rightHandHoldPoint;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        GameManager = FindObjectOfType<GameManager>().gameObject;
         Gun = FindObjectOfType<GunComponent>().gameObject;
         LoadPoint = FindObjectOfType<BoxMagazineLoadPoint>().gameObject;
         leftHand = FindObjectOfType<LeftHandComponent>().gameObject;
@@ -34,6 +38,7 @@ public class BoxMagazineComponent : MonoBehaviour
         rightHandHoldPoint = FindObjectOfType<RightHandComponent>().gameObject.GetComponentInChildren<HoldPointComponent>().transform;
         leftHandController= FindObjectOfType<LeftHandController>().gameObject;
         rightHandController = FindObjectOfType<RightHandController>().gameObject;
+        BulletCapacity = GameManager.GetComponent<GameManager>().BulletCapacity;
     }
 
     // Update is called once per frame
@@ -49,11 +54,10 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    if (hasShaked == false)
-                    {
-                        leftHandController.GetComponent<VibrateManager>().VibrateController(1, 1);
-                    }
+                    
                     timer = 0;
+                    leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                    leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
                     leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                     isHandled = true;
                     hasLoaded = true;
@@ -69,6 +73,8 @@ public class BoxMagazineComponent : MonoBehaviour
             if (Input.GetAxisRaw("LeftGrip") == 0 && isHandled)
             {
                 leftHand.GetComponent<HandComponent>().holdingObj = null;
+                leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = new Vector3(1, 1, 1);
+                leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = Vector3.zero;
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;
@@ -82,6 +88,8 @@ public class BoxMagazineComponent : MonoBehaviour
                 {
                     timer = 0;
                     rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                    rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                    rightHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(-1,1,1);
                     isHandled = true;
                     hasLoaded = true;
                     Gun.GetComponent<GunComponent>().loadingBoxMagazine = null;
@@ -96,6 +104,8 @@ public class BoxMagazineComponent : MonoBehaviour
             if (Input.GetAxisRaw("RightGrip") == 0 && isHandled)
             {
                 rightHand.GetComponent<HandComponent>().holdingObj = null;
+                rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = new Vector3(-1, 1, 1);
+                rightHand.GetComponentInChildren<HandMeshHold>().transform.localScale =  Vector3.zero;
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;

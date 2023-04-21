@@ -43,6 +43,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (IsOverLoad == true)
         {
             if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
@@ -158,6 +159,10 @@ public class Shoot : MonoBehaviour
                             invokeTime = 0;
                         }
                     }
+                    else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") == 0)
+                    {
+                        animator.SetBool(NormalShoot, false);
+                    }
                 }
             }
             if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false)
@@ -184,6 +189,10 @@ public class Shoot : MonoBehaviour
                             invokeTime = 0;
                         }
                     }
+                    else if(Input.GetAxisRaw("LeftTrigger") == 0)
+                    {
+                        animator.SetBool(NormalShoot, false);
+                    }
                 }
             }
             if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
@@ -200,10 +209,13 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
-                            animator.SetBool(NormalShoot, true);
                             RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             shooting();
                         }
+                    }
+                    else if (Input.GetAxisRaw("RightTrigger") == 0)
+                    {
+                        animator.SetBool(NormalShoot, false);
                     }
                 }
             }
@@ -211,6 +223,7 @@ public class Shoot : MonoBehaviour
     }
     public void shooting()
     {
+        animator.SetBool(NormalShoot, true);
         GameObject bullet;
         bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
         Gun.GetComponent<GunComponent>().AmmoCount--;

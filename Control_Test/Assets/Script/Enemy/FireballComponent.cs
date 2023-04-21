@@ -41,11 +41,6 @@ public class FireballComponent : MonoBehaviour
             }
             // FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;                                                   Hardy changed, 4/13
             Destroy(gameObject);
-
-
         }
-
-        
     }
-   
 }

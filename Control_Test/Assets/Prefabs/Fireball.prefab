@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 10-huoqiu
       objectReference: {fileID: 0}
+    - target: {fileID: 1292624607009146, guid: 49892de8c19698f49888786bf820f81b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4302452187542620, guid: 49892de8c19698f49888786bf820f81b, type: 3}
       propertyPath: m_RootOrder
       value: 0
