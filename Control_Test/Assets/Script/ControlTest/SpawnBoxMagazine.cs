@@ -25,7 +25,7 @@ public class SpawnBoxMagazine : MonoBehaviour
             {
                 Spawn();
                 timer = 0;
-                needToSpawn = false;
+                
             }
         }
     }
@@ -43,5 +43,6 @@ public class SpawnBoxMagazine : MonoBehaviour
     {
         BoxMagazine = Instantiate(BoxMagazinePrefeb, transform.position, transform.rotation);
         BoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity = GameManager.GetComponent<GameManager>().BulletCapacity;
+        needToSpawn = false;
     }
 }

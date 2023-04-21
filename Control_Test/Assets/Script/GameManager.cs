@@ -52,7 +52,11 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
 
-
+    private void Awake()
+    {
+        BulletCapacity = 1000;
+        BulletDamage = 3;
+    }
 
     void Start()
     {
