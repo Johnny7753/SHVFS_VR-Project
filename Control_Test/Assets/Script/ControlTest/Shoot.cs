@@ -11,6 +11,8 @@ public class Shoot : MonoBehaviour
     public Transform LeftGrip;
     public Transform RightGrip;
 
+    public Animator animator;
+
     public float currentTime;
     public float OverLoadMaxTime;
     public float OverLoadCD;
@@ -26,10 +28,14 @@ public class Shoot : MonoBehaviour
     private bool canOverLoad = true;
     private bool IsOverLoad = false;
     private bool IsOverHeat = false;
-    
+
+    private int NormalShoot = Animator.StringToHash("NormalShoot");
+    private int Overload = Animator.StringToHash("Overload");
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         oriTime = currentTime;
         invokeTime = currentTime;
     }
@@ -41,6 +47,7 @@ public class Shoot : MonoBehaviour
         {
             if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
             {
+                animator.SetBool(Overload, true);
                 IsOverLoad = false;
                 canOverLoad = false;
             }
@@ -52,6 +59,7 @@ public class Shoot : MonoBehaviour
         }
         else
         {
+            animator.SetBool(Overload, false);
             OverLoadTimer = 0;
             currentTime = oriTime;
             amp = 0.2f;
@@ -112,6 +120,7 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
+                            animator.SetBool(NormalShoot, true);
                             LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             GameObject bullet;
@@ -126,6 +135,7 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
+                            animator.SetBool(NormalShoot, true);
                             LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             GameObject bullet;
                             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
@@ -139,6 +149,7 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
+                            animator.SetBool(NormalShoot, true);
                             RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             GameObject bullet;
                             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
@@ -164,6 +175,7 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
+                            animator.SetBool(NormalShoot, true);
                             LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
                             GameObject bullet;
                             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
@@ -188,19 +200,21 @@ public class Shoot : MonoBehaviour
                         invokeTime += Time.deltaTime;
                         if (invokeTime - currentTime > 0)
                         {
+                            animator.SetBool(NormalShoot, true);
                             RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            GameObject bullet;
-                            bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
-                            Gun.GetComponent<GunComponent>().AmmoCount--;
-                            Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
-                            invokeTime = 0;
+                            shooting();
                         }
                     }
                 }
             }
         }
-        
-        
     }
-
+    public void shooting()
+    {
+        GameObject bullet;
+        bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
+        Gun.GetComponent<GunComponent>().AmmoCount--;
+        Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
+        invokeTime = 0;
+    }
 }
