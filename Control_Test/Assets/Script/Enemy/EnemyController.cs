@@ -49,12 +49,14 @@ public class EnemyController : MonoBehaviour
     RaycastHit m_Hit;
     bool m_HitDetect;
 
+    public Animator animator;
     #endregion
 
     protected virtual void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced,this is the target enemy should look at
+      
     }
     private void Update()
     {
