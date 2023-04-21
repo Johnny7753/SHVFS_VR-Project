@@ -18,13 +18,18 @@ public class SmallCrabController : EnemyController
     [SerializeField]
     private Vector2 actionArea;
 
+    public GameObject Explosion;
+    public GameObject Beetle;
+
     [Header("SmallCrab Attack")]
     [SerializeField]
     private float explodeRadius;
 
+    private GameObject Audiomanager;
     //give player a hint that the crab is going to explode
     private MeshRenderer mat;
     private int direction;
+    private float dieTimer;
     protected override void Start()
     {
         base.Start();
@@ -32,7 +37,7 @@ public class SmallCrabController : EnemyController
         mat = GetComponentInChildren<MeshRenderer>();
         direction = Random.Range(-1f, 1f) > 0 ? 1 : -1;
         GetNextGoal();
-
+        Audiomanager = FindObjectOfType<AudioManager>().gameObject;
         agent.updateRotation = false;
     }
     protected override void FixedUpdate()
@@ -60,11 +65,15 @@ public class SmallCrabController : EnemyController
             //mat.material.color = Color.red;
             transform.LookAt(player);
             timer += Time.deltaTime;
-            if (timer > attackInterval)
+            if (timer >= attackInterval)
             {
-                timer = 0;
-                Debug.Log("explode");
-                EnemyDie();
+                timer = -100;
+                //Debug.Log("explode");
+                Explosion.SetActive(true);
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().smallcrabblast,this.transform.position);
+                Beetle.SetActive(false);
+                Invoke("waitToDie", 1f);
+                
             }
         }
     }
@@ -114,5 +123,9 @@ public class SmallCrabController : EnemyController
             Gizmos.color = Color.white;
             Gizmos.DrawWireSphere(transform.position, explodeRadius);
         }
+    }
+    private void waitToDie()
+    {
+        EnemyDie();
     }
 }
