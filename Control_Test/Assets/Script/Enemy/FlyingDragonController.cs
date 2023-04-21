@@ -9,12 +9,14 @@ public class FlyingDragonController : EnemyController
     private GameObject bullet;
     [SerializeField]
     protected Transform shootPoint;
-    public Animator dragonanimator;
+    //public Animator dragonanimator;
 
     protected override void Start()
     {
+        animator = GetComponent<Animator>();
         base.Start();
         InitializeEnemy();
+        
     }
     protected override void FixedUpdate()
     {
@@ -28,8 +30,8 @@ public class FlyingDragonController : EnemyController
         if(timer>=attackInterval)
         {
             timer = 0;
-            dragonanimator.SetBool("IsAttack",true);
-            Invoke("FireBall",1);
+            animator.SetBool("IsAttack",true);
+            Invoke("FireBall",0.7f);
         }
     }
 

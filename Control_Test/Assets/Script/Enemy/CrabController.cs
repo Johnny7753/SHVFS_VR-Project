@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CrabController : EnemyController
 {
-   public Animator animator;
+   //public Animator animator;
 
     protected override void Start()
     {
@@ -23,7 +23,7 @@ public class CrabController : EnemyController
             transform.LookAt(player);
             goal = agent.destination = transform.position;
             beginAttack = true;
-            animator.SetBool("Isattack",true);                     //attack animation                                        by Hardy  4/21
+          //  animator.SetBool("Isattack",true);                     //attack animation                                        by Hardy  4/21
         }
         GroundEnemyAttack();
     }

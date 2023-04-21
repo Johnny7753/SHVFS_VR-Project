@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 633884567046046783}
   - component: {fileID: 633884567046046752}
   - component: {fileID: 3560409440987903761}
+  - component: {fileID: 1871549291921130900}
   m_Layer: 9
   m_Name: FlyingDragon
   m_TagString: Untagged
@@ -105,9 +106,29 @@ MonoBehaviour:
   attackInterval: 1.5
   enemyDamage: 0
   goal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 8206527945431404372}
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
   shootPoint: {fileID: 6535146013663846722}
-  dragonanimator: {fileID: 8206527945431404372}
+--- !u!95 &1871549291921130900
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633884567046046782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 827c0a07870f160428c94a755c8bfee6, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7197791463141119443
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +227,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: b48d9afa3d66cb8409d6a0096bb1273c, type: 3}
