@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject BoxMagazinePrefab;
     public GameObject BulletPrefeb;
     public GameObject[] Barrels;
+    public GameObject Confirmpad;
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
     public int EXP;
@@ -116,33 +117,50 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Cancel()
+    {
+        Confirmpad.SetActive(false);
+    }
+
+///////////////////////////////////////////////////////////////////
+    public void ConfirmOverloadCDUP()
+    {
+        EXP -= OverloadCDLevelEXP[OverloadCDLevel - 1];
+        OverloadCDLevel++;
+        for (int i = 0; i < Barrels.Length; i++)
+        {
+            Barrels[i].GetComponent<Shoot>().OverLoadCD = OverloadCD[OverloadCDLevel - 2];
+        }
+        Confirmpad.SetActive(false);
+                                                                                                 //audio clip: upgrade success
+    }
 
     public void OverloadCDUP()
     {
+                                                                                                 //audio clip: button pushed
         if (OverloadCDLevel == OverloadCDMaxLevel) return; //Max Level
+        
         if (EXP >= OverloadCDLevelEXP[OverloadCDLevel-1])
         {
-            EXP -= OverloadCDLevelEXP[OverloadCDLevel - 1];
-            OverloadCDLevel++;
-            for (int i = 0; i < Barrels.Length; i++)
-            {
-                Barrels[i].GetComponent<Shoot>().OverLoadCD = OverloadCD[OverloadCDLevel - 2];
-            }
+            Confirmpad.SetActive(true);
+            
         }
     }
-    public void BarrelUP()
+/// //////////////////////////////////////////////////////////////////////
+
+    public void ConfirmBarrelUP()
     {
-        if(BarrelLevel == BarrelMaxLevel) return;
-        if(BarrelLevel == 1)
+        if (BarrelLevel == 1)
         {
             if (EXP >= BarrelLevelEXP[0])
             {
                 Barrels[2].gameObject.SetActive(true);
                 EXP -= BarrelLevelEXP[0];
                 BarrelLevel++;
+                                                                                                     //audio clip: upgrading success
             }
         }
-        else if(BarrelLevel == 2)
+        else if (BarrelLevel == 2)
         {
             if (EXP >= BarrelLevelEXP[1])
             {
@@ -151,54 +169,107 @@ public class GameManager : MonoBehaviour
                 Barrels[4].gameObject.SetActive(true);
                 EXP -= BarrelLevelEXP[1];
                 BarrelLevel++;
+                                                                                                     //audio clip: upgrading success
             }
         }
+    }
+    public void BarrelUP()
+    {                                  
+                                                                                                       //audio clip: button pushed
+        if(BarrelLevel == BarrelMaxLevel) return;
+        else
+        {
+            Confirmpad.SetActive(true);
+        }
+    }
+
+/// //////////////////////////////////////////////////////////////////////
+    
+    public void ConfirmBoxMagazineUp()
+    {
+                                                                                                      //audio clip: upgrade confirmed
+        Confirmpad.SetActive(false);
+        EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
+        BoxMagazineLevel++;
+        BoxMagazinePrefab.GetComponent<BoxMagazineComponent>().BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
+                                                                
     }
     public void BoxMagazineUP()
     {
+                                                                                                      //audio clip: button pushed
         if (BoxMagazineLevel == BoxMagazineMaxLevel) return;
         if(EXP>= BoxMagazineLevelEXP[BoxMagazineLevel-1])
         {
-            EXP -= BoxMagazineLevelEXP[BoxMagazineLevel-1];
-            BoxMagazineLevel++;
-            BoxMagazinePrefab.GetComponent<BoxMagazineComponent>().BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
+            Confirmpad.SetActive(true);
         }
     }
+
+    /// //////////////////////////////////////////////////////////////////////
+
+    public void ConfirmDamageUP()
+    {
+                                                                                                       //audio clip: upgrade success
+        EXP -= DamageLevelEXP[DamageLevel - 1];
+        DamageLevel++;
+        BulletPrefeb.GetComponent<Bullet>().bulletDamage = Damage[DamageLevel - 2];
+        Confirmpad.SetActive(false);
+
+    }
+    
     public void DamageUP()
     {
+                                                                                                       //audio clip: button pushed
         if(DamageLevel == DamageMaxLevel) return;
         if (EXP >= DamageLevelEXP[DamageLevel - 1])
         {
-            EXP -= DamageLevelEXP[DamageLevel - 1];
-            DamageLevel++;
-            BulletPrefeb.GetComponent<Bullet>().bulletDamage = Damage[DamageLevel - 2];
+            Confirmpad.SetActive(true);
         }
+    }
+   
+/// //////////////////////////////////////////////////////////////////////
+
+    public void ConfirmOverloadTimeUP()
+    {
+                                                                                                        //audio clip: upgrade success
+        EXP -= OverloadTimeLevelEXP[OverloadTimeLevel - 1];
+        OverloadTimeLevel++;
+        for (int i = 0; i < Barrels.Length; i++)
+        {
+            Barrels[i].GetComponent<Shoot>().OverLoadMaxTime = OverloadTime[OverloadTimeLevel - 2];
+        }
+        Confirmpad.SetActive(false);
     }
     public void OverloadTimeUP()
     {
+                                                                                                        //audio clip: button pushed
         if(OverloadTimeLevel == OverloadTimeMaxLevel) return;
         if (EXP >= OverloadTimeLevelEXP[OverloadTimeLevel - 1])
         {
-            EXP -= OverloadTimeLevelEXP[OverloadTimeLevel - 1];
-            OverloadTimeLevel++;
-            for (int i = 0; i < Barrels.Length; i++)
-            {
-                Barrels[i].GetComponent<Shoot>().OverLoadMaxTime = OverloadTime[OverloadTimeLevel - 2];
-            }
+            Confirmpad.SetActive(true);
         }
+    }
+/// //////////////////////////////////////////////////////////////////////
+
+    public void ConfirmShootingRateUP()
+    {
+                                                                                                        //audio clip: upgrade success;
+        EXP -= ShootingRateLevelEXP[ShootingRateLevel - 1];
+        ShootingRateLevel++;
+        for (int i = 0; i < Barrels.Length; i++)
+        {
+            Barrels[i].GetComponent<Shoot>().oriTime = ShootingRate[ShootingRateLevel - 2];
+            Barrels[i].GetComponent<Shoot>().currentTime = ShootingRate[ShootingRateLevel - 2];
+        }
+        Confirmpad.SetActive(false);
+
     }
     public void ShootingRateUP()
     {
+                                                                                                        //audio clip: button pushed
         if (ShootingRateLevel == ShootingRateMaxLevel) return;
         if (EXP >= ShootingRateLevelEXP[ShootingRateLevel - 1])
         {
-            EXP -= ShootingRateLevelEXP[ShootingRateLevel - 1];
-            ShootingRateLevel++;
-            for (int i = 0; i < Barrels.Length; i++)
-            {
-                Barrels[i].GetComponent<Shoot>().oriTime = ShootingRate[ShootingRateLevel - 2];
-                Barrels[i].GetComponent<Shoot>().currentTime = ShootingRate[ShootingRateLevel - 2];
-            }
+            Confirmpad.SetActive (true);
         }
     }
 }
