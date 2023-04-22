@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
     public GameObject GameManager;
     public GameObject MonsterExplosion;
     public GameObject FireBallExplosion;
+
+    private GameObject Audiomanager;
     //public GameObject StoneExplosion;
     //public GameObject sandExplosion;
 
@@ -21,6 +23,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Audiomanager = FindObjectOfType<AudioManager>().gameObject;
         leftHand = GameObject.Find("LeftHand Controller");
         rightHand = GameObject.Find("RightHand Controller");
         GameManager = FindObjectOfType<GameManager>().gameObject;
@@ -56,6 +59,7 @@ public class Bullet : MonoBehaviour
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
@@ -65,6 +69,7 @@ public class Bullet : MonoBehaviour
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
@@ -74,6 +79,7 @@ public class Bullet : MonoBehaviour
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitDragon, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
@@ -83,6 +89,7 @@ public class Bullet : MonoBehaviour
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitMurloc, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
@@ -92,6 +99,7 @@ public class Bullet : MonoBehaviour
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitGhost, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
@@ -106,11 +114,13 @@ public class Bullet : MonoBehaviour
             }*/
             if (hitinfo.collider.GetComponent<Ground>() != null)
             {
-                Destroy(gameObject);
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSand, this.transform.position);
+                Invoke("DestoryBullet", 1f);
             }
             if (hitinfo.collider.GetComponent<Stone>() != null)
             {
-                Destroy(gameObject);
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitStone, this.transform.position);
+                Invoke("DestoryBullet", 1f);
             }
             if (hitinfo.collider.GetComponent<FireballComponent>() != null)
             {

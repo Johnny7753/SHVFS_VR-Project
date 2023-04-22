@@ -19,4 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip BulletHitBoss;
     public AudioClip BulletHitGhost;
     public AudioClip BulletHitDragon;
+    public AudioClip RocketLunch;
+    public AudioClip Explosion;
+    
 }

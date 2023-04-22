@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour
     public GameObject Bullet;
     public GameObject Rocket;
     public GameObject Gun;
+    public GameObject GunAudio;
 
     public Transform SpawnPoint;
     public Transform LeftGrip;
@@ -32,10 +33,15 @@ public class Shoot : MonoBehaviour
 
     private int NormalShoot = Animator.StringToHash("NormalShoot");
     private int Overload = Animator.StringToHash("Overload");
+    private int Shooting = Animator.StringToHash("Shooting");
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         animator = GetComponent<Animator>();
         oriTime = currentTime;
         invokeTime = currentTime;
@@ -146,7 +152,7 @@ public class Shoot : MonoBehaviour
                     }
                     else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") == 0)
                     {
-                        animator.SetBool(NormalShoot, false);
+                        
                     }
                 }
             }
@@ -206,16 +212,17 @@ public class Shoot : MonoBehaviour
     {
         if (Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>() != null)
         {
-            animator.SetBool(NormalShoot, true);
+            animator.SetTrigger(Shooting);
             GameObject bullet;
             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
             Gun.GetComponent<GunComponent>().AmmoCount--;
             Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;
+            GunAudio.GetComponent<GunAudio>().shootCount++;
             invokeTime = 0;
         }
         else if(Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent_Rocket>() != null)
         {
-            animator.SetBool(NormalShoot, true);
+            animator.SetTrigger(Shooting);
             GameObject rocket;
             rocket = Instantiate(Rocket, SpawnPoint.position, SpawnPoint.rotation);
             Gun.GetComponent<GunComponent>().AmmoCount--;

@@ -5974,7 +5974,7 @@ MonoBehaviour:
   Loadclip: {fileID: 8300000, guid: 224ea5f1e3980ff4ea36b99a4670ed89, type: 3}
   Overheat: {fileID: 8300000, guid: b4e30f2084d700f4d85e68c1b1717b18, type: 3}
   Removeclip: {fileID: 8300000, guid: 28a0c15ddec3e0a4e976dfec43e5e2d3, type: 3}
-  Shoot: {fileID: 8300000, guid: 66c43fd9f506eac468073454c356adc5, type: 3}
+  Shoot: {fileID: 8300000, guid: 0d32a70df0cd69f4087deb042af75f0a, type: 3}
   ShootOverload: {fileID: 8300000, guid: cbb39ff942a75a24e9bba73e49493c8e, type: 3}
   BulletHitBigCrab: {fileID: 8300000, guid: 2d6980ff8fdbc444ab33af803269a5ab, type: 3}
   BulletHitSmallCrab: {fileID: 8300000, guid: f12dec2171b4abf4eaedba58f4cee5f7, type: 3}
@@ -5982,6 +5982,8 @@ MonoBehaviour:
   BulletHitBoss: {fileID: 0}
   BulletHitGhost: {fileID: 8300000, guid: 040ba3c171fcb4f49856e8c5c4e3bd40, type: 3}
   BulletHitDragon: {fileID: 8300000, guid: e8c3f3a0b8403bc429765f3ced66e288, type: 3}
+  RocketLunch: {fileID: 8300000, guid: eb75fcab16821f24bb3e81d9ed531c9d, type: 3}
+  Explosion: {fileID: 8300000, guid: aa10257b5abb5ce4699e68efcb5c5eac, type: 3}
 --- !u!4 &611299832
 Transform:
   m_ObjectHideFlags: 0
@@ -22141,6 +22143,51 @@ Transform:
   m_Father: {fileID: 1420460010}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1980337843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980337844}
+  - component: {fileID: 1980337845}
+  m_Layer: 0
+  m_Name: GunAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1980337844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980337843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 28.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 214615696}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980337845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980337843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03173f843b32fc3488528d9a50f348b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootCount: 0
 --- !u!1001 &1983934587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24308,6 +24355,10 @@ PrefabInstance:
       propertyPath: Rocket
       value: 
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
+    - target: {fileID: 66243916, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: GunAudio
+      value: 
+      objectReference: {fileID: 1980337843}
     - target: {fileID: 214615697, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: TargetPoint
       value: 
@@ -24392,6 +24443,10 @@ PrefabInstance:
       propertyPath: Rocket
       value: 
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
+    - target: {fileID: 707856721, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: GunAudio
+      value: 
+      objectReference: {fileID: 1980337843}
     - target: {fileID: 747440663, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
@@ -24404,6 +24459,10 @@ PrefabInstance:
       propertyPath: Rocket
       value: 
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
+    - target: {fileID: 762348569, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: GunAudio
+      value: 
+      objectReference: {fileID: 1980337843}
     - target: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -24441,6 +24500,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
     - target: {fileID: 932587371, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: GunAudio
+      value: 
+      objectReference: {fileID: 1980337843}
+    - target: {fileID: 932587371, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: SpawnPoint1
       value: 
       objectReference: {fileID: 0}
@@ -24456,6 +24519,10 @@ PrefabInstance:
       propertyPath: Rocket
       value: 
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
+    - target: {fileID: 1232295979, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: GunAudio
+      value: 
+      objectReference: {fileID: 1980337843}
     - target: {fileID: 1232295979, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: SpawnPoint1
       value: 
@@ -25947,6 +26014,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2594429264561637707, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980337844}
     - targetCorrespondingSourceObject: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       insertIndex: -1
       addedObject: {fileID: 865979073}
