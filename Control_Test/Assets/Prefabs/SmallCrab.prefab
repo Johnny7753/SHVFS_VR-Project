@@ -99,16 +99,18 @@ MonoBehaviour:
   HP: 15
   Score: 5
   refreshInterval: 0
-  bornArea: {x: 300, y: 400, z: 60, w: 120}
+  bornArea: {x: 563, y: 650, z: 60, w: 120}
   pointsTaken: {fileID: 0}
   rayStart: {fileID: 4955121043666015600}
   rayLength: 10
   rayWidth: 5
-  nearestDisToPlayer: 30
+  nearestDisToTarget: 300
   attackInterval: 0.1
   enemyDamage: 20
   goal: {x: 0, y: 0, z: 0}
   animator: {fileID: 961395319182292498}
+  hitPos: {x: 0, y: 0, z: 0}
+  previousTrans: {x: 0, y: 0, z: 0}
   lateralOffset: {x: 70, y: 100}
   verticalOffset: {x: 40, y: 50}
   disToAttackPlayer: 10
@@ -116,7 +118,7 @@ MonoBehaviour:
   actionArea: {x: -145, y: 136}
   Explosion: {fileID: 8574293164875378019}
   Beetle: {fileID: 6422539843730058531}
-  explodeRadius: 10
+  explodeRadius: 80
 --- !u!33 &5357630411546482281
 MeshFilter:
   m_ObjectHideFlags: 0

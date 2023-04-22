@@ -136,7 +136,7 @@ public class EnemySystem : Singleton<EnemySystem>
     //enter next part
     private void EnterNextPart()
     {
-        if (finishRefreshing && !isRefreshing)
+        if (finishRefreshing && !isRefreshing&&partIndex+1< waves[waveIndex].parts.Length)
         {
             switch (waves[waveIndex].parts[partIndex].switchType)
             {
@@ -185,7 +185,7 @@ public class EnemySystem : Singleton<EnemySystem>
             RefreshOneEnemy(enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType]);
         }
         //Debug.Log(enemyNum);
-        if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum)
+        if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum-1)
         {
             isRefreshing = false;
             finishRefreshing = true;

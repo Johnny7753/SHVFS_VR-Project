@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject WinUI;
     public GameObject PauseUI;
     public GameObject[] Barrels;
-    public GameObject Confirmpad;
+ 
     public GameObject Base;
 
     public SpawnBoxMagazine[] BoxMagazinePrefeb;
@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     }
     public void Cancel()
     {
-        Confirmpad.SetActive(false);
+      
     }
 
 ///////////////////////////////////////////////////////////////////

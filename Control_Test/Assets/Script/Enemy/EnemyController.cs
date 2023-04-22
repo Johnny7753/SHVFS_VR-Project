@@ -51,6 +51,8 @@ public class EnemyController : MonoBehaviour
     bool m_HitDetect;
 
     public Animator animator;
+
+    private bool isDie;
     #endregion
 
     protected virtual void Start()
@@ -61,8 +63,9 @@ public class EnemyController : MonoBehaviour
     }
     private void Update()
     {
-        if (HP <= 0)
+        if (HP <= 0&&!isDie)
         {
+            isDie = true;
             EnemyDie();
         }
     }
@@ -88,7 +91,7 @@ public class EnemyController : MonoBehaviour
 
         //check the ground point
         NavMeshHit hit2;
-        NavMesh.SamplePosition(transform.position, out hit2, 10.0f, NavMesh.AllAreas);
+        NavMesh.SamplePosition(transform.position, out hit2, 50.0f, NavMesh.AllAreas);
         transform.position = hit2.position;
         transform.LookAt(player);
 
