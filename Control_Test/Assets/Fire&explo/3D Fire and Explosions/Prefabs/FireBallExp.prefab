@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198252407347076760}
   - component: {fileID: 199906499064890494}
   m_Layer: 0
-  m_Name: Smoke5
+  m_Name: FireBallExp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -38,6 +38,13 @@ public class SpawnBoxMagazine : MonoBehaviour
             BoxMagazine = null;
             needToSpawn = true;
         }
+        if (collision.GetComponent<BoxMagazineComponent_Rocket>() != null && collision.tag != "Spawned")
+        {
+            timer = 0;
+            BoxMagazine.tag = "Spawned";
+            BoxMagazine = null;
+            needToSpawn = true;
+        }
     }
     public void Spawn()
     {

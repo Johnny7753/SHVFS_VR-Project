@@ -56,7 +56,8 @@ public class Rocket : MonoBehaviour
                         }
                     }
                 }
-                Instantiate(ExplosionVFX, this.transform);
+                //Instantiate(ExplosionVFX, this.transform);
+                ExplosionVFX.SetActive(true);
                 Invoke("Explotion", 1f);
             }
             if(hitinfo.collider.GetComponent<Ground>() != null)
@@ -78,7 +79,8 @@ public class Rocket : MonoBehaviour
                     }
                 }
                 
-                Instantiate(ExplosionVFX, this.transform);
+                //Instantiate(ExplosionVFX, this.transform);
+                ExplosionVFX.SetActive(true);
                 Invoke("Explotion", 1f);
             }
             if (hitinfo.collider.GetComponent<FireballComponent>() != null)
@@ -99,7 +101,8 @@ public class Rocket : MonoBehaviour
                         }
                     }
                 }
-                Instantiate(ExplosionVFX, this.transform);
+                //Instantiate(ExplosionVFX, this.transform);
+                ExplosionVFX.SetActive(true);
                 Invoke("Explotion", 1f);
             }
         }
