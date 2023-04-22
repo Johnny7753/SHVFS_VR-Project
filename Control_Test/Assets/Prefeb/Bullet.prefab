@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
-  bulletLifeTime: 5
+  bulletLifeTime: 10
   oriPos: {x: 0, y: 0, z: 0}
   bulletDamage: 3
   criticalDamage: 0
+  GameManager: {fileID: 0}
 --- !u!1 &7512000200074685815
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class SpawnBoxMagazine : MonoBehaviour
     public void Spawn()
     {
         BoxMagazine = Instantiate(BoxMagazinePrefeb, transform.position, transform.rotation);
-        BoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity = GameManager.GetComponent<GameManager>().BulletCapacity;
+        //BoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity = GameManager.GetComponent<GameManager>().BulletCapacity;
         needToSpawn = false;
     }
 }

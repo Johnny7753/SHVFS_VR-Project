@@ -127,13 +127,14 @@ MonoBehaviour:
   hasLoaded: 1
   hasShaked: 0
   timer: 0
-  BulletCapacity: 0
+  BulletCapacity: 100
   Gun: {fileID: 0}
   LoadPoint: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
   leftHandController: {fileID: 0}
   rightHandController: {fileID: 0}
+  GameManager: {fileID: 0}
   leftHandHoldPoint: {fileID: 0}
   rightHandHoldPoint: {fileID: 0}
 --- !u!54 &3318797608210065818

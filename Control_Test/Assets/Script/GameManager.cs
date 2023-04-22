@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public float[] OverloadCD;
     public int[] BoxMagazine;
+    public int[] BoxMagazine_Rocket;
     public float[] Damage;
     public float[] OverloadTime;
     public float[] ShootingRate;
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
     public int OverloadTimeMaxLevel;
     public int ShootingRateMaxLevel;
     public int BulletCapacity;
+    public int RocketCapacity;
 
     public float BulletDamage;
 
@@ -49,11 +52,11 @@ public class GameManager : MonoBehaviour
     private int DamageLevel = 1;
     private int OverloadTimeLevel = 1;
     private int ShootingRateLevel = 1;
-
     // Start is called before the first frame update
 
     private void Awake()
     {
+        RocketCapacity = 100;
         BulletCapacity = 1000;
         BulletDamage = 3;
     }
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(Isdead&&GameOverUI!=null)
         {
             Debug.Log("Dead!");
@@ -204,7 +208,7 @@ public class GameManager : MonoBehaviour
         EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
         BoxMagazineLevel++;
         BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
-
+        RocketCapacity = BoxMagazine_Rocket[BoxMagazineLevel - 2];
     }
     public void BoxMagazineUP()
     {
