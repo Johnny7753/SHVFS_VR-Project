@@ -108,7 +108,7 @@ MonoBehaviour:
   attackInterval: 0.1
   enemyDamage: 20
   goal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 963179225459037450}
+  animator: {fileID: 961395319182292498}
   lateralOffset: {x: 70, y: 100}
   verticalOffset: {x: 40, y: 50}
   disToAttackPlayer: 10
@@ -135,7 +135,7 @@ Animator:
   m_GameObject: {fileID: 633884567046046782}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0cf9185edb0e9ad47a731ed689317d24, type: 3}
-  m_Controller: {fileID: 9100000, guid: cd55202195281444596642bfe7b4155b, type: 2}
+  m_Controller: {fileID: 9100000, guid: feb7ae7cefbfdbd4ebdd8e25085c95ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -280,7 +280,7 @@ Animator:
   m_GameObject: {fileID: 6422539843730058531}
   m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 0cf9185edb0e9ad47a731ed689317d24, type: 3}
-  m_Controller: {fileID: 9100000, guid: cd55202195281444596642bfe7b4155b, type: 2}
+  m_Controller: {fileID: 9100000, guid: feb7ae7cefbfdbd4ebdd8e25085c95ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

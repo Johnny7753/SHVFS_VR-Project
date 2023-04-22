@@ -115,7 +115,7 @@ MonoBehaviour:
   attackInterval: 3
   enemyDamage: 10
   goal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 8320816198915247136}
   waitSeconds: {x: 5, y: 10}
   momentum: 1
   checkHiddenPointRadius: 30
@@ -273,6 +273,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0fee7ae564f8c3344ad15a7804b291fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0fee7ae564f8c3344ad15a7804b291fd, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 92109768d4452f34a9a0527bfd4561e1, type: 2}
@@ -284,5 +288,10 @@ PrefabInstance:
 --- !u!4 &8320816198908257218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 0fee7ae564f8c3344ad15a7804b291fd, type: 3}
+  m_PrefabInstance: {fileID: 8320816198907869504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8320816198915247136 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 0fee7ae564f8c3344ad15a7804b291fd, type: 3}
   m_PrefabInstance: {fileID: 8320816198907869504}
   m_PrefabAsset: {fileID: 0}
