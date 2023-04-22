@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     protected float rayWidth;
     [SerializeField]
-    protected float nearestDisToPlayer;
+    protected float nearestDisToTarget;
 
     [Header("Enemy Attack")]
     [SerializeField]
@@ -37,6 +37,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     protected Vector3 goal;//enemy move destination
     protected Transform player;//player, enemy will look at this point
+    protected Transform target;
     protected Vector3 enemyTarget;//enemy will stop at this point
 
     protected NavMeshAgent agent;
@@ -56,7 +57,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced,this is the target enemy should look at
-      
+        target = FindObjectOfType<EnemyTarget>().transform;
     }
     private void Update()
     {
@@ -77,12 +78,12 @@ public class EnemyController : MonoBehaviour
         float angle = Random.Range(bornArea.z,bornArea.w);
         float xOffset = dis * Mathf.Cos(angle*Mathf.Deg2Rad);
         float yOffset = dis * Mathf.Sin(angle * Mathf.Deg2Rad);
-        transform.position = player.transform.position+new Vector3(yOffset, -player.transform.position.y, xOffset);
+        transform.position = target.position+new Vector3(yOffset, -target.position.y, xOffset);
 
         //enemyTarget = FindObjectOfType<EnemyTarget>().transform.position;//this is the point enemy will reach
-        enemyTarget = player.transform.position+ new Vector3(nearestDisToPlayer * Mathf.Sin(angle * Mathf.Deg2Rad), -player.transform.position.y, nearestDisToPlayer * Mathf.Cos(angle * Mathf.Deg2Rad));
+        enemyTarget = target.position + new Vector3(nearestDisToTarget * Mathf.Sin(angle * Mathf.Deg2Rad), -target.position.y, nearestDisToTarget * Mathf.Cos(angle * Mathf.Deg2Rad));
         NavMeshHit hit;
-        NavMesh.SamplePosition(enemyTarget, out hit, 10.0f, NavMesh.AllAreas);
+        NavMesh.SamplePosition(enemyTarget, out hit, 50.0f, NavMesh.AllAreas);
         enemyTarget = hit.position;
 
         //check the ground point
