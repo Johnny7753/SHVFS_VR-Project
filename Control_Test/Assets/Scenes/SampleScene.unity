@@ -23201,15 +23201,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10.39447
+      value: 3.157894
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10.39447
+      value: 3.1578941
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10.39447
+      value: 3.157894
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23777,7 +23777,6 @@ MonoBehaviour:
   BulletCapacity: 0
   RocketCapacity: 0
   BulletDamage: 0
-  S: {fileID: 1357649067050762, guid: 703aca4d9e2bf7549abc76fddc616fa0, type: 3}
 --- !u!1 &2130321376
 GameObject:
   m_ObjectHideFlags: 0
@@ -24354,15 +24353,15 @@ PrefabInstance:
       objectReference: {fileID: 1450262868007916, guid: 31fbeb6a6e36b8b42968636c115aff8c, type: 3}
     - target: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5190259
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5190259
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5190259
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24420,6 +24419,14 @@ PrefabInstance:
       propertyPath: rightHandController
       value: 
       objectReference: {fileID: 1661295718}
+    - target: {fileID: 1270487292, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: m_Height
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270487292, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1842655005, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: leftHand
       value: 
@@ -24432,6 +24439,14 @@ PrefabInstance:
       propertyPath: leftHandController
       value: 
       objectReference: {fileID: 1087421046}
+    - target: {fileID: 1842655006, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: m_Height
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842655006, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1925875774, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: m_LocalScale.x
       value: 17.416254
