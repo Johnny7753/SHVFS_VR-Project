@@ -119,6 +119,7 @@ public class Bullet : MonoBehaviour
             }
             if (hitinfo.collider.GetComponent<Stone>() != null)
             {
+                
                 AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitStone, this.transform.position);
                 Invoke("DestoryBullet", 1f);
             }

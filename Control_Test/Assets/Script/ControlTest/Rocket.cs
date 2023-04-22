@@ -7,7 +7,7 @@ public class Rocket : MonoBehaviour
     public float speed;
     public float bulletLifeTime;
     public Vector3 oriPos;
-    public float RucketDamage;
+    public float RocketDamage;
     public float criticalDamage;
     public GameObject GameManager;
     public GameObject ExplosionVFX;
@@ -25,7 +25,7 @@ public class Rocket : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RucketDamage = GameManager.GetComponent<GameManager>().BulletDamage;
+        RocketDamage = GameManager.GetComponent<GameManager>().oriRocketDamage;
     }
     // Update is called once per frame
     void Update()
@@ -48,7 +48,7 @@ public class Rocket : MonoBehaviour
                     {
                         if (hit.GetComponent<EnemyController>())
                         {
-                            hit.GetComponent<EnemyController>().HP -= RucketDamage;
+                            hit.GetComponent<EnemyController>().HP -= RocketDamage;
                         }
                         else if (hit.GetComponent<FireballComponent>() != null)
                         {
@@ -70,7 +70,7 @@ public class Rocket : MonoBehaviour
                     {
                         if (hit.GetComponent<EnemyController>())
                         {
-                            hit.GetComponent<EnemyController>().HP -= RucketDamage;
+                            hit.GetComponent<EnemyController>().HP -= RocketDamage;
                         }
                         else if (hit.GetComponent<FireballComponent>() != null)
                         {
@@ -93,7 +93,7 @@ public class Rocket : MonoBehaviour
                     {
                         if (hit.GetComponent<EnemyController>())
                         {
-                            hit.GetComponent<EnemyController>().HP -= RucketDamage;
+                            hit.GetComponent<EnemyController>().HP -= RocketDamage;
                         }
                         else if (hit.GetComponent<FireballComponent>() != null)
                         {

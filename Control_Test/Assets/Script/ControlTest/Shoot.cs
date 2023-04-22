@@ -228,6 +228,7 @@ public class Shoot : MonoBehaviour
             Gun.GetComponent<GunComponent>().AmmoCount--;
             Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent_Rocket>().RocketCapacity--;
             invokeTime = 0;
+            GunAudio.GetComponent<GunAudio>().RocketCount++;
         }
     }
 }
