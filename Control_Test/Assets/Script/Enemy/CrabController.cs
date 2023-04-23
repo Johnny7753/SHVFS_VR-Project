@@ -10,6 +10,7 @@ public class CrabController : EnemyController
     protected override void Start()
     {
         base.Start();
+        MonsterAudio = FindObjectOfType<AudioManager>().BulletHitBigCrab;
         InitializeEnemy();
         goal = agent.destination = enemyTarget;
         animator.SetBool("Isattack", false);

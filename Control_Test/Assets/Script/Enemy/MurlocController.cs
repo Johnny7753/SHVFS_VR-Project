@@ -23,6 +23,7 @@ public class MurlocController : EnemyController
 
     protected override void Start()
     {
+        MonsterAudio = FindObjectOfType<AudioManager>().BulletHitMurloc;
         base.Start();
         InitializeEnemy();
         goal = agent.destination = enemyTarget;

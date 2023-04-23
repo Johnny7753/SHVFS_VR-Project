@@ -13,6 +13,7 @@ public class FlyingDragonController : EnemyController
 
     protected override void Start()
     {
+        MonsterAudio = FindObjectOfType<AudioManager>().BulletHitDragon;
         animator = GetComponent<Animator>();
         base.Start();
         InitializeEnemy();
