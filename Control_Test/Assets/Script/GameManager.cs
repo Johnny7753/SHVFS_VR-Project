@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
+    public TextMeshProUGUI CD;
     public int EXP;
     public int AddHPCost;
     public int[] OverloadCDLevelEXP;
@@ -104,14 +105,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0.0001f;
         }
 
-        if(Input.GetKeyDown(KeyCode.Joystick1Button0))
-        {
-            PauseGame();
-        }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
-        {
-            GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 1);
-        }
+        //if(Input.GetKeyDown(KeyCode.Joystick1Button0))
+        //{
+        //    PauseGame();
+        //}
+        //if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        //{
+        //    GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 1);
+        //}
 
         if(BulletNumber!=null)
         {
@@ -123,6 +124,8 @@ public class GameManager : MonoBehaviour
 
             FortressHP.text = FindObjectOfType<Base>().BaseHp.ToString();
         }
+
+        CD.text = (FindObjectOfType<Shoot>().OverLoadCD - FindObjectOfType<Shoot>().OverLoadCDTimer).ToString();
 
     }
     public void StartGame()

@@ -24,7 +24,7 @@ public class Shoot : MonoBehaviour
     private float amp = 0.2f;
     private float invokeTime;
     private float OverLoadTimer;
-    private float OverLoadCDTimer;
+    public float OverLoadCDTimer;
     private float OverHeatTimer;
 
     private bool canOverLoad = true;
