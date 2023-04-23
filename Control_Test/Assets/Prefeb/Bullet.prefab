@@ -55,6 +55,8 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   MonsterExplosion: {fileID: 4835985598572258424}
   FireBallExplosion: {fileID: 7892102299352423681}
+  GunAudio: {fileID: 0}
+  VFXHitCount: 4
   shaketime: 0.05
   amp: 0.5
 --- !u!1 &7512000200074685815

@@ -20,6 +20,11 @@ public class Shoot : MonoBehaviour
     public float OverLoadCD;
     public float OverHeatTime;
     public float oriTime;
+    public float dizzyTime;
+    private float dizzyTimer;
+
+
+    public bool isDizzy = false;
 
     private float amp = 0.2f;
     private float invokeTime;
@@ -50,6 +55,17 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dizzyTime != 0)
+        {
+            isDizzy = true;
+            dizzyTimer += Time.deltaTime;
+        }
+        if (dizzyTimer >= dizzyTime)
+        {
+            isDizzy = false;
+            dizzyTimer = 0;
+            dizzyTime  = 0;
+        }
         if (IsOverLoad == true)
         {
             if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
@@ -98,133 +114,137 @@ public class Shoot : MonoBehaviour
                 IsOverHeat = false;
             }
         }
-        if (IsOverHeat == false)
+        if (isDizzy == false)
         {
-            if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
+            if (IsOverHeat == false)
             {
-                if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
-                {
-                    LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
-                    RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
-                }
-                if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") == 0)
-                {
-                    RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
-                }
-                if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
-                {
-                    LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
-                }
-            }
-            if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
-            {
-                if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
+                if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
                 {
                     if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
                     {
-                        if (IsOverLoad == false && canOverLoad == true)
-                        {
-                            if (Input.GetKey(KeyCode.Joystick1Button1) && Input.GetKey(KeyCode.Joystick1Button3))
-                            {
-                                IsOverLoad = true;
-                            }
-                        }
-                        else
-                        {
-                            if (Input.GetKeyUp(KeyCode.Joystick1Button1))
-                            {
-                                IsOverLoad = false;
-                                canOverLoad = false;
-                            }
-                            else if (Input.GetKeyUp(KeyCode.Joystick1Button3))
-                            {
-                                IsOverLoad = false;
-                                canOverLoad = false;
-                            }
-                        }
-                        invokeTime += Time.deltaTime;
-                        if (invokeTime - currentTime > 0)
-                        {
-                            LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            shooting();
-                        }
+                        LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
+                        RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
                     }
-                    else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
+                    if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") == 0)
                     {
-                        invokeTime += Time.deltaTime;
-                        if (invokeTime - currentTime > 0)
-                        {
-                            LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            shooting();
-                        }
+                        RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
                     }
-                    else if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") == 0)
+                    if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
                     {
-                        invokeTime += Time.deltaTime;
-                        if (invokeTime - currentTime > 0)
-                        {
-                            RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            shooting();
-                        }
-                    }
-                    else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") == 0)
-                    {
-                        
+                        LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
                     }
                 }
-            }
-            if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false)
-            {
-                if (IsOverLoad==true)
+                if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
                 {
-                    IsOverLoad = false;
-                    canOverLoad = false;
-                }
+                    if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
+                    {
+                        if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
+                        {
+                            if (IsOverLoad == false && canOverLoad == true)
+                            {
+                                if (Input.GetKey(KeyCode.Joystick1Button1) && Input.GetKey(KeyCode.Joystick1Button3))
+                                {
+                                    IsOverLoad = true;
+                                }
+                            }
+                            else
+                            {
+                                if (Input.GetKeyUp(KeyCode.Joystick1Button1))
+                                {
+                                    IsOverLoad = false;
+                                    canOverLoad = false;
+                                }
+                                else if (Input.GetKeyUp(KeyCode.Joystick1Button3))
+                                {
+                                    IsOverLoad = false;
+                                    canOverLoad = false;
+                                }
+                            }
+                            invokeTime += Time.deltaTime;
+                            if (invokeTime - currentTime > 0)
+                            {
+                                LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                shooting();
+                            }
+                        }
+                        else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") >= 0.1)
+                        {
+                            invokeTime += Time.deltaTime;
+                            if (invokeTime - currentTime > 0)
+                            {
+                                LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                shooting();
+                            }
+                        }
+                        else if (Input.GetAxisRaw("RightTrigger") >= 0.1 && Input.GetAxisRaw("LeftTrigger") == 0)
+                        {
+                            invokeTime += Time.deltaTime;
+                            if (invokeTime - currentTime > 0)
+                            {
+                                RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                shooting();
+                            }
+                        }
+                        else if (Input.GetAxisRaw("RightTrigger") == 0 && Input.GetAxisRaw("LeftTrigger") == 0)
+                        {
 
-                if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
-                {
-                    if (Input.GetAxisRaw("LeftTrigger") >= 0.1)
-                    {
-                        invokeTime += Time.deltaTime;
-                        if (invokeTime - currentTime > 0)
-                        {
-                            animator.SetBool(NormalShoot, true);
-                            LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            shooting();
                         }
                     }
-                    else if(Input.GetAxisRaw("LeftTrigger") == 0)
+                }
+                if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false)
+                {
+                    if (IsOverLoad == true)
                     {
-                        animator.SetBool(NormalShoot, false);
+                        IsOverLoad = false;
+                        canOverLoad = false;
                     }
-                }
-            }
-            if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
-            {
-                if (IsOverLoad==true)
-                {
-                    IsOverLoad = false;
-                    canOverLoad = false;
-                }
-                if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
-                {
-                    if (Input.GetAxisRaw("RightTrigger") >= 0.1)
+
+                    if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
                     {
-                        invokeTime += Time.deltaTime;
-                        if (invokeTime - currentTime > 0)
+                        if (Input.GetAxisRaw("LeftTrigger") >= 0.1)
                         {
-                            RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
-                            shooting();
+                            invokeTime += Time.deltaTime;
+                            if (invokeTime - currentTime > 0)
+                            {
+                                animator.SetBool(NormalShoot, true);
+                                LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                shooting();
+                            }
+                        }
+                        else if (Input.GetAxisRaw("LeftTrigger") == 0)
+                        {
+                            animator.SetBool(NormalShoot, false);
                         }
                     }
-                    else if (Input.GetAxisRaw("RightTrigger") == 0)
+                }
+                if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true)
+                {
+                    if (IsOverLoad == true)
                     {
-                        animator.SetBool(NormalShoot, false);
+                        IsOverLoad = false;
+                        canOverLoad = false;
+                    }
+                    if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
+                    {
+                        if (Input.GetAxisRaw("RightTrigger") >= 0.1)
+                        {
+                            invokeTime += Time.deltaTime;
+                            if (invokeTime - currentTime > 0)
+                            {
+                                RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(amp, 0.1f);
+                                shooting();
+                            }
+                        }
+                        else if (Input.GetAxisRaw("RightTrigger") == 0)
+                        {
+                            animator.SetBool(NormalShoot, false);
+                        }
                     }
                 }
             }
         }
+        
     }
     public void shooting()
     {

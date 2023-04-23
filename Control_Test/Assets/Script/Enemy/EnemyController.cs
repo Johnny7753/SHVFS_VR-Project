@@ -51,6 +51,7 @@ public class EnemyController : MonoBehaviour
     bool m_HitDetect;
 
     public Animator animator;
+    public AudioSource MonsterAudio;
 
     private bool isDie;
     #endregion
@@ -107,6 +108,11 @@ public class EnemyController : MonoBehaviour
         if (pointsTaken)
             pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
+        MonsterAudio.Play();
+        Invoke("waitToDie", 0.1f);
+    }
+    private void waitToDie()
+    {
         Destroy(gameObject);
     }
     protected virtual void OnDrawGizmos()

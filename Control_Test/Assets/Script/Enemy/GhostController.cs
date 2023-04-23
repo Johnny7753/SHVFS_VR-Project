@@ -42,7 +42,7 @@ public class GhostController : EnemyController
     {
         base.Start();
         InitializeEnemy();
-
+        MonsterAudio = FindObjectOfType<AudioManager>().BulletHitGhost;
         ghostRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         mat = ghostRenderer.material;
 

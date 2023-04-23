@@ -80,7 +80,6 @@ public class BoxMagazineComponent : MonoBehaviour
                         GetComponent<Rigidbody>().useGravity = false;
                         transform.position = leftHandHoldPoint.position;
                         transform.rotation = leftHandHoldPoint.rotation;
-                        falg = 1;
                     }
                     else
                     {
@@ -101,7 +100,7 @@ public class BoxMagazineComponent : MonoBehaviour
                         GetComponent<Rigidbody>().useGravity = false;
                         transform.position = leftHandHoldPoint.position;
                         transform.rotation = leftHandHoldPoint.rotation;
-                        falg = 1;
+                        
                     }
                 }
             }
@@ -113,6 +112,7 @@ public class BoxMagazineComponent : MonoBehaviour
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;
+                falg = 1;
             }
         }
         if (isrightHandIn)
@@ -123,8 +123,12 @@ public class BoxMagazineComponent : MonoBehaviour
                 {
                     if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == this.gameObject)
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
@@ -141,7 +145,11 @@ public class BoxMagazineComponent : MonoBehaviour
                     }
                     else
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
@@ -164,6 +172,7 @@ public class BoxMagazineComponent : MonoBehaviour
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;
+                falg = 1;
             }
         }
     }
