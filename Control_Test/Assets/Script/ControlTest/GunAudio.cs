@@ -17,15 +17,20 @@ public class GunAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shootCount >= 6)
+        if (shootCount >= 2)
         {
             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Shoot, this.transform.position);
-            shootCount -= 6;
+            shootCount -= 2;
         }
         if (RocketCount >= 2)
         {
             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().RocketLunch, this.transform.position);
             RocketCount -= 2;
         }
+        
+    }
+    public void OverHeat()
+    {
+        Audiomanager.GetComponent<AudioManager>().Overheat.Play();
     }
 }

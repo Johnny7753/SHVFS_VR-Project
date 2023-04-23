@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     #region AudioClip
     public AudioClip Loadclip;
     public AudioClip Takeclip;
-    public AudioClip Overheat;
+    
     public AudioClip Removeclip;
     public AudioClip Shoot;
     public AudioClip RocketLunch;
@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource UIChoose;
     public AudioSource Explosion;
     public AudioSource Gethit;
+    public AudioSource Overheat;
     #endregion
 
 

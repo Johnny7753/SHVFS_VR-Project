@@ -21,29 +21,25 @@ public class Shoot : MonoBehaviour
     public float OverHeatTime;
     public float oriTime;
     public float dizzyTime;
+    public float a;
     private float dizzyTimer;
-
 
     public bool isDizzy = false;
 
     private float amp = 0.2f;
     private float invokeTime;
-    private float OverLoadTimer;
-    public  float OverLoadCDTimer;
+    public float OverLoadTimer;
+    public float OverLoadCDTimer;
     private float OverHeatTimer;
 
     private bool canOverLoad = true;
     private bool IsOverLoad = false;
-    private bool IsOverHeat = false;
+    public bool IsOverHeat = false;
 
     private int NormalShoot = Animator.StringToHash("NormalShoot");
-    private int Overload = Animator.StringToHash("Overload");
     private int Shooting = Animator.StringToHash("Shooting");
 
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -52,7 +48,6 @@ public class Shoot : MonoBehaviour
         invokeTime = currentTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (dizzyTime != 0)
@@ -70,25 +65,40 @@ public class Shoot : MonoBehaviour
         {
             if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == true)
             {
-                animator.SetBool(Overload, true);
                 IsOverLoad = false;
                 canOverLoad = false;
             }
-            currentTime = oriTime / 2;
-            amp = 1;
+            if(currentTime > oriTime / 2)
+            {
+                currentTime  -= Time.deltaTime*a;
+            }
+            if (currentTime < oriTime / 2)
+            {
+                currentTime = oriTime / 2;
+            }
+            amp = 0.6f;
             OverLoadTimer += Time.deltaTime;
-            
             //overload sound
         }
         else
         {
-            animator.SetBool(Overload, false);
-            OverLoadTimer = 0;
+            OverLoadTimer -= Time.deltaTime;
             currentTime = oriTime;
             amp = 0.2f;
+            if (OverLoadTimer > 0)
+            {
+                OverLoadTimer -= Time.deltaTime;
+            }
+            else if (OverLoadTimer < 0)
+            {
+                OverLoadTimer = 0;
+            }
         }
         if(OverLoadTimer >= OverLoadMaxTime)
         {
+            LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 200);
+            RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 200);
+            GunAudio.GetComponent<GunAudio>().OverHeat();
             IsOverHeat = true;
             canOverLoad = false;
             IsOverLoad = false;
@@ -105,8 +115,7 @@ public class Shoot : MonoBehaviour
         }
         if (IsOverHeat == true)
         {
-            LeftGrip.GetComponent<LeftGripComponent>().leftHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
-            RightGrip.GetComponent<RightGripComponent>().rightHandController.GetComponent<VibrateManager>().VibrateController(1, 100);
+            
             OverHeatTimer += Time.deltaTime;
             if (OverHeatTimer >= OverHeatTime)
             {
@@ -152,12 +161,12 @@ public class Shoot : MonoBehaviour
                                 if (Input.GetKeyUp(KeyCode.Joystick1Button1))
                                 {
                                     IsOverLoad = false;
-                                    canOverLoad = false;
+                                    //canOverLoad = false;
                                 }
                                 else if (Input.GetKeyUp(KeyCode.Joystick1Button3))
                                 {
                                     IsOverLoad = false;
-                                    canOverLoad = false;
+                                    //canOverLoad = false;
                                 }
                             }
                             invokeTime += Time.deltaTime;
@@ -197,7 +206,7 @@ public class Shoot : MonoBehaviour
                     if (IsOverLoad == true)
                     {
                         IsOverLoad = false;
-                        canOverLoad = false;
+                        //canOverLoad = false;
                     }
 
                     if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
@@ -223,7 +232,7 @@ public class Shoot : MonoBehaviour
                     if (IsOverLoad == true)
                     {
                         IsOverLoad = false;
-                        canOverLoad = false;
+                        //canOverLoad = false;
                     }
                     if (Gun.GetComponent<GunComponent>().IsAmmoEmpty == false && Gun.GetComponent<GunComponent>().IsConnected == true)
                     {
@@ -250,6 +259,7 @@ public class Shoot : MonoBehaviour
     {
         if (Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>() != null)
         {
+            a = 0.03f;
             animator.SetTrigger(Shooting);
             GameObject bullet;
             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
@@ -260,6 +270,7 @@ public class Shoot : MonoBehaviour
         }
         else if(Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent_Rocket>() != null)
         {
+            a = 0.2f;
             animator.SetTrigger(Shooting);
             GameObject rocket;
             rocket = Instantiate(Rocket, SpawnPoint.position, SpawnPoint.rotation);

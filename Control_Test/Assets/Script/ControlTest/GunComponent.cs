@@ -10,6 +10,8 @@ public class GunComponent : MonoBehaviour
     public GameObject[] Barrels;
     public bool IsAmmoEmpty;
     public bool IsConnected = false;
+    public float NormalshootingRate;
+    public float RocketshootingRate;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,14 +39,14 @@ public class GunComponent : MonoBehaviour
             {
                 for(int i = 0; i < Barrels.Length; i++)
                 {
-                    Barrels[i].GetComponent<Shoot>().oriTime = 0.5f;
+                    Barrels[i].GetComponent<Shoot>().oriTime = RocketshootingRate;
                 }
             }
             else if (loadingBoxMagazine.GetComponent<BoxMagazineComponent>() != null)
             {
                 for (int i = 0; i < Barrels.Length; i++)
                 {
-                    Barrels[i].GetComponent<Shoot>().oriTime = 0.02f;
+                    Barrels[i].GetComponent<Shoot>().oriTime = NormalshootingRate;
                 }
             }
         }

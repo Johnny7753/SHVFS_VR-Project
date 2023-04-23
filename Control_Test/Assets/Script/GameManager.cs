@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject WinUI;
     public GameObject PauseUI;
     public GameObject AirDrop;
+    public GameObject WarningUI;
     public GameObject[] Barrels;
  
     public GameObject Base;
@@ -83,6 +84,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Barrels[0].GetComponent<Shoot>().IsOverHeat == true)
+        {
+            WarningUI.SetActive(true);
+        }
+        else
+        {
+            WarningUI.SetActive(false);
+        }
         //AirDropTimer += Time.timeScale;
         if(AirDropTimer >= AirDropTime)
         {
