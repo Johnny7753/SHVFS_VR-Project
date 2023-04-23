@@ -17,6 +17,8 @@ public class Bullet : MonoBehaviour
     //public GameObject StoneExplosion;
     //public GameObject sandExplosion;
 
+    public float shaketime;
+    public float amp;
 
     private GameObject leftHand;
     private GameObject rightHand;
@@ -56,54 +58,59 @@ public class Bullet : MonoBehaviour
             else if(hitinfo.collider.GetComponent<SmallCrabController>() != null)
             {
                 speed = 0;
-                leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
+                leftHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
+                rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab.Play();
+               // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<CrabController>() != null)
             {
                 speed = 0;
-                leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
+                leftHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
+                rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab.Play();
+              //  AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<FlyingDragonController>() != null)
             {
                 speed = 0;
-                leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
+                leftHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
+                rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitDragon, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitDragon.Play();
+               // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitDragon, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<MurlocController>() != null)
             {
                 speed = 0;
-                leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
+                leftHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
+                rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitMurloc, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitMurloc.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitMurloc, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<GhostController>() != null)
             {
                 speed = 0;
-                leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
+                leftHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
+                rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitGhost, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitGhost.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitGhost, this.transform.position);
                 MonsterExplosion.SetActive(true);
                 Invoke("DestoryBullet", 1f);
             }
-            /*else if (hitinfo.collider.GetComponent<SmallCrabController>() != null)
+            /*else if (hitinfo.collider.GetComponent<BossController>() != null)
             {
                 speed = 0;
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
@@ -114,19 +121,27 @@ public class Bullet : MonoBehaviour
             }*/
             if (hitinfo.collider.GetComponent<Ground>() != null)
             {
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSand, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitSand.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSand, this.transform.position);
                 Invoke("DestoryBullet", 1f);
             }
             if (hitinfo.collider.GetComponent<Stone>() != null)
             {
-                
-                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitStone, this.transform.position);
+                Audiomanager.GetComponent<AudioManager>().BulletHitStone.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitStone, this.transform.position);
                 Invoke("DestoryBullet", 1f);
             }
             if (hitinfo.collider.GetComponent<FireballComponent>() != null)
             {
                 speed = 0;
                 FireBallExplosion.SetActive(true);
+                Destroy(hitinfo.collider.gameObject);
+                Invoke("DestoryBullet", 1f);
+            }
+            if (hitinfo.collider.GetComponent<AirDrop>() != null)
+            {
+                speed = 0;
+                FindObjectOfType<SpawnBoxMagazine_Rocket>().gameObject.GetComponent<SpawnBoxMagazine>().Spawn();
                 Destroy(hitinfo.collider.gameObject);
                 Invoke("DestoryBullet", 1f);
             }

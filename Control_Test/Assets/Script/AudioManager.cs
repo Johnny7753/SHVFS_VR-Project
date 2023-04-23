@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip smallcrabblast;
-    public AudioClip BulletHitSand;
-    public AudioClip BulletHitStone;
-    public AudioClip UIChoose;
+    #region AudioClip
     public AudioClip Loadclip;
+    public AudioClip Takeclip;
     public AudioClip Overheat;
     public AudioClip Removeclip;
     public AudioClip Shoot;
-    public AudioClip ShootOverload;
-    public AudioClip BulletHitBigCrab;
-    public AudioClip BulletHitSmallCrab;
-    public AudioClip BulletHitMurloc;
-    public AudioClip BulletHitBoss;
-    public AudioClip BulletHitGhost;
-    public AudioClip BulletHitDragon;
     public AudioClip RocketLunch;
-    public AudioClip Explosion;
-    
+    #endregion
+
+    #region AudioSource
+    //public AudioSource ShootOverload;
+    public AudioSource BulletHitBigCrab;
+    public AudioSource BulletHitSmallCrab;
+    public AudioSource BulletHitMurloc;
+    public AudioSource BulletHitBoss;
+    public AudioSource BulletHitGhost;
+    public AudioSource BulletHitDragon;
+    public AudioSource smallcrabblast;
+    public AudioSource BulletHitSand;
+    public AudioSource BulletHitStone;
+    public AudioSource UIChoose;
+    public AudioSource Explosion;
+    public AudioSource Gethit;
+    #endregion
+
+
+
 }

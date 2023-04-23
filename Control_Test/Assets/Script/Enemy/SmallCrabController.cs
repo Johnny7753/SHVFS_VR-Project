@@ -118,7 +118,8 @@ public class SmallCrabController : EnemyController
             }
         }
         Explosion.SetActive(true);
-        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().smallcrabblast, this.transform.position);
+        Audiomanager.GetComponent<AudioManager>().smallcrabblast.Play();
+        //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().smallcrabblast, this.transform.position);
         Beetle.SetActive(false);
         Invoke("waitToDie", 1f);
     }

@@ -21,5 +21,10 @@ public class GunAudio : MonoBehaviour
             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Shoot, this.transform.position);
             shootCount -= 6;
         }
+        if (RocketCount >= 2)
+        {
+            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().RocketLunch, this.transform.position);
+            RocketCount -= 2;
+        }
     }
 }

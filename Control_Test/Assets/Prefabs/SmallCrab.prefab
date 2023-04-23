@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be19ba746851994a9f6de0d4c0cd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 15
+  HP: 20
   Score: 5
   refreshInterval: 0
   bornArea: {x: 563, y: 650, z: 60, w: 120}

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e5fcfdb0588d14c8dd3681b1bbc9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 20
+  HP: 150
   Score: 20
   refreshInterval: 0.5
   bornArea: {x: 563, y: 650, z: 60, w: 120}

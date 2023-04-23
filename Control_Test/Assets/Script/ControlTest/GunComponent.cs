@@ -44,7 +44,7 @@ public class GunComponent : MonoBehaviour
             {
                 for (int i = 0; i < Barrels.Length; i++)
                 {
-                    Barrels[i].GetComponent<Shoot>().oriTime = 0.02f;
+                    Barrels[i].GetComponent<Shoot>().oriTime = 0.01f;
                 }
             }
         }

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverUI;
     public GameObject WinUI;
     public GameObject PauseUI;
+    public GameObject AirDrop;
     public GameObject[] Barrels;
  
     public GameObject Base;
@@ -49,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     public float BulletDamage;
     public float oriRocketDamage;
+    public float AirDropMinTime;
+    public float AirDropMaxTime;
 
     private int OverloadCDLevel = 1;
     private int BarrelLevel = 1;
@@ -56,6 +59,9 @@ public class GameManager : MonoBehaviour
     private int DamageLevel = 1;
     private int OverloadTimeLevel = 1;
     private int ShootingRateLevel = 1;
+
+    public float AirDropTimer;
+    private float AirDropTime;
     // Start is called before the first frame update
 
     private void Awake()
@@ -64,6 +70,7 @@ public class GameManager : MonoBehaviour
         BulletCapacity = 1000;
         BulletDamage = 3;
         oriRocketDamage = 10;
+        AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
     }
 
     void Start()
@@ -75,7 +82,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //AirDropTimer += Time.timeScale;
+        if(AirDropTimer >= AirDropTime)
+        {
+            Instantiate(AirDrop, this.transform.position, this.transform.rotation);
+            AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
+            AirDropTimer =0;
+        }
         if(Isdead&&GameOverUI!=null)
         {
             Debug.Log("Dead!");
@@ -97,7 +110,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 500);
+            GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(10, 1);
         }
 
         if(BulletNumber!=null)

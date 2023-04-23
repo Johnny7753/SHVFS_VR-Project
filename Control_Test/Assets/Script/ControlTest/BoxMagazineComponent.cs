@@ -12,8 +12,11 @@ public class BoxMagazineComponent : MonoBehaviour
     public bool isHandled = false;
     public bool hasLoaded = true;
     public bool hasShaked = false;
+
     public float timer = 0;
+    
     public int BulletCapacity;
+
     public GameObject Gun;
     public GameObject LoadPoint;
     public GameObject leftHand;
@@ -24,11 +27,13 @@ public class BoxMagazineComponent : MonoBehaviour
     public Transform leftHandHoldPoint;
     public Transform rightHandHoldPoint;
 
+    private GameObject Audiomanager;
 
+    private int falg=1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Audiomanager = FindObjectOfType<AudioManager>().gameObject;
         GameManager = FindObjectOfType<GameManager>().gameObject;
         Gun = FindObjectOfType<GunComponent>().gameObject;
         LoadPoint = FindObjectOfType<BoxMagazineLoadPoint>().gameObject;
@@ -54,20 +59,50 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    
-                    timer = 0;
-                    leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
-                    leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
-                    leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
-                    isHandled = true;
-                    hasLoaded = true;
-                    Gun.GetComponent<GunComponent>().loadingBoxMagazine = null;
-                    Gun.GetComponent<GunComponent>().IsConnected = false;
-                    transform.SetParent(leftHand.transform);
-                    GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    GetComponent<Rigidbody>().useGravity = false;
-                    transform.position = leftHandHoldPoint.position;
-                    transform.rotation = leftHandHoldPoint.rotation;
+                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == this.gameObject)
+                    {
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                            falg = 0;
+                        }
+                        timer = 0;
+                        leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                        leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
+                        leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                        isHandled = true;
+                        hasLoaded = true;
+                        Gun.GetComponent<GunComponent>().loadingBoxMagazine = null;
+                        Gun.GetComponent<GunComponent>().IsConnected = false;
+                        transform.SetParent(leftHand.transform);
+                        GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GetComponent<Rigidbody>().useGravity = false;
+                        transform.position = leftHandHoldPoint.position;
+                        transform.rotation = leftHandHoldPoint.rotation;
+                        falg = 1;
+                    }
+                    else
+                    {
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            falg = 0;
+                        }
+                            
+                        timer = 0;
+                        leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                        leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
+                        leftHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                        isHandled = true;
+                        hasLoaded = true;
+                        transform.SetParent(leftHand.transform);
+                        GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GetComponent<Rigidbody>().useGravity = false;
+                        transform.position = leftHandHoldPoint.position;
+                        transform.rotation = leftHandHoldPoint.rotation;
+                        falg = 1;
+                    }
                 }
             }
             if (Input.GetAxisRaw("LeftGrip") == 0 && isHandled)
@@ -86,19 +121,39 @@ public class BoxMagazineComponent : MonoBehaviour
             {
                 if (rightHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    timer = 0;
-                    rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
-                    rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
-                    rightHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(-1,1,1);
-                    isHandled = true;
-                    hasLoaded = true;
-                    Gun.GetComponent<GunComponent>().loadingBoxMagazine = null;
-                    Gun.GetComponent<GunComponent>().IsConnected = false;
-                    transform.SetParent(rightHand.transform);
-                    GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    GetComponent<Rigidbody>().useGravity = false;
-                    transform.position = rightHandHoldPoint.position;
-                    transform.rotation = rightHandHoldPoint.rotation;
+                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == this.gameObject)
+                    {
+                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                        timer = 0;
+                        rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                        rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                        rightHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(-1, 1, 1);
+                        isHandled = true;
+                        hasLoaded = true;
+                        Gun.GetComponent<GunComponent>().loadingBoxMagazine = null;
+                        Gun.GetComponent<GunComponent>().IsConnected = false;
+                        transform.SetParent(rightHand.transform);
+                        GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GetComponent<Rigidbody>().useGravity = false;
+                        transform.position = rightHandHoldPoint.position;
+                        transform.rotation = rightHandHoldPoint.rotation;
+                    }
+                    else
+                    {
+                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                        timer = 0;
+                        rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
+                        rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
+                        rightHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(-1, 1, 1);
+                        isHandled = true;
+                        hasLoaded = true;
+                        transform.SetParent(rightHand.transform);
+                        GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GetComponent<Rigidbody>().useGravity = false;
+                        transform.position = rightHandHoldPoint.position;
+                        transform.rotation = rightHandHoldPoint.rotation;
+                    }
                 }
             }
             if (Input.GetAxisRaw("RightGrip") == 0 && isHandled)
@@ -142,6 +197,7 @@ public class BoxMagazineComponent : MonoBehaviour
         {
             if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == null)
             {
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Loadclip, this.transform.position);
                 if (hasLoaded)
                 {
                     Gun.GetComponent<GunComponent>().AmmoCount = BulletCapacity;

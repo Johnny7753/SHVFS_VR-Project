@@ -14,11 +14,13 @@ public class Rocket : MonoBehaviour
 
     [SerializeField]
     private float explodeRadius;
+    private GameObject Audiomanager;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Audiomanager = FindObjectOfType<AudioManager>().gameObject;
         GameManager = FindObjectOfType<GameManager>().gameObject;
         oriPos = transform.position;
     }
@@ -58,6 +60,8 @@ public class Rocket : MonoBehaviour
                 }
                 //Instantiate(ExplosionVFX, this.transform);
                 ExplosionVFX.SetActive(true);
+                Audiomanager.GetComponent<AudioManager>().Explosion.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
                 Invoke("Explotion", 1f);
             }
             if(hitinfo.collider.GetComponent<Ground>() != null)
@@ -81,6 +85,8 @@ public class Rocket : MonoBehaviour
                 
                 //Instantiate(ExplosionVFX, this.transform);
                 ExplosionVFX.SetActive(true);
+                Audiomanager.GetComponent<AudioManager>().Explosion.Play(0);
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
                 Invoke("Explotion", 1f);
             }
             if (hitinfo.collider.GetComponent<FireballComponent>() != null)
@@ -103,6 +109,8 @@ public class Rocket : MonoBehaviour
                 }
                 //Instantiate(ExplosionVFX, this.transform);
                 ExplosionVFX.SetActive(true);
+                Audiomanager.GetComponent<AudioManager>().Explosion.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
                 Invoke("Explotion", 1f);
             }
         }
