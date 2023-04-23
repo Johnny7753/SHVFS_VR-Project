@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSpeed: 50000
-  dizzyTime: 0
+  dizzyTime: 5
 --- !u!54 &353265393271103534
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -119,15 +119,15 @@ public class Bullet : MonoBehaviour
                 GunAudio.GetComponent<GunAudio>().hitCount++;
                 Invoke("DestoryBullet", 1f);
             }
-            /*else if (hitinfo.collider.GetComponent<BossController>() != null)
+            else if (hitinfo.collider.GetComponent<BossController>() != null)
             {
                 speed = 0;
                 leftHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
                 rightHand.GetComponent<VibrateManager>().VibrateController(0.8f, 5);
-                hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
-                MonsterExplosion.SetActive(true);
+                hitinfo.collider.GetComponentInParent<BossController>().HP -= bulletDamage;
+                GunAudio.GetComponent<GunAudio>().hitCount++;
                 Invoke("DestoryBullet", 1f);
-            }*/
+            }
             if (hitinfo.collider.GetComponent<Ground>() != null)
             {
                 Audiomanager.GetComponent<AudioManager>().BulletHitSand.Play();
