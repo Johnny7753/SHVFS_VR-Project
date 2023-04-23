@@ -112,7 +112,7 @@ public class SmallCrabController : EnemyController
                 }
                 else if (hit.GetComponent<Base>())
                 {
-                    Debug.Log("1");
+                    //Debug.Log("1");
                     hit.GetComponent<Base>().BaseHp -= enemyDamage;
                 }
             }

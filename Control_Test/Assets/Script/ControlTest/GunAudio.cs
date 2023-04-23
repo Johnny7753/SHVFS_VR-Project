@@ -7,6 +7,7 @@ public class GunAudio : MonoBehaviour
     private GameObject Audiomanager;
     public int shootCount;
     public int RocketCount;
+    public int hitCount;
     // Start is called before the first frame update
     void Start()
     {

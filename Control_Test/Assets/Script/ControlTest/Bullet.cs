@@ -12,7 +12,9 @@ public class Bullet : MonoBehaviour
     public GameObject GameManager;
     public GameObject MonsterExplosion;
     public GameObject FireBallExplosion;
+    public GameObject GunAudio;
 
+    public int VFXHitCount;
     private GameObject Audiomanager;
     //public GameObject StoneExplosion;
     //public GameObject sandExplosion;
@@ -25,6 +27,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GunAudio = FindObjectOfType<GunAudio>().gameObject;
         Audiomanager = FindObjectOfType<AudioManager>().gameObject;
         leftHand = GameObject.Find("LeftHand Controller");
         rightHand = GameObject.Find("RightHand Controller");
@@ -40,6 +43,12 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GunAudio.GetComponent<GunAudio>().hitCount >= VFXHitCount)
+        {
+            MonsterExplosion.SetActive(true);
+            GunAudio.GetComponent<GunAudio>().hitCount-=VFXHitCount;
+        }
+
         this.transform.Translate(Vector3.forward * Time.deltaTime * speed);
         Vector3 direction = transform.position - oriPos;
         
@@ -62,8 +71,9 @@ public class Bullet : MonoBehaviour
                 rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
                 Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab.Play();
-               // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab, this.transform.position);
-                MonsterExplosion.SetActive(true);
+                // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitSmallCrab, this.transform.position);
+                GunAudio.GetComponent<GunAudio>().hitCount++;
+                
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<CrabController>() != null)
@@ -73,8 +83,9 @@ public class Bullet : MonoBehaviour
                 rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
                 Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab.Play();
-              //  AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab, this.transform.position);
-                MonsterExplosion.SetActive(true);
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitBigCrab, this.transform.position);
+                GunAudio.GetComponent<GunAudio>().hitCount++;
+                
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<FlyingDragonController>() != null)
@@ -84,8 +95,8 @@ public class Bullet : MonoBehaviour
                 rightHand.GetComponent<VibrateManager>().VibrateController(amp, shaketime);
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
                 Audiomanager.GetComponent<AudioManager>().BulletHitDragon.Play();
-               // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitDragon, this.transform.position);
-                MonsterExplosion.SetActive(true);
+                // AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitDragon, this.transform.position);
+                GunAudio.GetComponent<GunAudio>().hitCount++;
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<MurlocController>() != null)
@@ -96,7 +107,7 @@ public class Bullet : MonoBehaviour
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
                 Audiomanager.GetComponent<AudioManager>().BulletHitMurloc.Play();
                 //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitMurloc, this.transform.position);
-                MonsterExplosion.SetActive(true);
+                GunAudio.GetComponent<GunAudio>().hitCount++;
                 Invoke("DestoryBullet", 1f);
             }
             else if (hitinfo.collider.GetComponent<GhostController>() != null)
@@ -107,7 +118,7 @@ public class Bullet : MonoBehaviour
                 hitinfo.collider.GetComponentInParent<EnemyController>().HP -= bulletDamage;
                 Audiomanager.GetComponent<AudioManager>().BulletHitGhost.Play();
                 //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().BulletHitGhost, this.transform.position);
-                MonsterExplosion.SetActive(true);
+                GunAudio.GetComponent<GunAudio>().hitCount++;
                 Invoke("DestoryBullet", 1f);
             }
             /*else if (hitinfo.collider.GetComponent<BossController>() != null)

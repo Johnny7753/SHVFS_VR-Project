@@ -31,23 +31,23 @@ public class ThreePoint_Bezier_yaw : MonoBehaviour
     {
        if(LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true )
         {
-            if (leftHand.transform.eulerAngles.y > minAngle && leftHand.transform.eulerAngles.y < maxAngle && rightHand.transform.eulerAngles.y > minAngle && rightHand.transform.eulerAngles.y < maxAngle)
+            if (leftHand.transform.eulerAngles.y > minAngle-10 && leftHand.transform.eulerAngles.y < maxAngle+10 && rightHand.transform.eulerAngles.y > minAngle-10 && rightHand.transform.eulerAngles.y < maxAngle+10)
             {
                 slider = (rightHand.transform.eulerAngles.y + leftHand.transform.eulerAngles.y) / 360;
             }
         }
         else if (LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == true && RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == false )
         {
-            if (leftHand.transform.eulerAngles.y+10 > minAngle && leftHand.transform.eulerAngles.y+10 < maxAngle)
+            if (leftHand.transform.eulerAngles.y > minAngle && leftHand.transform.eulerAngles.y < maxAngle)
             {
-                slider = (leftHand.transform.eulerAngles.y+10) / 180;
+                slider = (leftHand.transform.eulerAngles.y) / 180;
             }
         }
         else if (RightGrip.GetComponent<RightGripComponent>().isRightGripCaught == true && LeftGrip.GetComponent<LeftGripComponent>().isLeftGripCaught == false )
         {
-            if (rightHand.transform.eulerAngles.y-10 > minAngle && rightHand.transform.eulerAngles.y-10 < maxAngle)
+            if (rightHand.transform.eulerAngles.y > minAngle && rightHand.transform.eulerAngles.y < maxAngle)
             {
-                slider = (rightHand.transform.eulerAngles.y-10) / 180;
+                slider = (rightHand.transform.eulerAngles.y) / 180;
             }
         }
         obj.position = Bezier(slider);

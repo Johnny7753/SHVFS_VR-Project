@@ -26,6 +26,8 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
 
     private GameObject Audiomanager;
 
+    private int falg = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,8 +59,12 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                 {
                     if (Gun.GetComponent<GunComponent>().loadingBoxMagazine != null)
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
                         leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
@@ -75,7 +81,11 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                     }
                     else
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
                         leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
@@ -98,6 +108,7 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;
+                falg = 1;
             }
         }
         if (isrightHandIn)
@@ -108,8 +119,12 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                 {
                     if (Gun.GetComponent<GunComponent>().loadingBoxMagazine != null)
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
@@ -126,7 +141,11 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                     }
                     else
                     {
-                        AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                        if (falg == 1)
+                        {
+                            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
+                            falg = 0;
+                        }
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
@@ -149,6 +168,7 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
                 transform.parent = null;
                 GetComponent<Rigidbody>().useGravity = true;
                 isHandled = false;
+                falg = 1;
             }
         }
     }
@@ -182,6 +202,7 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
         {
             if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == null)
             {
+                AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Loadclip, this.transform.position);
                 if (hasLoaded)
                 {
                     Gun.GetComponent<GunComponent>().AmmoCount = RocketCapacity;
