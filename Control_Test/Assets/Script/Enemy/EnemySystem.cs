@@ -70,7 +70,7 @@ public class EnemySystem : Singleton<EnemySystem>
         enemyNum = 0;
         isRefreshing = true;
         finishRefreshing = false;
-        RefreshEnemies();
+        //RefreshEnemies();
     }
 
     public void Start()
@@ -94,8 +94,9 @@ public class EnemySystem : Singleton<EnemySystem>
         {
             enemyAlive[(int)Random.Range(0, enemyAlive.Count)].GetComponent<EnemyController>().EnemyDie();
         }
-
-
+    }
+    private void FixedUpdate()
+    {
         //detect if enemies are all killed, enter next wave
         EnterNextWave();
 
@@ -184,8 +185,8 @@ public class EnemySystem : Singleton<EnemySystem>
             timer = 0;
             RefreshOneEnemy(enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType]);
         }
-        //Debug.Log(enemyNum);
-        if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum-1)
+        Debug.Log(enemyNum);
+        if (enemyNum == waves[waveIndex].parts[partIndex].enemyNum)
         {
             isRefreshing = false;
             finishRefreshing = true;
