@@ -101,7 +101,8 @@ public class EnemyController : MonoBehaviour
 
     //destroy this enemy
     public virtual void EnemyDie()
-    {        
+    {
+        agent.enabled = false;
         GameObject.Find("RightHand Controller").GetComponent<VibrateManager>().VibrateController(0.8f, 1);
         GameObject.Find("LeftHand Controller").GetComponent<VibrateManager>().VibrateController(0.8f, 1);
         FindObjectOfType<GameManager>().GetComponent<GameManager>().EXP += Score;
@@ -109,7 +110,8 @@ public class EnemyController : MonoBehaviour
             pointsTaken.isTaken = false;
         EnemySystem.Instance.enemyAlive.Remove(gameObject);
         MonsterAudio.Play();
-        Invoke("waitToDie", 0.1f);
+        animator.SetTrigger("IsDead");
+        //Invoke("waitToDie", 2.5f);
     }
     private void waitToDie()
     {
@@ -166,16 +168,19 @@ public class EnemyController : MonoBehaviour
     #region Function(GROUND)
     protected void GroundEnemyAttack()
     {
-        if (beginAttack)
+        if (beginAttack&&!isDie)
         {
             timer += Time.deltaTime;
             if (timer > attackInterval)
             {
                 timer = 0;
+                animator.SetBool("IsAttack",true);
                 FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= enemyDamage;
             }
         }
     }
+
+
     #endregion
 
     //protected List<T> GetAvailablePointsBeforeEnemy<T>(List<T> points) where T : EnemyHidenPoint

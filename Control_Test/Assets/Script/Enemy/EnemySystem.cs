@@ -136,7 +136,7 @@ public class EnemySystem : Singleton<EnemySystem>
     //enter next part
     private void EnterNextPart()
     {
-        if (finishRefreshing && !isRefreshing&&partIndex+1< waves[waveIndex].parts.Length)
+        if (finishRefreshing && !isRefreshing && partIndex + 1 < waves[waveIndex].parts.Length)
         {
             switch (waves[waveIndex].parts[partIndex].switchType)
             {
@@ -152,7 +152,7 @@ public class EnemySystem : Singleton<EnemySystem>
                     }
                     break;
                 case SwitchType.Time:
-                    if (enemyAlive.Count == 0 )
+                    if (enemyAlive.Count == 0)
                     {
                         timer = 0;
                         enemyNum = 0;
@@ -202,6 +202,11 @@ public class EnemySystem : Singleton<EnemySystem>
 
     private void InstantiateBoss()
     {
-        Instantiate(bossPrefab, instantiatePos.position, instantiatePos.rotation);
+        if (bossPrefab)
+            Instantiate(bossPrefab, instantiatePos.position, instantiatePos.rotation);
+        else
+        {
+            Debug.Log("no boss");
+        }
     }
 }

@@ -13,17 +13,18 @@ public class CrabController : EnemyController
         MonsterAudio = FindObjectOfType<AudioManager>().BulletHitBigCrab;
         InitializeEnemy();
         goal = agent.destination = enemyTarget;
-        animator.SetBool("Isattack", false);
+        animator = GetComponentInChildren<Animator>();
         agent.updateRotation = false;
     }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5f)
+        if (!beginAttack&& Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5f)
         {
             transform.LookAt(player);
             goal = agent.destination = transform.position;
             beginAttack = true;
+            timer = attackInterval;
           //  animator.SetBool("Isattack",true);                     //attack animation                                        by Hardy  4/21
         }
         GroundEnemyAttack();

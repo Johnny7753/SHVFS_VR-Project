@@ -24,6 +24,7 @@ public class MurlocController : EnemyController
     protected override void Start()
     {
         MonsterAudio = FindObjectOfType<AudioManager>().BulletHitMurloc;
+        animator = GetComponentInChildren<Animator>();
         base.Start();
         InitializeEnemy();
         goal = agent.destination = enemyTarget;
@@ -35,10 +36,11 @@ public class MurlocController : EnemyController
         if (!isHidden)
             CheckHiddenPoint();
 
-        if (goal == enemyTarget && Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5)
+        if (!beginAttack&&goal == enemyTarget && Vector3.Distance(transform.position, new Vector3(goal.x, transform.position.y, goal.z)) < 5)
         {
             agent.enabled = false;
             beginAttack = true;
+            timer = attackInterval;
         }
         GroundEnemyAttack();
     }

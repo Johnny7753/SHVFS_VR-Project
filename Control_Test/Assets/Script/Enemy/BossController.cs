@@ -55,11 +55,18 @@ public class BossController : MonoBehaviour
     private float timer;
     private bool isAttacking;
 
+    private bool isDie;
+
+    private Animator anim;
+
+    private bool beginHorn;
+
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("XR Origin").transform;
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -67,17 +74,26 @@ public class BossController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            CallEnemies();
+            HP = 0;
         }
-        if(!isAttacking&&attackIndex<attacklist.Length)
+        if(HP<=0&&!isDie)
         {
-            isAttacking=true;
-            timer = 0;
+            isDie = true;
+            anim.SetTrigger("IsDead");
+        }
+
+    }
+    private void FixedUpdate()
+    {
+        if (!isAttacking && attackIndex < attacklist.Length)
+        {
             attackway = attacklist[attackIndex].attackWay;
+            isAttacking = true;
+            timer = 0;
             switch (attackway)
             {
                 case AttackWay.call:
-                    CallEnemies();
+                    CallEnemiesAnim();
                     break;
                 case AttackWay.fireball:
                     ShootFireball();
@@ -87,11 +103,25 @@ public class BossController : MonoBehaviour
                     break;
             }
         }
-        timer += Time.deltaTime;
-        if(isAttacking&& attackIndex < attacklist.Length&& timer >= attacklist[attackIndex].timeInterval)
+        if (isAttacking)
         {
-            attackIndex++;
-            isAttacking = false;
+            timer += Time.deltaTime;
+            if (timer >= attacklist[attackIndex].timeInterval)
+            {
+                attackIndex = (attackIndex + 1) % attacklist.Length;
+                isAttacking = false;
+            }
+        }
+        if (beginHorn)
+        {
+            timer += Time.deltaTime;
+            if (timer > hornInterval)
+            {
+                timer = 0;
+                isAttacking = true;
+                beginHorn = false;
+                CallEnemies();
+            }
         }
     }
 
@@ -100,7 +130,8 @@ public class BossController : MonoBehaviour
     /// </summary>
     private void ShootFireball()
     {
-        for(int i=0;i<fireballNum;i++)
+        anim.SetTrigger("Fire");
+        for (int i=0;i<fireballNum;i++)
         {
             //var offset = new Vector3(0,0,i*30f*((i%2)*2-1));
             var fireball= Instantiate(fireballPrefab,shootPoint.position,shootPoint.rotation);
@@ -112,6 +143,7 @@ public class BossController : MonoBehaviour
     /// </summary>
     private void CallWave()
     {
+        anim.SetTrigger("Wave");
         Instantiate(wavePrefab, shootPoint.position, shootPoint.rotation);
     }
     /// <summary>
@@ -127,5 +159,10 @@ public class BossController : MonoBehaviour
         {
             EnemySystem.Instance.RefreshOneEnemy(EnemySystem.Instance.enemyPrefab[4]);
         }
+    }
+    private void CallEnemiesAnim()
+    {        
+        anim.SetTrigger("Call");
+        beginHorn = true;
     }
 }
