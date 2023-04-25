@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         RocketCapacity = 100;
         BulletCapacity = 1000;
-        BulletDamage = 1;
+        BulletDamage = 3;
         oriRocketDamage = 20;
         AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
     }

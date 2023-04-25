@@ -70,7 +70,7 @@ public class Shoot : MonoBehaviour
             }
             if(currentTime > oriTime / 2)
             {
-                currentTime  -= Time.deltaTime*a;
+                currentTime  -= Time.deltaTime * a;
             }
             if (currentTime < oriTime / 2)
             {
