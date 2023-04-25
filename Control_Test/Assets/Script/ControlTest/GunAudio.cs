@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class GunAudio : MonoBehaviour
 {
-    private GameObject Audiomanager;
+    private AudioManager audioManager;
     public int shootCount;
     public int RocketCount;
     public int hitCount;
+    public GameObject BulletSound;
     // Start is called before the first frame update
     void Start()
     {
-        Audiomanager = FindObjectOfType<AudioManager>().gameObject;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -19,18 +20,18 @@ public class GunAudio : MonoBehaviour
     {
         if (shootCount >= 2)
         {
-            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Shoot, this.transform.position);
+            Instantiate(BulletSound);
             shootCount -= 2;
         }
         if (RocketCount >= 2)
         {
-            AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().RocketLunch, this.transform.position);
+            AudioSource.PlayClipAtPoint(audioManager.RocketLunch, this.transform.position);
             RocketCount -= 2;
         }
         
     }
     public void OverHeat()
     {
-        Audiomanager.GetComponent<AudioManager>().Overheat.Play();
+        audioManager.Overheat.Play();
     }
 }

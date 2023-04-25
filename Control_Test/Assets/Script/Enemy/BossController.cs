@@ -61,10 +61,11 @@ public class BossController : MonoBehaviour
 
     private bool beginHorn;
 
-
+    private AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         player = GameObject.Find("XR Origin").transform;
         anim = GetComponentInChildren<Animator>();
     }
@@ -130,19 +131,21 @@ public class BossController : MonoBehaviour
     /// </summary>
     private void ShootFireball()
     {
+        audioManager.DragonAttack.Play();
         anim.SetTrigger("Fire");
         for (int i=0;i<fireballNum;i++)
         {
             //var offset = new Vector3(0,0,i*30f*((i%2)*2-1));
             var fireball= Instantiate(fireballPrefab,shootPoint.position,shootPoint.rotation);
             fireball.transform.RotateAround(player.position,Vector3.up,i*angleBetween * ((i % 2) * 2 - 1));
-        }
+        } 
     }
     /// <summary>
     /// call shock wave
     /// </summary>
     private void CallWave()
     {
+        audioManager.BossCallShockWave.Play();
         anim.SetTrigger("Wave");
         Instantiate(wavePrefab, shootPoint.position, shootPoint.rotation);
     }
@@ -151,6 +154,7 @@ public class BossController : MonoBehaviour
     /// </summary>
     private void CallEnemies()
     {
+        audioManager.BossCallEnemy.Play();
         for(int i=0;i<murlocNum;i++)
         {
             EnemySystem.Instance.RefreshOneEnemy(EnemySystem.Instance.enemyPrefab[1]);

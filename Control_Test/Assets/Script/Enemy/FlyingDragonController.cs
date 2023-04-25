@@ -9,11 +9,13 @@ public class FlyingDragonController : EnemyController
     private GameObject bullet;
     [SerializeField]
     protected Transform shootPoint;
+    public AudioManager audioManager;
     //public Animator dragonanimator;
 
     protected override void Start()
     {
         MonsterAudio = FindObjectOfType<AudioManager>().BulletHitDragon;
+        audioManager = FindObjectOfType<AudioManager>();
         animator = GetComponent<Animator>();
         base.Start();
         InitializeEnemy();
@@ -38,6 +40,7 @@ public class FlyingDragonController : EnemyController
 
     public void FireBall()
     {
+        audioManager.DragonAttack.Play();
         Instantiate(bullet, shootPoint.position, shootPoint.rotation);
     }
 }

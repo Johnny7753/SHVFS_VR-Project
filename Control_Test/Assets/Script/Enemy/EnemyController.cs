@@ -53,11 +53,13 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
     public AudioSource MonsterAudio;
 
+
     private bool isDie;
     #endregion
 
     protected virtual void Start()
     {
+        
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("XR Origin").transform; //'GameObject.Find' need to be replaced,this is the target enemy should look at
         target = FindObjectOfType<EnemyTarget>().transform;

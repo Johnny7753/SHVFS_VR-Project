@@ -28,6 +28,16 @@ public class AudioManager : MonoBehaviour
     public AudioSource Explosion;
     public AudioSource Gethit;
     public AudioSource Overheat;
+    public AudioSource BrokeImpackWave;
+    public AudioSource ImpackWave;
+    public AudioSource LevelUP;
+    public AudioSource FireBallHitPlayer;
+    public AudioSource MurlocAttack;
+    public AudioSource GhostAttack;
+    public AudioSource DragonAttack;
+    public AudioSource BigGrabAttack;
+    public AudioSource BossCallShockWave;
+    public AudioSource BossCallEnemy;
     #endregion
 
 
