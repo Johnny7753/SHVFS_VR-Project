@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
     public TextMeshProUGUI CD;
+    public TextMeshProUGUI BarrelLV;
+    public TextMeshProUGUI AmmoCpacityLV;
+    public TextMeshProUGUI OverLoadLastingTimeLV;
+    public TextMeshProUGUI OverloadCDLV;
+    public TextMeshProUGUI BulletDamageLV;
     //public TextMeshProUGUI OverHeatRestTime;
     public int EXP;
     public int AddHPCost;
