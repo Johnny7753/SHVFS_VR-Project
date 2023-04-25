@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI OverLoadLastingTimeLV;
     public TextMeshProUGUI OverloadCDLV;
     public TextMeshProUGUI BulletDamageLV;
+    public TextMeshProUGUI Score;
     //public TextMeshProUGUI OverHeatRestTime;
+   
     public int EXP;
     public int AddHPCost;
     public int[] OverloadCDLevelEXP;
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        EXP = 0;
         RocketCapacity = 100;
         BulletCapacity = 1000;
         BulletDamage = 3;
@@ -83,7 +86,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
+        if(!FindObjectOfType<Tutorial>())
+        {
+            Time.timeScale = 1;
+        }
+        
         
         Base = FindObjectOfType<Base>().gameObject;
     }
@@ -91,6 +98,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Score.text = EXP.ToString();
         if (Barrels[0].GetComponent<Shoot>().IsOverHeat == true|| Barrels[0].GetComponent<Shoot>().isDizzy==true)
         {
             WarningUI.SetActive(true);
@@ -118,12 +126,16 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if(WinUI !=null && FindObjectOfType<EnemySystem>().isWin)
+        if(FindObjectOfType<EnemySystem>())
         {
-            Debug.Log("Win!");
-            WinUI.SetActive(true);
-            Time.timeScale = 0.0001f;
+            if (WinUI != null && FindObjectOfType<EnemySystem>().isWin)
+            {
+                Debug.Log("Win!");
+                WinUI.SetActive(true);
+                Time.timeScale = 0.0001f;
+            }
         }
+        
 
         //if(Input.GetKeyDown(KeyCode.Joystick1Button0))
         //{

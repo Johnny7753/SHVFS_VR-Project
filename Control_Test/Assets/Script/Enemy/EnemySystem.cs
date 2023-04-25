@@ -47,6 +47,7 @@ public class EnemySystem : Singleton<EnemySystem>
     [HideInInspector]
     public int enemyNum;
     public bool isWin = false;
+    public bool isTutorialWIn = false;
 
     private bool bossAppear;
     public override void Awake()
@@ -127,7 +128,7 @@ public class EnemySystem : Singleton<EnemySystem>
             }
             else
             {
-                //isWin = true;
+                isTutorialWIn = true;
                 finishRefreshing = false;
                 InstantiateBoss();
                 Debug.Log("no more enemies!");

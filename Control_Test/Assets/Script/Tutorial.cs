@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,55 +14,104 @@ public class Tutorial : MonoBehaviour
     public GameObject Overload;
     public GameObject EnemySystemAppear;
     public GameObject Over;
-    public bool tutorialOver;
-    public bool NormalBox;
-    public bool RocketBox;
-    public bool Isconnected;
-    public bool IsleftGrab;
-    public bool IsrightGrab;
-    public bool shoot;
+    public GameObject UpgradeSystem;
+    public bool tutorialOverUpdate;
+    public bool NormalBoxUpdate;
+    public bool RocketBoxUpdate;
+    public bool IsconnectedUpdate;
+    public bool IsleftGrabUpdate;
+    public bool IsrightGrabUpdate;
+    public bool shootUpdate;
+    
+    public bool UpgradeTutorial = false;
     public int flag=1;
 
+    private int Credits;
+    private int FormalCredits;
+    private BoxMagazineComponent NormalBox;
+    private BoxMagazineComponent_Rocket RocketBox;
+    private GunComponent Isconnected;
+    private LeftGripComponent IsleftGrab;
+    private RightGripComponent IsrightGrab;
+    private Shoot shoot;
+    private EnemySystem tutorialOver;
+    private GameManager Upgrade;
+    private void Awake()
+    {
+        
+    }
     private void Start()
     {
-        NormalBox = FindObjectOfType<BoxMagazineComponent>().AmmoisGrabed;
-        RocketBox = FindObjectOfType<BoxMagazineComponent_Rocket>().AmmoisGrabed;
-        Isconnected = FindObjectOfType<GunComponent>().IsConnected;
-        IsleftGrab = FindObjectOfType<LeftGripComponent>().isLeftGripCaught;
-        IsrightGrab = FindObjectOfType<RightGripComponent>().isRightGripCaught;
-        shoot = FindObjectOfType<Shoot>().isShooting;
-        tutorialOver = FindObjectOfType<EnemySystem>().isWin;
+        Time.timeScale = 0.001f;
+        NormalBox = FindObjectOfType<BoxMagazineComponent>();
+        RocketBox = FindObjectOfType<BoxMagazineComponent_Rocket>();
+        Isconnected = FindObjectOfType<GunComponent>();
+        IsleftGrab = FindObjectOfType<LeftGripComponent>();
+        IsrightGrab = FindObjectOfType<RightGripComponent>();
+        shoot = FindObjectOfType<Shoot>();
+        tutorialOver = FindObjectOfType<EnemySystem>();
+        Upgrade = FindObjectOfType<GameManager>();
+        //tutorialover = findobjectoftype<enemysystem>().iswin;
+        EnemySystemAppear.SetActive(false);
+        FormalCredits = 0;
+        Credits = 0;
     }
     private void Update()
     {
-        if((NormalBox|| RocketBox) &&(flag==1))
+
+        NormalBoxUpdate = NormalBox.AmmoisGrabed;
+        RocketBoxUpdate = RocketBox.AmmoisGrabed;
+        IsconnectedUpdate = Isconnected.IsConnected;
+        IsleftGrabUpdate = IsleftGrab.isLeftGripCaught;
+        IsrightGrabUpdate = IsrightGrab.isRightGripCaught;
+        shootUpdate = shoot.isShooting;
+        Credits = Upgrade.EXP;
+        // Debug.Log(FindObjectOfType<GunComponent>().IsConnected);
+        if ((IsconnectedUpdate) && (flag == 1))
         {
             grabAmmo.SetActive(false);
-            flag++;
-        }
-        if(Isconnected&&(flag==2))
-        {
             leftgrab.SetActive(true);
             flag++;
         }
-        if ((IsleftGrab||IsrightGrab) && (flag == 3))
+        if ((IsleftGrabUpdate || IsrightGrabUpdate) && (flag == 2))
         {
             leftgrab.SetActive(false);
             leftshoot.SetActive(true);
             flag++;
         }
-        if(shoot)
+        
+        if (shootUpdate&&!tutorialOverUpdate)
         {
+            leftshoot.SetActive(false);
             Overload.SetActive(true);
             EnemySystemAppear.SetActive(true);
+            FormalCredits = Credits;
+            tutorialOverUpdate = tutorialOver.isTutorialWIn;
+            
+
         }
 
-        if (Over != null && tutorialOver)
+        if (Over != null && tutorialOverUpdate)
+        {
+            UpgradeSystem.SetActive(true);
+            
+            if(Credits!= FormalCredits)
+            {
+                UpgradeTutorial = true;
+            }
+            Invoke("waitFor", 0.5f);
+            FormalCredits = Credits;
+            // Time.timeScale = 0.0001f;
+        }
+        if(Over!=null&& tutorialOverUpdate && UpgradeTutorial)
         {
             Over.SetActive(true);
-            Time.timeScale = 0.0001f;
         }
 
+        void waitFor()
+        {
+
+        }
     }
 
 
@@ -72,6 +122,7 @@ public class Tutorial : MonoBehaviour
 
     public void begintutorial()
     {
+        Time.timeScale = 1;
         StartTutorial.SetActive(false);
         grabAmmo.SetActive(true);
         
@@ -82,4 +133,5 @@ public class Tutorial : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    
 }

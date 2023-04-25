@@ -127,7 +127,7 @@ public class BossController : MonoBehaviour
     }
 
     /// <summary>
-    /// shoot fireball
+    /// shootUpdate fireball
     /// </summary>
     private void ShootFireball()
     {
