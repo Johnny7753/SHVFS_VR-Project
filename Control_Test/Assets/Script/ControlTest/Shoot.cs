@@ -30,9 +30,9 @@ public class Shoot : MonoBehaviour
     private float invokeTime;
     public float OverLoadTimer;
     public float OverLoadCDTimer;
-    private float OverHeatTimer;
+    public float OverHeatTimer;
 
-    private bool canOverLoad = true;
+    public bool canOverLoad = true;
     private bool IsOverLoad = false;
     public bool IsOverHeat = false;
 
@@ -104,7 +104,7 @@ public class Shoot : MonoBehaviour
             IsOverLoad = false;
         }
         
-        if(canOverLoad == false)
+        if(canOverLoad == false && IsOverHeat == false)
         {
             OverLoadCDTimer += Time.deltaTime;    // OverloadCD- OverLoadCDTimer = CD UI
             if(OverLoadCDTimer >= OverLoadCD)

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
     public TextMeshProUGUI CD;
+    public TextMeshProUGUI OverHeatRestTime;
     public int EXP;
     public int AddHPCost;
     public int[] OverloadCDLevelEXP;
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+
         Base = FindObjectOfType<Base>().gameObject;
     }
 
@@ -134,8 +136,13 @@ public class GameManager : MonoBehaviour
             FortressHP.text = FindObjectOfType<Base>().BaseHp.ToString();
         }
 
-        CD.text = (FindObjectOfType<Shoot>().OverLoadCD - FindObjectOfType<Shoot>().OverLoadCDTimer).ToString();
-
+        //CD.text = (FindObjectOfType<Shoot>().OverLoadCD - FindObjectOfType<Shoot>().OverLoadCDTimer).ToString();
+        if(Barrels[0].GetComponent<Shoot>().canOverLoad == true)
+        {
+            CD.text = "0.00";
+        }
+        else CD.text = string.Format("{0:N2}", Barrels[0].GetComponent<Shoot>().OverLoadCD - Barrels[0].GetComponent<Shoot>().OverLoadCDTimer);
+        OverHeatRestTime.text = string.Format("{0:N2}", Barrels[0].GetComponent<Shoot>().OverHeatTime - Barrels[0].GetComponent<Shoot>().OverHeatTimer);
     }
     public void StartGame()
     {
