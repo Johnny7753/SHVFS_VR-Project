@@ -9,7 +9,7 @@ public class ECExplodingProjectile : MonoBehaviour
     public GameObject explosionPrefab;
     public float thrust;
 
-    public Rigidbody thisRigidbody;
+    //public Rigidbody thisRigidbody;
 
     public GameObject particleKillGroup;
     private Collider thisCollider;
@@ -31,7 +31,7 @@ public class ECExplodingProjectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        thisRigidbody = GetComponent<Rigidbody>();
+        //thisRigidbody = GetComponent<Rigidbody>();
         if (Missile)
         {
             missileTarget = GameObject.FindWithTag("Target").transform;
@@ -64,12 +64,12 @@ public class ECExplodingProjectile : MonoBehaviour
 
             transform.LookAt(missileTarget);
 
-            thisRigidbody.AddForce(transform.forward * projectileSpeed);
+            //thisRigidbody.AddForce(transform.forward * projectileSpeed);
         }
 
         if (LookRotation && timer >= 0.05f)
         {
-            transform.rotation = Quaternion.LookRotation(thisRigidbody.velocity);
+            //transform.rotation = Quaternion.LookRotation(thisRigidbody.velocity);
         }
 
         CheckCollision(previousPosition);
@@ -97,7 +97,7 @@ public class ECExplodingProjectile : MonoBehaviour
             {
                 thisCollider.enabled = false;
                 particleKillGroup.SetActive(false);
-                thisRigidbody.velocity = Vector3.zero;
+                //thisRigidbody.velocity = Vector3.zero;
                 Destroy(gameObject, 5);
             }
 
@@ -125,7 +125,7 @@ public class ECExplodingProjectile : MonoBehaviour
 
                 thisCollider.enabled = false;
                 particleKillGroup.SetActive(false);
-                thisRigidbody.velocity = Vector3.zero;
+                //thisRigidbody.velocity = Vector3.zero;
 
                 Destroy(gameObject, 5);
 

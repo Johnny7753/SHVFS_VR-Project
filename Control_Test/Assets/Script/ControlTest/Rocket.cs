@@ -64,7 +64,7 @@ public class Rocket : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
                 Invoke("Explotion", 1f);
             }
-            if(hitinfo.collider.GetComponent<Ground>() != null)
+            if(hitinfo.collider.GetComponent<Ground>() != null || hitinfo.collider.GetComponent<Stone>() != null)
             {
                 speed = 0;
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, explodeRadius);

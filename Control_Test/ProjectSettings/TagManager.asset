@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawned
   - FxTemporaire
+  - FX
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Terrain
   - Obstacle
   - Enemy
-  - 
-  - 
+  - Bullet
+  - Base
   - 
   - 
   - 

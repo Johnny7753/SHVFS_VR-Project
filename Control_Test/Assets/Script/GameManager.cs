@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,7 +23,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI BulletNumber;
     public TextMeshProUGUI FortressHP;
     public TextMeshProUGUI CD;
-    public TextMeshProUGUI OverHeatRestTime;
+    //public TextMeshProUGUI OverHeatRestTime;
     public int EXP;
     public int AddHPCost;
     public int[] OverloadCDLevelEXP;
@@ -71,8 +70,8 @@ public class GameManager : MonoBehaviour
     {
         RocketCapacity = 100;
         BulletCapacity = 1000;
-        BulletDamage = 3;
-        oriRocketDamage = 10;
+        BulletDamage = 1;
+        oriRocketDamage = 20;
         AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
     }
 
@@ -142,7 +141,7 @@ public class GameManager : MonoBehaviour
             CD.text = "0.00";
         }
         else CD.text = string.Format("{0:N2}", Barrels[0].GetComponent<Shoot>().OverLoadCD - Barrels[0].GetComponent<Shoot>().OverLoadCDTimer);
-        OverHeatRestTime.text = string.Format("{0:N2}", Barrels[0].GetComponent<Shoot>().OverHeatTime - Barrels[0].GetComponent<Shoot>().OverHeatTimer);
+        //OverHeatRestTime.text = string.Format("{0:N2}", Barrels[0].GetComponent<Shoot>().OverHeatTime - Barrels[0].GetComponent<Shoot>().OverHeatTimer);
     }
     public void StartGame()
     {
