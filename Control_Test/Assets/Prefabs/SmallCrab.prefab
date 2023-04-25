@@ -109,6 +109,7 @@ MonoBehaviour:
   enemyDamage: 20
   goal: {x: 0, y: 0, z: 0}
   animator: {fileID: 961395319182292498}
+  MonsterAudio: {fileID: 0}
   hitPos: {x: 0, y: 0, z: 0}
   previousTrans: {x: 0, y: 0, z: 0}
   lateralOffset: {x: 70, y: 100}
@@ -118,7 +119,7 @@ MonoBehaviour:
   actionArea: {x: -145, y: 136}
   Explosion: {fileID: 8574293164875378019}
   Beetle: {fileID: 6422539843730058531}
-  explodeRadius: 80
+  explodeRadius: 15
 --- !u!33 &5357630411546482281
 MeshFilter:
   m_ObjectHideFlags: 0
