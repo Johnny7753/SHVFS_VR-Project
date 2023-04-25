@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     public GameObject Rocket;
     public GameObject Gun;
     public GameObject GunAudio;
+    
 
     public Transform SpawnPoint;
     public Transform LeftGrip;
@@ -43,7 +44,6 @@ public class Shoot : MonoBehaviour
 
     void Start()
     {
-        
         animator = GetComponent<Animator>();
         oriTime = currentTime;
         invokeTime = currentTime;
@@ -284,6 +284,7 @@ public class Shoot : MonoBehaviour
             a = 0.03f;
             animator.SetTrigger(Shooting);
             GameObject bullet;
+            
             bullet = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
             Gun.GetComponent<GunComponent>().AmmoCount--;
             Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>().BulletCapacity--;

@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     public GameObject GameManager;
     public GameObject MonsterExplosion;
     public GameObject FireBallExplosion;
+    public GameObject BrokeImpackWave;
     public GameObject GunAudio;
 
     public int VFXHitCount;
@@ -153,6 +154,14 @@ public class Bullet : MonoBehaviour
                 FindObjectOfType<SpawnBoxMagazine_Rocket>().gameObject.GetComponent<SpawnBoxMagazine>().Spawn();
                 Destroy(hitinfo.collider.gameObject);
                 Invoke("DestoryBullet", 1f);
+            }
+            if(hitinfo.collider.GetComponent<ShockWaveComponent>() != null)
+            {
+                speed = 0;
+                Audiomanager.GetComponent<AudioManager>().BrokeImpackWave.Play();
+                BrokeImpackWave.SetActive(true);
+                Destroy(hitinfo.collider.gameObject);
+                Invoke("DestoryBullet", 1.5f);
             }
         }
         oriPos = transform.position;

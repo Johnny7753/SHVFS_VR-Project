@@ -11,7 +11,7 @@ public class Rocket : MonoBehaviour
     public float criticalDamage;
     public GameObject GameManager;
     public GameObject ExplosionVFX;
-
+    public GameObject BrokeImpackWave;
     [SerializeField]
     private float explodeRadius;
     private GameObject Audiomanager;
@@ -40,7 +40,16 @@ public class Rocket : MonoBehaviour
         bool isCollider = Physics.Raycast(oriPos, direction, out hitinfo , ength);
         if (isCollider)
         {
-            if(hitinfo.collider.GetComponent<EnemyController>() != null)
+
+            if (hitinfo.collider.GetComponent<ShockWaveComponent>() != null)
+            {
+                speed = 0;
+                Audiomanager.GetComponent<AudioManager>().BrokeImpackWave.Play();
+                BrokeImpackWave.SetActive(true);
+                Destroy(hitinfo.collider.gameObject);
+                Invoke("Explotion", 1.5f);
+            }
+            if (hitinfo.collider.GetComponent<EnemyController>() != null)
             {
                 speed = 0;
                 Collider[] hitColliders = Physics.OverlapSphere(hitinfo.transform.position, explodeRadius);

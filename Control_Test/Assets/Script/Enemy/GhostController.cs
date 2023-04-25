@@ -84,6 +84,7 @@ public class GhostController : EnemyController
         //explode state
         if (Vector3.Distance(enemyTarget, transform.position) < disToAttackPlayer)
         {
+            
             GroundEnemyAttack();
         }
     }

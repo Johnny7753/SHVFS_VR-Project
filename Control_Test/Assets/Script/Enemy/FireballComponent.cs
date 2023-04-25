@@ -8,10 +8,11 @@ public class FireballComponent : MonoBehaviour
     public Vector2 emissionForce;
     private Rigidbody rigid;
     public float FireballDamage;
-
+    public AudioManager audioManager;
     private Transform player;
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         rigid=GetComponent<Rigidbody>();
 
         player = GameObject.Find("XR Origin").transform;//  by rebe 0419
@@ -36,8 +37,8 @@ public class FireballComponent : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Base>())
             {
+                audioManager.FireBallHitPlayer.Play();
                 FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;
-                Debug.Log("attacking");
             }
             // FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;                                                   Hardy changed, 4/13
             Destroy(gameObject);
