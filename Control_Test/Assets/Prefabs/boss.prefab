@@ -81,7 +81,7 @@ MonoBehaviour:
     timeInterval: 5
   hornInterval: 3
   murlocNum: 6
-  mmNum: 2
+  mmNum: 0
   wavePrefab: {fileID: 2355146353189238825, guid: c330b2a72074627478a9a7f4399700e4, type: 3}
   fireballPrefab: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
   fireballNum: 5

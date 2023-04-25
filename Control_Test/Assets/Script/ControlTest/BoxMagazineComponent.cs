@@ -26,7 +26,7 @@ public class BoxMagazineComponent : MonoBehaviour
     public GameObject GameManager;
     public Transform leftHandHoldPoint;
     public Transform rightHandHoldPoint;
-
+    public bool AmmoisGrabed=false;
     private GameObject Audiomanager;
 
     private int falg=1;
@@ -67,6 +67,7 @@ public class BoxMagazineComponent : MonoBehaviour
                             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
                             falg = 0;
                         }
+                        
                         timer = 0;
                         leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
                         leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
@@ -88,7 +89,7 @@ public class BoxMagazineComponent : MonoBehaviour
                             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
                             falg = 0;
                         }
-                            
+                        AmmoisGrabed = true;
                         timer = 0;
                         leftHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
                         leftHand.GetComponentInChildren<HandMeshHold>().transform.localScale = new Vector3(1, 1, 1);
@@ -129,6 +130,7 @@ public class BoxMagazineComponent : MonoBehaviour
                             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Removeclip, this.transform.position);
                             falg = 0;
                         }
+                        
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;
@@ -150,6 +152,7 @@ public class BoxMagazineComponent : MonoBehaviour
                             AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Takeclip, this.transform.position);
                             falg = 0;
                         }
+                        AmmoisGrabed = true;
                         timer = 0;
                         rightHand.GetComponent<HandComponent>().holdingObj = this.gameObject;
                         rightHand.GetComponentInChildren<HandMeshComponent>().transform.localScale = Vector3.zero;

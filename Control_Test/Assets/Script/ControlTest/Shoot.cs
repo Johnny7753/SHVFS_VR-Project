@@ -25,6 +25,7 @@ public class Shoot : MonoBehaviour
     private float dizzyTimer;
 
     public bool isDizzy = false;
+    public bool isShooting = false;
 
     private float amp = 0.2f;
     private float invokeTime;
@@ -279,6 +280,7 @@ public class Shoot : MonoBehaviour
     {
         if (Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent>() != null)
         {
+            isShooting = true;
             a = 0.03f;
             animator.SetTrigger(Shooting);
             GameObject bullet;
@@ -290,6 +292,7 @@ public class Shoot : MonoBehaviour
         }
         else if(Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent_Rocket>() != null)
         {
+            isShooting = true;
             a = 0.2f;
             animator.SetTrigger(Shooting);
             GameObject rocket;

@@ -180,6 +180,7 @@ public class EnemySystem : Singleton<EnemySystem>
     private void RefreshEnemies()
     {
         timer += Time.deltaTime;
+        Debug.Log((int)waves[waveIndex].parts[partIndex].enemyType);
         if (timer >= enemyPrefab[(int)waves[waveIndex].parts[partIndex].enemyType].GetComponent<EnemyController>().refreshInterval)
         {
             timer = 0;
