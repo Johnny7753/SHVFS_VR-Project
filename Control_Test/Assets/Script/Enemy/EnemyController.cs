@@ -177,7 +177,7 @@ public class EnemyController : MonoBehaviour
             {
                 timer = 0;
                 animator.SetBool("IsAttack",true);
-                FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= enemyDamage;
+                //FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= enemyDamage;
             }
         }
     }

@@ -50,11 +50,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 3.61
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5459005016938968801
 MonoBehaviour:
@@ -84,7 +84,7 @@ MonoBehaviour:
   mmNum: 0
   wavePrefab: {fileID: 2355146353189238825, guid: c330b2a72074627478a9a7f4399700e4, type: 3}
   fireballPrefab: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
-  fireballNum: 5
+  fireballNum: 3
   shootPoint: {fileID: 5459005017548645584}
   angleBetween: 5
 --- !u!1 &5459005017548645585
@@ -1433,3 +1433,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5459005016938968802}
+  audioManager: {fileID: 0}
+  audioSource: {fileID: 0}

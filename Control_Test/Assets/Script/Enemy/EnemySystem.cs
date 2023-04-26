@@ -14,8 +14,15 @@ public class EnemySystem : Singleton<EnemySystem>
     [SerializeField]
     private int waveIndex;
     public int wavenumber;                  //  to transfer wave index                               by Hardy     in 4/13
+    [HideInInspector]
+    public int waveUIIndex;//use for UI
+    [HideInInspector]
+    public int timeUI;//use for UI to count down
+    private float _timerUI;
     [SerializeField]
     private int partIndex;
+    //[HideInInspector]
+    //public int partUIIndex;//use for UI
 
 
     public List<OtherEnemyHiddenPoint> points;
@@ -50,6 +57,8 @@ public class EnemySystem : Singleton<EnemySystem>
     public bool isTutorialWIn = false;
 
     private bool bossAppear;
+
+    private bool inWaveInterval;//to check if game is in the interval between waves
     public override void Awake()
     {
         base.Awake();
@@ -65,6 +74,8 @@ public class EnemySystem : Singleton<EnemySystem>
         enemyAlive = new List<GameObject>();
         waveIndex = 0;
         partIndex = 0;
+        //partUIIndex = partIndex + 1;
+        waveUIIndex = waveIndex + 1;
 
         //fresh enemies
         timer = 0;
@@ -124,7 +135,8 @@ public class EnemySystem : Singleton<EnemySystem>
 
                 wavenumber = waveIndex;                                          //                    by Hardy   in 4/13
                 partIndex = 0;
-                Invoke("StartRefreshing", freshTimeInterval[waveIndex - 1]);
+                inWaveInterval = true;
+                //Invoke("StartRefreshing", freshTimeInterval[waveIndex - 1]);
             }
             else
             {
@@ -132,6 +144,16 @@ public class EnemySystem : Singleton<EnemySystem>
                 finishRefreshing = false;
                 InstantiateBoss();
                 Debug.Log("no more enemies!");
+            }
+        }
+        if(inWaveInterval)
+        {
+            _timerUI += Time.deltaTime;
+            timeUI = (int)freshTimeInterval[waveIndex - 1]-(int)_timerUI;
+            if (_timerUI >= freshTimeInterval[waveIndex - 1])
+            {
+                inWaveInterval = false;
+                StartRefreshing();
             }
         }
     }
@@ -148,8 +170,8 @@ public class EnemySystem : Singleton<EnemySystem>
                         timer = 0;
                         enemyNum = 0;
                         finishRefreshing = false;
-                        StartRefreshing();
                         partIndex++;
+                        StartRefreshing();
                         //RefreshEnemies();
                     }
                     break;
@@ -159,8 +181,8 @@ public class EnemySystem : Singleton<EnemySystem>
                         timer = 0;
                         enemyNum = 0;
                         finishRefreshing = false;
-                        Invoke("StartRefreshing", waves[waveIndex].parts[partIndex].switchTime);
                         partIndex++;
+                        Invoke("StartRefreshing", waves[waveIndex].parts[partIndex].switchTime);
                     }
                     break;
             }
@@ -176,6 +198,8 @@ public class EnemySystem : Singleton<EnemySystem>
     }
     private void StartRefreshing()
     {
+        waveUIIndex = waveIndex+1;
+        //partUIIndex = partIndex+1;
         isRefreshing = true;
     }
     private void RefreshEnemies()

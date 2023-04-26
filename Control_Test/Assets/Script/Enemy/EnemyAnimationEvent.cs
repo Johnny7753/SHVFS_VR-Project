@@ -23,6 +23,10 @@ public class EnemyAnimationEvent : MonoBehaviour
     {
         Destroy(enemy);
     }
+    public void CauseDamage()
+    {
+        FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= enemy.GetComponent<EnemyController>().enemyDamage;
+    }
     public void playBigGrabAttackSound()
     {
         audioSource = GetComponent<AudioSource>();

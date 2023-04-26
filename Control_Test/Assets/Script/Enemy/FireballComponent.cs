@@ -22,6 +22,7 @@ public class FireballComponent : MonoBehaviour
     }
     private void Update()
     {
+        transform.rotation=Quaternion.Euler(new Vector3(0, -Mathf.Rad2Deg*Mathf.Atan((player.position.z-transform.position.z)/(player.position.x - transform.position.x)), Mathf.Rad2Deg* Mathf.Atan(rigid.velocity.y / rigid.velocity.x)));
         RaycastHit hitinfo;
         Physics.Raycast(transform.position, Vector3.down, out hitinfo ,2.1f);
         if (hitinfo.collider == null) return;
