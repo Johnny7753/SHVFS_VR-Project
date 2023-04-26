@@ -83,7 +83,7 @@ public class Tutorial : MonoBehaviour
         if (shootUpdate&&!tutorialOverUpdate)
         {
             leftshoot.SetActive(false);
-            Overload.SetActive(true);
+            //Overload.SetActive(true);
             EnemySystemAppear.SetActive(true);
             FormalCredits = Credits;
             tutorialOverUpdate = tutorialOver.isTutorialWIn;
