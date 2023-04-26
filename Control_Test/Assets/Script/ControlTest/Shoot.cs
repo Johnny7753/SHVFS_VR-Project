@@ -51,6 +51,19 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
+        
+        if (Input.GetKey(KeyCode.Joystick1Button1))
+        {
+            Debug.Log("input");
+            //IsOverLoad = false;
+            //canOverLoad = false;
+        }
+        else if (Input.GetKey(KeyCode.Joystick1Button3))
+        {
+            Debug.Log("input");
+            //IsOverLoad = false;
+            //canOverLoad = false;
+        }
         if (dizzyTime != 0)
         {
             isDizzy = true;
@@ -174,6 +187,7 @@ public class Shoot : MonoBehaviour
                             {
                                 if (Input.GetKey(KeyCode.Joystick1Button1) && Input.GetKey(KeyCode.Joystick1Button3))
                                 {
+                                    Debug.Log("enter");
                                     IsOverLoad = true;
                                 }
                             }
