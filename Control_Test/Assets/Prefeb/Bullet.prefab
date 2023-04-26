@@ -57,6 +57,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   MonsterExplosion: {fileID: 4835985598572258424}
   FireBallExplosion: {fileID: 7892102299352423681}
+  BrokeImpackWave: {fileID: 1311915045874077465}
   GunAudio: {fileID: 0}
   VFXHitCount: 4
   shaketime: 0.05
@@ -233,6 +234,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6ec55c27f24e0d4eb784216f08eeba4, type: 3}
+--- !u!1 &1311915045874077465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1471962235837796, guid: d6ec55c27f24e0d4eb784216f08eeba4, type: 3}
+  m_PrefabInstance: {fileID: 1311076860894909053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1314647550961766155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4346979635813750, guid: d6ec55c27f24e0d4eb784216f08eeba4, type: 3}
