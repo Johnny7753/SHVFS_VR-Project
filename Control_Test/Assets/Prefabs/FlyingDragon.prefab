@@ -104,13 +104,14 @@ MonoBehaviour:
   rayLength: 0
   rayWidth: 0
   nearestDisToTarget: 0
-  attackInterval: 1.5
+  attackInterval: 2
   enemyDamage: 0
   goal: {x: 0, y: 0, z: 0}
   animator: {fileID: 8206527945431404372}
   MonsterAudio: {fileID: 0}
   bullet: {fileID: 1995517181549351702, guid: 597388346d9f1154c863287cfaf8b4c3, type: 3}
   shootPoint: {fileID: 6535146013663846722}
+  audioManager: {fileID: 0}
 --- !u!95 &1871549291921130900
 Animator:
   serializedVersion: 5
@@ -144,6 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 633884567046046782}
+  audioManager: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &7197791463141119443
 GameObject:
   m_ObjectHideFlags: 0

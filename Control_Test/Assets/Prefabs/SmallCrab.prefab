@@ -72,7 +72,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 30
+  m_Speed: 28
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -106,7 +106,7 @@ MonoBehaviour:
   rayWidth: 5
   nearestDisToTarget: 300
   attackInterval: 0.1
-  enemyDamage: 20
+  enemyDamage: 5
   goal: {x: 0, y: 0, z: 0}
   animator: {fileID: 961395319182292498}
   MonsterAudio: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   actionArea: {x: -145, y: 136}
   Explosion: {fileID: 8574293164875378019}
   Beetle: {fileID: 6422539843730058531}
-  explodeRadius: 15
+  explodeRadius: 40
 --- !u!33 &5357630411546482281
 MeshFilter:
   m_ObjectHideFlags: 0

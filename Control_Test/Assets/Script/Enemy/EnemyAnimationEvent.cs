@@ -29,6 +29,7 @@ public class EnemyAnimationEvent : MonoBehaviour
     }
     public void playBigGrabAttackSound()
     {
+        this.AddComponent<AudioSource>();
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioManager.BigGrabAttack.clip;
         audioSource.Play();

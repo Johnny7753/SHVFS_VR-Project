@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emissionForce: {x: 3000, y: 800}
-  FireballDamage: 5
+  FireballDamage: 4
   audioManager: {fileID: 0}
 --- !u!4 &7155527997179650196 stripped
 Transform:

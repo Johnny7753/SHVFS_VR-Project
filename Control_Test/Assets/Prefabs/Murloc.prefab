@@ -65,10 +65,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.9279499
+  m_Height: 2.4350595
   m_Direction: 1
-  m_Center: {x: 0, y: 1.12, z: 0}
+  m_Center: {x: 0.028492356, y: 1.3375297, z: 0.17583981}
 --- !u!195 &633884567046046752
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -112,8 +112,8 @@ MonoBehaviour:
   rayLength: 10
   rayWidth: 5
   nearestDisToTarget: 300
-  attackInterval: 3
-  enemyDamage: 10
+  attackInterval: 2
+  enemyDamage: 1
   goal: {x: 0, y: 0, z: 0}
   animator: {fileID: 8320816198915247136}
   MonsterAudio: {fileID: 0}
@@ -1123,6 +1123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 633884567046046782}
+  audioManager: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &8320816198908257218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 0fee7ae564f8c3344ad15a7804b291fd, type: 3}
