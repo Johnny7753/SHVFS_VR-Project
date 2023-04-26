@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
     public AudioSource MonsterAudio;
 
 
-    private bool isDie;
+    protected bool isDie;
     #endregion
 
     protected virtual void Start()

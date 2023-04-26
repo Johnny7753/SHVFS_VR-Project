@@ -40,7 +40,10 @@ public class FlyingDragonController : EnemyController
 
     public void FireBall()
     {
-        audioManager.DragonAttack.Play();
-        Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        if(!isDie)
+        {
+            audioManager.DragonAttack.Play();
+            Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        }
     }
 }

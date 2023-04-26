@@ -79,7 +79,8 @@ public class MurlocController : EnemyController
         isHidden = false;
         pointsTaken.isTaken = false;
         pointsTaken = null;
-        goal = agent.destination = enemyTarget;
+        if(!isDie)
+            goal = agent.destination = enemyTarget;
     }
 
 }
