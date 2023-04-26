@@ -90,14 +90,18 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        
-        
+        OverloadCDLV.text = "LV:" + OverloadCDLevel.ToString();
+        BarrelLV.text = "LV:" + BarrelLevel.ToString();
+        AmmoCpacityLV.text = "LV:" + BoxMagazineLevel.ToString();
+        OverLoadLastingTimeLV.text = "LV:" + OverloadTimeLevel.ToString();
+        BulletDamageLV.text = "LV" + DamageLevel.ToString();
         Base = FindObjectOfType<Base>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Score.text = EXP.ToString();
         if (Barrels[0].GetComponent<Shoot>().IsOverHeat == true|| Barrels[0].GetComponent<Shoot>().isDizzy==true)
         {
@@ -124,8 +128,6 @@ public class GameManager : MonoBehaviour
             GameOverUI.SetActive(true);
             Time.timeScale = 0.0001f;
         }
-
-
         if(FindObjectOfType<EnemySystem>())
         {
             if (WinUI != null && FindObjectOfType<EnemySystem>().isWin)
@@ -135,8 +137,6 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 0.0001f;
             }
         }
-        
-
         //if(Input.GetKeyDown(KeyCode.Joystick1Button0))
         //{
         //    PauseGame();
@@ -208,18 +208,37 @@ public class GameManager : MonoBehaviour
     public void OverloadCDUP()
     {
         //audio clip: button pushed
-        AudioManager.GetComponent<AudioManager>().UIChoose.Play();
-        if (OverloadCDLevel == OverloadCDMaxLevel) return; //Max Level
+        
+        
+        if (OverloadCDLevel == OverloadCDMaxLevel)
+        {
+            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            return;
+        }
         
         if (EXP >= OverloadCDLevelEXP[OverloadCDLevel-1])
         {
+            AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= OverloadCDLevelEXP[OverloadCDLevel - 1];
             OverloadCDLevel++;
+            if(OverloadCDLevel != OverloadCDMaxLevel)
+            {
+                OverloadCDLV.text = "LV:" + OverloadCDLevel.ToString();
+            }
+            else
+            {
+                OverloadCDLV.text = "Max";
+                
+            }
             for (int i = 0; i < Barrels.Length; i++)
             {
                 Barrels[i].GetComponent<Shoot>().OverLoadCD = OverloadCD[OverloadCDLevel - 2];
             }
 
+        }
+        else
+        {
+            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
         }
     }
 /// //////////////////////////////////////////////////////////////////////
@@ -245,6 +264,7 @@ public class GameManager : MonoBehaviour
                     Barrels[2].gameObject.SetActive(true);
                     EXP -= BarrelLevelEXP[0];
                     BarrelLevel++;
+                    BarrelLV.text = "LV:" + BarrelLevel.ToString();
                 }
                 else
                 {
@@ -261,7 +281,7 @@ public class GameManager : MonoBehaviour
                     Barrels[4].gameObject.SetActive(true);
                     EXP -= BarrelLevelEXP[1];
                     BarrelLevel++;
-
+                    BarrelLV.text = "Max";
                 }
                 else
                 {
@@ -286,6 +306,15 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
             BoxMagazineLevel++;
+            if (BoxMagazineLevel != BoxMagazineMaxLevel)
+            {
+                AmmoCpacityLV.text = "LV:" + BoxMagazineLevel.ToString();
+                
+            }
+            else
+            {
+                BulletDamageLV.text = "Max";
+            }
             BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
             RocketCapacity = BoxMagazine_Rocket[BoxMagazineLevel - 2];
         }
@@ -313,6 +342,15 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= DamageLevelEXP[DamageLevel - 1];
             DamageLevel++;
+            if(DamageLevel == DamageMaxLevel)
+            {
+                BulletDamageLV.text = "LV" + DamageLevel.ToString();
+                
+            }
+            else
+            {
+                BulletDamageLV.text = "Max";
+            }
             BulletDamage = Damage[DamageLevel - 2];
             oriRocketDamage = RocketDamage[DamageLevel - 2];
         }
@@ -338,6 +376,15 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= OverloadTimeLevelEXP[OverloadTimeLevel - 1];
             OverloadTimeLevel++;
+            if(OverloadTimeLevel == OverloadTimeMaxLevel)
+            {
+                OverLoadLastingTimeLV.text = "LV:" + OverloadTimeLevel.ToString();
+                
+            }
+            else
+            {
+                OverLoadLastingTimeLV.text = "Max";
+            }
             for (int i = 0; i < Barrels.Length; i++)
             {
                 Barrels[i].GetComponent<Shoot>().OverLoadMaxTime = OverloadTime[OverloadTimeLevel - 2];
