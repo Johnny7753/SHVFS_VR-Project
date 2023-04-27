@@ -65,6 +65,10 @@ public class Rocket : MonoBehaviour
                         {
                             Destroy(hit.gameObject);
                         }
+                        else if (hit.GetComponent<BossController>())
+                        {
+                            hit.GetComponent<BossController>().HP -= RocketDamage;
+                        }
                     }
                 }
                 //Instantiate(ExplosionVFX, this.transform);
@@ -73,7 +77,36 @@ public class Rocket : MonoBehaviour
                 //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
                 Invoke("Explotion", 1f);
             }
-            if(hitinfo.collider.GetComponent<Ground>() != null || hitinfo.collider.GetComponent<Stone>() != null)
+            if (hitinfo.collider.GetComponent<BossController>() != null)
+            {
+                speed = 0;
+                Collider[] hitColliders = Physics.OverlapSphere(hitinfo.transform.position, explodeRadius);
+                if (hitColliders.Length > 0)
+                {
+                    foreach (var hit in hitColliders)
+                    {
+                        if (hit.GetComponent<EnemyController>())
+                        {
+                            hit.GetComponent<EnemyController>().HP -= RocketDamage;
+                        }
+                        else if (hit.GetComponent<FireballComponent>() != null)
+                        {
+                            Destroy(hit.gameObject);
+                        }
+                        else if (hit.GetComponent<BossController>())
+                        {
+                            hit.GetComponent<BossController>().HP -= RocketDamage;
+                        }
+                    }
+                }
+                //Instantiate(ExplosionVFX, this.transform);
+                ExplosionVFX.SetActive(true);
+                Audiomanager.GetComponent<AudioManager>().Explosion.Play();
+                //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().Explosion, this.transform.position);
+                Invoke("Explotion", 1f);
+            }
+
+            if (hitinfo.collider.GetComponent<Ground>() != null || hitinfo.collider.GetComponent<Stone>() != null)
             {
                 speed = 0;
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, explodeRadius);
@@ -88,6 +121,10 @@ public class Rocket : MonoBehaviour
                         else if (hit.GetComponent<FireballComponent>() != null)
                         {
                             Destroy(hit.gameObject);
+                        }
+                        else if (hit.GetComponent<BossController>())
+                        {
+                            hit.GetComponent<BossController>().HP -= RocketDamage;
                         }
                     }
                 }
@@ -109,6 +146,10 @@ public class Rocket : MonoBehaviour
                         if (hit.GetComponent<EnemyController>())
                         {
                             hit.GetComponent<EnemyController>().HP -= RocketDamage;
+                        }
+                        else if (hit.GetComponent<BossController>())
+                        {
+                            hit.GetComponent<BossController>().HP -= RocketDamage;
                         }
                         else if (hit.GetComponent<FireballComponent>() != null)
                         {

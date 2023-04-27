@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] Barrels;
     public GameObject[] Magazines;
     public GameObject Base;
+    public GameObject WinSound;
+    public GameObject LostSound;
 
     public SpawnBoxMagazine[] BoxMagazinePrefeb;
 
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
     public float oriRocketShootingRate;
 
     private int OverloadCDLevel = 1;
-    private int BarrelLevel = 1;
+    public int BarrelLevel = 1;
     private int BoxMagazineLevel = 1;
     private int DamageLevel = 1;
     private int OverloadTimeLevel = 1;
@@ -86,10 +88,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         EXP = 0;
-        RocketCapacity = 100;
+        RocketCapacity = 200;
         BulletCapacity = 500;
         BulletDamage = 4.5f;
-        oriRocketDamage = 20;
+        oriRocketDamage = 15;
         AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
     }
 
@@ -138,8 +140,7 @@ public class GameManager : MonoBehaviour
         }
         if (IsBossDie)
         {
-            
-            AudioManager.GetComponent<AudioManager>().Win.Play();
+            WinSound.SetActive(true);
             WinUITimer+=Time.deltaTime;
             if(WinUITimer >= 3)
             {
@@ -151,7 +152,7 @@ public class GameManager : MonoBehaviour
         if(Isdead&&GameOverUI!=null)
         {
             //Debug.Log("Dead!");
-            AudioManager.GetComponent<AudioManager>().Loose.Play();
+            LostSound.SetActive(true);
             GameOverUI.SetActive(true);
             Time.timeScale = 0.0001f;
         }

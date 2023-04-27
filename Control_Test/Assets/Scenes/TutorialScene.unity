@@ -1187,7 +1187,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1170350975}
         m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
-        m_MethodName: RestratTutorial
+        m_MethodName: skiptutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1898,7 +1898,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1170350975}
         m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
-        m_MethodName: skiptutorial
+        m_MethodName: RestratTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4913,7 +4913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &380720511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30696,6 +30696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03173f843b32fc3488528d9a50f348b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetCount: 0
   shootCount: 0
   RocketCount: 0
   hitCount: 0
@@ -32883,6 +32884,9 @@ MonoBehaviour:
   oriRocketDamage: 4
   AirDropMinTime: 1
   AirDropMaxTime: 0
+  oriNormalShootingRate: 0.06
+  oriRocketShootingRate: 0.25
+  BarrelLevel: 1
   AirDropTimer: 0
 --- !u!1 &2130321376
 GameObject:

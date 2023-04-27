@@ -5,6 +5,8 @@ using UnityEngine;
 public class GunAudio : MonoBehaviour
 {
     private AudioManager audioManager;
+    private GameManager gameManager;
+    public int targetCount;
     public int shootCount;
     public int RocketCount;
     public int hitCount;
@@ -13,15 +15,31 @@ public class GunAudio : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (shootCount >= 2)
+        if (gameManager.BarrelLevel == 1)
+        {
+            BulletSound.GetComponent<AudioSource>().volume = 0.3f;
+            targetCount = 2;
+        }
+        else if (gameManager.BarrelLevel == 2)
+        {
+            BulletSound.GetComponent<AudioSource>().volume = 0.4f;
+            targetCount = 3;
+        }
+        else if (gameManager.BarrelLevel == 3) 
+        {
+            BulletSound.GetComponent<AudioSource>().volume = 0.5f;
+            targetCount = 4;
+        }
+        if (shootCount >= targetCount)
         {
             Instantiate(BulletSound);
-            shootCount -= 2;
+            shootCount -= targetCount;
         }
         if (RocketCount >= 2)
         {
