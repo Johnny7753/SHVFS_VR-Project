@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 20
-  Score: 5
+  Score: 2
   refreshInterval: 0
   bornArea: {x: 563, y: 650, z: 60, w: 120}
   pointsTaken: {fileID: 0}
@@ -233,11 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7194554030567229777, guid: 0b71c6b02546816419820a6c47d83495, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.03430765
+      value: -0.034307655
       objectReference: {fileID: 0}
     - target: {fileID: -7194554030567229777, guid: 0b71c6b02546816419820a6c47d83495, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.033059485
+      value: -0.03305949
       objectReference: {fileID: 0}
     - target: {fileID: -5621200918234132632, guid: 0b71c6b02546816419820a6c47d83495, type: 3}
       propertyPath: m_LocalRotation.x

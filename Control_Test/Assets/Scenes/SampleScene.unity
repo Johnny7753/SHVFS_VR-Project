@@ -19372,8 +19372,8 @@ MonoBehaviour:
   enemyAlive: []
   freshTimeInterval:
   - 15
-  - 0
-  - 0
+  - 15
+  - 15
   waves:
   - parts:
     - switchType: 1

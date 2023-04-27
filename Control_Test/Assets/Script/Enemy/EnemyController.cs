@@ -147,7 +147,7 @@ public class EnemyController : MonoBehaviour
         if (m_HitDetect)
         {
             //Output the name of the Collider your Box hit
-            Debug.Log("Hit : " + m_Hit.collider.name);
+            //Debug.Log("Hit : " + m_Hit.collider.name);
             if(agent.enabled)
                 agent.isStopped = true;
         }

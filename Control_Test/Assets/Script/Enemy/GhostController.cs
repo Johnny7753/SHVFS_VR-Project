@@ -76,7 +76,7 @@ public class GhostController : EnemyController
         //Debug.Log(Mathf.Abs(enemyTarget.x - transform.position.x));
         if (!beginAttack && Mathf.Abs(enemyTarget.x - transform.position.x) < disToChangeTarget)
         {
-            Debug.Log("change goal");
+            //Debug.Log("change goal");
             goal = agent.destination = enemyTarget;
             beginAttack = true;
             timer = attackInterval;

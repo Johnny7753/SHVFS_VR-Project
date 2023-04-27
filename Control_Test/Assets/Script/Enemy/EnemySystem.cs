@@ -146,11 +146,12 @@ public class EnemySystem : Singleton<EnemySystem>
                 isTutorialWIn = true;
                 finishRefreshing = false;
                 InstantiateBoss();
-                Debug.Log("no more enemies!");
+                //Debug.Log("no more enemies!");
             }
         }
         if(inWaveInterval)
         {
+            //Debug.Log("inWaveInterval");
             WaveUI.SetActive(true);
             WaveIndexUI.text = "Wave "+ waveUIIndex.ToString() +" is coming";
             WaveTimer.text = timeUI.ToString();
@@ -158,6 +159,7 @@ public class EnemySystem : Singleton<EnemySystem>
             timeUI = (int)freshTimeInterval[waveIndex - 1]-(int)_timerUI;
             if (_timerUI >= freshTimeInterval[waveIndex - 1])
             {
+                _timerUI = 0;
                 WaveUI.SetActive(false);
                 inWaveInterval = false;
                 StartRefreshing();
@@ -240,7 +242,7 @@ public class EnemySystem : Singleton<EnemySystem>
             Instantiate(bossPrefab, instantiatePos.position, instantiatePos.rotation);
         else
         {
-            Debug.Log("no boss");
+            //Debug.Log("no boss");
         }
     }
 }

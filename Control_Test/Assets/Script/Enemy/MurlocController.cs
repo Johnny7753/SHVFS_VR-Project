@@ -54,7 +54,7 @@ public class MurlocController : EnemyController
             {
                 if(hit.transform.position.x<transform.position.x-10 && hit.GetComponent<EnemyHidenPoint>().isTaken==false)
                 {
-                    Debug.Log("hide");
+                    //Debug.Log("hide");
                     isHidden = true;
                     goal = agent.destination = hit.transform.position;
                     pointsTaken = hit.GetComponent<EnemyHidenPoint>();
