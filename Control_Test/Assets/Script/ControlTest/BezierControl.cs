@@ -7,8 +7,11 @@ public class BezierControl : MonoBehaviour
     public GameObject Lefthand;
     public GameObject RightHand;
     public bool isFront;
+    public bool isRight;
+    public bool isLeft;
     public bool isTargetPoint;
-    public float offset;
+    public float xoffset;
+    public float zoffset;
     [SerializeField]
     GameObject LeftGrip;
     [SerializeField]
@@ -28,22 +31,30 @@ public class BezierControl : MonoBehaviour
             {
                 if (isFront)
                 {
-                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + offset+2, transform.position.y, transform.position.z);
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset + 4, transform.position.y,  (Lefthand.transform.position.z + RightHand.transform.position.z) / 2);
                 }
-                else
+                else if(isLeft)
                 {
-                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2, transform.position.y, transform.position.z);
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset, transform.position.y,  (Lefthand.transform.position.z + RightHand.transform.position.z) / 2 +2 + zoffset);
+                }
+                else if (isRight)
+                {
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset, transform.position.y, (Lefthand.transform.position.z + RightHand.transform.position.z) / 2 -2 + zoffset);
                 }
             }
             else
             {
                 if (isFront)
                 {
-                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + offset, transform.position.y, transform.position.z);
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset+2, transform.position.y,  (Lefthand.transform.position.z + RightHand.transform.position.z) / 2);
                 }
-                else
+                else if(isLeft)
                 {
-                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2, transform.position.y, transform.position.z);
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset, transform.position.y,  (Lefthand.transform.position.z + RightHand.transform.position.z) / 2 +1 + zoffset);
+                }
+                else if (isRight)
+                {
+                    transform.position = new Vector3((Lefthand.transform.position.x + RightHand.transform.position.x) / 2 + xoffset, transform.position.y, (Lefthand.transform.position.z + RightHand.transform.position.z) / 2 -1 + zoffset);
                 }
             }
         }

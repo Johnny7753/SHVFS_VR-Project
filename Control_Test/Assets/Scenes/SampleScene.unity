@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149379000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -2129,8 +2129,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 0
+  isRight: 0
+  isLeft: 1
   isTargetPoint: 1
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!1 &164200302
@@ -10646,7 +10649,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695474366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -10654,8 +10657,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 1
+  isRight: 0
+  isLeft: 0
   isTargetPoint: 1
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!4 &702819544 stripped
@@ -19074,7 +19080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280697526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -19082,8 +19088,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 0
+  isRight: 1
+  isLeft: 0
   isTargetPoint: 1
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!1 &1299687934
@@ -22843,7 +22852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633974518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -22851,8 +22860,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 1
+  isRight: 0
+  isLeft: 0
   isTargetPoint: 0
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!1001 &1652097557
@@ -25255,7 +25267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793624870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -25263,8 +25275,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 0
+  isRight: 1
+  isLeft: 0
   isTargetPoint: 0
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!1 &1819631295
@@ -25592,7 +25607,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844398630}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -25600,8 +25615,11 @@ MonoBehaviour:
   Lefthand: {fileID: 691140779}
   RightHand: {fileID: 1447334074}
   isFront: 0
+  isRight: 0
+  isLeft: 1
   isTargetPoint: 0
-  offset: 1.22
+  xoffset: -0.425
+  zoffset: -0.2
   LeftGrip: {fileID: 1842655003}
   RightGrip: {fileID: 1270487290}
 --- !u!1 &1844444840
