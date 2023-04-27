@@ -68,7 +68,6 @@ public class EnemySystem : Singleton<EnemySystem>
         isWin = false;
         isTutorialWIn = false;
         finishRefreshing = false;
-        base.Awake();
         waveIndex = 0;
         enemyNum = 0;
        
@@ -95,9 +94,9 @@ public class EnemySystem : Singleton<EnemySystem>
         //RefreshEnemies();
 
     }
-    public override void Awake()
+    public void Awake()
     {
-        base.Awake();
+        //base.Awake();
 
         //get and sort all hidden point
         OtherEnemyHiddenPoint[] _points = FindObjectsOfType<OtherEnemyHiddenPoint>();
@@ -150,7 +149,7 @@ public class EnemySystem : Singleton<EnemySystem>
 
         //change part in wave
         EnterNextPart();
-
+        Debug.Log(isRefreshing);
         if (isRefreshing)
         {
             RefreshEnemies();

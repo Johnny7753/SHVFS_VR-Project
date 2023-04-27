@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 150
-  Score: 20
+  Score: 5
   refreshInterval: 0.5
   bornArea: {x: 563, y: 650, z: 60, w: 120}
   pointsTaken: {fileID: 0}
