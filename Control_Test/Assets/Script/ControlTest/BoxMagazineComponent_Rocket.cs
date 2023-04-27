@@ -58,7 +58,7 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
             {
                 if (leftHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine != null)
+                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == this.gameObject)
                     {
                         if (falg == 1)
                         {
@@ -120,7 +120,7 @@ public class BoxMagazineComponent_Rocket : MonoBehaviour
             {
                 if (rightHand.GetComponent<HandComponent>().holdingObj == null)
                 {
-                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine != null)
+                    if (Gun.GetComponent<GunComponent>().loadingBoxMagazine == this.gameObject)
                     {
                         if (falg == 1)
                         {

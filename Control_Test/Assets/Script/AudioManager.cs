@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource BigGrabAttack;
     public AudioSource BossCallShockWave;
     public AudioSource BossCallEnemy;
+    public AudioSource UIChoose_Fail;
     #endregion
 
 

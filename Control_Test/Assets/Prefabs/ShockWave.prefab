@@ -119,7 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6518788f19965964d9ed1e1dd38c5e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 500
+  waveSpeed: 0
+  waveSpeed_Acc: 0.8
   dizzyTime: 3
 --- !u!54 &353265393271103534
 Rigidbody:

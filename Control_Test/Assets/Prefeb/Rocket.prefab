@@ -53,7 +53,8 @@ MonoBehaviour:
   criticalDamage: 0
   GameManager: {fileID: 0}
   ExplosionVFX: {fileID: 5505905386763877920}
-  explodeRadius: 30
+  BrokeImpackWave: {fileID: 0}
+  explodeRadius: 50
 --- !u!1 &7325220502025831238
 GameObject:
   m_ObjectHideFlags: 0

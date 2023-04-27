@@ -212,7 +212,7 @@ public class GameManager : MonoBehaviour
         
         if (OverloadCDLevel == OverloadCDMaxLevel)
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
         }
         
@@ -221,7 +221,7 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= OverloadCDLevelEXP[OverloadCDLevel - 1];
             OverloadCDLevel++;
-            if(OverloadCDLevel != OverloadCDMaxLevel)
+            if(OverloadCDLevel < OverloadCDMaxLevel)
             {
                 OverloadCDLV.text = "LV:" + OverloadCDLevel.ToString();
             }
@@ -238,7 +238,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
         }
     }
 /// //////////////////////////////////////////////////////////////////////
@@ -250,7 +250,7 @@ public class GameManager : MonoBehaviour
         
         if (BarrelLevel == BarrelMaxLevel)
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
         }
             
@@ -268,7 +268,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+                    AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
                 }
             }
             else if (BarrelLevel == 2)
@@ -285,7 +285,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+                    AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
                 }
             }
         }
@@ -298,7 +298,7 @@ public class GameManager : MonoBehaviour
         //audio clip: upgrade confirmed
         if (BoxMagazineLevel == BoxMagazineMaxLevel)
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
         } 
         if(EXP>= BoxMagazineLevelEXP[BoxMagazineLevel-1])
@@ -306,21 +306,21 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
             BoxMagazineLevel++;
-            if (BoxMagazineLevel != BoxMagazineMaxLevel)
+            if (BoxMagazineLevel < BoxMagazineMaxLevel)
             {
                 AmmoCpacityLV.text = "LV:" + BoxMagazineLevel.ToString();
                 
             }
             else
             {
-                BulletDamageLV.text = "Max";
+                AmmoCpacityLV.text = "Max";
             }
             BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
             RocketCapacity = BoxMagazine_Rocket[BoxMagazineLevel - 2];
         }
         else
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
         }
     }
 
@@ -333,7 +333,7 @@ public class GameManager : MonoBehaviour
         //audio clip: upgrade success
         if (DamageLevel == DamageMaxLevel) 
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
         }
         
@@ -342,7 +342,7 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= DamageLevelEXP[DamageLevel - 1];
             DamageLevel++;
-            if(DamageLevel == DamageMaxLevel)
+            if(DamageLevel < DamageMaxLevel)
             {
                 BulletDamageLV.text = "LV" + DamageLevel.ToString();
                 
@@ -356,7 +356,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
         }
     }
    
@@ -368,7 +368,7 @@ public class GameManager : MonoBehaviour
                                                                                                         //audio clip: upgrade success
         if(OverloadTimeLevel == OverloadTimeMaxLevel)
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
         }
         if (EXP >= OverloadTimeLevelEXP[OverloadTimeLevel - 1])
@@ -376,7 +376,7 @@ public class GameManager : MonoBehaviour
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= OverloadTimeLevelEXP[OverloadTimeLevel - 1];
             OverloadTimeLevel++;
-            if(OverloadTimeLevel == OverloadTimeMaxLevel)
+            if(OverloadTimeLevel < OverloadTimeMaxLevel)
             {
                 OverLoadLastingTimeLV.text = "LV:" + OverloadTimeLevel.ToString();
                 
@@ -392,7 +392,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
         }
     }
 /// //////////////////////////////////////////////////////////////////////
@@ -422,7 +422,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.GetComponent<AudioManager>().UIChoose.Play();
+            AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
         }
     }
 }

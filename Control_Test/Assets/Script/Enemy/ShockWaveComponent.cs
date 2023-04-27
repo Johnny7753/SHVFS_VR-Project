@@ -7,6 +7,8 @@ public class ShockWaveComponent : MonoBehaviour
     [SerializeField]
     private float waveSpeed;
     [SerializeField]
+    private float waveSpeed_Acc;
+    [SerializeField]
     private float dizzyTime;
     
     private Shoot[] Barrels;
@@ -22,13 +24,16 @@ public class ShockWaveComponent : MonoBehaviour
         player = GameObject.Find("XR Origin").transform;
         rigid = GetComponent<Rigidbody>();
         Barrels = FindObjectsOfType<Shoot>();
-        var direction = (player.position - transform.position).normalized;
-        rigid.velocity = direction * waveSpeed*Time.deltaTime;
+        
+        
 
     }
     private void Update()
     {
-        
+        var direction = (player.position - transform.position).normalized;
+        waveSpeed_Acc += waveSpeed_Acc * Time.deltaTime;
+        waveSpeed += waveSpeed_Acc * Time.deltaTime;
+        rigid.velocity = direction * Mathf.Pow(waveSpeed,waveSpeed) * Time.deltaTime;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -42,6 +47,7 @@ public class ShockWaveComponent : MonoBehaviour
             {
                 Barrels[i].dizzyTime = dizzyTime;
             }
+            Destroy(gameObject);
         }
     }
 }
