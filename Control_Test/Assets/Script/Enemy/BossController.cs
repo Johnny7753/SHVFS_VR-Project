@@ -16,7 +16,7 @@ public enum AttackWay
 };
 public class BossController : MonoBehaviour
 {
-
+    private GameManager gameManager;
 
     [Header("Attributes")]
     public float HP=300;
@@ -68,11 +68,14 @@ public class BossController : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         player = GameObject.Find("XR Origin").transform;
         anim = GetComponentInChildren<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
+        audioManager.BossBGM.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+        gameManager.IsBossDie = isDie;
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             HP = 0;

@@ -17,6 +17,7 @@ public class Tutorial : MonoBehaviour
     public GameObject UpgradeSystem;
     public GameObject ReleaseUI;
     public GameObject LooktoLeft;
+    public GameObject overheated;
     public bool tutorialOverUpdate;
     public bool NormalBoxUpdate;
     public bool RocketBoxUpdate;
@@ -28,8 +29,8 @@ public class Tutorial : MonoBehaviour
     public bool UpgradeTutorial = false;
     public int flag=1;
 
-    private int Credits;
-    private int FormalCredits;
+    public int Credits;
+    public int FormalCredits;
     private BoxMagazineComponent NormalBox;
     private BoxMagazineComponent_Rocket RocketBox;
     private GunComponent Isconnected;
@@ -58,7 +59,7 @@ public class Tutorial : MonoBehaviour
         Upgrade = FindObjectOfType<GameManager>();
         Isoverload = FindObjectOfType<Shoot>();
        
-        //tutorialover = findobjectoftype<enemysystem>().iswin;
+       // tutorialover = findobjectoftype<enemysystem>().iswin;
         EnemySystemAppear.SetActive(false);
         FormalCredits = 0;
         Credits = 0;
@@ -75,11 +76,13 @@ public class Tutorial : MonoBehaviour
         shootUpdate = shoot.isShooting;
         IsoverloadUpdate = Isoverload.IsOverLoad;
         Credits = Upgrade.EXP;
+        tutorialOverUpdate = tutorialOver.isTutorialWIn;
         // Debug.Log(FindObjectOfType<GunComponent>().IsConnected);
-        if((NormalBoxUpdate||RocketBoxUpdate)&&(flag ==1))
+        if ((NormalBoxUpdate||RocketBoxUpdate)&&(flag ==1))
         {
             grabAmmo.SetActive(false);
             LoadAmmo.SetActive(true);
+            flag++;
         }
 
         if ((IsconnectedUpdate) && (flag == 2))
@@ -90,57 +93,99 @@ public class Tutorial : MonoBehaviour
         }
         if ((IsleftGrabUpdate || IsrightGrabUpdate) && (flag == 3))
         {
+            leftgrab.SetActive(false);
             LoadAmmo.SetActive(false);
             leftshoot.SetActive(true);
             flag++;
         }
+
         
-        if (shootUpdate&&!tutorialOverUpdate)
+
+        if (shootUpdate)
         {
-            leftshoot.SetActive(false);
-            
-            EnemySystemAppear.SetActive(true);
+            if (shoot.OverLoadTimer <= 1.5)
+            {
+                Overload.SetActive(true);
+                ReleaseUI.SetActive(false);
+            }
+            if(!tutorialOverUpdate)
+            {
+                if (flag == 4)
+                {
+                    leftshoot.SetActive(false);
 
-            Overload.SetActive(true);
+                    EnemySystemAppear.SetActive(true);
 
-            FormalCredits = Credits;
-            tutorialOverUpdate = tutorialOver.isTutorialWIn;
+                    //Overload.SetActive(true);
+
+                    
+                    tutorialOverUpdate = tutorialOver.isTutorialWIn;
+                    flag++;
+                }
+            }
         }
 
-        if(IsoverloadUpdate)
+        if((shoot.OverLoadTimer>1.5f)&&(shoot.OverLoadTimer<3))
         {
-            Invoke("Release", 1.5f);
+            Overload.SetActive(false);
+            ReleaseUI.SetActive(true);
         }
 
-        if (Over != null && tutorialOverUpdate)
+        if(shoot.IsOverHeat)
         {
             ReleaseUI.SetActive(false);
-            EnemySystemAppear.SetActive(false);
-            UpgradeSystem.SetActive(true);
-            LooktoLeft.SetActive(true);
-            
-            if(Credits!= FormalCredits)
+            overheated.SetActive(true);
+        }
+        else
+        {
+            overheated.SetActive(false);
+        }
+
+
+        if((EnemySystemAppear!=null)&&flag==5)
+        {
+            if ((Over != null && tutorialOverUpdate))
+            {
+                flag++;
+                EnemySystemAppear.SetActive(false);
+                UpgradeSystem.SetActive(true);
+                LooktoLeft.SetActive(true);
+                
+                // Time.timeScale = 0.0001f;
+            }
+            FormalCredits = Credits;
+        }
+
+        if(flag>=6)
+        {
+            if (Credits != FormalCredits)
             {
                 UpgradeTutorial = true;
             }
             
-            FormalCredits = Credits;
-            // Time.timeScale = 0.0001f;
         }
-        if((Over!=null&& tutorialOverUpdate && UpgradeTutorial) && (flag == 4))
+
+        if (Over != null  && UpgradeTutorial && (flag == 6))
         {
 
-            LooktoLeft.SetActive(false);
+            
             EnemySystemAppear.SetActive(true);
             tutorialOverUpdate = tutorialOver.isTutorialWIn;
             flag++;
         }
-        if((Over != null && tutorialOverUpdate && UpgradeTutorial) && (flag == 5))
+
+
+        if ((Over != null && UpgradeTutorial) && (flag == 7))
         {
+            LooktoLeft.SetActive(false);
             tutorialOverUpdate = tutorialOver.isTutorialWIn;
-            Over.SetActive(true);
+            flag++;
         }
 
+        if(tutorialOverUpdate&&flag==8)
+        {
+            Over.SetActive(true);
+        }
 
     }
 
@@ -163,11 +208,7 @@ public class Tutorial : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    void Release()
-    {
-        Overload.SetActive(false);
-        ReleaseUI.SetActive(true);
-    }
+  
 
     
 }

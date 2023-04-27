@@ -39,6 +39,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource BossCallShockWave;
     public AudioSource BossCallEnemy;
     public AudioSource UIChoose_Fail;
+    public AudioSource Win;
+    public AudioSource BossBGM;
+    public AudioSource Loose;
     #endregion
 
 

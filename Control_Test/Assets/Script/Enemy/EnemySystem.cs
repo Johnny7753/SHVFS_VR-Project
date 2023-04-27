@@ -56,12 +56,45 @@ public class EnemySystem : Singleton<EnemySystem>
     private float timer;
     [HideInInspector]
     public int enemyNum;
-    public bool isWin = false;
-    public bool isTutorialWIn = false;
+    public bool isWin;
+    public bool isTutorialWIn ;
 
     private bool bossAppear;
 
     private bool inWaveInterval;//to check if game is in the interval between waves
+
+    private void OnEnable()
+    {
+        isWin = false;
+        isTutorialWIn = false;
+        finishRefreshing = false;
+        base.Awake();
+        waveIndex = 0;
+        enemyNum = 0;
+       
+
+        //get and sort all hidden point
+        OtherEnemyHiddenPoint[] _points = FindObjectsOfType<OtherEnemyHiddenPoint>();
+        FlyingDragonHiddenPoint[] _fpPoints = FindObjectsOfType<FlyingDragonHiddenPoint>();
+        points = new List<OtherEnemyHiddenPoint>(_points);
+        fdPoints = new List<FlyingDragonHiddenPoint>(_fpPoints);
+
+        SortPointByX();
+
+        enemyAlive = new List<GameObject>();
+        waveIndex = 0;
+        partIndex = 0;
+        //partUIIndex = partIndex + 1;
+        waveUIIndex = waveIndex + 1;
+
+        //fresh enemies
+        timer = 0;
+        enemyNum = 0;
+        isRefreshing = true;
+        finishRefreshing = false;
+        //RefreshEnemies();
+
+    }
     public override void Awake()
     {
         base.Awake();

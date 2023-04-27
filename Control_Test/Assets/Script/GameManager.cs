@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public bool Isdead;
-
+    public bool IsBossDie;
     public GameObject GameOverUI;
     public GameObject WinUI;
     public GameObject PauseUI;
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject WarningUI;
     public GameObject AudioManager;
     public GameObject[] Barrels;
- 
+    public GameObject[] Magazines;
     public GameObject Base;
 
     public SpawnBoxMagazine[] BoxMagazinePrefeb;
@@ -78,13 +78,14 @@ public class GameManager : MonoBehaviour
 
     public float AirDropTimer;
     private float AirDropTime;
+    private float WinUITimer;
     // Start is called before the first frame update
 
     private void Awake()
     {
         EXP = 0;
         RocketCapacity = 100;
-        BulletCapacity = 1000;
+        BulletCapacity = 500;
         BulletDamage = 4.5f;
         oriRocketDamage = 20;
         AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
@@ -133,9 +134,22 @@ public class GameManager : MonoBehaviour
             AirDropTime = Random.Range(AirDropMinTime, AirDropMaxTime);
             AirDropTimer =0;
         }
+        if (IsBossDie)
+        {
+            
+            AudioManager.GetComponent<AudioManager>().Win.Play();
+            WinUITimer+=Time.deltaTime;
+            if(WinUITimer >= 3)
+            {
+                WinUI.SetActive(true);
+                Time.timeScale = 0.0001f;
+            }
+        }
+
         if(Isdead&&GameOverUI!=null)
         {
-            Debug.Log("Dead!");
+            //Debug.Log("Dead!");
+            AudioManager.GetComponent<AudioManager>().Loose.Play();
             GameOverUI.SetActive(true);
             Time.timeScale = 0.0001f;
         }
@@ -315,11 +329,25 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.GetComponent<AudioManager>().UIChoose_Fail.Play();
             return;
-        } 
-        if(EXP>= BoxMagazineLevelEXP[BoxMagazineLevel-1])
+        }
+        if (EXP >= BoxMagazineLevelEXP[BoxMagazineLevel - 1])
         {
             AudioManager.GetComponent<AudioManager>().LevelUP.Play();
             EXP -= BoxMagazineLevelEXP[BoxMagazineLevel - 1];
+            if(Magazines[0].GetComponent<SpawnBoxMagazine>().BoxMagazine!= null)
+            {
+                Destroy(Magazines[0].GetComponent<SpawnBoxMagazine>().BoxMagazine);
+                Magazines[0].GetComponent<SpawnBoxMagazine>().BoxMagazine = null;
+                
+                Magazines[0].GetComponent<SpawnBoxMagazine>().Spawn();
+            }
+            if (Magazines[1].GetComponent<SpawnBoxMagazine>().BoxMagazine != null)
+            {
+                Destroy(Magazines[1].GetComponent<SpawnBoxMagazine>().BoxMagazine);
+                Magazines[1].GetComponent<SpawnBoxMagazine>().BoxMagazine = null;
+                
+                Magazines[1].GetComponent<SpawnBoxMagazine>().Spawn();
+            }
             BoxMagazineLevel++;
             if (BoxMagazineLevel < BoxMagazineMaxLevel)
             {
