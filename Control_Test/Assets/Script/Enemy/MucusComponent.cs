@@ -19,7 +19,7 @@ public class MucusComponent : MonoBehaviour
         if (collision.gameObject.GetComponent<Base>())
         {
             FindObjectOfType<Base>().GetComponent<Base>().BaseHp -= FireballDamage;
-            Debug.Log("attacking");
+            //Debug.Log("attacking");
             Destroy(gameObject);
         }
 

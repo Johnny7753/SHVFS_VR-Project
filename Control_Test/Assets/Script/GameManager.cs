@@ -30,8 +30,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI OverloadCDLV;
     public TextMeshProUGUI BulletDamageLV;
     public TextMeshProUGUI Score;
+    public TextMeshProUGUI BarrelCost;
+    public TextMeshProUGUI AmmoCpacityCost;
+    public TextMeshProUGUI OverLoadLastingTimeCost;
+    public TextMeshProUGUI OverloadCDCost;
+    public TextMeshProUGUI BulletDamageCost;
+    public TextMeshProUGUI HPCost;
     //public TextMeshProUGUI OverHeatRestTime;
-   
+
     public int EXP;
     public int AddHPCost;
     public int[] OverloadCDLevelEXP;
@@ -90,6 +96,12 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+        BarrelCost.text = BarrelLevelEXP[0].ToString();
+        AmmoCpacityCost.text = BoxMagazineLevelEXP[0].ToString();
+        OverLoadLastingTimeCost.text = OverloadTimeLevelEXP[0].ToString();
+        OverloadCDCost.text = OverloadCDLevelEXP[0].ToString();
+        BulletDamageCost.text = DamageLevelEXP[0].ToString();
+        HPCost.text = AddHPCost.ToString();
         OverloadCDLV.text = "LV:" + OverloadCDLevel.ToString();
         BarrelLV.text = "LV:" + BarrelLevel.ToString();
         AmmoCpacityLV.text = "LV:" + BoxMagazineLevel.ToString();
@@ -101,8 +113,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Score.text = EXP.ToString();
+        Score.text = "Score:" + EXP.ToString();
         if (Barrels[0].GetComponent<Shoot>().IsOverHeat == true|| Barrels[0].GetComponent<Shoot>().isDizzy==true)
         {
             WarningUI.SetActive(true);
@@ -223,10 +234,12 @@ public class GameManager : MonoBehaviour
             OverloadCDLevel++;
             if(OverloadCDLevel < OverloadCDMaxLevel)
             {
+                OverloadCDCost.text = OverloadCDLevelEXP[OverloadCDLevel - 1].ToString();
                 OverloadCDLV.text = "LV:" + OverloadCDLevel.ToString();
             }
             else
             {
+                OverloadCDCost.text = "-";
                 OverloadCDLV.text = "Max";
                 
             }
@@ -264,6 +277,7 @@ public class GameManager : MonoBehaviour
                     Barrels[2].gameObject.SetActive(true);
                     EXP -= BarrelLevelEXP[0];
                     BarrelLevel++;
+                    BarrelCost.text = BarrelLevelEXP[1].ToString();
                     BarrelLV.text = "LV:" + BarrelLevel.ToString();
                 }
                 else
@@ -281,6 +295,7 @@ public class GameManager : MonoBehaviour
                     Barrels[4].gameObject.SetActive(true);
                     EXP -= BarrelLevelEXP[1];
                     BarrelLevel++;
+                    BarrelCost.text = "-";
                     BarrelLV.text = "Max";
                 }
                 else
@@ -308,11 +323,12 @@ public class GameManager : MonoBehaviour
             BoxMagazineLevel++;
             if (BoxMagazineLevel < BoxMagazineMaxLevel)
             {
+                AmmoCpacityCost.text = BoxMagazineLevelEXP[BoxMagazineLevel - 1].ToString();
                 AmmoCpacityLV.text = "LV:" + BoxMagazineLevel.ToString();
-                
             }
             else
             {
+                AmmoCpacityCost.text = "-";
                 AmmoCpacityLV.text = "Max";
             }
             BulletCapacity = BoxMagazine[BoxMagazineLevel - 2];
@@ -345,10 +361,11 @@ public class GameManager : MonoBehaviour
             if(DamageLevel < DamageMaxLevel)
             {
                 BulletDamageLV.text = "LV" + DamageLevel.ToString();
-                
+                BulletDamageCost.text = DamageLevelEXP[DamageLevel - 1].ToString();
             }
             else
             {
+                BulletDamageCost.text = "-";
                 BulletDamageLV.text = "Max";
             }
             BulletDamage = Damage[DamageLevel - 2];
@@ -379,10 +396,11 @@ public class GameManager : MonoBehaviour
             if(OverloadTimeLevel < OverloadTimeMaxLevel)
             {
                 OverLoadLastingTimeLV.text = "LV:" + OverloadTimeLevel.ToString();
-                
+                OverLoadLastingTimeCost.text = OverloadTimeLevelEXP[OverloadTimeLevel - 1].ToString();
             }
             else
             {
+                OverLoadLastingTimeCost.text = "-";
                 OverLoadLastingTimeLV.text = "Max";
             }
             for (int i = 0; i < Barrels.Length; i++)

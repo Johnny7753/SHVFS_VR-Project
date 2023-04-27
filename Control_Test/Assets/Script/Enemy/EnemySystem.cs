@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -23,7 +24,9 @@ public class EnemySystem : Singleton<EnemySystem>
     private int partIndex;
     //[HideInInspector]
     //public int partUIIndex;//use for UI
-
+    public TextMeshProUGUI WaveIndexUI;
+    public TextMeshProUGUI WaveTimer;
+    public GameObject WaveUI;
 
     public List<OtherEnemyHiddenPoint> points;
     [HideInInspector]
@@ -143,15 +146,21 @@ public class EnemySystem : Singleton<EnemySystem>
                 isTutorialWIn = true;
                 finishRefreshing = false;
                 InstantiateBoss();
-                Debug.Log("no more enemies!");
+                //Debug.Log("no more enemies!");
             }
         }
         if(inWaveInterval)
         {
+            //Debug.Log("inWaveInterval");
+            WaveUI.SetActive(true);
+            WaveIndexUI.text = "Wave "+ waveUIIndex.ToString() +" is coming";
+            WaveTimer.text = timeUI.ToString();
             _timerUI += Time.deltaTime;
             timeUI = (int)freshTimeInterval[waveIndex - 1]-(int)_timerUI;
             if (_timerUI >= freshTimeInterval[waveIndex - 1])
             {
+                _timerUI = 0;
+                WaveUI.SetActive(false);
                 inWaveInterval = false;
                 StartRefreshing();
             }
@@ -233,7 +242,7 @@ public class EnemySystem : Singleton<EnemySystem>
             Instantiate(bossPrefab, instantiatePos.position, instantiatePos.rotation);
         else
         {
-            Debug.Log("no boss");
+            //Debug.Log("no boss");
         }
     }
 }

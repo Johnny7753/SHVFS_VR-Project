@@ -58,14 +58,14 @@ public class SmallCrabController : EnemyController
         //Debug.Log(Mathf.Abs(enemyTarget.x - transform.position.x));
         if (!beginAttack && Mathf.Abs(enemyTarget.x - transform.position.x) < disToChangeTarget)
         {
-            Debug.Log("change goal");
+            //Debug.Log("change goal");
             goal = agent.destination = enemyTarget;
             beginAttack = true;
         }
         //explode state
         if (beginAttack && Vector3.Distance(enemyTarget, transform.position) < disToAttackPlayer)
         {
-            Debug.Log("attack");
+            //Debug.Log("attack");
             agent.enabled = false;
             //mat.material.color = Color.red;
             transform.LookAt(player);
@@ -117,6 +117,7 @@ public class SmallCrabController : EnemyController
                 }
             }
         }
+        FindObjectOfType<GameManager>().GetComponent<GameManager>().EXP += Score;
         Explosion.SetActive(true);
         Audiomanager.GetComponent<AudioManager>().smallcrabblast.Play();
         //AudioSource.PlayClipAtPoint(Audiomanager.GetComponent<AudioManager>().smallcrabblast, this.transform.position);
