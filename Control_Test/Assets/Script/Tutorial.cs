@@ -6,15 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-
     public GameObject StartTutorial;
     public GameObject grabAmmo;
+    public GameObject LoadAmmo;
     public GameObject leftgrab;
     public GameObject leftshoot;
     public GameObject Overload;
     public GameObject EnemySystemAppear;
     public GameObject Over;
     public GameObject UpgradeSystem;
+    public GameObject ReleaseUI;
+    public GameObject LooktoLeft;
     public bool tutorialOverUpdate;
     public bool NormalBoxUpdate;
     public bool RocketBoxUpdate;
@@ -22,7 +24,7 @@ public class Tutorial : MonoBehaviour
     public bool IsleftGrabUpdate;
     public bool IsrightGrabUpdate;
     public bool shootUpdate;
-    
+    public bool IsoverloadUpdate;
     public bool UpgradeTutorial = false;
     public int flag=1;
 
@@ -36,12 +38,15 @@ public class Tutorial : MonoBehaviour
     private Shoot shoot;
     private EnemySystem tutorialOver;
     private GameManager Upgrade;
+    private Shoot Isoverload;
+  
     private void Awake()
     {
         
     }
     private void Start()
     {
+        tutorialOverUpdate = false;
         Time.timeScale = 0.001f;
         NormalBox = FindObjectOfType<BoxMagazineComponent>();
         RocketBox = FindObjectOfType<BoxMagazineComponent_Rocket>();
@@ -51,6 +56,8 @@ public class Tutorial : MonoBehaviour
         shoot = FindObjectOfType<Shoot>();
         tutorialOver = FindObjectOfType<EnemySystem>();
         Upgrade = FindObjectOfType<GameManager>();
+        Isoverload = FindObjectOfType<Shoot>();
+       
         //tutorialover = findobjectoftype<enemysystem>().iswin;
         EnemySystemAppear.SetActive(false);
         FormalCredits = 0;
@@ -61,21 +68,29 @@ public class Tutorial : MonoBehaviour
 
         NormalBoxUpdate = NormalBox.AmmoisGrabed;
         RocketBoxUpdate = RocketBox.AmmoisGrabed;
+        
         IsconnectedUpdate = Isconnected.IsConnected;
         IsleftGrabUpdate = IsleftGrab.isLeftGripCaught;
         IsrightGrabUpdate = IsrightGrab.isRightGripCaught;
         shootUpdate = shoot.isShooting;
+        IsoverloadUpdate = Isoverload.IsOverLoad;
         Credits = Upgrade.EXP;
         // Debug.Log(FindObjectOfType<GunComponent>().IsConnected);
-        if ((IsconnectedUpdate) && (flag == 1))
+        if((NormalBoxUpdate||RocketBoxUpdate)&&(flag ==1))
         {
             grabAmmo.SetActive(false);
+            LoadAmmo.SetActive(true);
+        }
+
+        if ((IsconnectedUpdate) && (flag == 2))
+        {
+            LoadAmmo.SetActive(false);
             leftgrab.SetActive(true);
             flag++;
         }
-        if ((IsleftGrabUpdate || IsrightGrabUpdate) && (flag == 2))
+        if ((IsleftGrabUpdate || IsrightGrabUpdate) && (flag == 3))
         {
-            leftgrab.SetActive(false);
+            LoadAmmo.SetActive(false);
             leftshoot.SetActive(true);
             flag++;
         }
@@ -83,35 +98,50 @@ public class Tutorial : MonoBehaviour
         if (shootUpdate&&!tutorialOverUpdate)
         {
             leftshoot.SetActive(false);
-            //Overload.SetActive(true);
+            
             EnemySystemAppear.SetActive(true);
+
+            Overload.SetActive(true);
+
             FormalCredits = Credits;
             tutorialOverUpdate = tutorialOver.isTutorialWIn;
-            
+        }
 
+        if(IsoverloadUpdate)
+        {
+            Invoke("Release", 1.5f);
         }
 
         if (Over != null && tutorialOverUpdate)
         {
+            ReleaseUI.SetActive(false);
+            EnemySystemAppear.SetActive(false);
             UpgradeSystem.SetActive(true);
+            LooktoLeft.SetActive(true);
             
             if(Credits!= FormalCredits)
             {
                 UpgradeTutorial = true;
             }
-            Invoke("waitFor", 0.5f);
+            
             FormalCredits = Credits;
             // Time.timeScale = 0.0001f;
         }
-        if(Over!=null&& tutorialOverUpdate && UpgradeTutorial)
+        if((Over!=null&& tutorialOverUpdate && UpgradeTutorial) && (flag == 4))
         {
+
+            LooktoLeft.SetActive(false);
+            EnemySystemAppear.SetActive(true);
+            tutorialOverUpdate = tutorialOver.isTutorialWIn;
+            flag++;
+        }
+        if((Over != null && tutorialOverUpdate && UpgradeTutorial) && (flag == 5))
+        {
+            tutorialOverUpdate = tutorialOver.isTutorialWIn;
             Over.SetActive(true);
         }
 
-        void waitFor()
-        {
 
-        }
     }
 
 
@@ -131,6 +161,12 @@ public class Tutorial : MonoBehaviour
     public void RestratTutorial()
     {
         SceneManager.LoadScene(0);
+    }
+
+    void Release()
+    {
+        Overload.SetActive(false);
+        ReleaseUI.SetActive(true);
     }
 
     

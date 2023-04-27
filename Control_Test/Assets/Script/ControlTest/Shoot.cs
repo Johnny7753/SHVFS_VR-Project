@@ -35,7 +35,7 @@ public class Shoot : MonoBehaviour
     public float OverHeatTimer;
 
     public bool canOverLoad = true;
-    private bool IsOverLoad = false;
+    public bool IsOverLoad = false;
     public bool IsOverHeat = false;
 
     private int NormalShoot = Animator.StringToHash("NormalShoot");
