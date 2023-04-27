@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -23,7 +24,9 @@ public class EnemySystem : Singleton<EnemySystem>
     private int partIndex;
     //[HideInInspector]
     //public int partUIIndex;//use for UI
-
+    public TextMeshProUGUI WaveIndexUI;
+    public TextMeshProUGUI WaveTimer;
+    public GameObject WaveUI;
 
     public List<OtherEnemyHiddenPoint> points;
     [HideInInspector]
@@ -148,10 +151,14 @@ public class EnemySystem : Singleton<EnemySystem>
         }
         if(inWaveInterval)
         {
+            WaveUI.SetActive(true);
+            WaveIndexUI.text = "Wave "+ waveUIIndex.ToString() +" is coming";
+            WaveTimer.text = timeUI.ToString();
             _timerUI += Time.deltaTime;
             timeUI = (int)freshTimeInterval[waveIndex - 1]-(int)_timerUI;
             if (_timerUI >= freshTimeInterval[waveIndex - 1])
             {
+                WaveUI.SetActive(false);
                 inWaveInterval = false;
                 StartRefreshing();
             }
