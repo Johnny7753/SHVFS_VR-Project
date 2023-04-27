@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
     public float oriRocketDamage;
     public float AirDropMinTime;
     public float AirDropMaxTime;
+    public float oriNormalShootingRate;
+    public float oriRocketShootingRate;
 
     private int OverloadCDLevel = 1;
     private int BarrelLevel = 1;

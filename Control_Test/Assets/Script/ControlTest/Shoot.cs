@@ -308,7 +308,7 @@ public class Shoot : MonoBehaviour
         else if(Gun.GetComponent<GunComponent>().loadingBoxMagazine.GetComponent<BoxMagazineComponent_Rocket>() != null)
         {
             isShooting = true;
-            a = 0.2f;
+            a = 0.1f;
             animator.SetTrigger(Shooting);
             GameObject rocket;
             rocket = Instantiate(Rocket, SpawnPoint.position, SpawnPoint.rotation);

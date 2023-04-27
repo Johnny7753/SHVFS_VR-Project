@@ -10,12 +10,17 @@ public class GunComponent : MonoBehaviour
     public GameObject[] Barrels;
     public bool IsAmmoEmpty;
     public bool IsConnected = false;
+    
+
+
     public float NormalshootingRate;
     public float RocketshootingRate;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        NormalshootingRate = FindObjectOfType<GameManager>().GetComponent<GameManager>().oriNormalShootingRate;
+        RocketshootingRate = FindObjectOfType<GameManager>().GetComponent<GameManager>().oriRocketShootingRate;
     }
 
     // Update is called once per frame

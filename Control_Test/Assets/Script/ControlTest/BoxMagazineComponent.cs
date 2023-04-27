@@ -14,6 +14,7 @@ public class BoxMagazineComponent : MonoBehaviour
     public bool hasShaked = false;
 
     public float timer = 0;
+
     
     public int BulletCapacity;
 

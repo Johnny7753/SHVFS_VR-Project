@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149379000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -2130,6 +2130,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 0
   isTargetPoint: 1
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!1 &164200302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,14 +2682,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206668634}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -61.935432, y: 45.234, z: -0.1345122}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &206668636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10643,7 +10646,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695474366}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -10652,6 +10655,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 1
   isTargetPoint: 1
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!4 &702819544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 764196635, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
@@ -14210,14 +14216,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972055171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61.812, y: 45.234, z: 0.227}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -61.93543, y: 45.234, z: 0.227}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &972055173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19068,7 +19074,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280697526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -19077,6 +19083,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 0
   isTargetPoint: 1
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!1 &1299687934
 GameObject:
   m_ObjectHideFlags: 0
@@ -22834,7 +22843,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633974518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -22843,6 +22852,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 1
   isTargetPoint: 0
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!1001 &1652097557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25243,7 +25255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793624870}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -25252,6 +25264,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 0
   isTargetPoint: 0
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!1 &1819631295
 GameObject:
   m_ObjectHideFlags: 0
@@ -25577,7 +25592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844398630}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf0db18b0d594e14baa8e3c19007af77, type: 3}
   m_Name: 
@@ -25586,6 +25601,9 @@ MonoBehaviour:
   RightHand: {fileID: 1447334074}
   isFront: 0
   isTargetPoint: 0
+  offset: 1.22
+  LeftGrip: {fileID: 1842655003}
+  RightGrip: {fileID: 1270487290}
 --- !u!1 &1844444840
 GameObject:
   m_ObjectHideFlags: 0
@@ -28423,15 +28441,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.157894
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.1578941
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.157894
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 4906792423109804, guid: 5b48a90aa737d1f4aaf3fc299d0ea90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29113,6 +29131,8 @@ MonoBehaviour:
   oriRocketDamage: 4
   AirDropMinTime: 1
   AirDropMaxTime: 0
+  oriNormalShootingRate: 0.06
+  oriRocketShootingRate: 0.25
   AirDropTimer: 0
 --- !u!1 &2123184791
 GameObject:
@@ -29608,11 +29628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 214615698, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: NormalshootingRate
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 214615698, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: RocketshootingRate
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 214615698, guid: 4b3f1cc2bbe7cb84d93fdc8f4d1dc454, type: 3}
       propertyPath: Barrels.Array.data[0]
